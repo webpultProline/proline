@@ -308,6 +308,50 @@ font-family: 'proline-ico' !important;
 .proline-icon-rubble:before {
   content: "\e900";
 }
+/*кнокпи*/
+.btn-wborder {
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: left;
+	height: 42px;
+	line-height: 1;
+	background: transparent;
+	border: 2px solid #e8e9fa;
+	color: #5a6779;
+	font-size: 14px;
+	border-radius: 21px;
+	padding: 0 48px;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-pack: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-ms-flex-align: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	min-width: 220px;
+	transition: background-color .35s, color .35s, border-color .35s;
+}
+.btn-wborder:hover {
+	color: #5a6779;
+	background-color: #f1f2f6;
+	border-color: #f1f2f6;
+}
+.btn-wborder:active {
+	color: #5a6779;
+	background-color: #d2d4dc;
+	border-color: #d2d4dc;
+}
 /*отзывы*/
 .product_review {
 	padding-bottom: 30px;
@@ -3907,6 +3951,11 @@ footer {
 	border-bottom: 1px solid #f5f6fa;
 	padding-bottom: 15px;
 	margin-bottom: 30px
+}
+
+.proline_product-image_button-group {
+	margin-top: 11px;
+	width: 100%
 }
 
 .proline_product-image {
