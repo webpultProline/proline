@@ -1748,6 +1748,7 @@ a {
   margin: 0 auto;
   display: inline-block;
   margin-top: 27px;
+  vertical-align: top;
 }
 
 .tale {
@@ -3568,7 +3569,6 @@ a {
   font-weight: lighter;
   text-align: center;
   margin-top: 40px;
-<<<<<<< HEAD
   padding-bottom: 40px;
   background: url(../img/bg_border.png) repeat-x bottom;
   background-position-x: 3px;
@@ -3696,8 +3696,6 @@ a {
 
 .review span:hover {
   border: transparent;
-=======
->>>>>>> eacffcbd8306df42477c38f2c11db0697a090699
 }
 
 .col-buy .rating-bar {
@@ -3728,6 +3726,10 @@ a {
 
 .title-contacts h1 {
   font-size: 30px;
+}
+
+.nav_left {
+  margin-top: 25px;
 }
 
 .menu_left {
@@ -3770,24 +3772,12 @@ a {
   color: #fff;
 }
 
+.mr30 {
+  margin-top: 30px;
+}
+
 .m25 {
   margin-top: 25px;
-}
-
-.contacts_info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.img-block {
-  min-width: 70px;
-}
-
-.text-info h6 {
-  font-size: 14px;
-  line-height: 26px;
-  letter-spacing: 0;
 }
 
 @media (min-width: 1200px) {
