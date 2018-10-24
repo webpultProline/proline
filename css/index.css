@@ -280,14 +280,14 @@ font-family: 'proline-ico' !important;
 --------------------------------
 */
 @font-face {
-  font-family: 'proline-ico';
-  src:  url('../fonts/proline-ico.eot?1ze7rx');
-  src:  url('../fonts/proline-ico.eot?1ze7rx#iefix') format('embedded-opentype'),
-    url('../fonts/proline-ico.ttf?1ze7rx') format('truetype'),
-    url('../fonts/proline-ico.woff?1ze7rx') format('woff'),
-    url('../fonts/proline-ico.svg?1ze7rx#proline-ico') format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'proline-ico';
+	src:  	url('../fonts/proline-ico.eot?43zhr');
+	src:  	url('../fonts/proline-ico.eot?43zhr#iefix') format('embedded-opentype'),
+			url('../fonts/proline-ico.ttf?43zhr') format('truetype'),
+			url('../fonts/proline-ico.woff?43zhr') format('woff'),
+			url('../fonts/proline-ico.svg?43zhr#proline-ico') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 [class^="proline-icon-"], [class*=" proline-icon-"] {
@@ -303,6 +303,12 @@ font-family: 'proline-ico' !important;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.proline-icon-video:before {
+  content: "\e929";
+}
+.proline-icon-d:before {
+  content: "\e928";
 }
 
 .proline-icon-rubble:before {
@@ -339,6 +345,9 @@ font-family: 'proline-ico' !important;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	align-items: center;
+    -ms-flex-wrap: nowrap !important;
+    -webkit-flex-wrap: nowrap !important;
+    flex-wrap: nowrap !important;
 	min-width: 220px;
 	transition: background-color .35s, color .35s, border-color .35s;
 }
@@ -352,27 +361,20 @@ font-family: 'proline-ico' !important;
 	background-color: #d2d4dc;
 	border-color: #d2d4dc;
 }
+.btn-wborder > span {
+	display: inline-block
+}
 
-.videoBtnWBORDER:before , .3dBtnWBORDER:before {
-	display: inline-block;
-	font-family: 'proline-ico' !important;
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #8f9baa;
-}
-.videoBtnWBORDER:before {
-	content: "\e929";
+.videoBtnWBORDER > i {
 	font-size: 16px;
-	margin-right: 9px;
+	margin-right: 10px;
+	display: inline-block;
+	width: 14px
 }
-.3dBtnWBORDER:before {
-	content: "\e928";
+.virtual-dBtnWBORDER > i {
+	font-size: 21px;
+	margin-right: 10px;
+	display: inline-block
 }
 /*отзывы*/
 .product_review {
