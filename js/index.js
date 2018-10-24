@@ -519,6 +519,12 @@ $(function(){
 	if($('.proline_tab').length > 0){
 		changeTabContent($('.proline_tabs').find('.proline_tab-nav li.active').attr('data-parentBlock'),$('.proline_tabs').find('.proline_tab-nav li.active').attr('data-tabId'));
 	}
+	$('.proline_product-link').click(function(){
+		changeTabContent("proline_product-tabs_info","tab-characteristics");
+		$('.proline_tabs').find('.proline_tab-nav li').removeClass('active');
+		$('.proline_tabs').find('.proline_tab-nav li[data-tabid="tab-characteristics"]').addClass('active');
+		$('html, body').stop().animate({scrollTop: $('#tab-characteristics').offset().top - 50 }, 800);
+	});
 	/*
 	отзывы
 	*/
