@@ -3403,6 +3403,10 @@ a {
   width: 164px;
 }
 
+.comment {
+  margin-top: -5px;
+}
+
 .input-textarea {
   width: 100%;
 }
@@ -3413,7 +3417,7 @@ a {
   font-size: 13px;
   color: #222425;
   line-height: 1;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .input-textarea textarea {
@@ -3606,6 +3610,12 @@ a {
   }
   .close {
     margin-left: 11px;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .date_time {
+    max-width: 564px;
   }
 }
 
@@ -4021,6 +4031,12 @@ a {
   .close {
     margin-left: 0;
     margin-top: 15px;
+  }
+  .form-group .input-label > input {
+    width: 126px;
+  }
+  .date_time .input-label:first-child input {
+    width: 100%;
   }
 }
 
