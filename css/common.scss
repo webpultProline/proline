@@ -190,6 +190,7 @@
     justify-content: flex-start;
     padding-top: 28px;
     padding-bottom: 30px;
+    flex-wrap: wrap;
     a {
         text-decoration: none;
         color: #5a6779;
@@ -200,6 +201,9 @@
             content: url(../img/arrow-bc.svg);
             position: absolute;
             right: -16px;
+        }
+        &::nth-child(3) {
+            margin-top: 10px;
         }
     
     }
@@ -2875,6 +2879,7 @@ margin-left: 2px;
 }
  
  //Cart end
+ //Sales start
  .to_sale {
      h5 {
          letter-spacing: 0;
@@ -2963,6 +2968,7 @@ margin-left: 2px;
         flex-direction: row;
         width: 230px;
         justify-content: space-between;
+        margin-top: 21px;
     }
     .col-cart a {
 
@@ -2981,6 +2987,7 @@ margin-left: 2px;
     .img-box {
         width: 200px;
         height: 200px;
+        max-height: 200px;
     }
     .col-img {
         display: flex;
@@ -3020,7 +3027,7 @@ margin-left: 2px;
 }
 .review {
     margin-top: 15px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     a, p {
         color: #5a6779;
         font-size: 14px;
@@ -3033,5 +3040,82 @@ margin-left: 2px;
         border: transparent;
     }
     }
+    
 }
+.col-buy {
+    .rating-bar {
+        padding-left: 0;
+    }
+    .proline_product-top-text {
+        border: 0;
+    }
+}
+.category_sales {
+    margin-top: 20px;
+}
+.regulations {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.regulations__title {
+    h5 {
+        letter-spacing: 0;
+    }
+    .rules {
+        line-height: 20px;
+        margin-top: 30px;
+    }
+}
+//sales end
+//contacts start
+
+.title-contacts {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+.menu_left {
+    border: 2px solid #f5f6fa;
+    border-radius: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    a {
+        height: 42px;
+        display: flex;
+        align-items: center;
+        width: 268px;
+        padding-left: 20px;
+        padding-right: 20px;
+        transition: .3s;
+        
+        &.active, &:hover {
+            background-color: #36398b;
+            color: #fff;
+        }
+
+    }
+
+}
+.m25 {
+    margin-top: 25px;
+}
+.contacts_info {
+    display:  flex;
+}
+.img-block {
+    min-width: 70px;
+}
+.text-info {
+    h6 {
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: 0;
+    }
+}
+  
 @import 'media';

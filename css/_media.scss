@@ -137,6 +137,31 @@
     .date_time {
         max-width: 564px;
     }
+    .product-sale .col-img {
+        margin-right: 0;
+    }
+    .product-sale .img-box {
+
+        width: 150px;
+        height: 150px;
+        max-height: 150px;
+    
+    }
+    .product-sale .col-buy {
+        margin-right: 0;
+    }
+    .product-sale .info-box--list span {
+        padding-top: 5px;
+    }
+    .product-sale .info-box--list .acticle {
+        margin-top: 10px;
+    }
+    .product-sale .product_list {
+        margin-top: 10px;
+    }
+    .product_list-row .product_list:last-child {
+        display: none;
+    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     .to--cart {
@@ -154,6 +179,14 @@
     .close {
         margin-left: -86px;
     }
+    .product_list-row .product_list:last-child {
+
+        margin-left: 5px;
+    
+    }
+    .product-sale .buy {
+        margin-top: 30px;
+    }
 }
 @media (max-width: 1199px) {
     .category__box:not(:nth-child(5n)) {
@@ -165,6 +198,7 @@
         margin: 0 auto;
         margin-bottom: 20px;
     }
+    
     
 }
 @media  (max-width: 575px) {
@@ -326,11 +360,58 @@ right: -18px;
     .csmb {
         margin-bottom: 10px;
     }
-    
+    //
     
 }
-
 @media (max-width: 767px) {
+    .days_time {
+        margin-bottom: 15px;
+
+    }
+    .col-sales {
+        flex-direction: column;
+    }
+    
+    .product_list-row {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .product_list-row .product_list:last-child {
+        margin: 0 auto;
+    }
+    .col-sales {
+        .col-img {
+            margin-right: 0;
+        }
+    }
+    
+
+.product-sale .info-box--list {
+    text-align: center;
+}
+.product-sale .column {
+    margin-left: 0;
+}
+.product-sale .col-buy {
+    margin-right: 0;
+    
+}
+.product-sale  .col-buy .prices {
+    justify-content: center;
+}
+.product-sale .col-buy .buy {
+    margin: 20px auto;
+}
+.rating_row {
+    
+    display: flex;
+    justify-content: center;
+}
+.review {
+    text-align: center;
+
+}
     .slider-item {
         flex-direction: column;
     }
@@ -580,6 +661,14 @@ right: -18px;
     .order__number {
         margin-top: 0;
     }
+    .regulations {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        .rules {
+            line-height: 20px;
+            margin-top: 10px;
+        }
+    }
 }
 @media (max-width: 1199px) {
     
@@ -587,11 +676,7 @@ right: -18px;
         margin: 0 auto;
     }
 }
-@media (min-width: 768px) and (max-width: 991px) {
-    
-    
-    
-}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .product-item {
         margin: 0auto;
