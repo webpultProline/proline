@@ -558,6 +558,33 @@ $(function(){
 			centerMode: true,
 			vertical: true,
 			verticalSwiping: true,
+			responsive: [
+				{
+					breakpoint: 993,
+					settings: {
+						verticalSwiping: false,
+						vertical: false,
+					}
+				},
+				{
+					breakpoint: 769,
+					settings: {
+						slidesToShow: 4,
+						verticalSwiping: false,
+						vertical: false,
+						centerMode: true,
+					}
+				},
+				{
+					breakpoint: 576,
+					settings: {
+						slidesToShow: 2,
+						verticalSwiping: false,
+						vertical: false,
+						centerMode: true,
+					}
+				}
+			]
 		});
 		
 		var backGround = $('.product-image-slider .product-slide[data-slick-index="0"]').find('.product-slide-image').css('background-image');
