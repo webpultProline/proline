@@ -2038,7 +2038,8 @@ ul {
     justify-content: flex-start;
     .input-radio {
         height: 112px;
-        margin-left: 8px;
+        margin-left: 4px;
+        margin-right: 4px;
         margin-bottom: 20px;
        
          p {
@@ -2838,16 +2839,38 @@ margin-left: 2px;
 
 
 }
-.Прямоугольник__скругл__углы_508_copy_26 {
-    border-width: 1px;
-    border-color: rgb(214, 219, 230);
-    border-style: solid;
-    position: absolute;
-    left: 407px;
-    top: 2308px;
-    width: 804px;
-    z-index: 468;
-  }
+.date_delivery {
+    margin-left: 4px;
+    margin-right: 4px;
+    height: 75px;
+    padding-left: 55px;
+    padding-top: 24px;
+}
+.date_text {
+    position: relative;
+
+    &:before {
+        content: '\e926';
+        font-family: 'proline-ico';
+        position: absolute;
+        top: 0;
+        left: -35px;
+        font-size: 22px;
+        color: #36398b;
+    }
+    h5 {
+        font-size: 15px;
+        line-height: 16px;
+        font-weight: 500;
+        letter-spacing: 0;
+    }
+    span {
+        font-size: 12px;
+        line-height: 18px;
+        color: #5c5d5c;
+
+    }
+}
   
  //Cart end
 @import 'media';
