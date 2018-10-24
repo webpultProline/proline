@@ -1,0 +1,3132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Карточка товара</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+
+    <!-- Custom Browsers Color Start -->
+    <!--<meta name="theme-color" content="#000">-->
+    <!-- Custom Browsers Color End -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="customscrollbar/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+	<!--
+	-----------------------------
+	модалка авторизации
+	-----------------------------
+	-->
+	<div class="modal modal-with-footer users-modals" id="user-auth">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Авторизация</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-error">
+					Пожалуйста, введите действительный адрес электронной почты
+				</p>
+				<label class="input-label">
+					<span>Email</span>
+					<input type="email" placeholder="Email">
+				</label>
+				<label class="input-label password">
+					<span>Пароль</span>
+					<input type="password" placeholder="Пароль">
+					<button></button>
+				</label>
+				<div class="d-flex flex-row flex-wrap justify-content-between align-items-center user-auth-ling-group">
+					<label class="checkbox-label checkbox-label-auth">
+						<input type="checkbox">
+						<div class="checkbox_inducator"></div>
+						<b class="checkbox-label-auth-yes">Запомнить меня</b>
+						<b class="checkbox-label-auth-no">Чужой компьютер</b>
+					</label>
+					<button class="link-normal openModalBTN" data-targetModal="user-password-change"><span>Забыли пароль?</span></button>
+				</div>
+				<div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+					<button class="btn btn-enter-user btn-send-request-modal">Войти</button>
+				</div>
+				<div class="socials-links">
+					<p>Или войдите с помощью социальных сетей</p>
+					<ul class="justify-content-end">
+						<li><a href="#" class="vk"></a></li>
+						<li><a href="#" class="twitter"></a></li>
+						<li><a href="#" class="facebook"></a></li>
+						<li><a href="#" class="ok"></a></li>
+						<li><a href="#" class="instag"></a></li>
+						<li><a href="#" class="youtube"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<p>У вас нет учетной записи? <a href="#" class="link-normal"><span>Зарегистрируйтесь!</span></a></p>
+			</div>
+		</div>
+	</div>
+	<!--
+	-----------------------------
+	модалка Восстановления пароля
+	-----------------------------
+	-->
+	<div class="modal users-modals" id="user-password-change">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Восстановление пароля</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-error">
+					Пожалуйста, введите действительный адрес электронной почты
+				</p>
+				<label class="input-label">
+					<span>Email</span>
+					<input type="email" placeholder="Email">
+				</label>
+				<div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+					<button class="btn btn-enter-user btn-send-request-modal openModalBTN" data-targetModal="user-password-change-success">Сменить пароль</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+	-----------------------------
+	модалка Восстановления пароля успешная отправка
+	-----------------------------
+	-->
+	<div class="modal users-modals" id="user-password-change-success">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p></p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body d-flex justify-content-center align-items-center flex-column flex-nowrap">
+				<img src="img/user-password-change-success.png" alt="">
+				<p class="modal_text-success">Готово!</p>
+				<p class="modal_text">Мы отправили по электронной почте Вам инструкцию о том, как сбросить пароль</p>
+			</div>
+		</div>
+	</div>
+	<!--
+	-----------------------------
+	модалка регистрации
+	-----------------------------
+	-->
+	<div class="modal modal-with-footer users-modals" id="user-register">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Регистрация</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-error">
+					Пожалуйста, введите действительный адрес электронной почты
+				</p>
+				<label class="input-label">
+					<span>Ваше имя</span>
+					<input type="text" placeholder="Ваше имя">
+				</label>
+				<label class="input-label">
+					<span>Email</span>
+					<input type="email" placeholder="Email">
+				</label>
+				<label class="input-label password">
+					<span>Пароль</span>
+					<input type="password" placeholder="Пароль">
+					<button></button>
+				</label>
+				<label class="input-label password">
+					<span>Повторите пароль</span>
+					<input type="password" placeholder="Повторите пароль">
+					<button></button>
+				</label>
+				<label class="checkbox-label">
+					<input type="checkbox">
+					<div class="checkbox_inducator"></div>
+					Я согласен на сбор и обработку персональных данных и согласен с <a href="#"><span>условиями соглашения</span></a>
+				</label>
+				
+				<div class="not-robots d-flex flex-row justify-content-center">
+					<img src="img/captcha.jpg" alt="">
+				</div>
+				
+				<div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+					<button class="btn btn-enter-user btn-send-request-modal">Зарегистрироваться</button>
+				</div>
+				<div class="socials-links">
+					<p>Или войдите с помощью социальных сетей</p>
+					<ul class="justify-content-end">
+						<li><a href="#" class="vk"></a></li>
+						<li><a href="#" class="twitter"></a></li>
+						<li><a href="#" class="facebook"></a></li>
+						<li><a href="#" class="ok"></a></li>
+						<li><a href="#" class="instag"></a></li>
+						<li><a href="#" class="youtube"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<p>У вас нет учетной записи? <a href="#" class="link-normal"><span>Зарегистрируйтесь!</span></a></p>
+			</div>
+		</div>
+	</div>
+	<!--
+	-----------------------------
+	Конец модалок авторизации, регистрации, восстановление пароля
+	-----------------------------
+	-->
+	<div class="modal" id="send_message">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Обратная связь</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-error">
+					Пожалуйста, введите действительный адрес электронной почты
+				</p>
+				<label class="input-label">
+					<span class="required">Ваше имя</span>
+					<input type="text" placeholder="Ваше имя">
+				</label>
+				<label class="input-label">
+					<span>Компания</span>
+					<input type="text" placeholder="Компания">
+				</label>
+				<label class="input-label">
+					<span>Email</span>
+					<input type="email" placeholder="Email">
+				</label>
+				<label class="input-label">
+					<span class="required">Моб. телефон</span>
+					<input type="text" placeholder="+7 (___)___-__-__" class="phone_input">
+				</label>
+				<label class="input-label">
+					<span class="required">Сообщение</span>
+					<textarea type="text" placeholder="Сообщение"></textarea>
+				</label>
+				<label class="checkbox-label">
+					<input type="checkbox">
+					<div class="checkbox_inducator"></div>
+					Я согласен на сбор и обработку персональных данных и согласен с <a href="#"><span>условиями соглашения</span></a>
+				</label>
+				<div class="col-auto d-flex flex-row flex-wrap justify-content-center align-items-center">
+					<button class="btn btn-send-request-modal">Отправить сообщение</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="request_call">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Заказать звонок</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-error">
+					Пожалуйста, введите действительный адрес электронной почты
+				</p>
+				<p class="modal_text">Не смогли дозвониться? Оставьте свой номер, и мы перезвоним Вам в течение 2-ух минут.</p>
+				<label class="input-label">
+					<span>Ваше имя</span>
+					<input type="text" placeholder="Ваше имя">
+				</label>
+				<label class="input-label">
+					<span>Моб. телефон</span>
+					<input type="text" placeholder="+7 (___)___-__-__" class="phone_input">
+				</label>
+				<label class="checkbox-label">
+					<input type="checkbox">
+					<div class="checkbox_inducator"></div>
+					Я согласен на сбор и обработку персональных данных и согласен с <a href="#"><span>условиями соглашения</span></a>
+				</label>
+				<div class="col-auto d-flex flex-row flex-wrap justify-content-center align-items-center">
+					<button class="btn btn-send-request-modal">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+	---------------------
+	шапка фиксированная
+	---------------------
+	-->
+	<div class="header-fixed d-none d-lg-block">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 header-navigation_main">
+					<button class="header-navigation">
+						<span class="icon_nav">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+						<img src="img/logo-white.png" alt="">
+						<span class="text_nav">Каталог товаров</span>
+					</button>
+					<nav class="header-navigation_row">
+						<a href="#" data-inside_menu='
+							<a href="#"><span>Кодовые панели</span></a>
+							<a href="#"><span>Кодонаборные панели со считывателем и контроллером</span></a>
+							<a href="#"><span>Замки, защелки</span></a>
+							<a href="#"><span>Дверные доводчики</span></a>
+							<a href="#"><span>Управление автоматикой</span></a>
+							<a href="#"><span>Разное</span></a>
+							<a href="#"><span>Идентификаторы</span></a>
+							<a href="#" data-inside_menu="
+								<a href=#><span>Считыватели с контроллером</span></a>
+								<a href=#><span>Контроллеры</span></a>
+								<a href=#><span>Кнопки выхода</span></a>
+								<a href=#><span>Кодовые панели</span></a>
+								<a href=#><span>Кодонаборные панели со считывателем и контроллером</span></a>
+								<a href=#><span>Замки, защелки</span></a>
+								<a href=#><span>Дверные доводчики</span></a>
+								<a href=#><span>Управление автоматикой</span></a>
+								<a href=#><span>Разное</span></a>
+								<a href=#><span>Идентификаторы</span></a>
+								<a href=#><span>Считыватели</span></a>
+								<a href=#><span>Считыватели с контроллером</span></a>
+								<a href=#><span>Контроллеры</span></a>
+								<a href=#><span>Кнопки выхода</span></a>
+								<a href=#><span>Кодовые панели</span></a>
+								<a href=#><span>Кодонаборные панели со считывателем и контроллером</span></a>
+								<a href=#><span>Замки, защелки</span></a>
+								<a href=#><span>Дверные доводчики</span></a>
+								<a href=#><span>Управление автоматикой</span></a>
+								<a href=#><span>Разное</span></a>
+							"><span class="hasSubMenu-fixed_header">Считыватели</span></a>
+							<a href="#"><span>Считыватели с контроллером</span></a>
+							<a href="#"><span>Контроллеры</span></a>
+							<a href="#"><span>Кнопки выхода</span></a>
+							<a href="#"><span>Идентификаторы</span></a>
+							<a href="#"><span>Считыватели</span></a>
+						'>
+							<span class="hasSubMenu-fixed_header">Подарки</span>
+						</a>
+						<a href="#"><span>Типовые решения</span></a>
+						<a href="#"><span>Системы видеонаблюдения</span></a>
+						<a href="#"><span>IP оборудование</span></a>
+						<a href="#" data-inside_menu='
+							<a href="#"><span>Идентификаторы</span></a>
+							<a href="#" data-inside_menu="
+								<a href=#><span>Контроллеры</span></a>
+								<a href=#><span>Кнопки выхода</span></a>
+								<a href=#><span>Считыватели</span></a>
+								<a href=#><span>Считыватели с контроллером</span></a>
+								<a href=#><span>Контроллеры</span></a>
+								<a href=#><span>Кнопки выхода</span></a>
+								<a href=#><span>Кодовые панели</span></a>
+								<a href=#><span>Кодонаборные панели со считывателем и контроллером</span></a>
+								<a href=#><span>Замки, защелки</span></a>
+								<a href=#><span>Дверные доводчики</span></a>
+								<a href=#><span>Управление автоматикой</span></a>
+								<a href=#><span>Разное</span></a>
+								<a href=#><span>Считыватели с контроллером</span></a>
+								<a href=#><span>Кодовые панели</span></a>
+								<a href=#><span>Кодонаборные панели со считывателем и контроллером</span></a>
+								<a href=#><span>Замки, защелки</span></a>
+								<a href=#><span>Дверные доводчики</span></a>
+								<a href=#><span>Управление автоматикой</span></a>
+								<a href=#><span>Разное</span></a>
+								<a href=#><span>Идентификаторы</span></a>
+							"><span class="hasSubMenu-fixed_header">Считыватели</span></a>
+							<a href="#"><span>Считыватели с контроллером</span></a>
+							<a href="#"><span>Контроллеры</span></a>
+							<a href="#"><span>Кнопки выхода</span></a>
+							<a href="#"><span>Кодовые панели</span></a>
+							<a href="#"><span>Кодонаборные панели со считывателем и контроллером</span></a>
+							<a href="#"><span>Замки, защелки</span></a>
+							<a href="#"><span>Дверные доводчики</span></a>
+							<a href="#"><span>Управление автоматикой</span></a>
+							<a href="#"><span>Разное</span></a>
+							<a href="#"><span>Идентификаторы</span></a>
+							<a href="#"><span>Считыватели</span></a>
+							<a href="#"><span>Считыватели с контроллером</span></a>
+							<a href="#"><span>Контроллеры</span></a>
+							<a href="#"><span>Кнопки выхода</span></a>
+							<a href="#"><span>Кодовые панели</span></a>
+							<a href="#"><span>Кодонаборные панели со считывателем и контроллером</span></a>
+							<a href="#"><span>Замки, защелки</span></a>
+							<a href="#"><span>Дверные доводчики</span></a>
+							<a href="#"><span>Управление автоматикой</span></a>
+							<a href="#"><span>Разное</span></a>
+						'>
+							<span class="hasSubMenu-fixed_header">Системы контроля доступа</span>
+						</a>
+						<a href="#"><span>Домофоны и системы связи</span></a>
+						<a href="#"><span>Охранно-пожарная сигнализация</span></a>
+						<a href="#"><span>Беспроводные системы</span></a>
+						<a href="#"><span>Расходные материалы</span></a>
+						<a href="#"><span>Источники питания</span></a>
+						<a href="#"><span>Носители информации</span></a>
+						<a href="#"><span>Подарки</span></a>
+						<a href="#"><span>Типовые решения</span></a>
+						<a href="#"><span>Системы видеонаблюдения</span></a>
+						<a href="#"><span>IP оборудование</span></a>
+						<a href="#"><span>Системы контроля доступа</span></a>
+						<a href="#"><span>Домофоны и системы связи</span></a>
+						<a href="#"><span>Охранно-пожарная сигнализация</span></a>
+						<a href="#"><span>Беспроводные системы</span></a>
+						<a href="#"><span>Расходные материалы</span></a>
+						<a href="#"><span>Источники питания</span></a>
+						<a href="#"><span>Носители информации</span></a>
+					</nav>
+					<nav class="header-navigation_row-second">
+						
+					</nav>
+					<nav class="header-navigation_row-third">
+						
+					</nav>
+					<div class="header-navigation_dark_background"></div>
+				</div>
+				
+				
+				
+				<div class="col-lg-9 d-flex flex-row flex-wrap justify-content-between align-items-center">
+					<div class="col-auto header-search">
+						<form>
+							<input type="text" placeholder="Поиск среди 5000 товаров...">
+							<button></button>
+							<div class="header-search-result">
+								<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+									<img src="img/adapter.png" alt="">
+									<span>
+										<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+										<span class="header-search-result_info-articul">Артикул: 54533</span>
+									</span>
+									<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+								</a>
+								<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+									<img src="img/adapter.png" alt="">
+									<span>
+										<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+										<span class="header-search-result_info-articul">Артикул: 54533</span>
+									</span>
+									<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+								</a>
+								<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+									<img src="img/adapter.png" alt="">
+									<span>
+										<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+										<span class="header-search-result_info-articul">Артикул: 54533</span>
+									</span>
+									<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+								</a>
+							</div>
+						</form>
+					</div>
+					<div class="nav_right d-flex flex-row flex-wrap justify-content-start align-items-center">
+						<!--
+							Временные классы для демонстрации
+							autorization-block-no - не авторизированный пользователь
+							autorization-block-yes - авторизированный пользователь
+							после посадки можно удалить класс auth-user-btn
+						-->	
+						<div class="authorization HasPopUp autorization-block-no">
+							<span class="d-none d-xl-block">Авторизация</span>
+							<div class="PopUpMain bottom">
+								<div class="PopUpBody">
+									<button class="btn openModalBTN" data-targetModal="user-auth">Войти на сайт</button>
+									<button class="btn btn-gb openModalBTN" data-targetModal="user-register">Зарегистрироваться</button>
+								</div>
+							</div>
+						</div>
+						<div class="authorization HasPopUp autorization-block-yes">
+							<span class="d-none d-xl-block">Сидоров С.А.</span>
+							<div class="PopUpMain bottom">
+								<div class="PopUpBody">
+									<a href="#" class="PopUpLink">Личный кабинет</a>
+									<a href="#" class="PopUpLink">Мои заказы</a>
+									<a href="#" class="PopUpLink">Обратная связь</a>
+									<a href="#" class="PopUpExit">Выход</a>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="comparison"><span>2</span></a>
+						<a href="#" class="liked"><span>12</span></a>
+						<a href="#" class="cart"><span>3</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+	---------------------
+	шапка фиксированная - конец
+	---------------------
+	-->
+	<!--
+	---------------------
+	шапка мобильная
+	---------------------
+	-->
+	<header class="d-lg-none">
+		<div class="header-mobile">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-between align-items-center">
+						<button class="mobile-menu_btn"><span></span><span></span><span></span></button>
+						<a href="#" class="mobile-menu_logo"><img src="img/logo.png" alt=""></a>
+						<div class="nav_right d-flex flex-row flex-wrap justify-content-start align-items-center">
+							<button class="search-mobile-btn"></button>
+							<a href="#" class="liked"></a>
+							<a href="#" class="cart"><span>3</span></a>
+							
+							<div class="col-auto header-search serach-mobile">
+								<form>
+									<input type="text" placeholder="Поиск среди 5000 товаров...">
+									<div class="header-search-result">
+										<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+											<img src="img/adapter.png" alt="">
+											<span>
+												<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+												<span class="header-search-result_info-articul">Артикул: 54533</span>
+											</span>
+											<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+										</a>
+										<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+											<img src="img/adapter.png" alt="">
+											<span>
+												<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+												<span class="header-search-result_info-articul">Артикул: 54533</span>
+											</span>
+											<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+										</a>
+										<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+											<img src="img/adapter.png" alt="">
+											<span>
+												<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+												<span class="header-search-result_info-articul">Артикул: 54533</span>
+											</span>
+											<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+										</a>
+									</div>
+
+								</form>
+							</div>
+						</div>
+						
+						<div class="mobile-full_menu">
+							<!--
+								Временные классы для демонстрации
+								autorization-block-no - не авторизированный пользователь
+								autorization-block-yes - авторизированный пользователь
+								после посадки можно удалить класс auth-user-btn
+							-->
+							<div class="mobile-header-link-group autorization-block-no">
+								<button class="btn btn-gb openModalBTN" data-targetModal="user-auth">Вход</button>
+								<button class="btn btn-gb openModalBTN" data-targetModal="user-register">Регистрация</button>
+							</div>
+							<div class="mobile-header-link-group autorization-block-yes">
+								<div class="nav_right">
+									<a href="#" class="authorization">
+										<span>Сидоров С.А.</span>
+									</a>
+								</div>
+							</div>
+							
+							<button class="mobile-select-region-btn">Ваш город: <b></b></button>
+							<div class="mobile-select-region">
+								<div class="col-auto header-search">
+									<form>
+										<input type="text" placeholder="Поиск среди 5000 товаров...">
+									</form>
+								</div>
+								<p>Выберите свой город</p>
+								<button class="mobile-full_menu-link active"><span>Ханты-Мансийский автономный округ </span></button>
+								<button class="mobile-full_menu-link"><span>Калининградская область</span></button>
+								<button class="mobile-full_menu-link"><span>Калмыкия</span></button>
+								<button class="mobile-full_menu-link"><span>Калужская область</span></button>
+								<button class="mobile-full_menu-link"><span>Камчатская область</span></button>
+								<button class="mobile-full_menu-link"><span>Карелия</span></button>
+								<button class="mobile-full_menu-link"><span>Кемеровская область</span></button>
+								<button class="mobile-full_menu-link"><span>Кировская область</span></button>
+								<button class="mobile-full_menu-link"><span>Коми</span></button>
+								<button class="mobile-full_menu-link"><span>Костромская область</span></button>
+								<button class="mobile-full_menu-link"><span>Краснодарский край</span></button>
+								<button class="mobile-full_menu-link"><span>Краснодарский край</span></button>
+								<button class="mobile-full_menu-link"><span>Краснодарский край</span></button>
+							</div>
+							
+							<div class="mobile-full_menu-category">
+								<button>
+									<span>
+										<span></span><span></span><span></span>
+									</span>
+									Каталог товаров
+								</button>
+								<ul>
+									<li>
+										<span><a href="#">Подарки</a></span>
+									</li>
+									<li>
+										<span><a href="#">Типовые решения</a></span>
+									</li>
+									<li>
+										<span class="mobile-sub-menu"><a href="#">Системы видеонаблюдения</a></span>
+										<ul>
+											<li><span><a href="#">Идентификаторы</a></span></li>
+											<li>
+												<span class="mobile-sub-menu"><a href="#">Считыватели</a></span>
+												<ul>
+													<li><span><a href="#">Название 1</a></span></li>
+													<li><span><a href="#">Название 2</a></span></li>
+													<li><span><a href="#">Название 3</a></span></li>
+													<li><span><a href="#">Название 4</a></span></li>
+													<li><span><a href="#">Название 5</a></span></li>
+													<li><span><a href="#">Название 6</a></span></li>
+													<li><span><a href="#">Название 7</a></span></li>
+													<li><span><a href="#">Название 8</a></span></li>
+												</ul>
+											</li>
+											<li><span><a href="#">Считыватели с контроллером</a></span></li>
+											<li><span><a href="#">Контроллеры</a></span></li>
+											<li><span><a href="#">Кнопки выхода</a></span></li>
+											<li><span><a href="#">Кодовые панели</a></span></li>
+											<li><span><a href="#">Кодонаборные панели со считывателем и контроллером</a></span></li>
+											<li><span><a href="#">Замки, защелки</a></span></li>
+											<li><span><a href="#">Дверные доводчики</a></span></li>
+											<li><span><a href="#">Управление автоматикой</a></span></li>
+											<li><span><a href="#">Разное</a></span></li>
+										</ul>
+									</li>
+									<li>
+										<span><a href="#">IP оборудование</a></span>
+									</li>
+									<li>
+										<span><a href="#">Системы контроля доступа</a></span>
+									</li>
+									<li>
+										<span><a href="#">Домофоны и системы связи</a></span>
+									</li>
+									<li>
+										<span><a href="#">Охранно-пожарная сигнализация</a></span>
+									</li>
+									<li>
+										<span><a href="#">Беспроводные системы</a></span>
+									</li>
+									<li>
+										<span><a href="#">Расходные материалы</a></span>
+									</li>
+									<li>
+										<span><a href="#">Источники питания</a></span>
+									</li>
+									<li>
+										<span><a href="#">Носители информации</a></span>
+									</li>
+								</ul>
+							</div>
+							<a href="#" class="mobile-full_menu-link"><span>О компании</span></a>
+							<a href="#" class="mobile-full_menu-link"><span>Гарантия и возврат</span></a>
+							<a href="#" class="mobile-full_menu-link"><span>Оплата</span></a>
+							<a href="#" class="mobile-full_menu-link"><span>Доставка</span></a>
+							<a href="#" class="mobile-full_menu-link"><span>FAQ</span></a>
+							<div class="list-contacts">
+								<ul>
+									<li>
+										<a href="tel:88003331100">8 (800) 333-11-00</a>
+										<p>Бесплатно по России</p>
+									</li>
+								</ul>
+							</div>
+							<div class="list-contacts">
+								<ul>
+									<li>
+										<a href="tel:+74956496970">8 (495) 649-69-70</a>
+										<p>Москва и МО</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--
+	---------------------
+	шапка мобильная - конец
+	---------------------
+	-->
+    <div class="page_wrap">
+		<!--
+		---------------------
+		шапка
+		---------------------
+		-->
+        <header class="header d-none d-lg-block">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 d-flex flex-row flex-wrap align-items-center justify-content-between">
+                            <div class="location d-flex flex-row flex-wrap align-items-center justify-content-between">
+                                <div class="region HasPopUp">
+                                    <span>Москва и МО</span>
+									<div class="PopUpMain bottom PopUpMain-confirm-region">
+										<div class="PopUpBody regionHTMLInner" data-show_this="true">
+											<div class="region_wrapper">
+												<p><span>Ваш регион</span> Москва и Московская обл?</p>
+												<div class="button-area">
+													<a href="#" class="btn PopUpClose">Да, все верно</a>
+													<a href="#" class="btn btn-gb changeRegion" data-selector="changeRegion-selectors">Выбрать другой</a>
+												</div>
+											</div>
+										</div>
+										<div class="PopUpBody regionHTMLInner" id="changeRegion-selectors">
+											<div class="region_wrapper">
+												<span>Выберите ваш регион</span>
+												<select name="" class="select_region style_new_jquery">
+													<option>Ханты-Мансийский автономный округ </option>
+													<option>Калининградская область</option>
+													<option>Калмыкия</option>
+													<option>Калужская область</option>
+													<option>Камчатская область</option>
+													<option>Карелия</option>
+													<option>Кемеровская область</option>
+													<option>Кировская область</option>
+													<option>Коми</option>
+													<option>Костромская область</option>
+													<option>Краснодарский край</option>
+													<option>Краснодарский край</option>
+													<option>Краснодарский край</option>
+												</select>
+												<div class="button-area">
+
+													<a href="#" class="btn js-yes PopUpClose">Да</a>
+													<a href="#" class="btn btn-gb js-no PopUpClose">Нет</a>
+												</div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="lang">
+                                    <select class="lang-select style_new_jquery">
+                                        <option>Русский</option>
+                                        <option>Английский</option>
+                                        <option>Китайский</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 d-flex flex-row flex-wrap justify-content-between align-items-center">
+                            <nav class="nav_top">
+                                <ul>
+                                    <li><a href="#">Оплата и доставка</a></li>
+                                    <li><a href="#">Гарантия и возврат</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">О компании</a></li>
+                                    <li class="dropmenu">
+										<a href="#">Еще</a>
+                                        <div class="dropdown-list">
+                                            <ul>
+                                                <li>Продукция</li>
+                                                <li>Бренды</li>
+                                                <li>Гарантии</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+							<div class="nav_right d-flex flex-row flex-wrap justify-content-start align-items-center">
+								<!--
+									Временные классы для демонстрации
+									autorization-block-no - не авторизированный пользователь
+									autorization-block-yes - авторизированный пользователь
+									после посадки можно удалить класс auth-user-btn
+								-->	
+								<div class="authorization HasPopUp autorization-block-no">
+									<span class="d-none d-xl-block">Авторизация</span>
+									<div class="PopUpMain bottom">
+										<div class="PopUpBody">
+											<button class="btn openModalBTN" data-targetModal="user-auth">Войти на сайт</button>
+											<button class="btn btn-gb openModalBTN" data-targetModal="user-register">Зарегистрироваться</button>
+										</div>
+									</div>
+								</div>
+								<div class="authorization HasPopUp autorization-block-yes">
+									<span class="d-none d-xl-block">Сидоров С.А.</span>
+									<div class="PopUpMain bottom">
+										<div class="PopUpBody">
+											<a href="#" class="PopUpLink">Личный кабинет</a>
+											<a href="#" class="PopUpLink">Мои заказы</a>
+											<a href="#" class="PopUpLink">Обратная связь</a>
+											<a href="#" class="PopUpExit">Выход</a>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="comparison"><span>2</span></a>
+								<a href="#" class="liked d-inline-flex flex-wrap"><span>12</span></a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="header-middle">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<a href="#" class="header-logo"><img src="img/logo.png" alt=""></a>
+						</div>
+						<div class="col-md-9 header-middle-right d-flex flex-row flex-wrap align-items-center justify-content-between">
+							<div class="list-contacts">
+								<ul>
+									<li>
+										<a href="tel:88003331100">8 (800) 333-11-00</a>
+										<p>Бесплатно по России</p>
+									</li>
+								</ul>
+							</div>
+							<div class="list-contacts">
+								<ul>
+									<li>
+										<a href="tel:+74956496970">8 (495) 649-69-70</a>
+										<p>Москва и МО</p>
+									</li>
+								</ul>
+							</div>
+							<div class="list-contacts d-none d-xl-block">
+								<ul>
+									<li class="work-time">
+										<p>Пн - Пт 09:00 - 19:00,<br>Сб 10:00 - 19:00</p>
+									</li>
+								</ul>
+							</div>
+							<div class="header-button_group d-flex flex-row flex-nowrap justify-content-start align-items-center">
+								<button class="header-button_group-forwCall openModalBTN" data-targetModal="send_message">Заказать <br>звонок</button>
+								<button class="header-button_group-feedback openModalBTN" data-targetModal="request_call">Свяжитесь <br>с нами</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="header-bottom">
+			
+				<svg style="display: none">
+					<filter id="ChangeColorNavigationIcon">
+						<feColorMatrix
+						type = "matrix"
+						values="0     0     0     0     0.2117647058823529
+								0     0     0     0     0.2235294117647059
+								0     0     0     0     0.5450980392156863
+								0     0     0     1     0 "/>
+					</filter>
+				</svg>
+			
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-3 header-navigation_main">
+							<button class="header-navigation">
+								<span class="icon_nav">
+									<span></span>
+									<span></span>
+									<span></span>
+								</span>
+								<span class="text_nav">Каталог товаров</span>
+							</button>
+							<ul class="header-navigation_list">
+								<li class="header-menu-icon-1">
+									<img src="img/header-menu-icon.png" alt="">
+									<a href="#">Системы<br>видеонаблюдения</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-2">
+									<img src="img/header-menu-icon2.png" alt="">
+									<a href="#">Охранные системы</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-3">
+									<img src="img/header-menu-icon3.png" alt="">
+									<a href="#">Автотовары</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-4">
+									<img src="img/header-menu-icon4.png" alt="">
+									<a href="#">Электроника</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-5">
+									<img src="img/header-menu-icon5.png" alt="">
+									<a href="#">Системы Умный дом</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-6">
+									<img src="img/header-menu-icon6.png" alt="">
+									<a href="#">Компьютерное<br>оборудование</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-7">
+									<img src="img/header-menu-icon7.png" alt="">
+									<a href="#">Дом, дача, ремонт</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-8">
+									<img src="img/header-menu-icon8.png" alt="">
+									<a href="#">Источники питания</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-9">
+									<img src="img/header-menu-icon9.png" alt="">
+									<a href="#">Накопители данных</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-10">
+									<img src="img/header-menu-icon10.png" alt="">
+									<a href="#">Расходные материалы</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-11">
+									<img src="img/header-menu-icon11.png" alt="">
+									<a href="#">Спорт и здоровье</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="col-auto header-search">
+							<form>
+								<input type="text" placeholder="Поиск среди 5000 товаров...">
+								<button></button>
+								<div class="header-search-result">
+									<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+										<img src="img/adapter.png" alt="">
+										<span>
+											<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+											<span class="header-search-result_info-articul">Артикул: 54533</span>
+										</span>
+										<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+									</a>
+									<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+										<img src="img/adapter.png" alt="">
+										<span>
+											<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+											<span class="header-search-result_info-articul">Артикул: 54533</span>
+										</span>
+										<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+									</a>
+									<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+										<img src="img/adapter.png" alt="">
+										<span>
+											<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+											<span class="header-search-result_info-articul">Артикул: 54533</span>
+										</span>
+										<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+									</a>
+								</div>
+							</form>
+						</div>
+						<div class="col-auto">
+							<a href="#" class="header-basket d-flex flex-row flex-wrap justify-content-between align-items-center" data-count_basket="12">
+								<span>
+									<span>9 999 999 <i class="proline-icon-rubble"></i></span>
+									<span>Оформить заказ</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+        </header>
+		<!--
+		---------------------
+		шапка - конец
+		---------------------
+		-->
+		<div class="work_area product-card">
+			<div class="container">
+				<div class="breadcrumbs">
+					<a href="#">Главная</a>
+					<a href="#">Каталог товаров</a>
+					<a href="#">Домофоны и системы связи</a>
+					<a href="#">Беспроводные аудио/видеодомофоны</a>
+					<a href="#">Proline PR-RF225BT</a>
+				</div>
+				<div class="main-title">
+					<h1>Беспроводной видеодомофон Proline PR-RF225BT</h1>
+				</div>
+				<div class="proline_product-info">
+					<div class="proline_product-top">
+						<div class="row flex-wrap flex-row">
+							<p class="proline_product-top-text">Артикул: 56796</p>
+							<div class="rating-bar d-flex flex-row flex-wrap align-items-center">
+								<img src="img/rating.png" alt="">
+							</div>
+							<p class="proline_product-top-text">55 отзывов</p>
+							
+							<div class="HasPopUp proline_liked-popup d-flex flex-wrap align-items-center flex-row">
+								<button></button>
+								<div class="PopUpMain bottom">
+									<div class="PopUpBody">
+										<a href="#" class="PopUpLink">Убрать из избранного</a>
+										<a href="#" class="PopUpLink">Просмотр списка</a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="HasPopUp proline_comparison-popup d-flex flex-wrap align-items-center flex-row">
+								<button></button>
+								<div class="PopUpMain bottom">
+									<div class="PopUpBody">
+										<button class="btn openModalBTN" data-targetmodal="user-auth">Войти на сайт</button>
+										<button class="btn btn-gb openModalBTN" data-targetmodal="user-register">Зарегистрироваться</button>
+									</div>
+								</div>
+							</div>
+							
+							<div class="HasPopUp proline_share-popup d-flex flex-wrap align-items-center flex-row">
+								<button></button>
+								<div class="PopUpMain bottom">
+									<div class="PopUpBody">
+										<div class="socials-links justify-content-center">
+											<p>Чтобы поделиться ссылкой с друзьями, нужно нажать на иконку соцсети</p>
+											<ul class="justify-content-end">
+												<li><a href="#" class="vk"></a></li>
+												<li><a href="#" class="twitter"></a></li>
+												<li><a href="#" class="facebook"></a></li>
+												<li><a href="#" class="ok"></a></li>
+												<li><a href="#" class="instag"></a></li>
+												<li><a href="#" class="youtube"></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="proline_product-middle">
+						<div class="row">
+							<div class="col-lg-1 d-flex flex-row justify-content-start align-items-start">
+								<div class="product-image-slider">
+									<div class="product-slide">
+										<div class="product-slide-image" style="background-image: url(img/memory.jpg)"></div>
+									</div>
+									<div class="product-slide">
+										<div class="product-slide-image" style="background-image: url(img/product.png)"></div>
+									</div>
+									<div class="product-slide">
+										<div class="product-slide-image" style="background-image: url(img/memory.jpg)"></div>
+									</div>
+									<div class="product-slide">
+										<div class="product-slide-image" style="background-image: url(img/product.png)"></div>
+									</div>
+									<div class="product-slide">
+										<div class="product-slide-image" style="background-image: url(img/memory.jpg)"></div>
+									</div>
+									<div class="product-slide">
+										<div class="product-slide-image" style="background-image: url(img/product.png)"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-5 proline_product-image-container">
+								<div class="proline_product-image" style="background-image: url(img/product.png)">
+									<div class="proline_product-lable-group">
+										<div class="proline_product-lable-once new">new</div>
+										<div class="proline_product-lable-once recommend"></div>
+										<div class="proline_product-lable-once hit"></div>
+										<div class="proline_product-lable-once gift"></div>
+									</div>
+									<div class="proline_product-lable-stock"><p>Акция</p></div>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="list-info">
+									<ul>
+										<li>Монитор: <span>2.4" LCD</span></li>
+										<li>Рабочая частота: <span>2.4 ГГц</span></li>
+										<li>Рабочая частота: <span>до 150 м</span></li>
+										<li>Питание: <span>3.7В 1400мА/ч</span></li>
+										<li>Автономная работа трубки: <span>до 70 часов</span></li>
+									</ul>
+								</div>
+								<button class="proline_product-link">Все характеристики</button>
+								<div class="list-info_delivery">
+									<ul>
+										<li class="addres"><button class="openModalBTN" data-targetmodal="proline_product_delivery_info"><b><span>Доставка по Москве и МО</span><br>бесплатно /</b> другие варианты от 1 дня</button></li>
+										<li class="delivery"><button class="openModalBTN" data-targetmodal="proline_product_delivery_info"><b><span>Доставка по России</span><br></b>осуществляется курьером от 2 дней</button></li>
+										<li class="cart"><button class="openModalBTN" data-targetmodal="proline_product_delivery_info"><b><span>Забрать самому</span><br>сегодня </b>или позже</button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="proline_product-prices d-flex flex-row flex-wrap justify-content-start align-items-end">
+									<p class="proline_product_price-now">9 100 </p>
+									<p class="proline_product_price-old">10 000 </p>
+									<p class="proline_product_price-availability">Есть в наличии</p>
+								</div>
+								<div class="proline_product-change_color">
+									<p>Выберите цвет</p>
+									<label><input type="radio" name="change-color-product" checked="true"><span style="background-color: #ffb72f;"></span></label>
+									<label><input type="radio" name="change-color-product"><span style="background-color: #f85229;"></span></label>
+									<label><input type="radio" name="change-color-product"><span style="background-color: #54ca7b;"></span></label>
+									<label><input type="radio" name="change-color-product"><span style="background-color: #1d1f57;"></span></label>
+									<label><input type="radio" name="change-color-product"><span style="background-color: #000000;"></span></label>
+								</div>
+								<div class="proline_product-button-group d-flex flex-row flex-wrap justify-content-between align-items-center">
+									<button class="btn to-cart d-flex justify-content-center align-items-center openModalBTN" data-targetmodal="proline_product_buy_one_click">Добавить в корзину</button>
+									<button class="btn btn-gb openModalBTN" data-targetmodal="proline_product_buy_one_click">Быстрый заказ</button>
+									<button class="btn btn-gb">Купить оптом</button>
+								</div>
+								<div class="proline_product-right-side_bonus-text d-flex flex-row flex-wrap justify-content-start align-items-center">
+									<span>1000 бонусов на карту</span>
+									<i class="info">
+										?
+										<div class="info__popup">
+											<p>
+												Начисление Бонусных рублей произойдёт 
+												после доставки или получения заказа в 
+												магазине. Сумма Бонусных рублей 
+												определяется в соответствии с правилами 
+												программы «Пролайн-Бонус».
+											</p>
+										</div>
+									</i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="proline_product-check">
+						<p class="proline_product-title">Проверь свое устройство на оригинальность</p>
+						<div class="proline_product-input_group d-flex flex-row flex-wrap justify-content-between align-items-center">
+							<input type="text" placeholder="XXXX">
+							<input type="text" placeholder="XXXX">
+							<input type="text" placeholder="XXXX">
+							<input type="text" placeholder="XXXX">
+							<button class="btn">Проверить</button>
+						</div>
+						<p class="proline_product-info">Сотрите защитный слой с наклейки на коробке и введите цифры в соответствующие поля в формате 5-5-4-4 (XXXXX-XXXXX-XXXX-XXXX).</p>
+						<p class="proline_product-info-desc">Внимание! Несколько последних поставок имеют защитный код в неверном формате (5-4-5-4 вместо 5-5-4-4). Пожалуйста, исправьте расположение цифр так, чтобы получился формат: 5-5-4-4.</p>
+					</div>
+					<div class="popular_products new-products">
+						<div class="title d-flex flex-row flex-wrap justify-content-between align-items-end">
+							<h2>Сделайте свою покупку лучше</h2>
+							<a href="#">Показать все</a>
+						</div> 
+						<div class="slider slider-proline" data-dotsSet="0" data-arrowNav="1" data-count_def="6" data-xl_count="5" data-lg_count="3" data-md_count="2" data-sm_count="1" data-dotsOnMobile="1">
+							<div class="col-md-3">
+								<div class="product-item product-item-small">
+									<div class="img-box">
+										<img src="img/cam.jpg" alt="">
+									</div>
+									<div class="info-box">
+										<div class="product-title">Proline PR-117B</div>
+										<span>Муляж уличной видеокамеры</span>
+										<div class="price">39 990</div>
+									</div>
+									<div class="buy">
+										<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+											<img src="img/cart-white.svg" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="product-item product-item-small">
+									<div class="img-box">
+										<img src="img/cam.jpg" alt="">
+									</div>
+									<div class="info-box">
+										<div class="product-title">Proline PR-117B</div>
+										<span>Муляж уличной видеокамеры</span>
+										<div class="price">39 990</div>
+									</div>
+									<div class="buy">
+										<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+											<img src="img/cart-white.svg" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="product-item product-item-small">
+									<div class="img-box">
+										<img src="img/cam.jpg" alt="">
+									</div>
+									<div class="info-box">
+										<div class="product-title">Proline PR-117B</div>
+										<span>Муляж уличной видеокамеры</span>
+										<div class="price">39 990</div>
+									</div>
+									<div class="buy">
+										<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+											<img src="img/cart-white.svg" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="product-item product-item-small">
+									<div class="img-box">
+										<img src="img/cam.jpg" alt="">
+									</div>
+									<div class="info-box">
+										<div class="product-title">Proline PR-117B</div>
+										<span>Муляж уличной видеокамеры</span>
+										<div class="price">39 990</div>
+									</div>
+									<div class="buy">
+										<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+											<img src="img/cart-white.svg" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="product-item product-item-small">
+									<div class="img-box">
+										<img src="img/cam.jpg" alt="">
+									</div>
+									<div class="info-box">
+										<div class="product-title">Proline PR-117B</div>
+										<span>Муляж уличной видеокамеры</span>
+										<div class="price">39 990</div>
+									</div>
+									<div class="buy">
+										<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+											<img src="img/cart-white.svg" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="product-item product-item-small">
+									<div class="img-box">
+										<img src="img/cam.jpg" alt="">
+									</div>
+									<div class="info-box">
+										<div class="product-title">Proline PR-117B</div>
+										<span>Муляж уличной видеокамеры</span>
+										<div class="price">39 990</div>
+									</div>
+									<div class="buy">
+										<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+											<img src="img/cart-white.svg" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="product-item product-item-small">
+									<div class="img-box">
+										<img src="img/cam.jpg" alt="">
+									</div>
+									<div class="info-box">
+										<div class="product-title">Proline PR-117B</div>
+										<span>Муляж уличной видеокамеры</span>
+										<div class="price">39 990</div>
+									</div>
+									<div class="buy">
+										<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+											<img src="img/cart-white.svg" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="product-item product-item-small">
+									<div class="img-box">
+										<img src="img/cam.jpg" alt="">
+									</div>
+									<div class="info-box">
+										<div class="product-title">Proline PR-117B</div>
+										<span>Муляж уличной видеокамеры</span>
+										<div class="price">39 990</div>
+									</div>
+									<div class="buy">
+										<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+											<img src="img/cart-white.svg" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Табы-->
+					<div class="proline_tabs" id="proline_product-tabs_info">
+						<ul class="proline_tab-nav">
+							<li class="product_description active" data-parentBlock="proline_product-tabs_info" data-tabId="tab-product_description">Описание товара</li>
+							<li class="characteristics" data-parentBlock="proline_product-tabs_info" data-tabId="tab-characteristics">Характеристики</li>
+							<li class="downloads" data-parentBlock="proline_product-tabs_info" data-tabId="tab-downloads">Загрузки<span>8</span></li>
+							<li class="accessories" data-parentBlock="proline_product-tabs_info" data-tabId="tab-accessories">Аксессуары</li>
+							<li class="reviews" data-parentBlock="proline_product-tabs_info" data-tabId="tab-reviews">Отзывы<span>12</span></li>
+							<li class="similar_goods" data-parentBlock="proline_product-tabs_info" data-tabId="tab-similar_goods">Похожие товары</li>
+							<li class="articles_and_reviews" data-parentBlock="proline_product-tabs_info" data-tabId="tab-articles_and_reviews">Статьи и обзоры</li>
+						</ul>
+						<div class="proline_tabs-container">
+							<div class="proline_tab" id="tab-product_description">
+								<p>В линейке видеодомофонов Proline уникальное пополнение – новый радиоканальный видеодомофон Proline PR-RF225BT, который уже поступил в продажу! Стильный, яркий и комфортный, видеодомофон Proline перевернет Ваше представление о домофонах! </p>
+								<p>Видеодомофон Proline PR-RF225BT позволяет видеть посетителя, разговаривать с ним и открывать дверь в любое время и в любом месте, не отвлекаясь от ежедневных обязанностей – из кухни, ванной комнаты или не вставая с кровати!</p>
+								<p>Компактный беспроводный видеодомофон Proline PR-RF225BT состоит из двух основных элементов:</p>
+								<p>Телефонной трубки со встроенным 2.4" LCD монитором, включающий в себя микрофон для общения с посетителями, динамик, антенну, кнопки управления и цветной дисплей, с помощью которого можно просматривать изображение с вызывной панели или фото, сохраненные во внутреннюю память. Монитор работает от аккумулятора и обладает миниатюрными размерами, поэтому его можно без проблем носить с собой. Кроме того, он комплектуется удобной подставкой/зарядным устройством, благодаря которому можно размещать на горизонтальных поверхностях и удобно заряжать трубку. </p>
+								<img src="img/product/product-desc-1.png" alt="">
+								<p>Вызывная панель, которая имеет встроенную фотокамеру и кнопку звонка. Вызывная панель устанавливается рядом с входной дверью и имеет функцию автоматического 
+создания фото, при нажатии кнопки звонка на вызывной панели. Фотографии сохраняются на внутреннюю память в переносной трубке. Максимальное количество 
+фотографий 10 штук. Питание вызывной панели осуществляется от электросети 220В. На случай перебоев электропитания вызывная панель имеет встроенную 
+аккумуляторную батарею, которая позволит сохранить работоспособность домофона.</p>
+								<p>Беспроводной видеодомофон имеет функцию открытия двери с электромагнитным или электромеханическим замком. Открытие замка происходит нажатием кнопки на переносной трубке. </p>
+								<img src="img/product/product-desc-2.png" alt="">
+								<img src="img/product/product-desc-3.png" alt="">
+								<p>P1: +5В плюс с блока питания;<br>
+P2: - 5В минус с блока питания;<br>
+P3: Нормально-замкнутое реле (эл. магнитный замок);<br>
+P4: Земля;<br>
+P5: Нормально-разомкнутое реле (эл. механический замок).</p>
+								<h4>Особенности видеодомофона Proline PR-RF225BT:</h4>
+								<ul>
+									<li>Беспроводная радиоканальная связь на частоте 2,4 ГГц между трубкой и вызывной панелью. Расстояние от вызывной панели до трубки может составлять до 150 
+метров. Это удобство и свобода пользования трубкой. В пределах радиуса действия можно свободно перемещаться с трубкой не отвлекаясь от своих дел. Беспроводная 
+связь существенно экономит на монтаже видеодомофона. Установка довольно проста и не нужно прокладывать провода, особенно когда уже сделан ремонт в 
+помещении.</li>
+									<li>Небольшие размеры переносной трубки. Переносная трубка имеет встроенный дисплей 2,4" и встроенный аккумулятор. На корпусе трубки имеются кнопки для ответа на 
+звонок, вызова и настройки работы. Благодаря таким характеристикам, Вы сможете спокойно перемещаться по дому или офису и всегда будете знать, если кто-то 
+звонит в вашу дверь.</li>
+									<li>Функция оповещения в случаях вандализма или порчи вызывной панели. При попытке повредить корпус вызывной панели, она подаст сигнал тревоги и одновременно 
+передаст сигнал на переносную трубку, которая в свою очередь оповестит Вас об акте вандализма звуковым сигналом.</li>
+								</ul>
+							</div>
+							<div class="proline_tab" id="tab-characteristics">
+								<div class="row">
+									<div class="col-lg-9">
+										<div class="proline_product-characteristics">
+											<p class="proline_product-characteristics_title">Внутренний дисплей</p>
+											<ul class="proline_product-characteristics_list">
+												<li>
+													<span class="align-items-center"><span>Источник питания</span>
+														<i class="info">
+															?
+															<div class="info__popup">
+																<p>
+																	Начисление Бонусных рублей произойдёт 
+																	после доставки или получения заказа в 
+																	магазине. Сумма Бонусных рублей 
+																	определяется в соответствии с правилами 
+																	программы «Пролайн-Бонус».
+																</p>
+															</div>
+														</i>
+													</span>
+													<span>Внешний блок питания</span>
+												</li>
+												<li>
+													<span>Тип блока питания</span>
+													<span>Литий-ионный</span>
+												</li>
+												<li>
+													<span>Ток в режиме ожидания</span>
+													<span>Ток в режиме ожидания</span>
+												</li>
+												<li>
+													<span>Источник питания</span>
+													<span>Внешний блок питания</span>
+												</li>
+												<li>
+													<span>Тип блока питания</span>
+													<span>Литий-ионный</span>
+												</li>
+												<li>
+													<span>Ток в режиме ожидания</span>
+													<span>Ток в режиме ожидания</span>
+												</li>
+												<li>
+													<span>Источник питания</span>
+													<span>Внешний блок питания</span>
+												</li>
+												<li>
+													<span>Тип блока питания</span>
+													<span>Литий-ионный</span>
+												</li>
+												<li>
+													<span>Ток в режиме ожидания</span>
+													<span>Ток в режиме ожидания</span>
+												</li>
+											</ul>
+											<p class="proline_product-characteristics_title">Внутренний дисплей</p>
+											<ul class="proline_product-characteristics_list">
+												<li>
+													<span class="align-items-center"><span>Источник питания</span>
+														<i class="info">
+															?
+															<div class="info__popup">
+																<p>
+																	Начисление Бонусных рублей произойдёт 
+																	после доставки или получения заказа в 
+																	магазине. Сумма Бонусных рублей 
+																	определяется в соответствии с правилами 
+																	программы «Пролайн-Бонус».
+																</p>
+															</div>
+														</i>
+													</span>
+													<span>Внешний блок питания</span>
+												</li>
+												<li>
+													<span>Тип блока питания</span>
+													<span>Литий-ионный</span>
+												</li>
+												<li>
+													<span>Ток в режиме ожидания</span>
+													<span>Ток в режиме ожидания</span>
+												</li>
+												<li>
+													<span>Источник питания</span>
+													<span>Внешний блок питания</span>
+												</li>
+												<li>
+													<span>Тип блока питания</span>
+													<span>Литий-ионный</span>
+												</li>
+												<li>
+													<span>Ток в режиме ожидания</span>
+													<span>Ток в режиме ожидания</span>
+												</li>
+												<li>
+													<span>Источник питания</span>
+													<span>Внешний блок питания</span>
+												</li>
+												<li>
+													<span>Тип блока питания</span>
+													<span>Литий-ионный</span>
+												</li>
+												<li>
+													<span>Ток в режиме ожидания</span>
+													<span>Ток в режиме ожидания</span>
+												</li>
+											</ul>
+											<p class="proline_product-characteristics_title">Внутренний дисплей</p>
+											<ul class="proline_product-characteristics_list">
+												<li class="align-items-center">
+													<span class="align-items-center"><span>Источник питания</span>
+														<i class="info">
+															?
+															<div class="info__popup">
+																<p>
+																	Начисление Бонусных рублей произойдёт 
+																	после доставки или получения заказа в 
+																	магазине. Сумма Бонусных рублей 
+																	определяется в соответствии с правилами 
+																	программы «Пролайн-Бонус».
+																</p>
+															</div>
+														</i>
+													</span>
+													<span>Внешний блок питания</span>
+												</li>
+												<li>
+													<span>Тип блока питания</span>
+													<span>Литий-ионный</span>
+												</li>
+												<li>
+													<span>Ток в режиме ожидания</span>
+													<span>Ток в режиме ожидания</span>
+												</li>
+												<li>
+													<span>Источник питания</span>
+													<span>Внешний блок питания</span>
+												</li>
+												<li>
+													<span>Тип блока питания</span>
+													<span>Литий-ионный</span>
+												</li>
+												<li>
+													<span>Ток в режиме ожидания</span>
+													<span>Ток в режиме ожидания</span>
+												</li>
+												<li>
+													<span>Источник питания</span>
+													<span>Внешний блок питания</span>
+												</li>
+												<li>
+													<span>Тип блока питания</span>
+													<span>Литий-ионный</span>
+												</li>
+												<li>
+													<span>Ток в режиме ожидания</span>
+													<span>Ток в режиме ожидания</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-lg-3">
+										<div class="proline_product-documents colDocuments">
+											<p>Инструкции и сертификаты</p>
+											<ul>
+												<li>
+													<a href="#">
+														<img src="img/svg_icons/documents/pdf.svg" alt="">
+														<span>
+															<span class="proline_product-document_name">Инструкция на русском языке.pdf</span>
+															<span class="proline_product-document_fsize">(20 мб)</span>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="img/svg_icons/documents/pdf.svg" alt="">
+														<span>
+															<span class="proline_product-document_name">Скачать сертификат соответствия.pdf</span>
+															<span class="proline_product-document_fsize">(7.7 мб)</span>
+														</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="proline_tab" id="tab-downloads">
+								<div class="row">
+									<div class="col-lg-8">
+										<div class="proline_product-documents">
+											<p>Инструкции и сертификаты</p>
+											<ul>
+												<li>
+													<a href="#">
+														<img src="img/svg_icons/documents/pdf.svg" alt="">
+														<span>
+															<span class="proline_product-document_name">Инструкция на русском языке.pdf</span>
+															<span class="proline_product-document_fsize">(20 мб)</span>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="img/svg_icons/documents/apk.svg" alt="">
+														<span>
+															<span class="proline_product-document_name">ПО для Android.apk</span>
+															<span class="proline_product-document_fsize">(15 мб)</span>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="img/svg_icons/documents/exe.svg" alt="">
+														<span>
+															<span class="proline_product-document_name">ПО для ПК .exe</span>
+															<span class="proline_product-document_fsize">(10 мб)</span>
+														</span>
+													</a>
+												</li>
+												
+												<li>
+													<a href="#">
+														<img src="img/svg_icons/documents/pdf.svg" alt="">
+														<span>
+															<span class="proline_product-document_name">Скачать сертификат соответствия.pdf</span>
+															<span class="proline_product-document_fsize">(7.7 мб)</span>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="img/svg_icons/documents/exe.svg" alt="">
+														<span>
+															<span class="proline_product-document_name">Веб-сервер для просмотра.exe</span>
+															<span class="proline_product-document_fsize">(30 мб)</span>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="img/svg_icons/documents/zip.svg" alt="">
+														<span>
+															<span class="proline_product-document_name">Архив.zip</span>
+															<span class="proline_product-document_fsize">(1 мб)</span>
+														</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="proline_tab" id="tab-accessories">
+								<div class="row">
+									<div class="col-md-3">
+										<div href="#" class="product-item">
+											<div class="img-box">
+												<img src="img/cam.jpg" alt="">
+											</div>
+											<div class="info-box">
+												<div class="product-title">Proline PR-117B1234908785645PR123</div>
+												<span>Муляж уличной видеокамеры</span>
+												<div class="acticle">Актикул: 56409</div>
+												<div class="prices">
+													<div class="price">999 999</div>
+												</div>
+											</div>
+											<div class="buy">
+												<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+													<img src="img/cart-white.svg" alt="">
+												</a>
+												<a href="#" class="key" tabindex="0">
+													<img src="img/comparison-gray.svg" alt="">
+												</a>
+												<a href="#" class="key js-liked-popup" tabindex="0">
+													<img src="img/liked-gray.svg" alt="">
+													<div class="liked-popup">
+													<ul>
+														<li>Добавить в избранное</li>
+														<li>Просмотр списка</li>
+													</ul>
+													</div>
+												</a>
+											</div>
+										</div>
+                                    </div>
+									<div class="col-md-3">
+										<div href="#" class="product-item">
+											<div class="img-box">
+												<img src="img/cam.jpg" alt="">
+											</div>
+											<div class="info-box">
+												<div class="product-title">Proline PR-117B1234908785645PR123</div>
+												<span>Муляж уличной видеокамеры</span>
+												<div class="acticle">Актикул: 56409</div>
+												<div class="prices">
+													<div class="price">999 999</div>
+												</div>
+											</div>
+											<div class="buy">
+												<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+													<img src="img/cart-white.svg" alt="">
+												</a>
+												<a href="#" class="key" tabindex="0">
+													<img src="img/comparison-gray.svg" alt="">
+												</a>
+												<a href="#" class="key js-liked-popup" tabindex="0">
+													<img src="img/liked-gray.svg" alt="">
+													<div class="liked-popup">
+													<ul>
+														<li>Добавить в избранное</li>
+														<li>Просмотр списка</li>
+													</ul>
+													</div>
+												</a>
+											</div>
+										</div>
+                                    </div>
+									<div class="col-md-3">
+										<div href="#" class="product-item">
+											<div class="img-box">
+												<img src="img/cam.jpg" alt="">
+											</div>
+											<div class="info-box">
+												<div class="product-title">Proline PR-117B1234908785645PR123</div>
+												<span>Муляж уличной видеокамеры</span>
+												<div class="acticle">Актикул: 56409</div>
+												<div class="prices">
+													<div class="price">999 999</div>
+												</div>
+											</div>
+											<div class="buy">
+												<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+													<img src="img/cart-white.svg" alt="">
+												</a>
+												<a href="#" class="key" tabindex="0">
+													<img src="img/comparison-gray.svg" alt="">
+												</a>
+												<a href="#" class="key js-liked-popup" tabindex="0">
+													<img src="img/liked-gray.svg" alt="">
+													<div class="liked-popup">
+													<ul>
+														<li>Добавить в избранное</li>
+														<li>Просмотр списка</li>
+													</ul>
+													</div>
+												</a>
+											</div>
+										</div>
+                                    </div>
+									<div class="col-md-3">
+										<div href="#" class="product-item">
+											<div class="img-box">
+												<img src="img/cam.jpg" alt="">
+											</div>
+											<div class="info-box">
+												<div class="product-title">Proline PR-117B1234908785645PR123</div>
+												<span>Муляж уличной видеокамеры</span>
+												<div class="acticle">Актикул: 56409</div>
+												<div class="prices">
+													<div class="price">999 999</div>
+												</div>
+											</div>
+											<div class="buy">
+												<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+													<img src="img/cart-white.svg" alt="">
+												</a>
+												<a href="#" class="key" tabindex="0">
+													<img src="img/comparison-gray.svg" alt="">
+												</a>
+												<a href="#" class="key js-liked-popup" tabindex="0">
+													<img src="img/liked-gray.svg" alt="">
+													<div class="liked-popup">
+													<ul>
+														<li>Добавить в избранное</li>
+														<li>Просмотр списка</li>
+													</ul>
+													</div>
+												</a>
+											</div>
+										</div>
+                                    </div>
+									<div class="col-md-3">
+										<div href="#" class="product-item">
+											<div class="img-box">
+												<img src="img/cam.jpg" alt="">
+											</div>
+											<div class="info-box">
+												<div class="product-title">Proline PR-117B1234908785645PR123</div>
+												<span>Муляж уличной видеокамеры</span>
+												<div class="acticle">Актикул: 56409</div>
+												<div class="prices">
+													<div class="price">999 999</div>
+												</div>
+											</div>
+											<div class="buy">
+												<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+													<img src="img/cart-white.svg" alt="">
+												</a>
+												<a href="#" class="key" tabindex="0">
+													<img src="img/comparison-gray.svg" alt="">
+												</a>
+												<a href="#" class="key js-liked-popup" tabindex="0">
+													<img src="img/liked-gray.svg" alt="">
+													<div class="liked-popup">
+													<ul>
+														<li>Добавить в избранное</li>
+														<li>Просмотр списка</li>
+													</ul>
+													</div>
+												</a>
+											</div>
+										</div>
+                                    </div>
+								</div>
+							</div>
+							<div class="proline_tab" id="tab-reviews">
+								<div class="reviews_product-top d-flex flex-row justify-content-between align-items-center flex-wrap">
+									<div class="rating-bar d-flex flex-row flex-wrap align-items-center">
+										<img src="img/rating.png" alt=""><span>3.0</span><p>на основе 55 оценок.</p>
+									</div>
+									<button class="btn openModalBTN" data-targetmodal="reviews_add">Написать отзыв</button>
+								</div>
+							
+								<div class="d-flex flex-row flex-wrap justify-content-between align-items-center reviews_product-title">
+									<p>Всего 55 отзывов</p>
+									<div class="sorting__select">
+										<select>
+											<option>Сортировать по популярности</option>
+											<option>Сортировать по популярности</option>
+											<option>Сортировать по популярности</option>
+										</select>
+									</div>
+								</div>
+								
+								<div class="product_review">
+									<div class="row">
+										<div class="col-lg-3">
+											<div class="product_review-left">
+												<div class="rating-bar d-flex flex-row flex-wrap align-items-center">
+													<img src="img/rating.png" alt=""><span>3.0</span>
+												</div>
+												<p class="product_review-user_name">Аноним</p>
+												<p class="product_review-date_post">06 июля 2016, 13:47</p>
+											</div>
+										</div>
+										<div class="col-lg-9">
+											<div class="product_review-right">
+												<p>
+													<b>Плюсы</b>
+													<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
+													<br><br>
+													<b>Минусы</b>
+													<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+													<br><br>
+													<b>Отзыв</b>
+													<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </span>
+												</p>
+												<div class="product_review-right_bottom">
+													<div class="product_review-liked-group justify-content-start">
+														<p>Отзыв полезен?</p>
+														<button class="review-like active">Да</button>
+														<button class="review-dislike">Нет</button>
+													</div>
+													<p><b>447 человек</b> считают этот отзыв полезным</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product_review">
+									<div class="row">
+										<div class="col-lg-3">
+											<div class="product_review-left">
+												<div class="rating-bar d-flex flex-row flex-wrap align-items-center">
+													<img src="img/rating.png" alt=""><span>3.0</span>
+												</div>
+												<p class="product_review-user_name">Аноним</p>
+												<p class="product_review-date_post">06 июля 2016, 13:47</p>
+											</div>
+										</div>
+										<div class="col-lg-9">
+											<div class="product_review-right">
+												<p>
+													<b>Плюсы</b>
+													<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
+													<br><br>
+													<b>Минусы</b>
+													<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+													<br><br>
+													<b>Отзыв</b>
+													<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </span>
+												</p>
+												<div class="product_review-right_bottom">
+													<div class="product_review-liked-group justify-content-start">
+														<p>Отзыв полезен?</p>
+														<button class="review-like">Да</button>
+														<button class="review-dislike active">Нет</button>
+													</div>
+													<p><b>447 человек</b> считают этот отзыв полезным</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="product_review">
+									<div class="row">
+										<div class="col-lg-3">
+											<div class="product_review-left">
+												<div class="rating-bar d-flex flex-row flex-wrap align-items-center">
+													<img src="img/rating.png" alt=""><span>3.0</span>
+												</div>
+												<p class="product_review-user_name">Аноним</p>
+												<p class="product_review-date_post">06 июля 2016, 13:47</p>
+											</div>
+										</div>
+										<div class="col-lg-9">
+											<div class="product_review-right">
+												<p>
+													<b>Плюсы</b>
+													<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
+													<br><br>
+													<b>Минусы</b>
+													<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+													<br><br>
+													<b>Отзыв</b>
+													<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </span>
+												</p>
+												<div class="product_review-right_bottom">
+													<div class="product_review-liked-group justify-content-start">
+														<p>Отзыв полезен?</p>
+														<button class="review-like">Да</button>
+														<button class="review-dislike">Нет</button>
+													</div>
+													<p><b>447 человек</b> считают этот отзыв полезным</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pagination">
+									<a href="#" class="prev"></a>
+									<div class="pagination__pages">
+										<a href="#">22</a>
+										<a href="#" class="active">23</a>
+										<a href="#">24</a>
+										<a href="#">25</a>
+										<a href="#">26</a>
+										<a href="#">...</a>
+										<a href="#">60</a>
+									</div>
+									<a href="#" class="next"></a>
+								</div>
+							</div>
+							<div class="proline_tab" id="tab-similar_goods">
+								<div class="popular_products new-products">
+									<div class="title d-flex flex-row flex-wrap justify-content-between align-items-center">
+										<h2>Товары из данной категории</h2>
+										<a href="#">Показать все</a>
+									</div> 
+									<div class="slider slider-proline" data-dotsSet="0" data-arrowNav="1" data-count_def="4" data-xl_count="3" data-lg_count="2" data-md_count="1" data-sm_count="1" data-dotsOnMobile="1">
+										<div class="col-md-3">
+											<div class="product-item">
+												<div class="event-box">
+													<div class="btn-event new">NEW</div>
+													<div class="btn-event md">уценка </div>
+													<div class="btn-event stock"></div>
+													<div class="btn-event hit">Хит</div>
+													<div class="btn-event gift"></div>
+												</div>
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="product-item">
+												<div class="event-box">
+													<div class="btn-event new">NEW</div>
+													<div class="btn-event md">уценка </div>
+													<div class="btn-event stock"></div>
+													<div class="btn-event hit">Хит</div>
+													<div class="btn-event gift"></div>
+												</div>
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="product-item">
+												<div class="event-box">
+													<div class="btn-event new">NEW</div>
+													<div class="btn-event md">уценка </div>
+													<div class="btn-event stock"></div>
+													<div class="btn-event hit">Хит</div>
+													<div class="btn-event gift"></div>
+												</div>
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="product-item">
+												<div class="event-box">
+													<div class="btn-event new">NEW</div>
+													<div class="btn-event md">уценка </div>
+													<div class="btn-event stock"></div>
+													<div class="btn-event hit">Хит</div>
+													<div class="btn-event gift"></div>
+												</div>
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="product-item">
+												<div class="event-box">
+													<div class="btn-event new">NEW</div>
+													<div class="btn-event md">уценка </div>
+													<div class="btn-event stock"></div>
+													<div class="btn-event hit">Хит</div>
+													<div class="btn-event gift"></div>
+												</div>
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="popular_products new-products">
+									<div class="title d-flex flex-row flex-wrap justify-content-between align-items-center">
+										<h2>Специально для вас</h2>
+										<a href="#">Показать все</a>
+									</div> 
+									<div class="slider slider-proline" data-dotsSet="0" data-arrowNav="1" data-count_def="4" data-xl_count="3" data-lg_count="2" data-md_count="1" data-sm_count="1" data-dotsOnMobile="1">
+										<div class="col-md-3">
+											<div class="product-item">
+												<div class="event-box">
+													<div class="btn-event new">NEW</div>
+													<div class="btn-event md">уценка </div>
+													<div class="btn-event stock"></div>
+													<div class="btn-event hit">Хит</div>
+													<div class="btn-event gift"></div>
+												</div>
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="product-item">
+												<div class="event-box">
+													<div class="btn-event new">NEW</div>
+													<div class="btn-event md">уценка </div>
+													<div class="btn-event stock"></div>
+													<div class="btn-event hit">Хит</div>
+													<div class="btn-event gift"></div>
+												</div>
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="product-item">
+												<div class="event-box">
+													<div class="btn-event new">NEW</div>
+													<div class="btn-event md">уценка </div>
+													<div class="btn-event stock"></div>
+													<div class="btn-event hit">Хит</div>
+													<div class="btn-event gift"></div>
+												</div>
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="product-item">
+												<div class="event-box">
+													<div class="btn-event new">NEW</div>
+													<div class="btn-event md">уценка </div>
+													<div class="btn-event stock"></div>
+													<div class="btn-event hit">Хит</div>
+													<div class="btn-event gift"></div>
+												</div>
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="product-item">
+												<div class="event-box">
+													<div class="btn-event new">NEW</div>
+													<div class="btn-event md">уценка </div>
+													<div class="btn-event stock"></div>
+													<div class="btn-event hit">Хит</div>
+													<div class="btn-event gift"></div>
+												</div>
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="proline_tab" id="tab-articles_and_reviews">
+								<p>
+С другой стороны начало повседневной работы по формированию позиции способствует подготовки и реализации существенных финансовых и административных условий. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке новых предложений.
+<br><br>
+Товарищи! новая модель организационной деятельности в значительной степени обуславливает создание направлений прогрессивного развития. Задача организации, в особенности же новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий.
+<br><br>
+Равным образом новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание форм развития. Таким образом консультация с широким активом влечет за собой процесс внедрения и модернизации форм развития. С другой стороны сложившаяся структура организации в значительной степени обуславливает создание модели развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание систем массового участия.
+<br><br>
+Товарищи! сложившаяся структура организации влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. С другой стороны рамки и место обучения кадров в значительной степени обуславливает создание систем массового участия.
+<br><br>
+Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности способствует подготовки и реализации дальнейших направлений развития. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров позволяет оценить значение новых предложений. Не следует, однако забывать, что рамки и место обучения кадров требуют от нас анализа новых предложений. Задача организации, в особенности же новая модель организационной деятельности требуют от нас анализа направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности способствует подготовки и реализации направлений прогрессивного развития.
+<br><br>
+С другой стороны сложившаяся структура организации позволяет выполнять важные задания по разработке новых предложений. Повседневная практика показывает, что сложившаяся структура организации позволяет выполнять важные задания по разработке систем массового участия. Повседневная практика показывает, что реализация намеченных плановых заданий способствует подготовки и реализации новых предложений. Товарищи! начало повседневной работы по формированию позиции позволяет оценить значение систем массового участия. Задача организации, в особенности же укрепление и развитие структуры требуют от нас анализа дальнейших направлений развития. Товарищи! постоянный количественный рост и сфера нашей активности позволяет оценить значение новых предложений.
+<br><br>
+Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки существенных финансовых и административных условий. Разнообразный и богатый опыт реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации новых предложений. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности требуют от нас анализа модели развития.
+<br><br>
+Повседневная практика показывает, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Равным образом новая модель организационной деятельности играет важную роль в формировании направлений прогрессивного развития.
+<br><br>
+Задача организации, в особенности же постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации форм развития. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения существенных финансовых и административных условий.
+<br><br>
+Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке модели развития. Задача организации, в особенности же реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. Повседневная практика показывает, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Товарищи! рамки и место обучения кадров позволяет оценить значение систем массового участия.
+								</p>
+							</div>
+						</div>
+					</div>
+					<!---->
+					<div class="proline_product_advantages d-flex flex-row flex-nowrap justify-content-between align-items-stretch">
+						<button class="proline_product-ten_year openModalBTN" data-targetmodal="proline_product-ten_year">
+							<span>Компании боле<br>10 лет</span>
+						</button>
+						<button class="proline_product-delivery_all openModalBTN" data-targetmodal="proline_product-delivery_all">
+							<span>Доставка по всей<br>России</span>
+						</button>
+						<button class="proline_product-teh_pod openModalBTN" data-targetmodal="proline_product-teh_pod">
+							<span>Техническая<br>поддержка</span>
+						</button>
+						<button class="proline_product-ru_soft openModalBTN" data-targetmodal="proline_product-ru_soft">
+							<span>Русифицированное<br>ПО</span>
+						</button>
+						<button class="proline_product-many_product openModalBTN" data-targetmodal="proline_product-many_product">
+							<span>Более 100 000 товаров</span>
+						</button>
+					</div>
+					<p class="public_offer">
+						Информируем Вас о том, что размещенная информация на нашем интернет-магазине содержит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ст. 435 и ст. 437 Гражданского Кодекса РФ. Администратор сайта и сайт – не используют отображаемые на данном интернет-магазине товарные знаки в рекламных целях и не заявляют о своих исключительных правах на них. Зарегистрированные в установленном порядке товарные знаки (знаки обслуживания) являются собственностью их правообладателей и используются исключительно с целью идентификации представленного товара и информирования пользователей данного сайта о потребительских свойствах товаров и услуг. Наш интернет-магазин считает своим долгом обеспечить максимальную достоверность и полноту всей содержащейся информации, но, не дает абсолютной гарантии её достоверности и не несет ответственности за ошибки, несоответствия или неполноту информации, а также результаты её использования без предварительной консультации с нашими сотрудниками. Для получения подробной информации о наличии и стоимости указанных товаров и (или) услуг, пожалуйста, обращайтесь к менеджерам отдела клиентского обслуживания с помощью специальной <span>формы связи или по телефону</span>, позвонив по указанным на интернет-магазине номерам телефонов. <br><br>
+						Вы можете сообщить о неточности в описании товара – выделите её и нажмите Shift + Enter
+					</p>
+				</div>
+			</div>
+		</div>
+	<!--
+	---------------------
+	подвал
+	---------------------
+	-->
+	<footer>
+		<div class="footer_top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-3 d-none d-lg-block">
+						<div class="list-contacts">
+							<ul>
+								<li class="phone">
+									<a href="tel:+74956496970">8 (495) 649-69-70</a>
+									<p>Москва и МО</p>
+								</li>
+								<li>
+									<a href="tel:88003331100">8 (800) 333-11-00</a>
+									<p>Бесплатно по России</p>
+								</li>
+							</ul>
+							<ul>
+								<li class="work-time">
+									<p>Пн - Пт 09:00 - 19:00,<br>Сб 10:00 - 19:00</p>
+								</li>
+								<li class="addres">
+									<address>107023, г. Москва, Семеновский переулок, дом 6, строение 3</address>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-3">
+						<div class="list-links">
+							<p>Компания Proline</p>
+							<ul>
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">Продукция</a></li>
+								<li><a href="#">Статьи и обзоры</a></li>
+								<li><a href="#">Оптовикам</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-3">
+						<div class="list-links">
+							<p>Покупателям</p>
+							<ul>
+								<li><a href="#">Пользовательское соглашение</a></li>
+								<li><a href="#">Установочные центры</a></li>
+								<li><a href="#">Как сделать заказ</a></li>
+								<li><a href="#">Оптовикам</a></li>
+								<li><a href="#">Гарантия</a></li>
+								<li><a href="#">Услуги</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-12 col-lg-3 d-flex flex-row flex-wrap">
+						<div class="list-download_app">
+							<p>Скачайте приложение</p>
+							<ul>
+								<li>
+									<a href="#"><img src="img/apps_stores/google.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/apps_stores/apple.png" alt=""></a>
+								</li>
+							</ul>
+						</div>
+						<div class="list-payment">
+							<p>Способы оплаты</p>
+							<ul>
+								<li>
+									<a href="#"><img src="img/payment/alfabank.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/payment/master_card.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/payment/webmoney.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/payment/visa.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/payment/qiwi.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/payment/mir.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/payment/yandex_money.png" alt=""></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<p class="copyright-text">© 2005 — 2017, ПРОЛАЙН РУС. Все права защищены.</p>
+					</div>
+					<div class="col-lg-6">
+						<div class="socials-links dark">
+							<ul class="justify-content-end">
+								<li><a href="#" class="vk"></a></li>
+								<li><a href="#" class="twitter"></a></li>
+								<li><a href="#" class="facebook"></a></li>
+								<li><a href="#" class="ok"></a></li>
+								<li><a href="#" class="instag"></a></li>
+								<li><a href="#" class="youtube"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--
+	---------------------
+	подвал - конец
+	---------------------
+	-->
+	
+	
+	<!--
+	-----------------------------
+	модалки преимуществ
+	-----------------------------
+	-->
+	<div class="modal modal-product_advantages" id="proline_product-ten_year">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Компании более 10 лет</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal_text">Это комплект специального оборудования, направленного на мониторинг и запись происходящего. Собственно, c его помощью можно наблюдать за происходящим, фиксировать все события и анализировать их постфактум.</p>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-product_advantages" id="proline_product-delivery_all">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Доставка по всей России</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal_text">С другой стороны начало повседневной работы по формированию позиции способствует подготовки и реализации существенных финансовых и административных условий. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке новых предложений.
+
+Товарищи! новая модель организационной деятельности в значительной степени обуславливает создание направлений прогрессивного развития. Задача организации, в особенности же новая модель организационной деятельности играет важную роль в формировании существенных финансовых и административных условий.</p>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-product_advantages" id="proline_product-teh_pod">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Техническая поддержка</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal_text">Равным образом новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание форм развития. Таким образом консультация с широким активом влечет за собой процесс внедрения и модернизации форм развития. С другой стороны сложившаяся структура организации в значительной степени обуславливает создание модели развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание систем массового участия.</p>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-product_advantages" id="proline_product-ru_soft">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Русифицированное ПО</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal_text">Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности способствует подготовки и реализации дальнейших направлений развития. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров позволяет оценить значение новых предложений. Не следует, однако забывать, что рамки и место обучения кадров требуют от нас анализа новых предложений. Задача организации, в особенности же новая модель организационной деятельности требуют от нас анализа направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности способствует подготовки и реализации направлений прогрессивного развития.</p>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-product_advantages" id="proline_product-many_product">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Более 100 000 товаров</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal_text">С другой стороны сложившаяся структура организации позволяет выполнять важные задания по разработке новых предложений. Повседневная практика показывает, что сложившаяся структура организации позволяет выполнять важные задания по разработке систем массового участия. Повседневная практика показывает, что реализация намеченных плановых заданий способствует подготовки и реализации новых предложений. Товарищи! начало повседневной работы по формированию позиции позволяет оценить значение систем массового участия. Задача организации, в особенности же укрепление и развитие структуры требуют от нас анализа дальнейших направлений развития. Товарищи! постоянный количественный рост и сфера нашей активности позволяет оценить значение новых предложений.</p>
+			</div>
+		</div>
+	</div>
+	<!--
+	-----------------------------
+	модалки преимуществ
+	-----------------------------
+	-->
+	<div class="modal users-modals small-modal" id="reviews_add">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Оставить отзыв</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-error">
+					Пожалуйста, введите действительный адрес электронной почты
+				</p>
+				<label class="input-label">
+					<span>Моб. телефон</span>
+					<input type="text" placeholder="+7 (___)___-__-__" class="phone_input">
+				</label>
+				<label class="input-label">
+					<span>Ваше имя</span>
+					<input type="text" placeholder="Ваше имя">
+				</label>
+				<label class="input-label">
+					<span>Email</span>
+					<input type="email" placeholder="Email">
+				</label>
+				
+				<label class="input-label">
+					<span>Ваша оценка</span>
+					<div class="rating-bar d-flex flex-row flex-wrap align-items-center">
+						<img src="img/rating.png" alt=""><span>3.0</span>
+					</div>
+				</label>
+				
+				<label class="input-label">
+					<span>Плюсы</span>
+					<textarea type="text" placeholder="Опишите достоинства"></textarea>
+				</label>
+				<label class="input-label">
+					<span>Минусы</span>
+					<textarea type="text" placeholder="Опишите недостатки"></textarea>
+				</label>
+				<label class="input-label">
+					<span>Текст отзыва</span>
+					<textarea type="text" placeholder="Текст Вашего отзыва"></textarea>
+				</label>
+				<div class="not-robots d-flex flex-row justify-content-center">
+					<img src="img/captcha.jpg" alt="">
+				</div>
+				<div class="col-auto d-flex flex-row flex-wrap justify-content-center align-items-center">
+					<button class="btn btn-send-request-modal">Отправить отзыв</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+	-----------------------------
+	модалка информация о доставке
+	-----------------------------
+	-->
+	<div class="modal" id="proline_product_delivery_info">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Доставка по Москве и МО</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal_text">Мы осуществим доставку вашего заказа собственной курьерской службой и автотранспортом компании непосредственно до квартиры или офиса по Москве или Московской области в пределах 15 км от МКАД.</p>
+				
+				<div class="list-with_icon">
+					<p class="truck-ico">При сумме заказа более 1000 рублей (10:00 до 19:00)</p>
+					<ul>
+						<li>Доставка в пределах МКАД – 300 рублей;</li>
+						<li>Доставка в пределах 15 км от МКАД – Уточняйте у менеджера;</li>
+						<li>Доставка «День в день» в пределах МКАД – Уточняйте у менеджера.</li>
+					</ul>
+				</div>
+				
+				<div class="list-with_icon">
+					<p class="truck-ico">При сумме заказа менее 1000 рублей (10:00 до 19:00)</p>
+					<ul>
+						<li>Доставка в пределах МКАД – 500 рублей;</li>
+						<li>Доставка в пределах 15 км от МКАД – Уточняйте у менеджера;</li>
+						<li>Доставка «День в день» в пределах МКАД – Уточняйте у менеджера.</li>
+					</ul>
+				</div>
+				
+				<p class="modal_text">Возможность, сроки и стоимость доставки дальше 15 км от МКАД согласовываются при оформлении заказа индивидуально.</p>
+				<p class="modal_text-desc">
+					<span>Внимание: </span>Ознакомьтесь так же с дополнительными правилами доставки в разделе <a href="#"><span>Доставка.</span></a>
+				</p>
+				<p class="modal_text">Остальные вопросы, касающиеся услуги доставки товаров по Москве и Московской области Вы можете получить у наших менеджеров.</p>
+			</div>
+		</div>
+	</div>
+	<!--
+	-----------------------------
+	модалка заказать в один клик
+	-----------------------------
+	-->
+	<div class="modal" id="proline_product_buy_one_click">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Купить Proline PR-RF225BT</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-error">
+					Пожалуйста, введите действительный адрес электронной почты
+				</p>
+				<p class="modal_text">Оставьте свои контактные данные. Наши менеджеры свяжутся с вами для уточнения деталей заказа.</p>
+				<label class="input-label">
+					<span>Ваше имя</span>
+					<input type="text" placeholder="Ваше имя">
+				</label>
+				<label class="input-label">
+					<span>Моб. телефон</span>
+					<input type="text" placeholder="+7 (___)___-__-__" class="phone_input">
+				</label>
+				<label class="input-label">
+					<span>Email</span>
+					<input type="email" placeholder="Email">
+				</label>
+				<label class="checkbox-label">
+					<input type="checkbox">
+					<div class="checkbox_inducator"></div>
+					Я хочу зарегистрироваться на сайте и пользоваться личным кабинетом
+				</label>
+				<label class="checkbox-label">
+					<input type="checkbox">
+					<div class="checkbox_inducator"></div>
+					Я согласен на сбор и обработку персональных данных и согласен с <a href="#"><span>условиями соглашения</span></a>
+				</label>
+				<p class="modal_text">Кнопка "Подтвердить заказ" помогает вам оформить заявку на связь с менеджером для уточнения актуальных остатков и цен выбранных вами товаров. Не является намерением Покупателя приобрести Товар и не может быть рассмотрена как факт акцепта договора купли-продажи.</p>
+				<div class="col-auto d-flex flex-row flex-wrap justify-content-center align-items-center">
+					<button class="btn btn-send-request-modal">Подтвердить заказ</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="js/jquery.js"></script>
+<script src="jquery_styler/jquery.formstyler.min.js"></script>
+<script src="customscrollbar/jquery.mCustomScrollbar.js"></script>
+
+<script src="inputmask/jquery.inputmask.bundle.js"></script>
+<script src="inputmask/phone.js"></script>
+<script src="inputmask/phone-ru.js"></script>
+
+<script src="slick/slick.min.js"></script>
+
+<script src="js/script.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,2896 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Title</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+
+    <!-- Custom Browsers Color Start -->
+    <!--<meta name="theme-color" content="#000">-->
+    <!-- Custom Browsers Color End -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.css">
+    
+
+</head>
+
+<body>
+	<!--
+	-----------------------------
+	модалка авторизации
+	-----------------------------
+	-->
+	<div class="modal modal-with-footer users-modals" id="user-auth">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Авторизация</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-error">
+					Пожалуйста, введите действительный адрес электронной почты
+				</p>
+				<label class="input-label">
+					<span>Email</span>
+					<input type="email" placeholder="Email">
+				</label>
+				<label class="input-label password">
+					<span>Пароль</span>
+					<input type="password" placeholder="Пароль">
+					<button></button>
+				</label>
+				<div class="d-flex flex-row flex-wrap justify-content-between align-items-center user-auth-ling-group">
+					<label class="checkbox-label checkbox-label-auth">
+						<input type="checkbox">
+						<div class="checkbox_inducator"></div>
+						<b class="checkbox-label-auth-yes">Запомнить меня</b>
+						<b class="checkbox-label-auth-no">Чужой компьютер</b>
+					</label>
+					<button class="link-normal openModalBTN" data-targetModal="user-password-change"><span>Забыли пароль?</span></button>
+				</div>
+				<div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+					<button class="btn btn-enter-user btn-send-request-modal">Войти</button>
+				</div>
+				<div class="socials-links">
+					<p>Или войдите с помощью социальных сетей</p>
+					<ul class="justify-content-end">
+						<li><a href="#" class="vk"></a></li>
+						<li><a href="#" class="twitter"></a></li>
+						<li><a href="#" class="facebook"></a></li>
+						<li><a href="#" class="ok"></a></li>
+						<li><a href="#" class="instag"></a></li>
+						<li><a href="#" class="youtube"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<p>У вас нет учетной записи? <a href="#" class="link-normal"><span>Зарегистрируйтесь!</span></a></p>
+			</div>
+		</div>
+	</div>
+	<!--
+	-----------------------------
+	модалка Восстановления пароля
+	-----------------------------
+	-->
+	<div class="modal users-modals" id="user-password-change">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Восстановление пароля</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-error">
+					Пожалуйста, введите действительный адрес электронной почты
+				</p>
+				<label class="input-label">
+					<span>Email</span>
+					<input type="email" placeholder="Email">
+				</label>
+				<div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+					<button class="btn btn-enter-user btn-send-request-modal openModalBTN" data-targetModal="user-password-change-success">Сменить пароль</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+	-----------------------------
+	модалка Восстановления пароля успешная отправка
+	-----------------------------
+	-->
+	<div class="modal users-modals" id="user-password-change-success">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p></p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body d-flex justify-content-center align-items-center flex-column flex-nowrap">
+				<img src="img/user-password-change-success.png" alt="">
+				<p class="modal_text-success">Готово!</p>
+				<p class="modal_text">Мы отправили по электронной почте Вам инструкцию о том, как сбросить пароль</p>
+			</div>
+		</div>
+	</div>
+	<!--
+	-----------------------------
+	модалка регистрации
+	-----------------------------
+	-->
+	<div class="modal modal-with-footer users-modals" id="user-register">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Регистрация</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-error">
+					Пожалуйста, введите действительный адрес электронной почты
+				</p>
+				<label class="input-label">
+					<span>Ваше имя</span>
+					<input type="text" placeholder="Ваше имя">
+				</label>
+				<label class="input-label">
+					<span>Email</span>
+					<input type="email" placeholder="Email">
+				</label>
+				<label class="input-label password">
+					<span>Пароль</span>
+					<input type="password" placeholder="Пароль">
+					<button></button>
+				</label>
+				<label class="input-label password">
+					<span>Повторите пароль</span>
+					<input type="password" placeholder="Повторите пароль">
+					<button></button>
+				</label>
+				<label class="checkbox-label">
+					<input type="checkbox">
+					<div class="checkbox_inducator"></div>
+					Я согласен на сбор и обработку персональных данных и согласен с <a href="#"><span>условиями соглашения</span></a>
+				</label>
+				
+				<div class="not-robots d-flex flex-row justify-content-center">
+					<img src="img/captcha.jpg" alt="">
+				</div>
+				
+				<div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+					<button class="btn btn-enter-user btn-send-request-modal">Зарегистрироваться</button>
+				</div>
+				<div class="socials-links">
+					<p>Или войдите с помощью социальных сетей</p>
+					<ul class="justify-content-end">
+						<li><a href="#" class="vk"></a></li>
+						<li><a href="#" class="twitter"></a></li>
+						<li><a href="#" class="facebook"></a></li>
+						<li><a href="#" class="ok"></a></li>
+						<li><a href="#" class="instag"></a></li>
+						<li><a href="#" class="youtube"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<p>У вас нет учетной записи? <a href="#" class="link-normal"><span>Зарегистрируйтесь!</span></a></p>
+			</div>
+		</div>
+	</div>
+	<!--
+	-----------------------------
+	Конец модалок авторизации, регистрации, восстановление пароля
+	-----------------------------
+	-->
+	<div class="modal" id="send_message">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Обратная связь</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-error">
+					Пожалуйста, введите действительный адрес электронной почты
+				</p>
+				<label class="input-label">
+					<span class="required">Ваше имя</span>
+					<input type="text" placeholder="Ваше имя">
+				</label>
+				<label class="input-label">
+					<span>Компания</span>
+					<input type="text" placeholder="Компания">
+				</label>
+				<label class="input-label">
+					<span>Email</span>
+					<input type="email" placeholder="Email">
+				</label>
+				<label class="input-label">
+					<span class="required">Моб. телефон</span>
+					<input type="text" placeholder="+7 (___)___-__-__" class="phone_input">
+				</label>
+				<label class="input-label">
+					<span class="required">Сообщение</span>
+					<textarea type="text" placeholder="Сообщение"></textarea>
+				</label>
+				<label class="checkbox-label">
+					<input type="checkbox">
+					<div class="checkbox_inducator"></div>
+					Я согласен на сбор и обработку персональных данных и согласен с <a href="#"><span>условиями соглашения</span></a>
+				</label>
+				<div class="col-auto d-flex flex-row flex-wrap justify-content-center align-items-center">
+					<button class="btn btn-send-request-modal">Отправить сообщение</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="request_call">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Заказать звонок</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-error">
+					Пожалуйста, введите действительный адрес электронной почты
+				</p>
+				<p class="modal_text">Не смогли дозвониться? Оставьте свой номер, и мы перезвоним Вам в течение 2-ух минут.</p>
+				<label class="input-label">
+					<span>Ваше имя</span>
+					<input type="text" placeholder="Ваше имя">
+				</label>
+				<label class="input-label">
+					<span>Моб. телефон</span>
+					<input type="text" placeholder="+7 (___)___-__-__" class="phone_input">
+				</label>
+				<label class="checkbox-label">
+					<input type="checkbox">
+					<div class="checkbox_inducator"></div>
+					Я согласен на сбор и обработку персональных данных и согласен с <a href="#"><span>условиями соглашения</span></a>
+				</label>
+				<div class="col-auto d-flex flex-row flex-wrap justify-content-center align-items-center">
+					<button class="btn btn-send-request-modal">Оставить заявку</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+	---------------------
+	шапка фиксированная
+	---------------------
+	-->
+	<div class="header-fixed d-none d-lg-block">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 header-navigation_main">
+					<button class="header-navigation">
+						<span class="icon_nav">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+						<img src="img/logo-white.png" alt="">
+						<span class="text_nav">Каталог товаров</span>
+					</button>
+					<nav class="header-navigation_row">
+						<a href="#" data-inside_menu='
+							<a href="#"><span>Кодовые панели</span></a>
+							<a href="#"><span>Кодонаборные панели со считывателем и контроллером</span></a>
+							<a href="#"><span>Замки, защелки</span></a>
+							<a href="#"><span>Дверные доводчики</span></a>
+							<a href="#"><span>Управление автоматикой</span></a>
+							<a href="#"><span>Разное</span></a>
+							<a href="#"><span>Идентификаторы</span></a>
+							<a href="#" data-inside_menu="
+								<a href=#><span>Считыватели с контроллером</span></a>
+								<a href=#><span>Контроллеры</span></a>
+								<a href=#><span>Кнопки выхода</span></a>
+								<a href=#><span>Кодовые панели</span></a>
+								<a href=#><span>Кодонаборные панели со считывателем и контроллером</span></a>
+								<a href=#><span>Замки, защелки</span></a>
+								<a href=#><span>Дверные доводчики</span></a>
+								<a href=#><span>Управление автоматикой</span></a>
+								<a href=#><span>Разное</span></a>
+								<a href=#><span>Идентификаторы</span></a>
+								<a href=#><span>Считыватели</span></a>
+								<a href=#><span>Считыватели с контроллером</span></a>
+								<a href=#><span>Контроллеры</span></a>
+								<a href=#><span>Кнопки выхода</span></a>
+								<a href=#><span>Кодовые панели</span></a>
+								<a href=#><span>Кодонаборные панели со считывателем и контроллером</span></a>
+								<a href=#><span>Замки, защелки</span></a>
+								<a href=#><span>Дверные доводчики</span></a>
+								<a href=#><span>Управление автоматикой</span></a>
+								<a href=#><span>Разное</span></a>
+							"><span class="hasSubMenu-fixed_header">Считыватели</span></a>
+							<a href="#"><span>Считыватели с контроллером</span></a>
+							<a href="#"><span>Контроллеры</span></a>
+							<a href="#"><span>Кнопки выхода</span></a>
+							<a href="#"><span>Идентификаторы</span></a>
+							<a href="#"><span>Считыватели</span></a>
+						'>
+							<span class="hasSubMenu-fixed_header">Подарки</span>
+						</a>
+						<a href="#"><span>Типовые решения</span></a>
+						<a href="#"><span>Системы видеонаблюдения</span></a>
+						<a href="#"><span>IP оборудование</span></a>
+						<a href="#" data-inside_menu='
+							<a href="#"><span>Идентификаторы</span></a>
+							<a href="#" data-inside_menu="
+								<a href=#><span>Контроллеры</span></a>
+								<a href=#><span>Кнопки выхода</span></a>
+								<a href=#><span>Считыватели</span></a>
+								<a href=#><span>Считыватели с контроллером</span></a>
+								<a href=#><span>Контроллеры</span></a>
+								<a href=#><span>Кнопки выхода</span></a>
+								<a href=#><span>Кодовые панели</span></a>
+								<a href=#><span>Кодонаборные панели со считывателем и контроллером</span></a>
+								<a href=#><span>Замки, защелки</span></a>
+								<a href=#><span>Дверные доводчики</span></a>
+								<a href=#><span>Управление автоматикой</span></a>
+								<a href=#><span>Разное</span></a>
+								<a href=#><span>Считыватели с контроллером</span></a>
+								<a href=#><span>Кодовые панели</span></a>
+								<a href=#><span>Кодонаборные панели со считывателем и контроллером</span></a>
+								<a href=#><span>Замки, защелки</span></a>
+								<a href=#><span>Дверные доводчики</span></a>
+								<a href=#><span>Управление автоматикой</span></a>
+								<a href=#><span>Разное</span></a>
+								<a href=#><span>Идентификаторы</span></a>
+							"><span class="hasSubMenu-fixed_header">Считыватели</span></a>
+							<a href="#"><span>Считыватели с контроллером</span></a>
+							<a href="#"><span>Контроллеры</span></a>
+							<a href="#"><span>Кнопки выхода</span></a>
+							<a href="#"><span>Кодовые панели</span></a>
+							<a href="#"><span>Кодонаборные панели со считывателем и контроллером</span></a>
+							<a href="#"><span>Замки, защелки</span></a>
+							<a href="#"><span>Дверные доводчики</span></a>
+							<a href="#"><span>Управление автоматикой</span></a>
+							<a href="#"><span>Разное</span></a>
+							<a href="#"><span>Идентификаторы</span></a>
+							<a href="#"><span>Считыватели</span></a>
+							<a href="#"><span>Считыватели с контроллером</span></a>
+							<a href="#"><span>Контроллеры</span></a>
+							<a href="#"><span>Кнопки выхода</span></a>
+							<a href="#"><span>Кодовые панели</span></a>
+							<a href="#"><span>Кодонаборные панели со считывателем и контроллером</span></a>
+							<a href="#"><span>Замки, защелки</span></a>
+							<a href="#"><span>Дверные доводчики</span></a>
+							<a href="#"><span>Управление автоматикой</span></a>
+							<a href="#"><span>Разное</span></a>
+						'>
+							<span class="hasSubMenu-fixed_header">Системы контроля доступа</span>
+						</a>
+						<a href="#"><span>Домофоны и системы связи</span></a>
+						<a href="#"><span>Охранно-пожарная сигнализация</span></a>
+						<a href="#"><span>Беспроводные системы</span></a>
+						<a href="#"><span>Расходные материалы</span></a>
+						<a href="#"><span>Источники питания</span></a>
+						<a href="#"><span>Носители информации</span></a>
+						<a href="#"><span>Подарки</span></a>
+						<a href="#"><span>Типовые решения</span></a>
+						<a href="#"><span>Системы видеонаблюдения</span></a>
+						<a href="#"><span>IP оборудование</span></a>
+						<a href="#"><span>Системы контроля доступа</span></a>
+						<a href="#"><span>Домофоны и системы связи</span></a>
+						<a href="#"><span>Охранно-пожарная сигнализация</span></a>
+						<a href="#"><span>Беспроводные системы</span></a>
+						<a href="#"><span>Расходные материалы</span></a>
+						<a href="#"><span>Источники питания</span></a>
+						<a href="#"><span>Носители информации</span></a>
+					</nav>
+					<nav class="header-navigation_row-second">
+						
+					</nav>
+					<nav class="header-navigation_row-third">
+						
+					</nav>
+					<div class="header-navigation_dark_background"></div>
+				</div>
+				
+				
+				
+				<div class="col-lg-9 d-flex flex-row flex-wrap justify-content-between align-items-center">
+					<div class="col-auto header-search">
+						<form>
+							<input type="text" placeholder="Поиск среди 5000 товаров...">
+							<button></button>
+							<div class="header-search-result">
+								<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+									<img src="img/adapter.png" alt="">
+									<span>
+										<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+										<span class="header-search-result_info-articul">Артикул: 54533</span>
+									</span>
+									<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+								</a>
+								<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+									<img src="img/adapter.png" alt="">
+									<span>
+										<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+										<span class="header-search-result_info-articul">Артикул: 54533</span>
+									</span>
+									<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+								</a>
+								<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+									<img src="img/adapter.png" alt="">
+									<span>
+										<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+										<span class="header-search-result_info-articul">Артикул: 54533</span>
+									</span>
+									<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+								</a>
+							</div>
+						</form>
+					</div>
+					<div class="nav_right d-flex flex-row flex-wrap justify-content-start align-items-center">
+						<!--
+							Временные классы для демонстрации
+							autorization-block-no - не авторизированный пользователь
+							autorization-block-yes - авторизированный пользователь
+							после посадки можно удалить класс auth-user-btn
+						-->	
+						<div class="authorization HasPopUp autorization-block-yes">
+							<span class="d-none d-xl-block">Авторизация</span>
+							<div class="PopUpMain bottom">
+								<div class="PopUpBody">
+									<button class="btn openModalBTN" data-targetModal="user-auth">Войти на сайт</button>
+									<button class="btn btn-gb openModalBTN" data-targetModal="user-register">Зарегистрироваться</button>
+								</div>
+							</div>
+						</div>
+						<div class="authorization HasPopUp autorization-block-no">
+							<span class="d-none d-xl-block">Сидоров С.А.</span>
+							<div class="PopUpMain bottom">
+								<div class="PopUpBody">
+									<a href="#" class="PopUpLink">Личный кабинет</a>
+									<a href="#" class="PopUpLink">Мои заказы</a>
+									<a href="#" class="PopUpLink">Обратная связь</a>
+									<a href="#" class="PopUpExit">Выход</a>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="comparison"><span>2</span></a>
+						<a href="#" class="liked"><span>12</span></a>
+						<a href="#" class="cart"><span>3</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+	---------------------
+	шапка фиксированная - конец
+	---------------------
+	-->
+	<!--
+	---------------------
+	шапка мобильная
+	---------------------
+	-->
+	<header class="d-lg-none">
+		<div class="header-mobile">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-between align-items-center">
+						<button class="mobile-menu_btn"><span></span><span></span><span></span></button>
+						<a href="#" class="mobile-menu_logo"><img src="img/logo.png" alt=""></a>
+						<div class="nav_right d-flex flex-row flex-wrap justify-content-start align-items-center">
+							<button class="search-mobile-btn"></button>
+							<a href="#" class="liked"></a>
+							<a href="#" class="cart"><span>3</span></a>
+							
+							<div class="col-auto header-search serach-mobile">
+								<form>
+									<input type="text" placeholder="Поиск среди 5000 товаров...">
+									<div class="header-search-result">
+										<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+											<img src="img/adapter.png" alt="">
+											<span>
+												<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+												<span class="header-search-result_info-articul">Артикул: 54533</span>
+											</span>
+											<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+										</a>
+										<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+											<img src="img/adapter.png" alt="">
+											<span>
+												<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+												<span class="header-search-result_info-articul">Артикул: 54533</span>
+											</span>
+											<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+										</a>
+										<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+											<img src="img/adapter.png" alt="">
+											<span>
+												<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+												<span class="header-search-result_info-articul">Артикул: 54533</span>
+											</span>
+											<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+										</a>
+									</div>
+
+								</form>
+							</div>
+						</div>
+						
+						<div class="mobile-full_menu">
+							<!--
+								Временные классы для демонстрации
+								autorization-block-no - не авторизированный пользователь
+								autorization-block-yes - авторизированный пользователь
+								после посадки можно удалить класс auth-user-btn
+							-->
+							<div class="mobile-header-link-group autorization-block-yes">
+								<button class="btn btn-gb openModalBTN" data-targetModal="user-auth">Вход</button>
+								<button class="btn btn-gb openModalBTN" data-targetModal="user-register">Регистрация</button>
+							</div>
+							<div class="mobile-header-link-group autorization-block-no">
+								<div class="nav_right">
+									<a href="#" class="authorization">
+										<span>Сидоров С.А.</span>
+									</a>
+								</div>
+							</div>
+							
+							<button class="mobile-select-region-btn">Ваш город: <b></b></button>
+							<div class="mobile-select-region">
+								<div class="col-auto header-search">
+									<form>
+										<input type="text" placeholder="Поиск среди 5000 товаров...">
+									</form>
+								</div>
+								<p>Выберите свой город</p>
+								<button class="mobile-full_menu-link active"><span>Ханты-Мансийский автономный округ </span></button>
+								<button class="mobile-full_menu-link"><span>Калининградская область</span></button>
+								<button class="mobile-full_menu-link"><span>Калмыкия</span></button>
+								<button class="mobile-full_menu-link"><span>Калужская область</span></button>
+								<button class="mobile-full_menu-link"><span>Камчатская область</span></button>
+								<button class="mobile-full_menu-link"><span>Карелия</span></button>
+								<button class="mobile-full_menu-link"><span>Кемеровская область</span></button>
+								<button class="mobile-full_menu-link"><span>Кировская область</span></button>
+								<button class="mobile-full_menu-link"><span>Коми</span></button>
+								<button class="mobile-full_menu-link"><span>Костромская область</span></button>
+								<button class="mobile-full_menu-link"><span>Краснодарский край</span></button>
+								<button class="mobile-full_menu-link"><span>Краснодарский край</span></button>
+								<button class="mobile-full_menu-link"><span>Краснодарский край</span></button>
+							</div>
+							
+							<div class="mobile-full_menu-category">
+								<button>
+									<span>
+										<span></span><span></span><span></span>
+									</span>
+									Каталог товаров
+								</button>
+								<ul>
+									<li>
+										<span><a href="#">Подарки</a></span>
+									</li>
+									<li>
+										<span><a href="#">Типовые решения</a></span>
+									</li>
+									<li>
+										<span class="mobile-sub-menu"><a href="#">Системы видеонаблюдения</a></span>
+										<ul>
+											<li><span><a href="#">Идентификаторы</a></span></li>
+											<li>
+												<span class="mobile-sub-menu"><a href="#">Считыватели</a></span>
+												<ul>
+													<li><span><a href="#">Название 1</a></span></li>
+													<li><span><a href="#">Название 2</a></span></li>
+													<li><span><a href="#">Название 3</a></span></li>
+													<li><span><a href="#">Название 4</a></span></li>
+													<li><span><a href="#">Название 5</a></span></li>
+													<li><span><a href="#">Название 6</a></span></li>
+													<li><span><a href="#">Название 7</a></span></li>
+													<li><span><a href="#">Название 8</a></span></li>
+												</ul>
+											</li>
+											<li><span><a href="#">Считыватели с контроллером</a></span></li>
+											<li><span><a href="#">Контроллеры</a></span></li>
+											<li><span><a href="#">Кнопки выхода</a></span></li>
+											<li><span><a href="#">Кодовые панели</a></span></li>
+											<li><span><a href="#">Кодонаборные панели со считывателем и контроллером</a></span></li>
+											<li><span><a href="#">Замки, защелки</a></span></li>
+											<li><span><a href="#">Дверные доводчики</a></span></li>
+											<li><span><a href="#">Управление автоматикой</a></span></li>
+											<li><span><a href="#">Разное</a></span></li>
+										</ul>
+									</li>
+									<li>
+										<span><a href="#">IP оборудование</a></span>
+									</li>
+									<li>
+										<span><a href="#">Системы контроля доступа</a></span>
+									</li>
+									<li>
+										<span><a href="#">Домофоны и системы связи</a></span>
+									</li>
+									<li>
+										<span><a href="#">Охранно-пожарная сигнализация</a></span>
+									</li>
+									<li>
+										<span><a href="#">Беспроводные системы</a></span>
+									</li>
+									<li>
+										<span><a href="#">Расходные материалы</a></span>
+									</li>
+									<li>
+										<span><a href="#">Источники питания</a></span>
+									</li>
+									<li>
+										<span><a href="#">Носители информации</a></span>
+									</li>
+								</ul>
+							</div>
+							<a href="#" class="mobile-full_menu-link"><span>О компании</span></a>
+							<a href="#" class="mobile-full_menu-link"><span>Гарантия и возврат</span></a>
+							<a href="#" class="mobile-full_menu-link"><span>Оплата</span></a>
+							<a href="#" class="mobile-full_menu-link"><span>Доставка</span></a>
+							<a href="#" class="mobile-full_menu-link"><span>FAQ</span></a>
+							<div class="list-contacts">
+								<ul>
+									<li>
+										<a href="tel:88003331100">8 (800) 333-11-00</a>
+										<p>Бесплатно по России</p>
+									</li>
+								</ul>
+							</div>
+							<div class="list-contacts">
+								<ul>
+									<li>
+										<a href="tel:+74956496970">8 (495) 649-69-70</a>
+										<p>Москва и МО</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--
+	---------------------
+	шапка мобильная - конец
+	---------------------
+	-->
+    <div class="page_wrap">
+		<!--
+		---------------------
+		шапка
+		---------------------
+		-->
+        <header class="header d-none d-lg-block">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 d-flex flex-row flex-wrap align-items-center justify-content-between">
+                            <div class="location d-flex flex-row flex-wrap align-items-center justify-content-between">
+                                <div class="region HasPopUp">
+                                    <span>Москва и МО</span>
+									<div class="PopUpMain bottom PopUpMain-confirm-region">
+										<div class="PopUpBody regionHTMLInner" data-show_this="true">
+											<div class="region_wrapper">
+												<p><span>Ваш регион</span> Москва и Московская обл?</p>
+												<div class="button-area">
+													<a href="#" class="btn PopUpClose">Да, все верно</a>
+													<a href="#" class="btn btn-gb changeRegion" data-selector="changeRegion-selectors">Выбрать другой</a>
+												</div>
+											</div>
+										</div>
+										<div class="PopUpBody regionHTMLInner" id="changeRegion-selectors">
+											<div class="region_wrapper">
+												<span>Выберите ваш регион</span>
+												<select name="" class="select_region style_new_jquery">
+													<option>Ханты-Мансийский автономный округ </option>
+													<option>Калининградская область</option>
+													<option>Калмыкия</option>
+													<option>Калужская область</option>
+													<option>Камчатская область</option>
+													<option>Карелия</option>
+													<option>Кемеровская область</option>
+													<option>Кировская область</option>
+													<option>Коми</option>
+													<option>Костромская область</option>
+													<option>Краснодарский край</option>
+													<option>Краснодарский край</option>
+													<option>Краснодарский край</option>
+												</select>
+												<div class="button-area">
+
+													<a href="#" class="btn js-yes PopUpClose">Да</a>
+													<a href="#" class="btn btn-gb js-no PopUpClose">Нет</a>
+												</div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="lang">
+                                    <select class="lang-select style_new_jquery">
+                                        <option>Русский</option>
+                                        <option>Английский</option>
+                                        <option>Китайский</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 d-flex flex-row flex-wrap justify-content-between align-items-center">
+                            <nav class="nav_top">
+                                <ul>
+                                    <li><a href="#">Оплата и доставка</a></li>
+                                    <li><a href="#">Гарантия и возврат</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">О компании</a></li>
+                                    <li class="dropmenu">
+										<a href="#">Еще</a>
+                                        <div class="dropdown-list">
+                                            <ul>
+                                                <li>Продукция</li>
+                                                <li>Бренды</li>
+                                                <li>Гарантии</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+							<div class="nav_right d-flex flex-row flex-wrap justify-content-start align-items-center">
+								<!--
+									Временные классы для демонстрации
+									autorization-block-no - не авторизированный пользователь
+									autorization-block-yes - авторизированный пользователь
+									после посадки можно удалить класс auth-user-btn
+								-->	
+								<div class="authorization HasPopUp autorization-block-yes">
+									<span class="d-none d-xl-block">Авторизация</span>
+									<div class="PopUpMain bottom">
+										<div class="PopUpBody">
+											<button class="btn openModalBTN" data-targetModal="user-auth">Войти на сайт</button>
+											<button class="btn btn-gb openModalBTN" data-targetModal="user-register">Зарегистрироваться</button>
+										</div>
+									</div>
+								</div>
+								<div class="authorization HasPopUp autorization-block-no">
+									<span class="d-none d-xl-block">Сидоров С.А.</span>
+									<div class="PopUpMain bottom">
+										<div class="PopUpBody">
+											<a href="#" class="PopUpLink">Личный кабинет</a>
+											<a href="#" class="PopUpLink">Мои заказы</a>
+											<a href="#" class="PopUpLink">Обратная связь</a>
+											<a href="#" class="PopUpExit">Выход</a>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="comparison"><span>2</span></a>
+								<a href="#" class="liked d-inline-flex flex-wrap"><span>12</span></a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="header-middle">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<a href="#" class="header-logo"><img src="img/logo.png" alt=""></a>
+						</div>
+						<div class="col-md-9 header-middle-right d-flex flex-row flex-wrap align-items-center justify-content-between">
+							<div class="list-contacts">
+								<ul>
+									<li>
+										<a href="tel:88003331100">8 (800) 333-11-00</a>
+										<p>Бесплатно по России</p>
+									</li>
+								</ul>
+							</div>
+							<div class="list-contacts">
+								<ul>
+									<li>
+										<a href="tel:+74956496970">8 (495) 649-69-70</a>
+										<p>Москва и МО</p>
+									</li>
+								</ul>
+							</div>
+							<div class="list-contacts d-none d-xl-block">
+								<ul>
+									<li class="work-time">
+										<p>Пн - Пт 09:00 - 19:00,<br>Сб 10:00 - 19:00</p>
+									</li>
+								</ul>
+							</div>
+							<div class="header-button_group d-flex flex-row flex-nowrap justify-content-start align-items-center">
+								<button class="header-button_group-forwCall openModalBTN" data-targetModal="send_message">Заказать <br>звонок</button>
+								<button class="header-button_group-feedback openModalBTN" data-targetModal="request_call">Свяжитесь <br>с нами</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="header-bottom">
+			
+				<svg style="display: none">
+					<filter id="ChangeColorNavigationIcon">
+						<feColorMatrix
+						type = "matrix"
+						values="0     0     0     0     0.2117647058823529
+								0     0     0     0     0.2235294117647059
+								0     0     0     0     0.5450980392156863
+								0     0     0     1     0 "/>
+					</filter>
+				</svg>
+			
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-3 header-navigation_main">
+							<button class="header-navigation">
+								<span class="icon_nav">
+									<span></span>
+									<span></span>
+									<span></span>
+								</span>
+								<span class="text_nav">Каталог товаров</span>
+							</button>
+							<ul class="header-navigation_list">
+								<li class="header-menu-icon-1">
+									<img src="img/header-menu-icon.png" alt="">
+									<a href="#">Системы<br>видеонаблюдения</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-2">
+									<img src="img/header-menu-icon2.png" alt="">
+									<a href="#">Охранные системы</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-3">
+									<img src="img/header-menu-icon3.png" alt="">
+									<a href="#">Автотовары</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-4">
+									<img src="img/header-menu-icon4.png" alt="">
+									<a href="#">Электроника</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-5">
+									<img src="img/header-menu-icon5.png" alt="">
+									<a href="#">Системы Умный дом</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-6">
+									<img src="img/header-menu-icon6.png" alt="">
+									<a href="#">Компьютерное<br>оборудование</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-7">
+									<img src="img/header-menu-icon7.png" alt="">
+									<a href="#">Дом, дача, ремонт</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-8">
+									<img src="img/header-menu-icon8.png" alt="">
+									<a href="#">Источники питания</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-9">
+									<img src="img/header-menu-icon9.png" alt="">
+									<a href="#">Накопители данных</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-10">
+									<img src="img/header-menu-icon10.png" alt="">
+									<a href="#">Расходные материалы</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+								<li class="header-menu-icon-11">
+									<img src="img/header-menu-icon11.png" alt="">
+									<a href="#">Спорт и здоровье</a>
+									<ul class="header-navigation_second">
+										<li>
+											<a href="#">Идентификаторы</a>
+										</li>
+										<li>
+											<a href="#">Считыватели</a>
+											<ul class="header-navigation_third">
+												<li><a href="#">Название 1</a></li>
+												<li><a href="#">Название 2</a></li>
+												<li><a href="#">Название 3</a></li>
+												<li><a href="#">Название 4</a></li>
+												<li><a href="#">Название 5</a></li>
+												<li><a href="#">Название 6</a></li>
+												<li><a href="#">Название 7</a></li>
+												<li><a href="#">Название 8</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Считыватели с контроллером</a>
+										</li>
+										<li>
+											<a href="#">Контроллеры</a>
+										</li>
+										<li>
+											<a href="#">Кнопки выхода</a>
+										</li>
+										<li>
+											<a href="#">Кодовые панели</a>
+										</li>
+										<li>
+											<a href="#">Кодонаборные панели со<br>считывателем и контроллером</a>
+										</li>
+										<li>
+											<a href="#">Замки, защелки</a>
+										</li>
+										<li>
+											<a href="#">Дверные доводчики</a>
+										</li>
+										<li>
+											<a href="#">Управление автоматикой</a>
+										</li>
+										<li>
+											<a href="#">Разное</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="col-auto header-search">
+							<form>
+								<input type="text" placeholder="Поиск среди 5000 товаров...">
+								<button></button>
+								<div class="header-search-result">
+									<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+										<img src="img/adapter.png" alt="">
+										<span>
+											<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+											<span class="header-search-result_info-articul">Артикул: 54533</span>
+										</span>
+										<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+									</a>
+									<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+										<img src="img/adapter.png" alt="">
+										<span>
+											<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+											<span class="header-search-result_info-articul">Артикул: 54533</span>
+										</span>
+										<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+									</a>
+									<a href="#" class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+										<img src="img/adapter.png" alt="">
+										<span>
+											<span class="header-search-result_info-name">Уличная IP камера Proline IP-HW1033WKF</span>
+											<span class="header-search-result_info-articul">Артикул: 54533</span>
+										</span>
+										<span class="header-search-result_price">5 000 <i class="proline-icon-rubble"></i></span>
+									</a>
+								</div>
+							</form>
+						</div>
+						<div class="col-auto">
+							<a href="#" class="header-basket d-flex flex-row flex-wrap justify-content-between align-items-center" data-count_basket="12">
+								<span>
+									<span>9 999 999 <i class="proline-icon-rubble"></i></span>
+									<span>Оформить заказ</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+        </header>
+		<!--
+		---------------------
+		шапка - конец
+		---------------------
+		-->
+    <div class="page_wrap">
+        <div class="work_area">
+           <div class="container">
+                <div class="breadcrumbs pb26">
+                        <a href="#">Главная</a>
+                        <a href="#">Системы видеонаблюдения</a>
+                    </div>
+                    <div class="main-title catalog">
+                            <h1>Видеорегистраторы</h1>
+                            <a href="#" class="btn btn-gb">Найдено 23 товара в наличии</a>
+                        </div>
+               <div class="row">
+                   <div class="col-md-12 col-lg-4 col-xl-3">
+                       <aside class="catalog_filter">
+                           <div class="filter_items">
+                                <div class="filter_item">
+                                        <div class="accordion submenu active active">Цена</div>
+                                        <div class="panel ">
+                                            <div class="range">
+                                                    <input id="rent-range"/>
+                                                    <div class="from_to">
+                                                        <input type="text" value="0 Р" class="from_to-start">
+                                                        <span></span>
+                                                        <input type="text" value="100000 Р" class="from_to-end">
+                                                    </div>
+                                            </div>
+                                        </div>
+                                   </div>
+                                   <div class="filter_item">
+                                        <div class="accordion submenu active">Скидки и акции</div>
+                                        <div class="panel ">
+                                            <div class="label_group">
+                                                    <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                           Новинки <span>22</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                            Скидка <span>1</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                Акция <span>0</span> 
+                                                        </label> 
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                Хит <span>0</span> 
+                                                        </label>   
+                                            </div>
+                                                  
+                                        </div>
+                                   </div>
+                                   <div class="filter_item">
+                                        <div class="accordion submenu active">Производители</div>
+                                        <div class="panel ">
+                                            <div class="label_group">
+                                                    <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                           Proline <span>22</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                            Neoline <span>1</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                Datacam <span>0</span> 
+                                                        </label> 
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                Prestige <span>0</span> 
+                                                        </label>   
+                                            </div>
+                                                  
+                                        </div>
+                                   </div>
+                                   <div class="filter_item">
+                                        <div class="accordion submenu active">Режим работы 
+                                            <i class="info">?
+                                                    <div class="info__popup">
+                                                            <p>
+                                                                    Начисление Бонусных рублей произойдёт 
+                                                                    после доставки или получения заказа в 
+                                                                    магазине. Сумма Бонусных рублей 
+                                                                    определяется в соответствии с правилами 
+                                                                    программы «Пролайн-Бонус».
+                                                            </p>
+                                                                    
+                                                        </div>
+                                            </i>
+                                        </div>
+                                        <div class="panel ">
+                                            <div class="label_group">
+                                                    <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                           AHD <span>22</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                            TVI <span>1</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                CVI <span>0</span> 
+                                                        </label> 
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                Analog <span>0</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                IP <span>0</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                ICCTV <span>0</span> 
+                                                        </label>     
+                                            </div>
+                                                  
+                                        </div>
+                                   </div>
+                                   <div class="filter_item">
+                                        <div class="accordion submenu active">Сетевой протокол
+                                            <i class="info">?
+                                                    <div class="info__popup">
+                                                            <p>
+                                                                    Начисление Бонусных рублей произойдёт 
+                                                                    после доставки или получения заказа в 
+                                                                    магазине. Сумма Бонусных рублей 
+                                                                    определяется в соответствии с правилами 
+                                                                    программы «Пролайн-Бонус».
+                                                            </p>
+                                                                    
+                                                        </div>
+                                            </i>
+                                        </div>
+                                        <div class="panel ">
+                                            <div class="label_group">
+                                                    <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                            ONVIF  <span>22</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                            NVR <span>1</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                HYBRID <span>0</span> 
+                                                        </label> 
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                DNS <span>0</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                DDNS <span>0</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                PPPoE <span>0</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                NTP <span>0</span> 
+                                                        </label> 
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                Mail <span>0</span> 
+                                                        </label> 
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                FTP <span>0</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                ARSP <span>0</span> 
+                                                        </label> 
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                UPNP <span>0</span> 
+                                                        </label>            
+                                            </div>
+                                                  
+                                        </div>
+                                   </div>
+                                   <div class="filter_item">
+                                        <div class="accordion submenu active">Количество USB</div>
+                                        <div class="panel ">
+                                            <div class="label_group">
+                                                    <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                           2 <span>22</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                            3 <span>1</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                4 <span>0</span> 
+                                                        </label> 
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                5 <span>0</span> 
+                                                        </label>   
+                                            </div>
+                                                  
+                                        </div>
+                                   </div>
+                                   <div class="filter_item">
+                                        <div class="accordion submenu active">Разрешение записи
+                                            <i class="info">?
+                                                    <div class="info__popup">
+                                                            <p>
+                                                                    Начисление Бонусных рублей произойдёт 
+                                                                    после доставки или получения заказа в 
+                                                                    магазине. Сумма Бонусных рублей 
+                                                                    определяется в соответствии с правилами 
+                                                                    программы «Пролайн-Бонус».
+                                                            </p>
+                                                                    
+                                                        </div>
+                                            </i>
+                                        </div>
+                                        <div class="panel ">
+                                            <div class="label_group">
+                                                    <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                            Аналоговое 960H <br>
+        (960x576)  <span>22</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                            AHD/TVI/CVI 1080H  <br>
+        (960х1080)  <span>1</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                AHD/TVI/CVI 720P <br>
+        (1280x720) <span>0</span> 
+                                                        </label> 
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                IP 1080P   <br> (1920х1080) <span>0</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                                <input type="checkbox">
+                                                                <div class="checkbox_inducator"></div>
+                                                                IP 720P <br> (1280x720) <span>0</span> 
+                                                        </label>
+                                                        
+                                                                 
+                                            </div>
+                                                  
+                                        </div>
+                                   </div>
+                                   <div class="filter_item">
+                                        <div class="accordion submenu active">Стандарт видео</div>
+                                        <div class="panel ">
+                                            <div class="label_group">
+                                                    <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                           PAL <span>22</span> 
+                                                        </label>
+                                                        <label class="checkbox-label">
+                                                            <input type="checkbox">
+                                                            <div class="checkbox_inducator"></div>
+                                                            NTSC <span>1</span> 
+                                                        </label>
+                                                        
+                                            </div>
+                                                  
+                                        </div>
+                                   </div>
+                                   <div class="filter_item">
+                                        <div class="accordion submenu active">Управление</div>
+                                        <div class="panel ">
+                                                  
+                                        </div>
+                                   </div>
+                           </div>
+                           
+                           <div class="btn-filter-area">
+                               <a href="#" class="btn btn-gb js-view-all">Показать все параметры</a>
+                               <a href="#" class="btn">Применить фильтр</a>
+                               <a href="#" class="btn btn-gb js-clear">Очистить</a>
+                           </div>
+                       </aside>
+                   </div>
+                   <div class="col-md-12 col-lg-8 col-xl-9 thumb_catalog">
+                        <div class="sorting">
+                            <div class="sorting__select">
+                                <select>
+                                    <option>Сортировать по популярности</option>
+                                    <option>Сортировать по популярности</option>
+                                    <option>Сортировать по популярности</option>
+                                </select>
+                            </div>
+                            <div class="sorting_type">
+                                <a href="#" class="type_list">
+                                    
+                                </a>
+                                <a href="#" class="type_thumb active">
+                                    
+                                </a>
+                                <a href="#" class="type_tile">
+                                    
+                                </a>
+                                    
+                            </div>
+                        </div>
+                        <div class="sort_filter">
+							<button>
+									с Full HD 
+							</button>
+							<button>
+									Видеорегистраторы с GPS 
+							</button>
+							<button class="active">
+								Видеорегистраторы на присоске
+							</button>
+							<button>
+								С радар-детектором
+							</button>
+							<div class="view-more">
+								<span class="show">
+										Скрыть всё
+								</span>
+							</div>
+							<div class="view-all active">
+									<button>
+											С дополнительными камерами 
+									</button>
+									<button>
+											Видеорегистраторы с фото 
+									</button>
+									<button >
+											Видеорегистраторы с ночной съёмкой 
+									</button>
+									<button>
+										На магните
+									</button>
+									<button>
+											Видеорегистраторы с подсветкой
+									</button>
+									<button>
+											Видеорегистраторы с USB 
+									</button>
+									<button >
+											Видеорегистраторы с HDMI
+									</button>
+									<button>
+											Видеорегистраторы серые
+									</button>
+									<button>
+											Видеорегистраторы SHO-ME
+									</button>
+									<button>
+											Видеорегистраторы Mio
+									</button>
+									<button>
+											Видеорегистраторы Каркам
+									</button>
+									
+									<button>
+											Видеорегистраторы NEOLINE
+									</button>
+									<button>
+											Видеорегистраторы Prestigio
+									</button>
+									<button>
+											Видеорегистраторы Xiaomi
+									</button>
+							</div>
+						</div>
+                        <div class="container_products">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v01.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-X2404M</div>
+                                                    <span>AHD/TVI/CVI/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109408</div>
+                                                            <div class="price">39 990</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v01.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-8216HVR</div>
+                                                    <span>Analog/IP
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 57341</div>
+                                                    <div class="prices">
+                                                            <div class="price">4 100</div>
+                                                            <div class="old-price">5 850</div>
+                                                    </div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v02.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-A3404S</div>
+                                                    <span>AHD/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109863</div>
+                                                            <div class="price">3 250</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v01.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-X2404M</div>
+                                                    <span>AHD/TVI/CVI/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109408</div>
+                                                            <div class="price">39 990</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v01.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-8216HVR</div>
+                                                    <span>Analog/IP
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 57341</div>
+                                                    <div class="prices">
+                                                            <div class="price">4 100</div>
+                                                            <div class="old-price">5 850</div>
+                                                    </div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v02.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-A3404S</div>
+                                                    <span>AHD/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109863</div>
+                                                            <div class="price">3 250</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v02.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-A3404S</div>
+                                                    <span>AHD/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109863</div>
+                                                            <div class="price">3 250</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v02.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-A3404S</div>
+                                                    <span>AHD/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109863</div>
+                                                            <div class="price">3 250</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v02.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-A3404S</div>
+                                                    <span>AHD/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109863</div>
+                                                            <div class="price">3 250</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                
+                                
+                        </div>
+                        </div>
+                        <div class="container_products js-load-more">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v01.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-X2404M</div>
+                                                    <span>AHD/TVI/CVI/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109408</div>
+                                                            <div class="price">39 990</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v01.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-8216HVR</div>
+                                                    <span>Analog/IP
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 57341</div>
+                                                    <div class="prices">
+                                                            <div class="price">4 100</div>
+                                                            <div class="old-price">5 850</div>
+                                                    </div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v02.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-A3404S</div>
+                                                    <span>AHD/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109863</div>
+                                                            <div class="price">3 250</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v01.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-X2404M</div>
+                                                    <span>AHD/TVI/CVI/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109408</div>
+                                                            <div class="price">39 990</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v01.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-8216HVR</div>
+                                                    <span>Analog/IP
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 57341</div>
+                                                    <div class="prices">
+                                                            <div class="price">4 100</div>
+                                                            <div class="old-price">5 850</div>
+                                                    </div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v02.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-A3404S</div>
+                                                    <span>AHD/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109863</div>
+                                                            <div class="price">3 250</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v02.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-A3404S</div>
+                                                    <span>AHD/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109863</div>
+                                                            <div class="price">3 250</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v02.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-A3404S</div>
+                                                    <span>AHD/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109863</div>
+                                                            <div class="price">3 250</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                        <div href="#" class="product-item">
+                                            
+                                            
+                                            <div class="img-box">
+                                                <img src="img/v02.png" alt="">
+                                            </div>
+                                            <div class="info-box">
+                                                    <div class="product-title">Proline PR-A3404S</div>
+                                                    <span>AHD/Analog/IP <br>
+                                                        видеорегистратор</span>
+                                                    <div class="acticle">Актикул: 109863</div>
+                                                            <div class="price">3 250</div>
+                                                    
+
+                                                    
+                                            </div>
+                                            <div class="buy">
+                                                <a href="#"  class="to-cart openModalBTN" data-targetModal="modal_slider">
+                                                    <img src="img/cart-white.svg" alt="">
+                                                </a>
+                                                    <a href="#" class="key">
+                                                <img src="img/comparison-gray.svg" alt="">
+                                                    </a>
+                                                    <a href="#" class="key js-liked-popup">
+                                                        <img src="img/liked-gray.svg" alt="">
+                                                        <div class="liked-popup">
+                                                        <ul>
+                                                            <li>Добавить в избранное</li>
+                                                            <li>Просмотр списка</li>
+                                                        </ul>
+                                                        </div>
+                                                    </a>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                                
+                                
+                        </div>
+                        </div>
+                        <a href="#" class="more-products btn btn-gb">Загрузить больше товаров</a>
+                        <div class="pagination">
+                                <a href="#" class="prev"></a>
+                                <div class="pagination__pages">
+                                    <a href="#" >22</a>
+                                    <a href="#" class="active">23</a>
+                                    <a href="#">24</a>
+                                    <a href="#">25</a>
+                                    <a href="#">26</a>
+                                    <a href="#">...</a>
+                                    <a href="#">60</a>
+                                </div>
+                                <a href="#" class="next"></a>
+                        </div>
+                   </div>
+               </div>
+               <div class="bottom_info">
+				<div class="title">
+					<h2>Системы видеонаблюдения</h2>
+				</div>
+				<p>
+						Вопросы безопасности не теряют актуальности в наше время. Можно долго разбирать причины, но, думаем, они и так всем понятны.
+				</p>
+				<p>
+						Защитить своё имущество или свою семью можно разными способами. И один из них — применение систем безопасности. Давайте же чуть подробнее разберёмся, <br>
+						что к чему.
+				</p>
+				<div class="about">
+					<div class="about__title">
+							Что такое системы безопасности и видеонаблюдения?
+					</div>
+					<p>
+							Это комплект специального оборудования, направленного на мониторинг и запись происходящего. Собственно, c его помощью можно наблюдать за происходящим, <br>
+							фиксировать все события и анализировать их постфактум.
+					</p>
+				</div>
+				<div class="about js-about">
+					<div class="about__title">
+						Для чего нужны системы видеонаблюдения?
+					</div>
+					<p>
+						Основная задача системы — обеспечить безопасность объекта или субъекта. Если простыми словами, то видеонаблюдение помогает защитить имущество или жизнь и 
+						здоровье человека.
+					</p>
+				</div>
+					<a href="#" class="btn_description js-btn full_description"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px" height="8px">
+					   <path fill-rule="evenodd" fill="rgb(143, 155, 170)" d="M13.364,1.706 L7.707,7.362 C7.317,7.753 6.683,7.753 6.293,7.362 L0.636,1.706 C0.245,1.315 0.245,0.682 0.636,0.291 C1.027,-0.099 1.660,-0.099 2.050,0.291 L7.000,5.241 L11.950,0.291 C12.340,-0.099 12.973,-0.099 13.364,0.291 C13.754,0.682 13.754,1.315 13.364,1.706 Z"></path>
+					   </svg>
+					   <div class="show">Полное описание раздела</div>         
+					</a>
+			</div>
+            </div>
+           </div>
+            
+        </div>
+      
+    </div>
+<!--Modal-->
+    <div class="modal" id="modal_slider">
+            <div class="modal-container to--cart">
+                <div class="modal-head">
+                    <button class="close-modal"><span></span><span></span></button>
+                    <div class="add-to-cart">
+                        <img src="img/to-cart.png" alt="">
+                        <div class="title">
+                            <h2>Товар добавлен в корзину</h2>
+                        </div>
+                        <div class="btn-group">
+                            <a href="#" class="btn">Перейти в корзину</a>
+                            <a href="#" class="btn btn-gb">Продолжить покупки</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-title">
+                        <h2>
+                        С этим товаром покупают
+
+                        </h2>
+                    </div>
+                        <div class="modal-slider" >
+                                <div>
+                                        <div class="product-item p20">
+                                                <div class="img-box">
+                                                    <img src="img/adapter.png" alt="">
+                                                </div>
+                                                <div class="info-box">
+                                                        <div class="product-title">Ai-Ball Cradle+Adaptors</div>
+                                                        <span>Держатель с адаптерами <br> питания</span>
+                                                        <div class="acticle">Актикул: 56409</div>
+                                                        <div class="prices">
+                                                                <div class="price">910</div>
+                                                                <div class="old-price">1 300</div>
+                                                        </div>
+                                                </div>
+                                                <div class="buy">
+                                                        <a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+                                                                <img src="img/cart-white.svg" alt="">
+                                                            </a>
+                                                        <a href="#" class="key">
+                                                    <img src="img/comparison-gray.svg" alt="">
+                                                        </a>
+                                                        <a href="#" class="key js-liked-popup">
+                                                            <img src="img/liked-gray.svg" alt="">
+                                                            <div class="liked-popup">
+                                                            <ul>
+                                                                <li>Добавить в избранное</li>
+                                                                <li>Просмотр списка</li>
+                                                            </ul>
+                                                            </div>
+                                                        </a>
+                                                </div>
+                                                
+                                            </div>
+                                </div>
+                                <div> 
+                                        <div class="product-item p20">
+                                                <div class="img-box">
+                                                    <img src="img/memory.jpg" alt="">
+                                                </div>
+                                                <div class="info-box">
+                                                        <div class="product-title">32Gb microSDHC C10 SanDisk <br>
+                                                                Ultra c адаптером</div>
+                                                        <span>Карта памяти 32Gb c адаптером</span>
+                                                        <div class="acticle">Актикул: 110357</div>
+                                                                <div class="price">1410</div>
+                                                </div>
+                                                <div class="buy">
+                                                        <a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+                                                                <img src="img/cart-white.svg" alt="">
+                                                            </a>
+                                                        <a href="#" class="key">
+                                                    <img src="img/comparison-gray.svg" alt="">
+                                                        </a>
+                                                        <a href="#" class="key js-liked-popup">
+                                                            <img src="img/liked-gray.svg" alt="">
+                                                            <div class="liked-popup">
+                                                            <ul>
+                                                                <li>Добавить в избранное</li>
+                                                                <li>Просмотр списка</li>
+                                                            </ul>
+                                                            </div>
+                                                        </a>
+                                                </div>
+                                                
+                                            </div>
+                                </div>
+                                <div>
+                                        <div class="product-item p20">
+                                                <div class="img-box">
+                                                    <img src="img/p.jpg" alt="">
+                                                </div>
+                                                <div class="info-box">
+                                                        <div class="product-title">Folksafe FS-4200SR (B) KIT</div>
+                                                        <span>Пассивные влагозащищенные  <br>
+                                                                передатчики видео сигнала</span>
+                                                        <div class="acticle">Актикул: 55614</div>
+                                                                <div class="price">455</div>
+                                                </div>
+                                                <div class="buy">
+                                                        <a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+                                                                <img src="img/cart-white.svg" alt="">
+                                                            </a>
+                                                        <a href="#" class="key">
+                                                    <img src="img/comparison-gray.svg" alt="">
+                                                        </a>
+                                                        <a href="#" class="key js-liked-popup">
+                                                            <img src="img/liked-gray.svg" alt="">
+                                                            <div class="liked-popup">
+                                                            <ul>
+                                                                <li>Добавить в избранное</li>
+                                                                <li>Просмотр списка</li>
+                                                            </ul>
+                                                            </div>
+                                                        </a>
+                                                </div>
+                                                
+                                            </div>  
+                                </div>
+                                <div>
+                                        <div class="product-item p20">
+                                                <div class="img-box">
+                                                    <img src="img/p.jpg" alt="">
+                                                </div>
+                                                <div class="info-box">
+                                                        <div class="product-title">Folksafe FS-4200SR (B) KIT</div>
+                                                        <span>Пассивные влагозащищенные  <br>
+                                                                передатчики видео сигнала</span>
+                                                        <div class="acticle">Актикул: 55614</div>
+                                                                <div class="price">455</div>
+                                                </div>
+                                                <div class="buy">
+                                                        <a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+                                                                <img src="img/cart-white.svg" alt="">
+                                                            </a>
+                                                        <a href="#" class="key">
+                                                    <img src="img/comparison-gray.svg" alt="">
+                                                        </a>
+                                                        <a href="#" class="key js-liked-popup">
+                                                            <img src="img/liked-gray.svg" alt="">
+                                                            <div class="liked-popup">
+                                                            <ul>
+                                                                <li>Добавить в избранное</li>
+                                                                <li>Просмотр списка</li>
+                                                            </ul>
+                                                            </div>
+                                                        </a>
+                                                </div>
+                                                
+                                            </div>       
+                                </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+<!--Modal end-->
+	<!--
+	---------------------
+	подвал
+	---------------------
+	-->
+	<footer>
+		<div class="footer_top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-3 d-none d-lg-block">
+						<div class="list-contacts">
+							<ul>
+								<li class="phone">
+									<a href="tel:+74956496970">8 (495) 649-69-70</a>
+									<p>Москва и МО</p>
+								</li>
+								<li>
+									<a href="tel:88003331100">8 (800) 333-11-00</a>
+									<p>Бесплатно по России</p>
+								</li>
+							</ul>
+							<ul>
+								<li class="work-time">
+									<p>Пн - Пт 09:00 - 19:00,<br>Сб 10:00 - 19:00</p>
+								</li>
+								<li class="addres">
+									<address>107023, г. Москва, Семеновский переулок, дом 6, строение 3</address>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-3">
+						<div class="list-links">
+							<p>Компания Proline</p>
+							<ul>
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">Продукция</a></li>
+								<li><a href="#">Статьи и обзоры</a></li>
+								<li><a href="#">Оптовикам</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-3">
+						<div class="list-links">
+							<p>Покупателям</p>
+							<ul>
+								<li><a href="#">Пользовательское соглашение</a></li>
+								<li><a href="#">Установочные центры</a></li>
+								<li><a href="#">Как сделать заказ</a></li>
+								<li><a href="#">Оптовикам</a></li>
+								<li><a href="#">Гарантия</a></li>
+								<li><a href="#">Услуги</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-12 col-lg-3 d-flex flex-row flex-wrap">
+						<div class="list-download_app">
+							<p>Скачайте приложение</p>
+							<ul>
+								<li>
+									<a href="#"><img src="img/apps_stores/google.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/apps_stores/apple.png" alt=""></a>
+								</li>
+							</ul>
+						</div>
+						<div class="list-payment">
+							<p>Способы оплаты</p>
+							<ul>
+								<li>
+									<a href="#"><img src="img/payment/alfabank.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/payment/master_card.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/payment/webmoney.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/payment/visa.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/payment/qiwi.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/payment/mir.png" alt=""></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/payment/yandex_money.png" alt=""></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bottom">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<p class="copyright-text">© 2005 — 2017, ПРОЛАЙН РУС. Все права защищены.</p>
+					</div>
+					<div class="col-lg-6">
+						<div class="socials-links dark">
+							<ul class="justify-content-end">
+								<li><a href="#" class="vk"></a></li>
+								<li><a href="#" class="twitter"></a></li>
+								<li><a href="#" class="facebook"></a></li>
+								<li><a href="#" class="ok"></a></li>
+								<li><a href="#" class="instag"></a></li>
+								<li><a href="#" class="youtube"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--
+	---------------------
+	подвал - конец
+	---------------------
+	-->
+<script src="js/scripts.min.js"></script>
+<script src="inputmask/jquery.inputmask.bundle.js"></script>
+<script src="inputmask/phone.js"></script>
+<script src="inputmask/phone-ru.js"></script>
+<script src="slick/slick.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+    
