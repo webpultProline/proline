@@ -30,6 +30,11 @@ body a.autorization-block-yes , body button.autorization-block-yes , body div.au
 ФИКСЫ
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
+#proline_product_virtual_view_scene {
+	width: 100%!important;
+	height: 70vh!important
+}
+
 .quantity_box::after {
 	width: 100%;
 	left: 0;

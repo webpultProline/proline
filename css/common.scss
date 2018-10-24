@@ -1441,9 +1441,7 @@ ul {
      margin: 0 auto;
      display: inline-block;
      margin-top: 27px;
-     vertical-align: top;
  }
- 
  .tale {
      padding-top: 37px;
      .info-box .acticle {
@@ -2935,103 +2933,5 @@ margin-left: 2px;
     font-weight: lighter;
     text-align: center;
     margin-top: 40px;
-    padding-bottom: 40px;
-    background: url(../img/bg_border.png) repeat-x bottom;
-    background-position-x: 3px;
-}
-.one-slide {
-    .slick-dots {
-        display: none;
-    }
-}
-.mt35 {
-    margin-top: 35px;
-}
-.sorting--sales {
-    margin-bottom: 20px;
-}
-.product-sale {
-    height: 260px;
-    padding-left: 30px;
-    padding-right: 30px;
-    justify-content: space-between;
-    .col-buy {
-        margin-left: 0;
-        
-    }
-    .buy {
-        flex-direction: row;
-        width: 230px;
-        justify-content: space-between;
-    }
-    .col-cart a {
-
-        width: 50px;
-    
-    }
-    .col-buy .to-cart {
-
-        width: 110px;
-    
-    }
-    .col-cart {
-        margin-top: 0;
-        width: 110px;
-    }
-    .img-box {
-        width: 200px;
-        height: 200px;
-    }
-    .col-img {
-        display: flex;
-        align-items: center;
-        margin-right: 40px;
-    }
-    .product_list {
-        padding-left: 14px;
-        margin-top: 18px;
-        li {
-            margin-bottom: 7px;
-        }
-    }
-    .info-box--list {
-        margin-top: 10px;
-        span {
-            padding-top: 20px;
-            display: block;
-        }
-        .acticle {
-            font-size: 14px;
-            color: #8e9aa9;
-            margin-top: 15px;
-        }
-    }
-}
-.col-sales {
-    display: flex;
-    justify-content: space-between;
-}
-.product_list-row {
-    .product_list {
-        &:last-child {
-            margin-left: 60px;
-        }
-    } 
-}
-.review {
-    margin-top: 15px;
-    margin-bottom: 8px;
-    a, p {
-        color: #5a6779;
-        font-size: 14px;
-        line-height: 28px;
-    }
-    span {
-    border-bottom: 1px dotted;
-    transition: .3s;
-    &:hover {
-        border: transparent;
-    }
-    }
 }
 @import 'media';

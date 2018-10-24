@@ -1742,7 +1742,6 @@ a {
   margin: 0 auto;
   display: inline-block;
   margin-top: 27px;
-  vertical-align: top;
 }
 
 .tale {
@@ -3563,131 +3562,6 @@ a {
   font-weight: lighter;
   text-align: center;
   margin-top: 40px;
-  padding-bottom: 40px;
-  background: url(../img/bg_border.png) repeat-x bottom;
-  background-position-x: 3px;
-}
-
-.one-slide .slick-dots {
-  display: none;
-}
-
-.mt35 {
-  margin-top: 35px;
-}
-
-.sorting--sales {
-  margin-bottom: 20px;
-}
-
-.product-sale {
-  height: 260px;
-  padding-left: 30px;
-  padding-right: 30px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.product-sale .col-buy {
-  margin-left: 0;
-}
-
-.product-sale .buy {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 230px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.product-sale .col-cart a {
-  width: 50px;
-}
-
-.product-sale .col-buy .to-cart {
-  width: 110px;
-}
-
-.product-sale .col-cart {
-  margin-top: 0;
-  width: 110px;
-}
-
-.product-sale .img-box {
-  width: 200px;
-  height: 200px;
-}
-
-.product-sale .col-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 40px;
-}
-
-.product-sale .product_list {
-  padding-left: 14px;
-  margin-top: 18px;
-}
-
-.product-sale .product_list li {
-  margin-bottom: 7px;
-}
-
-.product-sale .info-box--list {
-  margin-top: 10px;
-}
-
-.product-sale .info-box--list span {
-  padding-top: 20px;
-  display: block;
-}
-
-.product-sale .info-box--list .acticle {
-  font-size: 14px;
-  color: #8e9aa9;
-  margin-top: 15px;
-}
-
-.col-sales {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.product_list-row .product_list:last-child {
-  margin-left: 60px;
-}
-
-.review {
-  margin-top: 15px;
-  margin-bottom: 8px;
-}
-
-.review a, .review p {
-  color: #5a6779;
-  font-size: 14px;
-  line-height: 28px;
-}
-
-.review span {
-  border-bottom: 1px dotted;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.review span:hover {
-  border: transparent;
 }
 
 @media (min-width: 1200px) {

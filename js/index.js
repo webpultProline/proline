@@ -79,6 +79,11 @@
 			}
 		});
 	}
+	
+
+	function renderObject(e,t,a){window.addEventListener("resize",function(){camera.aspect=e.clientWidth/e.clientHeight,camera.updateProjectionMatrix(),
+	r.setSize(e.clientWidth,e.clientHeight),
+	o()},!1);var i=e.clientWidth,n=e.clientHeight;e.setAttribute("width",i),e.setAttribute("height",n);var r=new THREE.WebGLRenderer({canvas:e});r.setClearColor(3355443),r.setPixelRatio(window.devicePixelRatio),r.setSize(i,n),r.shadowMap.enabled=!0,r.shadowMap.type=THREE.PCFSoftShadowMap,scene=new THREE.Scene,scene.background=new THREE.Color('rgb(255,255,255)'),camera=new THREE.PerspectiveCamera(35,e.clientWidth/e.clientHeight,1,5e3),camera.up.set(0,.5,1),camera.position.set(0,0,0),scene.add(camera);var d=new THREE.OrbitControls(camera,r.domElement);d.addEventListener("change",o),d.minDistance=1500,d.maxDistance=4e3,d.enablePan=!0,d.target.set(0,0,0),d.update(),dirLight=new THREE.DirectionalLight(16774337,1),dirLight.color.setHSL(.1,1,.95),dirLight.position.set(50,50,150),dirLight.position.multiplyScalar(1),scene.add(dirLight),scene.add(new THREE.AmbientLight(16777215,.5)),dirLight.castShadow=!0,dirLight.shadow.mapSize.width=2048,dirLight.shadow.mapSize.height=2048;dirLight.shadow.camera.left=-50,dirLight.shadow.camera.right=50,dirLight.shadow.camera.top=50,dirLight.shadow.camera.bottom=-50,dirLight.shadow.camera.far=4500,dirLight.shadow.bias=-1e-4;new THREE.LoadingManager;function o(){r.render(scene,camera)}(new THREE.MTLLoader).setPath(t).load(a+".mtl",function(e){e.preload(),(new THREE.OBJLoader).setMaterials(e).setPath(t).load(a+".obj",function(e){e.position.y=-200,e.castShadow=!1,e.receiveShadow=!1,scene.add(e)})}),function e(){r.render(scene,camera),requestAnimationFrame(function(){e()})}()}
 
 $(function(){
 	/*тест авторизации*/
@@ -315,6 +320,9 @@ $(function(){
 		$('#'+targetBlock).addClass('openModal');
 		if($('#'+targetBlock).find('.modal-slider').length > 0){
 			$('#'+targetBlock).find('.modal-slider').slick('slickGoTo',0);
+		}
+		if($('#'+targetBlock).find('canvas').length > 0){
+			renderObject(document.getElementById('proline_product_virtual_view_scene'),$(this).attr('data-path3D'),$(this).attr('data-name3D'));
 		}
 		
 		$('.HasPopUp').removeClass('OpenPopUp');
@@ -578,11 +586,6 @@ $(function(){
 			thumbnail: false,
 			selector: '.productGallery-photo',
 		});
-
-	function renderObject(e,t,a){window.addEventListener("resize",function(){camera.aspect=e.parentNode.parentElement.clientWidth/e.parentNode.parentElement.clientHeight,camera.updateProjectionMatrix(),r.setSize(e.parentNode.parentElement.clientWidth,e.parentNode.parentElement.clientHeight),o()},!1);var i=e.parentNode.parentElement.clientWidth,n=e.parentNode.parentElement.clientHeight;e.setAttribute("width",i),e.setAttribute("height",n);var r=new THREE.WebGLRenderer({canvas:e});r.setClearColor(3355443),r.setPixelRatio(window.devicePixelRatio),r.setSize(i,n),r.shadowMap.enabled=!0,r.shadowMap.type=THREE.PCFSoftShadowMap,scene=new THREE.Scene,scene.background=new THREE.Color(15395562),camera=new THREE.PerspectiveCamera(35,e.parentNode.parentElement.clientWidth/e.parentNode.parentElement.clientHeight,1,5e3),camera.up.set(0,.5,1),camera.position.set(0,0,0),scene.add(camera);var d=new THREE.OrbitControls(camera,r.domElement);d.addEventListener("change",o),d.minDistance=1500,d.maxDistance=4e3,d.enablePan=!0,d.target.set(0,0,0),d.update(),dirLight=new THREE.DirectionalLight(16774337,1),dirLight.color.setHSL(.1,1,.95),dirLight.position.set(50,50,150),dirLight.position.multiplyScalar(1),scene.add(dirLight),scene.add(new THREE.AmbientLight(16777215,.5)),dirLight.castShadow=!0,dirLight.shadow.mapSize.width=2048,dirLight.shadow.mapSize.height=2048;dirLight.shadow.camera.left=-50,dirLight.shadow.camera.right=50,dirLight.shadow.camera.top=50,dirLight.shadow.camera.bottom=-50,dirLight.shadow.camera.far=4500,dirLight.shadow.bias=-1e-4;new THREE.LoadingManager;function o(){r.render(scene,camera)}(new THREE.MTLLoader).setPath(t).load(a+".mtl",function(e){e.preload(),(new THREE.OBJLoader).setMaterials(e).setPath(t).load(a+".obj",function(e){e.position.y=-200,e.castShadow=!1,e.receiveShadow=!1,scene.add(e)})}),function e(){r.render(scene,camera),requestAnimationFrame(function(){e()})}()}
-	
-	renderObject(document.getElementById('proline_product_virtual_view_scene'),'chair/','chair');
-		
 	}
 	/*
 	списки в подвале
