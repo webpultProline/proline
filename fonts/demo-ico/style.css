@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'proline-ico';
+  src:  url('fonts/proline-ico.eot?43zhr');
+  src:  url('fonts/proline-ico.eot?43zhr#iefix') format('embedded-opentype'),
+    url('fonts/proline-ico.ttf?43zhr') format('truetype'),
+    url('fonts/proline-ico.woff?43zhr') format('woff'),
+    url('fonts/proline-ico.svg?43zhr#proline-ico') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="proline-icon-"], [class*=" proline-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'proline-ico' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.proline-icon-ruble-bold:before {
+  content: "\e921";
+}
+.proline-icon-recommend:before {
+  content: "\e920";
+}
+.proline-icon-gift:before {
+  content: "\e918";
+}
+.proline-icon-hit:before {
+  content: "\e919";
+}
+.proline-icon-stock:before {
+  content: "\e91a";
+}
+.proline-icon-10:before {
+  content: "\e91b";
+}
+.proline-icon-delivery-all:before {
+  content: "\e91c";
+}
+.proline-icon-many-product:before {
+  content: "\e91d";
+}
+.proline-icon-ru-soft:before {
+  content: "\e91e";
+}
+.proline-icon-teh-pod:before {
+  content: "\e91f";
+}
+.proline-icon-d:before {
+  content: "\e928";
+}
+.proline-icon-video:before {
+  content: "\e929";
+}
+.proline-icon-cal:before {
+  content: "\e926";
+}
+.proline-icon-promo:before {
+  content: "\e927";
+}
+.proline-icon-downloads:before {
+  content: "\e911";
+}
+.proline-icon-characteristics:before {
+  content: "\e912";
+}
+.proline-icon-product_description:before {
+  content: "\e913";
+}
+.proline-icon-reviews:before {
+  content: "\e914";
+}
+.proline-icon-similar_goods:before {
+  content: "\e915";
+}
+.proline-icon-articles_and_reviews:before {
+  content: "\e916";
+}
+.proline-icon-accessories:before {
+  content: "\e917";
+}
+.proline-icon-liked-full:before {
+  content: "\e909";
+}
+.proline-icon-liked-normal:before {
+  content: "\e908";
+}
+.proline-icon-comparison:before {
+  content: "\e90a";
+}
+.proline-icon-cart:before {
+  content: "\e90e";
+}
+.proline-icon-pin-white:before {
+  content: "\e90f";
+}
+.proline-icon-share:before {
+  content: "\e90b";
+}
+.proline-icon-delivery-track:before {
+  content: "\e910";
+}
+.proline-icon-forwCall:before {
+  content: "\e90d";
+}
+.proline-icon-feedback:before {
+  content: "\e90c";
+}
+.proline-icon-header-menu-icon10:before {
+  content: "\e810";
+}
+.proline-icon-header-menu-icon9:before {
+  content: "\e809";
+}
+.proline-icon-header-menu-icon8:before {
+  content: "\e808";
+}
+.proline-icon-header-menu-icon7:before {
+  content: "\e807";
+}
+.proline-icon-header-menu-icon6:before {
+  content: "\e806";
+}
+.proline-icon-header-menu-icon5:before {
+  content: "\e805";
+}
+.proline-icon-header-menu-icon4:before {
+  content: "\e804";
+}
+.proline-icon-header-menu-icon2:before {
+  content: "\e802";
+}
+.proline-icon-header-menu-icon3:before {
+  content: "\e803";
+}
+.proline-icon-header-menu-icon1:before {
+  content: "\e801";
+}
+.proline-icon-header-menu-icon11:before {
+  content: "\e811";
+}
+.proline-icon-tile:before {
+  content: "\e905";
+}
+.proline-icon-thumb:before {
+  content: "\e906";
+}
+.proline-icon-arrow-top:before {
+  content: "\e904";
+}
+.proline-icon-arrow-bottom:before {
+  content: "\e903";
+}
+.proline-icon-checkbox:before {
+  content: "\e902";
+}
+.proline-icon-arrow_right:before {
+  content: "\e901";
+}
+.proline-icon-arrow_right1:before {
+  content: "\e922";
+}
+.proline-icon-rubble:before {
+  content: "\e900";
+}
+.proline-icon-list:before {
+  content: "\e907";
+}
+.proline-icon-dislike:before {
+  content: "\e924";
+}
+.proline-icon-like:before {
+  content: "\e925";
+}
+.proline-icon-close:before {
+  content: "\e923";
+}

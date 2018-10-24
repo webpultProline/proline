@@ -519,6 +519,12 @@ $(function(){
 	if($('.proline_tab').length > 0){
 		changeTabContent($('.proline_tabs').find('.proline_tab-nav li.active').attr('data-parentBlock'),$('.proline_tabs').find('.proline_tab-nav li.active').attr('data-tabId'));
 	}
+	$('.proline_product-link').click(function(){
+		changeTabContent("proline_product-tabs_info","tab-characteristics");
+		$('.proline_tabs').find('.proline_tab-nav li').removeClass('active');
+		$('.proline_tabs').find('.proline_tab-nav li[data-tabid="tab-characteristics"]').addClass('active');
+		$('html, body').stop().animate({scrollTop: $('#tab-characteristics').offset().top - 50 }, 800);
+	});
 	/*
 	отзывы
 	*/
@@ -529,6 +535,12 @@ $(function(){
 	карусель фото в карточке
 	*/
 	if($('.product-image-slider').length > 0){
+		//для построения галереи
+		$('.product-image-slider .product-slide').each(function(){
+			var src = $(this).find('.product-slide-image').attr('data-src');
+			$('.proline_product-image-container').append('<div class="productGallery-photo" style="display:none!important" data-src="'+src+'"></div>');
+		});
+		//
 		$('.product-image-slider').slick({
 			dots: false,
 			infinite: true,
@@ -537,21 +549,36 @@ $(function(){
 			slidesToScroll: 1,
 			centerMode: true,
 			vertical: true,
-			verticalSwiping: true
+			verticalSwiping: true,
 		});
+		
+		var backGround = $('.product-image-slider .product-slide[data-slick-index="0"]').find('.product-slide-image').css('background-image');
+		var srcBackground = $('.product-image-slider .product-slide[data-slick-index="0"]').find('.product-slide-image').attr('data-src');
+		$('.proline_product-image').css('background-image',backGround);
+		$('.proline_product-image').attr('data-src',srcBackground);
 		
 		$('.product-image-slider .product-slide').click(function(){
 			var backGround = $(this).find('.product-slide-image').css('background-image');
+			var srcBackground = $(this).find('.product-slide-image').attr('data-src');
+			
 			var position_slide = parseInt($(this).attr('data-slick-index'),10);
-			$('.proline_product-image').css('background-image',backGround)
+			$('.proline_product-image').css('background-image',backGround);
 			$('.product-image-slider').slick('slickGoTo',position_slide);
-			//console.log(position_slide);
+			$('.proline_product-image').attr('data-src',srcBackground);
 		});
 		$('.product-image-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 			var backGround = $('.product-image-slider .product-slide[data-slick-index="'+nextSlide+'"]').find('.product-slide-image').css('background-image');
-			$('.proline_product-image').css('background-image',backGround)
+			var srcBackground = $('.product-image-slider .product-slide[data-slick-index="'+nextSlide+'"]').find('.product-slide-image').attr('data-src');
+			$('.proline_product-image').css('background-image',backGround);
+			$('.proline_product-image').attr('data-src',srcBackground);
 		});
 	}
+	$('.productGallery').lightGallery({
+		download: false,
+		counter: true,
+		thumbnail: false,
+		selector: '.productGallery-photo',
+	});
 	/*
 	списки в подвале
 	*/
