@@ -1717,7 +1717,7 @@
 								</div>
 								<div class="proline_product-image_button-group d-flex flex-row flex-wrap justify-content-between align-items-center">
 									<button class="btn-wborder videoBtnWBORDER productGallery-photo" data-src="//www.youtube.com/watch?v=1ugivNRYfjc"><i class="proline-icon-video"></i><span>Открыть видео</span></button>
-									<button class="btn-wborder virtual-dBtnWBORDER"><i class="proline-icon-d"></i><span>Открыть 3D</span></button>
+									<button class="btn-wborder virtual-dBtnWBORDER openModalBTN" data-targetmodal="proline_product_virtual_view"><i class="proline-icon-d"></i><span>Открыть 3D</span></button>
 								</div>
 							</div>
 							<div class="col-lg-3">
@@ -3302,8 +3302,31 @@ P5: Нормально-разомкнутое реле (эл. механичес
 			</div>
 		</div>
 	</div>
+	<!--
+	-----------------------------
+	модалка 3d
+	-----------------------------
+	-->
+	<div class="modal" id="proline_product_virtual_view">
+		<div class="modal-container">
+			<div class="modal-head">
+				<p>Купить Proline PR-RF225BT</p>
+				<button class="close-modal"><span></span><span></span></button>
+			</div>
+			<div class="modal-body">
+				<canvas id="proline_product_virtual_view_scene"></canvas>
+			</div>
+		</div>
+	</div>
 
 <script src="js/jquery.js"></script>
+
+<script src="js/three.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/OBJLoader.js"></script>
+<script src="js/MTLLoader.js"></script>
+<script src="js/main.js"></script>
+
 <script src="jquery_styler/jquery.formstyler.min.js"></script>
 <script src="customscrollbar/jquery.mCustomScrollbar.js"></script>
 
