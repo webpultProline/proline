@@ -3748,6 +3748,9 @@ footer {
 	-webkit-box-align: center !important;
 	-webkit-align-items: center !important;
 	align-items: center !important;
+	position: relative;
+	left: 0;
+	top: 0
 }
 .proline_comparison-popup > button:before {
 	font-family: 'proline-ico' !important;
@@ -3764,12 +3767,70 @@ footer {
 	font-size: 20px;
 	transition: color .35s;
 }
+.proline_comparison-popup > button.hasComparison:after {
+	content: attr(data-count);
+    height: 21px;
+    line-height: 21px;
+    border-radius: 21px;
+    text-align: center;
+    padding: 0 6px;
+    min-width: 21px;
+    color: #fff;
+    display: block;
+    background: #36398b;
+	text-align: center;
+	position: absolute;
+	right: -7px;
+	top: -10px;
+}
 .proline_comparison-popup:hover > button:before , .proline_comparison-popup > button.active:before {
 	color: #4c5662;
 }
 .proline_comparison-popup:hover .PopUpMain {
     visibility: visible;
     opacity: 1;
+}
+.proline_comparison-popup .PopUpMain {
+	width: 290px;
+}
+.proline_comparison-popup .PopUpMain .quantity_box .img-box {
+	min-width: 90px;
+	display: -ms-flexbox !important;
+	display: -webkit-box !important;
+	display: -webkit-flex !important;
+	display: flex !important;
+	-ms-flex-direction: row !important;
+	-webkit-box-orient: horizontal !important;
+	-webkit-box-direction: normal !important;
+	-webkit-flex-direction: row !important;
+	flex-direction: row !important;
+	-ms-flex-wrap: wrap !important;
+	-webkit-flex-wrap: wrap !important;
+	flex-wrap: wrap !important;
+	-ms-flex-align: center !important;
+	-webkit-box-align: center !important;
+	-webkit-align-items: center !important;
+	align-items: center !important;
+    -ms-flex-pack: center !important;
+    -webkit-box-pack: center !important;
+    -webkit-justify-content: center !important;
+    justify-content: center !important;
+}
+.proline_comparison-popup .PopUpMain .quantity_box .product_name {
+	max-width: 180px;
+}
+.proline_comparison-popup .PopUpMain .btn {
+	margin-top: 20px
+}
+.proline_comparison-popup .PopUpMain .PopUpBody > p {
+	display: block;
+	padding: 15px;
+	border-radius: 6px;
+	background-color: #e1f1cd;
+	color: #222425;
+	font-size: 14px;
+	line-height: 1;
+	margin: 0 0 5px;
 }
 
 .product-card .proline_share-popup {
