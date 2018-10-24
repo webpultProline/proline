@@ -168,6 +168,12 @@ $('.sort_filter button').on('click', function(e){
   $('.sort_filter button').removeClass('active');
   $(this).toggleClass('active');
 });
+$('.location_region span').on('click', function(e){
+  e.preventDefault();
+  $('.location_region span').removeClass('active');
+  $(this).toggleClass('active');
+});
+
 $('.js-btn').on('click', function(e){
   e.preventDefault();
   if($(this).parent().find('.js-about').first().hasClass('active') == false){
