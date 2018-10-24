@@ -30,6 +30,20 @@ body a.autorization-block-yes , body button.autorization-block-yes , body div.au
 ФИКСЫ
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
+.breadcrumbs {
+	-ms-flex-wrap: wrap !important;
+	-webkit-flex-wrap: wrap !important;
+	flex-wrap: wrap !important;
+}
+.breadcrumbs a {
+	margin-bottom: 5px
+}
+
+#proline_product_virtual_view_scene {
+	width: 100%!important;
+	height: 70vh!important
+}
+
 .quantity_box::after {
 	width: 100%;
 	left: 0;
@@ -911,6 +925,10 @@ font-family: 'proline-ico' !important;
 }
 .list-info_delivery > ul > li span {
 	border-bottom: 1px dotted #5a6779;
+}
+.list-info_delivery > ul > li button:hover span {
+	color: #36398b;
+	border-bottom-color: #36398b;
 }
 .list-info_delivery > ul > li:before {
 	position: absolute;
@@ -3664,7 +3682,7 @@ footer {
 }
 /*
 --------------------------------
-Шапка фиксированная
+страница продукта
 --------------------------------
 */
 .product-card .main-title {
@@ -3899,6 +3917,46 @@ footer {
 	font-size: 14px;
 	line-height: 1;
 	margin: 0 0 5px;
+}
+.proline_comparison-popup .PopUpMain .PopUpBody > p.error {
+	background-color: #ffe9e1;
+}
+.quantity_box .remove_product {
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	padding: 0 0 0 22px;
+	margin: 10px 0 0 0;
+	line-height: 1;
+	color: #5a6779;
+	font-size: 14px;
+	font-weight: 400;
+	position: relative;
+	left: 0;
+	top: 0;
+	background: transparent;
+	display: block
+}
+.quantity_box .remove_product:before {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: 'proline-ico' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #5a6779;
+	font-size: 12px;
+	content: "\e923"
+}
+.quantity_box .remove_product:hover , .quantity_box .remove_product:hover:before {
+	color: #36398b;
 }
 
 .product-card .proline_share-popup {
@@ -4398,7 +4456,11 @@ footer {
 	margin: 5px 15px;
 	color: #222425;
 	font-size: 18px;
-	text-transform: uppercase
+	text-transform: uppercase;
+	transition: border-color .35s;
+}
+.proline_product-input_group > input:focus {
+	border-color: #36398b;
 }
 .proline_product-input_group > button.btn {
 	width: 170px;
@@ -4928,6 +4990,85 @@ footer {
 	}
 }
 @media(max-width: 991px){
+	/*
+	--------------------------------
+	страница продукта
+	--------------------------------
+	*/
+	.product-image-slider {
+		width: 100%;
+		height: 75px;
+	}
+	.product-image-slider .slick-list {
+		height: 75px!important;
+		margin: 0 40px;
+	}
+	.product-image-slider .slick-next {
+		left: auto;
+		right: 0;
+		transform: translateX(0) translateY(-50%) rotate(0deg);
+		top: 50%;
+		bottom: 0;
+		margin-top: 0;
+	}
+	.product-image-slider .slick-prev {
+		right: auto;
+		left: 0;
+		transform: translateX(0) translateY(-50%) rotate(0deg);
+		top: 50%;
+		bottom: 0;
+		margin-top: 0;
+	}
+	.product-image-sliders {
+		margin-bottom: 30px;
+		order: 2;
+	}
+	.proline_product-image-container {
+		margin-bottom: 30px;
+		order: 1;
+	}
+	.proline_product-middle-info , .proline_product-right-info {
+		order: 3;
+	}
+	
+	.proline_product-input_group > input , .proline_product-input_group > button.btn {
+		width: 100%
+	}
+	.proline_product_advantages > button {
+		width: 50%
+	}
+	.proline_product_advantages {
+		-ms-flex-wrap: wrap !important;
+		-webkit-flex-wrap: wrap !important;
+		flex-wrap: wrap !important;
+	}
+	.product_review-left {
+		margin-bottom: 20px
+	}
+	
+	.product-card .proline_share-popup .PopUpMain , .proline_comparison-popup .PopUpMain , .proline_liked-popup .PopUpMain {
+		left: auto;
+		right: 0;
+		transform: translateY(100%) translateX(0);
+	}
+	.product-card .proline_share-popup .PopUpMain:before {
+		left: auto;
+		transform: translateX(0);
+		right: 15px
+	}
+	.proline_liked-popup .PopUpMain:before {
+		left: auto;
+		transform: translateX(0);
+		right: 15px
+	}
+	.proline_comparison-popup .PopUpMain:before {
+		left: auto;
+		transform: translateX(0);
+		right: 15px
+	}
+	.proline_product_price-availability {
+		width: 100%
+	}
 	/*
 	--------------------------------
 	мобильная шапка
@@ -5589,8 +5730,73 @@ footer {
 	.main-carousel_slide {
 		height: 263px;
 	}
+	/*
+	--------------------------------
+	страница продукта
+	--------------------------------
+	*/
+	.proline_product-middle-info {
+		margin-bottom: 20px
+	}
+	.product-card .main-title {
+		padding-right: 90px;
+	}
+	.product-card .main-title:after {
+		width: 75px;
+		height: 15px
+	}
 }
 @media(max-width: 576px){
+	/*
+	--------------------------------
+	страница продукта
+	--------------------------------
+	*/
+	.reviews_product-top .rating-bar {
+		width: 100%;
+		margin-bottom: 20px
+	}
+	.proline_product-image {
+		height: 60vw
+	}
+	.reviews_product-title > p {
+		width: 100%;
+		margin-bottom: 20px;
+		text-align: left;
+	}
+	.product_review-liked-group {
+		width: 100%;
+		margin-bottom: 20px
+	}
+	.proline_product-top-text , .rating-bar {
+		width: 33%;
+		margin-bottom: 15px
+	}
+	.proline_product-top > .row {
+		-ms-flex-pack: end !important;
+		-webkit-box-pack: end !important;
+		-webkit-justify-content: flex-end !important;
+		justify-content: flex-end !important;
+	}
+	.proline_product_advantages > button {
+		width: 100%
+	}
+	.proline_product-characteristics_list > li > span {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.proline_product-characteristics_list > li > span:last-child {
+		margin-bottom: 0
+	}
+	.proline_product-check {
+		padding-left: 15px;
+		padding-right: 15px
+	}
+	
+	.proline_product-image_button-group > button {
+		margin-bottom: 20px;
+		width: 100%
+	}
 	/*
 	--------------------------------
 	мобильная шапка
@@ -5837,6 +6043,12 @@ footer {
 		overflow: hidden;
 		max-height: 0;
 	}
+	.socials-links > ul , .footer_bottom .socials-links {
+    -ms-flex-pack: start !important;
+    -webkit-box-pack: start !important;
+    -webkit-justify-content: flex-start !important;
+    justify-content: flex-start !important;
+	}
 	.footer_top .list-links > ul > li:last-child {
 		padding-bottom: 9px;
 	}
@@ -5942,6 +6154,27 @@ footer {
 	}
 }
 @media(max-width: 430px){
+	/*
+	--------------------------------
+	страница продукта
+	--------------------------------
+	*/
+	.proline_product-top-text {
+		width: 100%
+	}
+	.proline_share-popup .PopUpMain {
+		width: 75vw
+	}
+	.proline_comparison-popup .PopUpMain {
+		right: -30px;
+	}
+	
+	.rating-bar {
+		width: 50%;
+	}
+	.proline_product-top-text:nth-child(3){
+		width: 50%
+	}
 	/*
 	--------------------------------
 	модальные окна

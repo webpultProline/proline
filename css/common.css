@@ -1748,7 +1748,6 @@ a {
   margin: 0 auto;
   display: inline-block;
   margin-top: 27px;
-  vertical-align: top;
 }
 
 .tale {
@@ -3569,6 +3568,7 @@ a {
   font-weight: lighter;
   text-align: center;
   margin-top: 40px;
+<<<<<<< HEAD
   padding-bottom: 40px;
   background: url(../img/bg_border.png) repeat-x bottom;
   background-position-x: 3px;
@@ -3696,6 +3696,8 @@ a {
 
 .review span:hover {
   border: transparent;
+=======
+>>>>>>> eacffcbd8306df42477c38f2c11db0697a090699
 }
 
 .col-buy .rating-bar {
