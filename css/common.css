@@ -3487,6 +3487,83 @@ a {
   color: #5c5d5c;
 }
 
+.to_sale h5 {
+  letter-spacing: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.days_time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  margin-top: 5px;
+}
+
+.days {
+  font-size: 14px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.days:before {
+  content: "";
+  background-image: url(../img/time.svg);
+  background-size: contain;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.time_items {
+  width: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 14px;
+}
+
+.time_items .time_item {
+  height: 30px;
+  width: 35px;
+  background-color: #dedfe2;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.time_items .time_item:not(:last-child)::after {
+  position: absolute;
+  content: ":";
+  top: 7px;
+  right: -8px;
+}
+
+.sell-out {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 40px;
+}
+
 @media (min-width: 1200px) {
   .slider-img {
     min-width: 640px;
