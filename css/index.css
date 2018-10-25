@@ -30,6 +30,11 @@ body a.autorization-block-yes , body button.autorization-block-yes , body div.au
 ФИКСЫ
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
+.min-select_new .sorting__select .jq-selectbox__select {
+	width: 120px;
+	padding-right: 35px
+}
+
 .breadcrumbs {
 	-ms-flex-wrap: wrap !important;
 	-webkit-flex-wrap: wrap !important;
