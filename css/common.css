@@ -3788,10 +3788,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.contacts_info .img-block {
-  height: 50px;
+  height: 60px;
 }
 
 .text-info {
@@ -3818,6 +3815,202 @@ a {
 
 .text-info a:hover {
   border-bottom: transparent;
+}
+
+.our_address {
+  font-style: normal;
+  margin-top: 35px;
+}
+
+.our_address h2 {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.our_address .address {
+  margin-top: 15px;
+  letter-spacing: 0.1px;
+}
+
+.our_address .call_our {
+  color: #5a6779;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  margin-top: 7px;
+}
+
+.our_address .call_our a {
+  color: #36398b;
+  letter-spacing: 0.141px;
+}
+
+.chart {
+  margin-top: 32px;
+}
+
+.chart .title h3 {
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  font-weight: 500;
+}
+
+.chart__days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 17px;
+  max-width: 698px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.chart__days .chart__day {
+  height: 36px;
+  width: 98px;
+  background-color: #ebeefa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.chart__days .chart__day.weekend {
+  background-color: #ffe0be;
+}
+
+.chart__days .chart__day.worked {
+  width: 71.41%;
+}
+
+.chart__days .chart__day.weekend_days {
+  width: 28.3%;
+}
+
+.our_social {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 35px;
+}
+
+.our_social .title {
+  margin-bottom: 18px;
+}
+
+.our_social .title h4 {
+  font-size: 16px;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.map_title {
+  margin-top: 43px;
+}
+
+.map_title h5 {
+  letter-spacing: 0;
+  font-size: 26px;
+}
+
+.tabs-map {
+  border-bottom: 2px solid #eef0f5;
+  height: 54px;
+  margin-bottom: 30px;
+  margin-top: 21px;
+}
+
+.tabs-map .tab-map {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 53px;
+  padding-left: 30px;
+  padding-right: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  color: #5a6779;
+  position: relative;
+}
+
+.tabs-map .tab-map:before {
+  content: '';
+  width: 0;
+  border-bottom: 2px solid #36398b;
+  position: absolute;
+  bottom: -1px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  right: 0;
+}
+
+.tabs-map .tab-map.active {
+  color: #222425;
+}
+
+.tabs-map .tab-map.active:before {
+  left: 0;
+  width: 100%;
+}
+
+.form_contacts {
+  border-color: #fafafc;
+  background-color: #fafafc;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.form_contacts .btn {
+  margin-top: 38px;
+}
+
+.form_contacts .input-label {
+  width: 100%;
+  max-width: 405px;
+}
+
+.form_contacts .form-row .input-label > input {
+  width: 92%;
+}
+
+.form_contacts .quality {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.write_to_us {
+  margin-top: 60px;
+  margin-bottom: 23px;
+}
+
+.write_to_us h5 {
+  letter-spacing: 0;
+}
+
+.chekcbox-label.grey {
+  color: #5a6779;
 }
 
 @media (min-width: 1200px) {

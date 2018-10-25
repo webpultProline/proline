@@ -3112,9 +3112,7 @@ margin-left: 2px;
 .contacts_info {
     display: flex;
     align-items: center;
-    .img-block {
-        height: 50px;
-    }
+    height: 60px;
 }
 .text-info {
     max-width: 190px;
@@ -3137,5 +3135,154 @@ margin-left: 2px;
         }
     }
 }
-  
+ .our_address {
+     font-style: normal;
+     margin-top: 35px;
+     h2 {
+         font-size: 16px;
+         font-weight: 500;
+         letter-spacing: 0.2px;
+     }
+     .address {
+        margin-top: 15px;
+        letter-spacing: 0.1px;
+     }
+     .call_our {
+         color: #5a6779;
+         line-height: 20px;
+         letter-spacing: 0.1px;
+         margin-top: 7px;
+         a {
+            color: #36398b;
+            letter-spacing: 0.141px;
+         }
+     }
+ }
+ .chart  {
+     margin-top: 32px;
+     .title {
+         h3 {
+             font-size: 16px;
+             letter-spacing: 0.2px;
+             font-weight: 500;
+         }
+     }
+ }
+ .chart__days {
+     display: flex;
+     margin-top: 17px;
+     max-width: 698px;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     .chart__day {
+        height: 36px;
+        width: 98px;
+        background-color: #ebeefa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        margin-bottom: 2px;
+        &.weekend {
+            background-color: #ffe0be;
+        }
+        &.worked {
+            width: 71.41%;
+        }
+        &.weekend_days {
+            width: 28.3%;
+        }
+
+     }
+ }
+ .our_social {
+     display: inline-flex;
+     flex-direction: column;
+     margin-top: 35px;
+     .title {
+         margin-bottom: 18px;
+         h4 {
+             font-size: 16px;
+             letter-spacing: 0;
+             font-weight: 500;
+         }
+     }
+ }
+ .map_title {
+     margin-top: 43px;
+     h5 {
+         letter-spacing: 0;
+         font-size: 26px;
+     }
+ }
+ .tabs-map {
+     border-bottom: 2px solid #eef0f5;
+     height: 54px;
+     margin-bottom: 30px;
+     margin-top: 21px;
+     .tab-map {
+         display: inline-flex;
+         justify-content: center;
+         height: 53px;
+         padding-left: 30px;
+        padding-right: 30px;
+         align-items: center;
+         text-transform: uppercase;
+         font-size: 13px;
+         font-weight: 500;
+         color: #5a6779;
+         position: relative;
+            &:before {
+                content: '';
+                width: 0;
+               border-bottom: 2px solid #36398b;
+               position: absolute;
+               bottom: -1px;
+               transition: .3s;
+                right: 0;
+            }
+         &.active {
+             &:before {
+                 left: 0;
+                 width: 100%;
+             }
+             color: #222425;
+         }
+     }
+ }
+ .form_contacts {
+     border-color: #fafafc;
+     background-color: #fafafc;
+     padding-top: 28px;
+     padding-bottom: 28px;
+     .btn {
+         margin-top: 38px;
+     }
+     .input-label {
+         width: 100%;
+         max-width: 405px;
+     }
+     .form-row .input-label > input {
+         width: 92%;
+     }
+     .quality {
+         font-size: 14px;
+         line-height: 20px;
+         font-weight: 500;
+
+
+     }
+ }
+ .write_to_us {
+     margin-top: 60px;
+     margin-bottom: 23px;
+     h5 {
+         letter-spacing: 0;
+     }
+ }
+.chekcbox-label {
+     &.grey {
+         color: #5a6779;
+     }
+ }
 @import 'media';

@@ -260,5 +260,12 @@ $(".tabs-delivery .tab").click(function() {
     $(".tab_item").hide().eq($(this).index()).show();
 }).eq(0).addClass("active");
 
+
+
+$(".tab_item-map").not(":first").hide();
+$(".wrapper-map .tab-map").click(function() {
+	$(".wrapper-map .tab-map").removeClass("active").eq($(this).index()).addClass("active");
+	$(".tab_item-map").hide().eq($(this).index()).show();
+}).eq(0).addClass("active");
 });
 
