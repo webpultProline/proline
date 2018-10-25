@@ -1491,87 +1491,397 @@
 					<h1>Личный кабинет</h1>
 				</div>
 				<div class="row m22">
-					<div class="col-md-3">
+					<div class="col-lg-3">
 						<aside class="nav_left">
 							<nav class="menu_left">
-								<a href="#" class='active'>Настройки</a>
+								<a href="users-setting.html">Настройки</a>
 								<a href="#">Мои заказы</a>
-								<a href="#">Избранное</a>
+								<a href="users-favorites.html" class="counter-item active" data-count="12">Избранное</a>
 								<a href="#">Подписка на рассылку</a>
 								<a href="#">Бонусная карта</a>
-								<a href="#">Обратная связь</a>
+								<a href="users-feedback.html">Обратная связь</a>
 							</nav>
 						</aside>
 					</div>
-					<div class="col-md-9">
-						<div class="row">
-							<div class="col-md-6">
-								<label class="input-label">
-									<span>Имя</span>
-									<input type="text" placeholder="Имя">
-								</label>
-							</div>
-							<div class="col-md-6">
-								<label class="input-label">
-									<span>Фамилия</span>
-									<input type="text" placeholder="Фамилия">
-								</label>
-							</div>
-							<div class="col-md-12">
-								<div class="row">
-									<div class="col-md-6">
-										<label class="input-label">
-											<span>Отчество</span>
-											<input type="text" placeholder="Отчество">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<label class="input-label">
-									<span>Моб. телефон</span>
-									<input type="text" placeholder="+7 (___)___-__-__" class="phone_input" im-insert="true">
-								</label>
-							</div>
-							<div class="col-md-6">
-								<label class="input-label">
-									<span>Email</span>
-									<input type="email" placeholder="Email">
-								</label>
-							</div>
-							<div class="col-md-6">
-								<div class="row input-label d-flex flex-row flex-wrap justify-content-between align-items-center min-select_new">
-									<span class="col-lg-12">День рождения</span>
-									<div class="sorting__select col-lg-4">
-										<select>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-										</select>
-									</div>
-									<div class="sorting__select col-lg-4">
-										<select>
-											<option>Январь</option>
-											<option>Февраль</option>
-											<option>Март</option>
-											<option>Апрель</option>
-											<option>Май</option>
-											<option>Июнь</option>
-											<option>Июль</option>
-										</select>
-									</div>
-									<div class="sorting__select col-lg-4">
-										<select>
-											<option>1990</option>
-											<option>1991</option>
-											<option>1992</option>
-											<option>1993</option>
-											<option>1994</option>
-											<option>1995</option>
-											<option>1996</option>
-										</select>
+					<div class="col-lg-9">
+					
+						<!--Табы-->
+						<div class="proline_tabs" id="tabs_user">
+							<div class="proline_tabs-container">
+								<div class="proline_tab open proline_tab-one" id="tab-favoriets">
+									<div class="row">
+
+										<div class="col-xl-4 col-md-6">
+											<div class="product-item">
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key" tabindex="0">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup" tabindex="0">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-4 col-md-6">
+											<div class="product-item">
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key" tabindex="0">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup" tabindex="0">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-4 col-md-6">
+											<div class="product-item">
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key" tabindex="0">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup" tabindex="0">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-4 col-md-6">
+											<div class="product-item">
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key" tabindex="0">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup" tabindex="0">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-4 col-md-6">
+											<div class="product-item">
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key" tabindex="0">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup" tabindex="0">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-4 col-md-6">
+											<div class="product-item">
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key" tabindex="0">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup" tabindex="0">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-4 col-md-6">
+											<div class="product-item">
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key" tabindex="0">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup" tabindex="0">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-4 col-md-6">
+											<div class="product-item">
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key" tabindex="0">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup" tabindex="0">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-4 col-md-6">
+											<div class="product-item">
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key" tabindex="0">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup" tabindex="0">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-4 col-md-6">
+											<div class="product-item">
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key" tabindex="0">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup" tabindex="0">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-4 col-md-6">
+											<div class="product-item">
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key" tabindex="0">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup" tabindex="0">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-xl-4 col-md-6">
+											<div class="product-item">
+												<div class="img-box">
+													<img src="img/cam.jpg" alt="">
+												</div>
+												<div class="info-box">
+													<div class="product-title">Proline PR-117B</div>
+													<span>Муляж уличной видеокамеры</span>
+													<div class="acticle">Актикул: 56409</div>
+													<div class="price">39 990</div>
+												</div>
+												<div class="buy">
+													<a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+														<img src="img/cart-white.svg" alt="">
+													</a>
+													<a href="#" class="key" tabindex="0">
+														<img src="img/comparison-gray.svg" alt="">
+													</a>
+													<a href="#" class="key js-liked-popup" tabindex="0">
+														<img src="img/liked-gray.svg" alt="">
+														<div class="liked-popup">
+															<ul>
+																<li>Добавить в избранное</li>
+																<li>Просмотр списка</li>
+															</ul>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>

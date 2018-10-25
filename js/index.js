@@ -5,53 +5,64 @@
 	
 	function checkInputForModal(block){
 		$(block).find('input').each(function(){
-			if($(this).attr('type') == 'email' || $(this).attr('type') == 'EMAIL'){
-				if($(this).val() == '' || isEmail($(this).val()) == false){
-					if($(this).parents('.input-label').hasClass('error') == false){
-						$(this).parents('.input-label').addClass('error');
-						if($(this).parents('.modal').length > 0){
-							$(this).parents('.modal').addClass('show-error');
+			if($(this).prop('disabled') == false){
+				if($(this).attr('type') == 'email' || $(this).attr('type') == 'EMAIL'){
+					if($(this).val() == '' || isEmail($(this).val()) == false){
+						if($(this).parents('.input-label').hasClass('error') == false){
+							$(this).parents('.input-label').addClass('error');
+							if($(this).parents(block).length > 0){
+								$(this).parents(block).addClass('show-error');
+							}
+						}
+					} else {
+						if($(this).parents('.input-label').hasClass('error') == true){
+							$(this).parents('.input-label').removeClass('error');
+							if($(this).parents(block).length > 0){
+								$(this).parents(block).removeClass('show-error');
+							}
 						}
 					}
 				} else {
-					if($(this).parents('.input-label').hasClass('error') == true){
-						$(this).parents('.input-label').removeClass('error');
-						if($(this).parents('.modal').length > 0){
-							$(this).parents('.modal').removeClass('show-error');
+					if($(this).val() == ''){
+						if($(this).parents('.input-label').hasClass('error') == false){
+							$(this).parents('.input-label').addClass('error');
+							if($(this).parents(block).length > 0){
+								$(this).parents(block).addClass('show-error');
+							}
 						}
-					}
-				}
-			} else {
-				if($(this).val() == ''){
-					if($(this).parents('.input-label').hasClass('error') == false){
-						$(this).parents('.input-label').addClass('error');
-						if($(this).parents('.modal').length > 0){
-							$(this).parents('.modal').addClass('show-error');
+					} else {
+						if($(this).parents('.input-label').hasClass('error') == true){
+							$(this).parents('.input-label').removeClass('error');
+							if($(this).parents(block).length > 0){
+								$(this).parents(block).removeClass('show-error');
+							}
 						}
-					}
-				} else {
-					if($(this).parents('.input-label').hasClass('error') == true){
-						$(this).parents('.input-label').removeClass('error');
-						if($(this).parents('.modal').length > 0){
-							$(this).parents('.modal').removeClass('show-error');
-						}
-					}
-				}
-			}
-		});
-		$(block).find('textarea').each(function(){
-			if($(this).val() == ''){
-				if($(this).parents('.input-label').hasClass('error') == false){
-					$(this).parents('.input-label').addClass('error');
-					if($(this).parents('.modal').length > 0){
-						$(this).parents('.modal').addClass('show-error');
 					}
 				}
 			} else {
 				if($(this).parents('.input-label').hasClass('error') == true){
 					$(this).parents('.input-label').removeClass('error');
-					if($(this).parents('.modal').length > 0){
-						$(this).parents('.modal').removeClass('show-error');
+					if($(this).parents(block).length > 0){
+						$(this).parents(block).removeClass('show-error');
+					}
+				}
+			}
+		});
+		$(block).find('textarea').each(function(){
+			if($(this).prop('disabled') == false){
+				if($(this).val() == ''){
+					if($(this).parents('.input-label').hasClass('error') == false){
+						$(this).parents('.input-label').addClass('error');
+						if($(this).parents(block).length > 0){
+							$(this).parents(block).addClass('show-error');
+						}
+					}
+				} else {
+					if($(this).parents('.input-label').hasClass('error') == true){
+						$(this).parents('.input-label').removeClass('error');
+						if($(this).parents(block).length > 0){
+							$(this).parents(block).removeClass('show-error');
+						}
 					}
 				}
 			}
@@ -148,6 +159,18 @@ $(function(){
 		$('.header-navigation_main').find('.header-navigation').addClass('subPages');
 	}
 	/*
+	для груп инпутов с чекбоксом
+	*/
+	if($('.patronymic-group').length > 0){
+		$('.patronymic-group').find('.checkbox-label').click(function(){
+			if($(this).find('input[type="checkbox"]').prop('checked') == true){
+				$(this).parents('.patronymic-group').find('.input-label input').prop('disabled',true);
+			} else {
+				$(this).parents('.patronymic-group').find('.input-label input').prop('disabled',false);
+			}
+		});
+	}
+	/*
 	мобильная навигация
 	*/
 	$('.search-mobile-btn').click(function(){
@@ -188,7 +211,6 @@ $(function(){
 		$('.mobile-menu_btn').attr('data-actionClass','mobile-select-region-btn');
 		$('.mobile-full_menu').addClass('show-sub-menu');
 	});
-	
 	
 	function hideSelectRegionOnMobile(){
 		if($('.mobile-select-region-btn').hasClass('open') == true){

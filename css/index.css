@@ -30,6 +30,39 @@ body a.autorization-block-yes , body button.autorization-block-yes , body div.au
 ФИКСЫ
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
+body .menu_left a:active {
+	background-color: #1b1d5c;
+	color: #fff;
+}
+.menu_left a.counter-item {
+	padding-right: 70px;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.menu_left a.counter-item:after {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+    height: 21px;
+    line-height: 21px;
+    border-radius: 21px;
+    text-align: center;
+    padding: 0 6px;
+    min-width: 21px;
+    color: #fff;
+    display: block;
+    background: #36398b;
+	content: attr(data-count);
+	font-size: 12px;
+	transition: background-color .35s, color .35s;
+}
+.menu_left a.counter-item:hover:after , .menu_left a.counter-item.active:after , .menu_left a.counter-item:active:after {
+    color: #5a6779;
+    background-color: #e8e9fa;
+}
+
 .min-select_new .sorting__select .jq-selectbox__select {
 	width: 120px;
 	padding-right: 35px
@@ -784,6 +817,9 @@ font-family: 'proline-ico' !important;
 .proline_tab.open {
     display: block;
 }
+.proline_tab.proline_tab-one {
+	padding-top: 0
+}
 
 .proline_tab {
 	padding-top: 25px;
@@ -1246,6 +1282,9 @@ font-family: 'proline-ico' !important;
 	transition: border-color .35s , color .35s;
 	background-color: #fff;
 }
+.input-label > input:disabled {
+	background-color: #fafbfc;
+}
 .input-label > input::-webkit-input-placeholder {
 	color: #8e9aa9;
 }
@@ -1370,6 +1409,10 @@ font-family: 'proline-ico' !important;
     width: auto;
     height: 20px;
 }
+/*лабел с выпадащкой*/
+.input-label .sorting__select .jq-selectbox__select , .input-label .sorting__select .jq-selectbox {
+	width: 100%
+}
 
 .checkbox-label-auth .checkbox-label-auth-yes {
 	display: none;
@@ -1444,6 +1487,84 @@ font-family: 'proline-ico' !important;
 }
 .checkbox-label > a > span {
 	border-bottom: 1px dotted #afb0d1;
+}
+/*радио с текстом*/
+.radio-group {
+	margin-bottom: 25px
+}
+.radio-group > span {
+	display: inline-block;
+	text-align: left;
+	font-size: 13px;
+	color: #222425;
+	line-height: 1;
+	margin-bottom: 5px;
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%
+}
+.radio-label {
+	display: inline-block;
+	padding: 0 0 0 32px;
+	margin: 10px 55px 10px 0;
+	position: relative;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+	color: #222425;
+	font-size: 14px;
+}
+.radio-label:last-child {
+	margin-right: 0
+}
+.radio-label b {
+	font-weight: 500;
+}
+.radio-label .radio_inducator {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	border: 1px solid #d6dbe6;
+	color: #fff;
+	transition: background-color .35s , color .35s , border-width .35s , border-color .35s , color .35s;
+}
+.radio-label:hover {
+	color: #36398b;
+}
+.radio-label:hover .radio_inducator {
+	border-color: #36398b;
+}
+.radio-label > input {
+	display: none;
+}
+.radio-label > input[type="radio"]:checked + .radio_inducator {
+	border-color: #36398b;
+	border-width: 7px;
+}
+.radio-label > a {
+	display: inline-block;
+	text-decoration: none;
+	color: #36398b;
+}
+.radio-label > a > span {
+	border-bottom: 1px dotted #afb0d1;
+}
+/*отчество*/
+.patronymic-group .checkbox-label {
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.patronymic-group .checkbox-label .checkbox_inducator {
+	top: 50%;
+	transform: translateY(-50%);
+}
+.patronymic-group .checkbox-label {
+	display: inline-block
 }
 /*попапы*/
 .HasPopUp {
@@ -4939,6 +5060,33 @@ footer {
 }
 /*
 --------------------------------
+личный кабинет
+--------------------------------
+*/
+#tabs_user .proline_tab {
+	text-align: left;
+}
+#tabs_user .proline_tab-nav {
+	width: max-content;
+}
+#tabs_user .proline_tab-nav > li {
+	padding-left: 30px;
+	padding-right: 30px;
+    -ms-flex-positive: 0;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+}
+#tabs_user .proline_tab .btn {
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-bottom: 60px
+}
+#tab-favoriets .product-item {
+	margin-bottom: 30px;
+}
+/*
+--------------------------------
 --------------------------------
 Адаптив
 --------------------------------
@@ -4995,6 +5143,23 @@ footer {
 	}
 }
 @media(max-width: 991px){
+	/*
+	--------------------------------
+	личный кабинет
+	--------------------------------
+	*/
+	#tabs_user .proline_tab-nav {
+		width: 100%;
+	}
+	#tabs_user .proline_tab-nav > li {
+		-ms-flex-positive: 1;
+		-webkit-box-flex: 1;
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+	}
+	.min-select_new .sorting__select {
+		margin-bottom: 25px;
+	}
 	/*
 	--------------------------------
 	страница продукта
