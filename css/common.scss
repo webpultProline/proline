@@ -3089,7 +3089,7 @@ margin-left: 2px;
         height: 42px;
         display: flex;
         align-items: center;
-        width: 268px;
+        width: calc(100% + 4px);
         padding-left: 20px;
         padding-right: 20px;
         transition: .3s;
@@ -3257,19 +3257,22 @@ margin-left: 2px;
      padding-bottom: 28px;
      .btn {
          margin-top: 38px;
+         width: 170px;
      }
      .input-label {
          width: 100%;
-         max-width: 405px;
+         max-width: 390px;
      }
      .form-row .input-label > input {
-         width: 92%;
+         width: 100%;
      }
      .quality {
-         font-size: 14px;
-         line-height: 20px;
-         font-weight: 500;
-
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        margin-top: -5px;
+        letter-spacing: -0.05px;
+        margin-bottom: 33px;
 
      }
  }
@@ -3280,9 +3283,10 @@ margin-left: 2px;
          letter-spacing: 0;
      }
  }
-.chekcbox-label {
-     &.grey {
-         color: #5a6779;
-     }
+    .grey {
+        color: #5a6779;
+    }
+ .captcha {
+     margin-bottom: 30px;
  }
 @import 'media';

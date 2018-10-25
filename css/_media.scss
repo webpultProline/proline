@@ -31,6 +31,9 @@
     .to--cart {
         width: 560px;
     }
+    .chart__days .chart__day {
+        width: calc(33.3% - 1px);
+    }
     .quantity_box .product_name {
         max-width: 195px;
     }
@@ -48,6 +51,14 @@
     
 }
 @media (min-width: 768px) and (max-width: 991px) {
+    .img-block {
+        img {
+            min-width: 60px;
+        }
+    }
+    .contacts_info {
+        height: auto;
+    }
     .to--cart {
         width: 750px;
     }
@@ -161,6 +172,34 @@
     }
     .product_list-row .product_list:last-child {
         display: none;
+    }
+    .chart__days .chart__day.worked {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .chart__days .chart__day.weekend_days {
+        width: 100%;
+    }
+    .tabs-map {
+        height: auto;
+        border-bottom: 0;
+        margin-bottom: 15px;
+    }
+    .tabs-map .tab-map {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .chart__days .chart__day {
+        width: calc(20% - 1px);
+    }
+    .chart__days {
+        justify-content: flex-start;
+        .chart__day {
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+        
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -361,8 +400,43 @@ right: -18px;
     }
     //
     
+    
+    .our_social .socials-links > ul > li {
+        margin-right: 12px;
+    }
+   
+    .write_to_us {
+        margin-top: 20px;
+    }
+    .menu_left a {
+        width: calc(100% + 2px);
+    }
+    .chart__days .chart__day {
+        width: calc(50% - 1px);
+    }
 }
 @media (max-width: 767px) {
+    .contacts_info {
+        margin-top: 20px;
+    }
+   
+    .chart__days .chart__day.worked {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .chart__days .chart__day.weekend_days {
+        width: 100%;
+    }
+    .tabs-map {
+        height: auto;
+        border-bottom: 0;
+        margin-bottom: 15px;
+    }
+    .tabs-map .tab-map {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
     .days_time {
         margin-bottom: 15px;
 
@@ -668,6 +742,12 @@ right: -18px;
             margin-top: 10px;
         }
     }
+    .title-contacts h1 {
+        font-size: 23px;
+    }
+    .write_to_us h5 {
+        font-size: 23px;
+    }
 }
 @media (max-width: 1199px) {
     
@@ -711,6 +791,15 @@ right: -18px;
     .title_liked {
         margin-top: 19px;
     
+    }
+    .tabs-map .tab-map {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+    .img-block {
+        img {
+            min-width: 60px;
+        }
     }
 }
 @media (min-width: 1200px) and (max-width: 1265px) {
