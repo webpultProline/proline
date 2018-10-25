@@ -3724,19 +3724,19 @@ a {
   margin-top: 30px;
 }
 
-.title-contacts h1 {
-  font-size: 30px;
+.title-contacts {
+  margin-top: -5px;
 }
 
-.nav_left {
-  margin-top: 25px;
+.title-contacts h1 {
+  font-size: 30px;
 }
 
 .menu_left {
   border: 2px solid #f5f6fa;
   border-radius: 10px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3765,6 +3765,7 @@ a {
   padding-right: 20px;
   -webkit-transition: .3s;
   transition: .3s;
+  font-size: 14px;
 }
 
 .menu_left a.active, .menu_left a:hover {
@@ -3776,8 +3777,47 @@ a {
   margin-top: 30px;
 }
 
-.m25 {
-  margin-top: 25px;
+.m22 {
+  margin-top: 22px;
+}
+
+.contacts_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts_info .img-block {
+  height: 50px;
+}
+
+.text-info {
+  max-width: 190px;
+  margin-top: -4px;
+  margin-left: 15px;
+}
+
+.text-info h6 {
+  letter-spacing: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+.text-info a {
+  letter-spacing: -0.3px;
+  color: #36398b;
+  border-bottom: 1px dotted #36398b;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.text-info a:hover {
+  border-bottom: transparent;
 }
 
 @media (min-width: 1200px) {

@@ -3070,18 +3070,17 @@ margin-left: 2px;
 //contacts start
 
 .title-contacts {
+    margin-top: -5px;
     h1 {
         font-size: 30px;
     }
 }
-.nav_left {
-    margin-top: 25px;
-}
+
 .menu_left {
     border: 2px solid #f5f6fa;
     border-radius: 10px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -3094,6 +3093,7 @@ margin-left: 2px;
         padding-left: 20px;
         padding-right: 20px;
         transition: .3s;
+        font-size: 14px;
         
         &.active, &:hover {
             background-color: #36398b;
@@ -3106,12 +3106,35 @@ margin-left: 2px;
 .mr30 {
       margin-top: 30px;
 }
-.m25 {
-    margin-top: 25px;
+.m22 {
+    margin-top: 22px;
+}
+.contacts_info {
+    display: flex;
+    align-items: center;
+    .img-block {
+        height: 50px;
+    }
 }
 .text-info {
-    h5 {
-        
+    max-width: 190px;
+    margin-top: -4px;
+    margin-left: 15px;
+    h6 {
+        letter-spacing: 0;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+    a {
+        letter-spacing: -0.3px;
+        color: #36398b;
+        border-bottom: 1px dotted #36398b;
+        transition: .3s;
+        &:hover {
+            border-bottom: transparent;
+        }
     }
 }
   
