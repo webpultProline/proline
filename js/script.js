@@ -116,7 +116,13 @@ $(function() {
      
     ]
   });
-  
+    if($(".dropped__form").length > 0){
+      $(".dropped__form").mCustomScrollbar({
+        theme:"dark",
+        axis: 'y'
+      });
+    };
+
   if($("#rent-range").length > 0){
     $("#rent-range").ionRangeSlider({
       type: "double",
