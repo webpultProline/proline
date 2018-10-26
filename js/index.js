@@ -396,7 +396,9 @@ $(function(){
 		returnToDefModalInput();
 	});
 	$('.close-modal').click(function(){
-		$('body').removeClass('openModal');
+		if($('.mobile-menu_btn').hasClass('open-menu') == false){
+			$('body').removeClass('openModal');
+		}
 		$(this).parents('.modal').removeClass('openModal');
 	});
 	if($('.phone_input').length > 0){
@@ -412,7 +414,9 @@ $(function(){
 	});
 	$(window).click(function(event){
 		if($(event.target).hasClass('modal') == true){
-			$('body').removeClass('openModal');
+			if($('.mobile-menu_btn').hasClass('open-menu') == false){
+				$('body').removeClass('openModal');
+			}
 			$(event.target).removeClass('openModal');
 		}
 	});
