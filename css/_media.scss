@@ -28,18 +28,6 @@
     }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-    .auth {
-        margin-top: 30px;
-        margin-bottom: 10px;
-
-    }
-    .authorization_user .title {
-        margin-top: 15px;
-
-    }
-    .authorization_user {
-        margin-bottom: 35px;
-    }
     .to--cart {
         width: 560px;
     }
@@ -63,23 +51,6 @@
     
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    .auth{
-        flex-direction: column!important;
-        align-items: flex-start!important;
-        justify-content: flex-start !important;
-        margin-top: 35px;
-        margin-bottom: 35px;
-
-
-    }
-    .authorization_user {
-        margin-bottom: 35px;
-
-    }
-    .authorization_user .title {
-        margin-top: 15px;
-
-    }
     .img-block {
         img {
             min-width: 60px;
@@ -270,20 +241,7 @@
     
 }
 @media  (max-width: 575px) {
-    .auth {
-        margin-top: 35px;
-        margin-bottom: 0px;
-    }
-    .auth-btn  {
-        flex-direction: column;
-        .btn {
-            margin-bottom: 10px;
-
-        }
-    }
-    .authorization_user {
-margin-bottom: 20px;
-    }
+    
     .breadcrumbs {
         padding-top: 18px;
         padding-bottom: 20px;
@@ -456,10 +414,8 @@ right: -18px;
     .chart__days .chart__day {
         width: calc(50% - 1px);
     }
-    
 }
 @media (max-width: 767px) {
-    
     .contacts_info {
         margin-top: 20px;
     }
@@ -759,22 +715,7 @@ right: -18px;
     
 }
 @media (max-width: 991px) {
-    .share {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 15px;
-    }
-    .share__social {
-        flex-wrap: wrap;
-        margin-top: 10px;
-
-    }
-    .share__text {
-        margin-right: 10px;
-    }
-    .social__item {
-        margin-bottom: 10px;
-    }
+    
     .product-item--list {
         padding-top: 10px;
     }
@@ -817,7 +758,7 @@ right: -18px;
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .product-item {
-        margin: 0 auto;
+        margin: 0auto;
     }
     .slider-img img {
         display: block;
