@@ -541,6 +541,20 @@ $(function(){
 		window.custom_select_parent_class = parent_class_;
 	}
 	
+	if($('i.info').length > 0){
+		$('i.info').mouseenter(function(){
+			
+			var container_position_left = $(this).parents('.container').offset().left + parseInt($(this).parents('.container').css('padding-left'),10);
+			var position_info_popup_left = $(this).find('.info__popup').offset().left;
+
+			console.log('cotainer : '+container_position_left+"\ninfo-block : "+position_info_popup_left);
+
+			if(container_position_left > position_info_popup_left){
+				$(this).find('.info__popup').css('right','-'+(container_position_left-position_info_popup_left)+'px');
+			}
+		});
+	}
+	
 	$(window).click(function(event){
 		if(window.custom_select == true){
 			if($(event.target).parents().hasClass(window.custom_select_parent_class) == false && $(event.target).hasClass(window.custom_select_parent_class) == false){
@@ -895,13 +909,9 @@ $(function(){
 			var comparison_tabindex_for_while = parseInt($('.comparison-rightside .slider-proline_smallCard').find('.slick-current').attr('data-slick-index'),10);
 			var comparison_tabindex = parseInt($('.comparison-rightside .slider-proline_smallCard').find('.slick-current').attr('data-slick-index'),10);
 			var product_line_comparison = 1;
-			console.log(comparison_tabindex);
 			while(comparison_tabindex < (comparison_tabindex_for_while+3)){
 				$('.comparison-rightside .slider-proline_smallCard').find('.slick-slide[data-slick-index="'+comparison_tabindex+'"]').not('.slick-cloned').find('.comparison-hidden-constructor p').each(function(){
 					var this_text = $(this).text();
-					
-					console.log(comparison_tabindex);
-					
 					$('.proline_product-characteristics_before-row[data-data-product_info="'+$(this).attr('data-data-product_info')+'"]').find('.comparison-proline_product-info_'+product_line_comparison).text('');
 					$('.proline_product-characteristics_before-row[data-data-product_info="'+$(this).attr('data-data-product_info')+'"]').find('.comparison-proline_product-info_'+product_line_comparison).text(this_text);
 				});

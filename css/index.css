@@ -30,6 +30,10 @@ body a.autorization-block-yes , body button.autorization-block-yes , body div.au
 ФИКСЫ
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
+i.info {
+	cursor: pointer
+}
+
 body .menu_left a:active {
 	background-color: #1b1d5c;
 	color: #fff;
