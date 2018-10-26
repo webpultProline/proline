@@ -97,12 +97,6 @@
 	o()},!1);var i=e.clientWidth,n=e.clientHeight;e.setAttribute("width",i),e.setAttribute("height",n);var r=new THREE.WebGLRenderer({canvas:e});r.setClearColor(3355443),r.setPixelRatio(window.devicePixelRatio),r.setSize(i,n),r.shadowMap.enabled=!0,r.shadowMap.type=THREE.PCFSoftShadowMap,scene=new THREE.Scene,scene.background=new THREE.Color('rgb(255,255,255)'),camera=new THREE.PerspectiveCamera(35,e.clientWidth/e.clientHeight,1,5e3),camera.up.set(0,.5,1),camera.position.set(0,0,0),scene.add(camera);var d=new THREE.OrbitControls(camera,r.domElement);d.addEventListener("change",o),d.minDistance=1500,d.maxDistance=4e3,d.enablePan=!0,d.target.set(0,0,0),d.update(),dirLight=new THREE.DirectionalLight(16774337,1),dirLight.color.setHSL(.1,1,.95),dirLight.position.set(50,50,150),dirLight.position.multiplyScalar(1),scene.add(dirLight),scene.add(new THREE.AmbientLight(16777215,.5)),dirLight.castShadow=!0,dirLight.shadow.mapSize.width=2048,dirLight.shadow.mapSize.height=2048;dirLight.shadow.camera.left=-50,dirLight.shadow.camera.right=50,dirLight.shadow.camera.top=50,dirLight.shadow.camera.bottom=-50,dirLight.shadow.camera.far=4500,dirLight.shadow.bias=-1e-4;new THREE.LoadingManager;function o(){r.render(scene,camera)}(new THREE.MTLLoader).setPath(t).load(a+".mtl",function(e){e.preload(),(new THREE.OBJLoader).setMaterials(e).setPath(t).load(a+".obj",function(e){e.position.y=-200,e.castShadow=!1,e.receiveShadow=!1,scene.add(e)})}),function e(){r.render(scene,camera),requestAnimationFrame(function(){e()})}()}
 
 $(function(){
-	/*сравнение*/
-	if($('.comparison-bottom').length > 0){
-		$('.comparison-bottom').find('.proline_product-characteristics_title').click(function(){
-			$(this).toggleClass('open');
-		});
-	}
 	/*тест авторизации*/
 	/*$('.auth-user-btn').click(function(event){
 		event.preventDefault();
@@ -135,6 +129,8 @@ $(function(){
 	*/
 	document.onscroll = function (event) {
 		fixedHeader();
+		fixedMobileHeader();
+		fixedComparisonSlider();
 	};
 	function fixedHeader(){
 		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -179,6 +175,49 @@ $(function(){
 	/*
 	мобильная навигация
 	*/
+	
+	function fixedMobileHeader(){
+		if($(window).width() < 992){
+			var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+			if(scrollTop > $('.header-mobile').height()){
+				if($('.header-mobile').hasClass('scrolled') == false){
+					$('body').addClass('mobile_header_scolled');
+					$('.header-mobile').addClass('scrolled');
+				}
+			} else {
+				if($('.header-mobile').hasClass('scrolled') == true){
+					$('body').removeClass('mobile_header_scolled');
+					$('.header-mobile').removeClass('scrolled');
+				}
+			}
+		}
+	}
+	fixedMobileHeader();
+	function fixedComparisonSlider(){
+		if($('.comparison-rightside').length > 0){
+			if($(window).width() < 573){
+				var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+				var position_carousel = $('.comparison-rightside').offset().top-47;
+				if(scrollTop > position_carousel){
+					if($('.slider.slider-proline.slider-proline_smallCard').hasClass('scrolled') == false){
+						$('.comparison-rightside').css({
+							'height':($('.slider.slider-proline.slider-proline_smallCard .slick-slide').outerHeight(true))+'px'
+						});
+						$('.slider.slider-proline.slider-proline_smallCard').addClass('scrolled');
+					}
+				} else {
+					if($('.slider.slider-proline.slider-proline_smallCard').hasClass('scrolled') == true){
+						$('.comparison-rightside').css({
+							'height':'auto'
+						});
+						$('.slider.slider-proline.slider-proline_smallCard').removeClass('scrolled');
+					}
+				}
+			}
+		}
+	}
+	fixedComparisonSlider();
+	
 	$('.search-mobile-btn').click(function(){
 		$(this).toggleClass('show');
 	});
@@ -419,6 +458,17 @@ $(function(){
 			} else {
 				var arrowOnMobile = false;
 			}
+			//
+			if(typeof $(this).attr('data-autoPlay') !== typeof undefined && $(this).attr('data-autoPlay') !== false && $(this).attr('data-autoPlay') != '0'){
+				var autoPlay = false;
+			} else {
+				var autoPlay = true;
+			}
+			if(typeof $(this).attr('data-infinite') !== typeof undefined && $(this).attr('data-infinite') !== false && $(this).attr('data-infinite') != '0'){
+				var infinite = false;
+			} else {
+				var infinite = true;
+			}
 			
 			/*адаптив*/
 			var count_def = parseInt($(this).attr('data-count_def'),10);
@@ -428,13 +478,13 @@ $(function(){
 			var sm_count = parseInt($(this).attr('data-sm_count'),10);
 			/**/
 			$(this).slick({
-				infinite: true,
+				infinite: infinite,
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				dots: setDots,
 				arrows: setArrows,
 				slidesToShow: count_def,
-				autoplay: true,
+				autoplay: autoPlay,
 				variableWidth: variableWidth,
 				centerMode: centerMode,
 				autoplaySpeed: 5000,
@@ -831,4 +881,34 @@ $(function(){
 			$(this).addClass('OpenPopUp');
 		}
 	});
+	/*сравнение*/
+	if($('.comparison-bottom').length > 0){
+		$('.comparison-bottom').find('.proline_product-characteristics_title').click(function(){
+			$(this).toggleClass('open');
+		});
+		//
+		function setInfoComparison(){
+			var comparison_tabindex_for_while = parseInt($('.comparison-rightside .slider-proline_smallCard').find('.slick-current').attr('data-slick-index'),10);
+			var comparison_tabindex = parseInt($('.comparison-rightside .slider-proline_smallCard').find('.slick-current').attr('data-slick-index'),10);
+			var product_line_comparison = 1;
+			console.log(comparison_tabindex);
+			while(comparison_tabindex < (comparison_tabindex_for_while+3)){
+				$('.comparison-rightside .slider-proline_smallCard').find('.slick-slide[data-slick-index="'+comparison_tabindex+'"]').not('.slick-cloned').find('.comparison-hidden-constructor p').each(function(){
+					var this_text = $(this).text();
+					
+					console.log(comparison_tabindex);
+					
+					$('.proline_product-characteristics_before-row[data-data-product_info="'+$(this).attr('data-data-product_info')+'"]').find('.comparison-proline_product-info_'+product_line_comparison).text('');
+					$('.proline_product-characteristics_before-row[data-data-product_info="'+$(this).attr('data-data-product_info')+'"]').find('.comparison-proline_product-info_'+product_line_comparison).text(this_text);
+				});
+				comparison_tabindex++;
+				product_line_comparison++;
+			}
+		}
+		setInfoComparison();
+		$('.comparison-rightside .slider-proline_smallCard').on('afterChange', function(event, slick, currentSlide, nextSlide){
+			setInfoComparison();
+			
+		});
+	}
 });

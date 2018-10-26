@@ -5359,6 +5359,12 @@ footer {
 .comparison-bottom  .proline_product-characteristics_title.open + .proline_product-characteristics_list {
 	display: block
 }
+.comparison-hidden-constructor {
+	display: none;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+}
 /*
 --------------------------------
 --------------------------------
@@ -5367,6 +5373,15 @@ footer {
 --------------------------------
 */
 @media(max-width: 1199px){
+	/*
+	--------------------------------
+	сравнение
+	--------------------------------
+	*/
+	.proline_product-characteristics_before-row > .row > span:first-child {
+		margin-bottom: 15px;
+		font-weight: 700
+	}
 	/*
 	--------------------------------
 	Шапка фиксированная
@@ -5417,6 +5432,14 @@ footer {
 	}
 }
 @media(max-width: 991px){
+	/*
+	--------------------------------
+	сравнение
+	--------------------------------
+	*/
+	.proline_product-characteristics_before-row span.comparison-proline_product-info_3 {
+		display: none!important
+	}
 	/*
 	--------------------------------
 	личный кабинет
@@ -5518,12 +5541,22 @@ footer {
 	мобильная шапка
 	--------------------------------
 	*/
+	body.mobile_header_scolled {
+		padding-top: 47px;
+	}
 	.header-mobile {
 		background-color: #fff;
 		position: relative;
 		z-index: 5;
 		left: 0;
 		top: 0
+	}
+	.header-mobile.scrolled {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 65
 	}
 	.header-mobile > .container > .row {
 		min-height: 47px;
@@ -6168,6 +6201,52 @@ footer {
 @media(max-width: 767px){
 	/*
 	--------------------------------
+	сравнение
+	--------------------------------
+	*/
+	.slider.slider-proline.slider-proline_smallCard .product-item {
+		height: auto;
+		min-width: auto;
+		
+		display: -ms-flexbox !important;
+		display: -webkit-box !important;
+		display: -webkit-flex !important;
+		display: flex !important;
+		-ms-flex-direction: column !important;
+		-webkit-box-orient: vertical !important;
+		-webkit-box-direction: normal !important;
+		-webkit-flex-direction: column !important;
+		flex-direction: column !important;
+		-ms-flex-wrap: nowrap !important;
+		-webkit-flex-wrap: nowrap !important;
+		flex-wrap: nowrap !important;
+		-ms-flex-pack: start !important;
+		-webkit-box-pack: start !important;
+		-webkit-justify-content: flex-start !important;
+		justify-content: flex-start !important;
+		-ms-flex-align: center !important;
+		-webkit-box-align: center !important;
+		-webkit-align-items: center !important;
+		align-items: center !important;
+	}
+	.slider.slider-proline.slider-proline_smallCard .product-item .img-box {
+		position: relative;
+		left: 0;
+		top: 0;
+		display: block;
+	}
+	.slider.slider-proline.slider-proline_smallCard .product-item .info-box , .slider.slider-proline.slider-proline_smallCard .product-item .buy {
+		padding-left: 0;
+		width: 155px
+	}
+	.slider.slider-proline.slider-proline_smallCard .product-item .info-box .prices {
+		-ms-flex-pack: start !important;
+		-webkit-box-pack: start !important;
+		-webkit-justify-content: flex-start !important;
+		justify-content: flex-start !important;
+	}
+	/*
+	--------------------------------
 	первая секция главной
 	--------------------------------
 	*/
@@ -6191,6 +6270,59 @@ footer {
 	}
 }
 @media(max-width: 576px){
+	/*
+	--------------------------------
+	сравнение
+	--------------------------------
+	*/
+	.slider.slider-proline.slider-proline_smallCard , .slider.slider-proline.slider-proline_smallCard .product-item {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.slider.slider-proline.slider-proline_smallCard .product-item .buy .to-cart {
+		width: 88px
+	}
+	.slider.slider-proline.slider-proline_smallCard .product-item .info-box, .slider.slider-proline.slider-proline_smallCard .product-item .buy {
+		width: 146px
+	}
+	.comparison-bottom .proline_product-characteristics_title {
+		margin-bottom: 0;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border-top: 1px solid #f5f6fa;
+		border-bottom: 1px solid #f5f6fa;
+		padding-left: 15px;
+		padding-right: 44px;
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+	.comparison-bottom .proline_product-characteristics_title:after {
+		position: absolute;
+		right: 17px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.comparison-bottom {
+		padding-left: 0;
+		padding-right: 0
+	}
+	.slider.slider-proline.slider-proline_smallCard .slick-slide {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border: 1px solid #f5f6fa;
+		border-radius: 0
+	}
+	.comparison-rightside {
+		margin-bottom: 0
+	}
+	.comparison-top {
+		height: auto;
+		margin-bottom: 0px
+	}
+	.comparison-leftside {
+		margin-bottom: 10px
+	}
 	/*
 	--------------------------------
 	страница продукта
@@ -6595,6 +6727,25 @@ footer {
 	}
 	.footer_bottom .socials-links > ul > li:last-child {
 		margin-right: 0
+	}
+}
+@media(max-width: 572px){
+	/*
+	--------------------------------
+	сравнение
+	--------------------------------
+	*/
+	.slider.slider-proline.slider-proline_smallCard.scrolled {
+		position: fixed;
+		left: 0;
+		top: 47px;
+		z-index: 40;
+		background: #fff;
+		width: 100%;
+		box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+	}
+	.slider.slider-proline.slider-proline_smallCard.scrolled .product-item .info-box {
+		display: none;
 	}
 }
 @media(max-width: 430px){
