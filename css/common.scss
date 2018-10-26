@@ -3367,7 +3367,7 @@ margin-left: 2px;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         background-color: #36398b;
-        width: 100px;
+        min-width: 100px;
         color: #fff;
         border: 0;
         transition: .3s;
@@ -3663,4 +3663,60 @@ margin-left: 2px;
          height: 42px;
      }
  }
+ .reviews {
+     margin-bottom: 22px;
+ }
+ .reviews_select {
+     &:after {
+        display: none;
+     }
+     &.jq-selectbox {
+         width: 300px;
+         height: 100%;
+         padding: 0;
+         margin-top: 0;
+         border-radius: 0;
+
+     }
+     .jq-selectbox__select {
+         width: 300px;
+         display: flex;
+         height: 100%;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+     }
+     .jq-selectbox__select-text {
+         font-weight: 500;
+         position: relative;
+         overflow: visible;
+         &:after {
+             content: "+2";
+            background-color: rgb(54, 57, 139);
+            width: 29px;
+            height: 21px;
+            position: absolute;
+            top: -2px;
+            right: -38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 10px;
+         }
+     }
+     .jq-selectbox__trigger-arrow::after {
+         right: 20px;
+     }
+     .jq-selectbox__dropdown {
+        margin-top: -3px;
+        margin-bottom: -3px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        width: calc(100% + 2px);
+     }
+ }
+ 
+  
 @import 'media';
