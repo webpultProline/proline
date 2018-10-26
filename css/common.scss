@@ -3708,6 +3708,18 @@ margin-left: 2px;
     border-top-left-radius: 0;
     z-index: 25;
     background: #fff;
+    .checkbox-label {
+        height: 32px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: color .3s;
+    }
+    }
  }
 //  .reviews_select {
 //      &:after {
