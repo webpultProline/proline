@@ -193,9 +193,34 @@ $(function(){
 		}
 	}
 	fixedMobileHeader();
+	function resizeBlockSMallSlider(){
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		var position_carousel = $('.comparison-rightside').offset().top-47;
+		if(scrollTop > position_carousel){
+			var self_parent = $('.proline_product-characteristics_list .proline_product-characteristics_before-row');
+			
+			var width_ = self_parent.find('.comparison-proline_product-info_1').outerWidth(true)+self_parent.find('.comparison-proline_product-info_2').outerWidth(true)+self_parent.find('.comparison-proline_product-info_3').outerWidth(true);
+			
+			var padding_left = self_parent.find('.comparison-proline_product-info_1').offset().left;
+			
+			if($(window).width() > 573){
+				$('.slider.slider-proline.slider-proline_smallCard').css({
+					'width':width_+'px',
+					'left':padding_left+'px'
+				});
+			} else {
+				$('.slider.slider-proline.slider-proline_smallCard').css({
+					'width':'100%',
+					'left':'0px'
+				});
+			}
+			if($('.slider-proline_smallCard').hasClass('slick-initialized') == true){
+				$('.slider-proline_smallCard').slick('slickGoTo',0);
+			}
+		}
+	}
 	function fixedComparisonSlider(){
 		if($('.comparison-rightside').length > 0){
-			if($(window).width() < 573){
 				var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 				var position_carousel = $('.comparison-rightside').offset().top-47;
 				if(scrollTop > position_carousel){
@@ -204,6 +229,7 @@ $(function(){
 							'height':($('.slider.slider-proline.slider-proline_smallCard .slick-slide').outerHeight(true))+'px'
 						});
 						$('.slider.slider-proline.slider-proline_smallCard').addClass('scrolled');
+						resizeBlockSMallSlider();
 					}
 				} else {
 					if($('.slider.slider-proline.slider-proline_smallCard').hasClass('scrolled') == true){
@@ -211,12 +237,22 @@ $(function(){
 							'height':'auto'
 						});
 						$('.slider.slider-proline.slider-proline_smallCard').removeClass('scrolled');
+						$('.slider.slider-proline.slider-proline_smallCard').css({
+							'width':'100%',
+							'left':'0px'
+						});
+						if($('.slider-proline_smallCard').hasClass('slick-initialized') == true){
+							$('.slider-proline_smallCard').slick('slickGoTo',0);
+						}
 					}
 				}
-			}
+
 		}
 	}
 	fixedComparisonSlider();
+	$(window).resize(function(){
+		resizeBlockSMallSlider();
+	});
 	
 	$('.search-mobile-btn').click(function(){
 		$(this).toggleClass('show');
