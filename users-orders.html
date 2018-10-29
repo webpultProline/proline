@@ -1509,286 +1509,1530 @@
 					<div class="col-lg-9">
 					
 						<!--Табы-->
-						<div class="proline_tabs" id="tabs_user">
+						<div class="proline_tabs" id="tabs_orders">
 							<ul class="proline_tab-nav">
-								<li class="active" data-parentBlock="tabs_user" data-tabId="tab-change_main">Личные данные</li>
-								<li data-parentBlock="tabs_user" data-tabId="tab-change_addres">Адрес доставки</li>
-								<li data-parentBlock="tabs_user" data-tabId="tab-change_organization">Организация</li>
-								<li data-parentBlock="tabs_user" data-tabId="tab-change_password">Смена пароля</li>
+								<li class="active" data-parentBlock="tabs_orders" data-tabId="tab-orders_now">Текущие заказы <span>5</span></li>
+								<li data-parentBlock="tabs_orders" data-tabId="tab-orders_end">Завершенные заказы <span>10</span></li>
+								<li data-parentBlock="tabs_orders" data-tabId="tab-orders_all">Все заказы <span>15</span></li>
 							</ul>
 							<div class="proline_tabs-container">
-								<div class="proline_tab" id="tab-change_main">
-									<p>Личные сведения, полученные в распоряжение сайта при регистрации или каким-либо иным образом, не будут без разрешения пользователей передаваться третьим организациям и лицам, за исключением ситуаций, когда этого требует закон или судебное решение.</p>
-									<p>Ваш электронный адрес (E-Mail) используется как логин для идентификации Вас в качестве посетителя сайта.</p>
+								<div class="proline_tab" id="tab-orders_now">
 									<div class="row">
-										<div class="col-md-6">
-											<label class="input-label">
-												<span>Имя</span>
-												<input type="text" placeholder="Имя">
-											</label>
+										<div class="col-lg-12 user_page-order-main">
+											<div class="d-flex flex-row flex-wrap justify-content-start align-items-center user_page-orders-top">
+												<p class="user_page-order-1_7"><b>Статус</b></p>
+												<p class="user_page-order-2"><b>Номер заказа</b></p>
+												<p class="user_page-order-2"><b>Время создания</b></p>
+												<p class="user_page-order-2"><b>Способ доставки</b></p>
+												<p class="user_page-order-1"><b>Сумма заказа</b></p>
+											</div>
 										</div>
-										<div class="col-md-6">
-											<label class="input-label">
-												<span>Фамилия</span>
-												<input type="text" placeholder="Фамилия">
-											</label>
-										</div>
-										<div class="col-md-12">
-											<div class="row patronymic-group">
-												<div class="col-md-6">
-													<label class="input-label">
-														<span>Отчество</span>
-														<input type="text" placeholder="Отчество">
-													</label>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-treatment">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/expects.png" alt="">Обработка</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/canceled.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
-												<div class="col-md-6">
-													<label class="checkbox-label">
-														<input type="checkbox">
-														<div class="checkbox_inducator"></div>
-														<b>Нет отчества</b>
-													</label>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-6">
-											<label class="input-label">
-												<span>Моб. телефон</span>
-												<input type="text" placeholder="+7 (___)___-__-__" class="phone_input" im-insert="true">
-											</label>
-										</div>
-										<div class="col-md-6">
-											<label class="input-label">
-												<span>Email</span>
-												<input type="email" placeholder="Email">
-											</label>
-										</div>
-										<div class="col-md-6">
-											<div class="row input-label d-flex flex-row flex-wrap justify-content-between align-items-center min-select_new">
-												<span class="col-lg-12">День рождения</span>
-												<div class="sorting__select col-lg-4">
-													<select>
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-														<option>5</option>
-													</select>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-treatment">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/expects.png" alt="">Обработка</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/canceled.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
-												<div class="sorting__select col-lg-4">
-													<select>
-														<option>Январь</option>
-														<option>Февраль</option>
-														<option>Март</option>
-														<option>Апрель</option>
-														<option>Май</option>
-														<option>Июнь</option>
-														<option>Июль</option>
-													</select>
-												</div>
-												<div class="sorting__select col-lg-4">
-													<select>
-														<option>1990</option>
-														<option>1991</option>
-														<option>1992</option>
-														<option>1993</option>
-														<option>1994</option>
-														<option>1995</option>
-														<option>1996</option>
-													</select>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-6">
-											<div class="radio-group">
-												<span>Пол</span>
-												<label class="radio-label">
-													<input type="radio" name="user_gender">
-													<div class="radio_inducator"></div>
-													<b>Мужской</b>
-												</label>
-												<label class="radio-label">
-													<input type="radio" name="user_gender">
-													<div class="radio_inducator"></div>
-													<b>Женский</b>
-												</label>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-treatment">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/expects.png" alt="">Обработка</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/canceled.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-treatment">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/expects.png" alt="">Обработка</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/canceled.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-treatment">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/expects.png" alt="">Обработка</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/canceled.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
-									<button class="btn" onclick="checkInputForModal('#tab-change_main')">Сохранить</button>
+									<div class="pagination">
+										<a href="#" class="prev"></a>
+										<div class="pagination__pages">
+											<a href="#">22</a>
+											<a href="#" class="active">23</a>
+											<a href="#">24</a>
+											<a href="#">25</a>
+											<a href="#">26</a>
+											<a href="#">...</a>
+											<a href="#">60</a>
+										</div>
+										<a href="#" class="next"></a>
+									</div>
 								</div>
-								<div class="proline_tab" id="tab-change_addres">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<div class="proline_tab" id="tab-orders_end">
 									<div class="row">
-										<div class="col-md-6">
-											<label class="input-label">
-												<span class="required">Населённый пункт</span>
-												<div class="sorting__select">
-													<select>
-														<option>Москва</option>
-														<option>Московская область</option>
-													</select>
+										<div class="col-lg-12 user_page-order-main">
+											<div class="d-flex flex-row flex-wrap justify-content-start align-items-center user_page-orders-top">
+												<p class="user_page-order-1_7"><b>Статус</b></p>
+												<p class="user_page-order-2"><b>Номер заказа</b></p>
+												<p class="user_page-order-2"><b>Время создания</b></p>
+												<p class="user_page-order-2"><b>Способ доставки</b></p>
+												<p class="user_page-order-1"><b>Сумма заказа</b></p>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-canceled">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/canceled.png" alt="">Отменен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/repeat.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
-											</label>
-											<div class="row">
-												<div class="col-xl-8">
-													<label class="input-label">
-														<span class="required">Улица</span>
-														<input type="text" placeholder="Улица">
-													</label>
-												</div>
-												<div class="col-xl-4">
-													<label class="input-label">
-														<span class="required">Дом / корпус</span>
-														<input type="text" placeholder="Дом / корпус">
-													</label>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-6">
-											<div class="row">
-												<div class="col-xl-6">
-													<label class="input-label">
-														<span class="required">Станция метро</span>
-														<input type="text" placeholder="Станция метро">
-													</label>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-shipped">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/shipped.png" alt="">Отправлен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р</p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
-												<div class="col-xl-6">
-													<label class="input-label">
-														<span>Почтовый индекс</span>
-														<input type="text" placeholder="Почтовый индекс">
-													</label>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
 											</div>
-											<div class="row">
-												<div class="col-xl-4">
-													<label class="input-label">
-														<span class="required">Квартира / офис</span>
-														<input type="text" placeholder="Квартира / офис">
-													</label>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-canceled">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/canceled.png" alt="">Отменен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/repeat.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
-												<div class="col-xl-4">
-													<label class="input-label">
-														<span>Этаж</span>
-														<input type="text" placeholder="Этаж">
-													</label>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
-												<div class="col-xl-4">
-													<label class="input-label">
-														<span>Подъезд</span>
-														<input type="text" placeholder="Подъезд">
-													</label>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-shipped">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/shipped.png" alt="">Отправлен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р</p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-canceled">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/canceled.png" alt="">Отменен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/repeat.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-shipped">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/shipped.png" alt="">Отправлен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р</p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-canceled">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/canceled.png" alt="">Отменен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/repeat.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-shipped">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/shipped.png" alt="">Отправлен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р</p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-canceled">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/canceled.png" alt="">Отменен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/repeat.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-shipped">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/shipped.png" alt="">Отправлен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р</p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<button class="btn" onclick="checkInputForModal('#tab-change_addres')">Сохранить</button>
+									<div class="pagination">
+										<a href="#" class="prev"></a>
+										<div class="pagination__pages">
+											<a href="#">22</a>
+											<a href="#" class="active">23</a>
+											<a href="#">24</a>
+											<a href="#">25</a>
+											<a href="#">26</a>
+											<a href="#">...</a>
+											<a href="#">60</a>
+										</div>
+										<a href="#" class="next"></a>
+									</div>
 								</div>
-								<div class="proline_tab" id="tab-change_organization">
-									<p>Личные сведения, полученные в распоряжение сайта при регистрации или каким-либо иным образом, не будут без разрешения пользователей передаваться третьим организациям и лицам, за исключением ситуаций, когда этого требует закон или судебное решение.</p>
+								<div class="proline_tab" id="tab-orders_all">
 									<div class="row">
-										<div class="col-md-12">
-											<label class="input-label">
-												<span class="required">Полное наименование организации</span>
-												<input type="text" placeholder="Полное наименование организации">
-											</label>
+										<div class="col-lg-12 user_page-order-main">
+											<div class="d-flex flex-row flex-wrap justify-content-start align-items-center user_page-orders-top">
+												<p class="user_page-order-1_7"><b>Статус</b></p>
+												<p class="user_page-order-2"><b>Номер заказа</b></p>
+												<p class="user_page-order-2"><b>Время создания</b></p>
+												<p class="user_page-order-2"><b>Способ доставки</b></p>
+												<p class="user_page-order-1"><b>Сумма заказа</b></p>
+											</div>
 										</div>
-										<div class="col-md-12">
-											<div class="row">
-												<div class="col-md-6">
-													<label class="input-label">
-														<span class="required">ИНН</span>
-														<input type="text" placeholder="ИНН">
-													</label>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-canceled">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/canceled.png" alt="">Отменен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/repeat.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
-												<div class="col-md-6">
-													<label class="input-label">
-														<span class="required">КПП</span>
-														<input type="text" placeholder="КПП">
-													</label>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-12">
-											<div class="row">
-												<div class="col-md-6">
-													<label class="input-label">
-														<span class="required">Код по ОКПО</span>
-														<input type="text" placeholder="Код по ОКПО">
-													</label>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-shipped">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/shipped.png" alt="">Отправлен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р</p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
-												<div class="col-md-6">
-													<label class="input-label">
-														<span class="required">Юридический адрес</span>
-														<input type="text" placeholder="Юридический адрес">
-													</label>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-12">
-											<div class="row">
-												<div class="col-md-6">
-													<label class="input-label">
-														<span class="required">Название банка</span>
-														<input type="text" placeholder="Название банка">
-													</label>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-canceled">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/canceled.png" alt="">Отменен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/repeat.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
-												<div class="col-md-6">
-													<label class="input-label">
-														<span class="required">Расчетный счет</span>
-														<input type="text" placeholder="Расчетный счет">
-													</label>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-md-12">
-											<div class="row">
-												<div class="col-md-6">
-													<label class="input-label">
-														<span class="required">Корреспондентский счет</span>
-														<input type="text" placeholder="Корреспондентский счет">
-													</label>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-shipped">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/shipped.png" alt="">Отправлен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р</p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
-												<div class="col-md-6">
-													<label class="input-label">
-														<span class="required">БИК</span>
-														<input type="text" placeholder="БИК">
-													</label>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-canceled">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/canceled.png" alt="">Отменен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/repeat.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-shipped">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/shipped.png" alt="">Отправлен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р</p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-canceled">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/canceled.png" alt="">Отменен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/repeat.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-shipped">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/shipped.png" alt="">Отправлен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р</p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-canceled">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/canceled.png" alt="">Отменен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/repeat.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-shipped">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/shipped.png" alt="">Отправлен</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р</p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-treatment">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/expects.png" alt="">Обработка</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/canceled.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-treatment">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/expects.png" alt="">Обработка</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/canceled.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-treatment">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/expects.png" alt="">Обработка</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/canceled.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-treatment">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/expects.png" alt="">Обработка</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/canceled.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="user_page-order-main">
+											<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center user_page-order user_page-treatment">
+												<p class="user_page-order-1_7" data-mobile_name="Статус"><img src="img/user_orders/expects.png" alt="">Обработка</p>
+												<p class="user_page-order-2" data-mobile_name="Номер заказа">№ 84334</p>
+												<p class="user_page-order-2" data-mobile_name="Время создания">27 мая 2017</p>
+												<p class="user_page-order-2" data-mobile_name="Способ доставки">Доставка курьером</p>
+												<p class="user_page-order-1" data-mobile_name="Сумма заказа">22 470 Р<button style="background-image: url(img/user_orders/canceled.png)"></button></p>
+											</div>
+											<div class="user_page-order-body">
+												<p>Состав заказа</p>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная IP камера Proline IP-HW1033WKF
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
+												</div>
+												<div class="quantity_box d-flex flex-row flex-wrap justify-content-between align-items-start">
+													<div class="img-box">
+														<img src="img/mini01.jpg" alt="">
+													</div>
+													<div class="product_name">
+														Уличная AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS
+														<p class="acticle">Артикул: 54533</p>
+													</div>
+													<div class="user_page-order_block">
+														16 575 P  
+													</div>
+													<div class="user_page-order_block">
+														5 шт
+													</div>
+													<div class="user_page-order_block">
+														80 575 P  
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<button class="btn" onclick="checkInputForModal('#tab-change_organization')">Сохранить</button>
-								</div>
-								<div class="proline_tab" id="tab-change_password">
-									<p>Укажите новый пароль в форме ниже и запомните его. Пароль должен быть не менее 6 символов и содержать только латинские буквы</p>
-									<div class="row">
-										<div class="col-md-6">
-											<label class="input-label password">
-												<span>Старый пароль</span>
-												<input type="password" placeholder="Старый пароль">
-												<button></button>
-											</label>
+									<div class="pagination">
+										<a href="#" class="prev"></a>
+										<div class="pagination__pages">
+											<a href="#">22</a>
+											<a href="#" class="active">23</a>
+											<a href="#">24</a>
+											<a href="#">25</a>
+											<a href="#">26</a>
+											<a href="#">...</a>
+											<a href="#">60</a>
 										</div>
-										<div class="col-md-12">
-											<div class="row">
-												<div class="col-md-6">
-													<label class="input-label password">
-														<span>Новый пароль</span>
-														<input type="password" placeholder="Новый пароль">
-														<button></button>
-													</label>
-												</div>
-												<div class="col-md-6">
-													<label class="input-label password">
-														<span>Повторите пароль</span>
-														<input type="password" placeholder="Повторите пароль">
-														<button></button>
-													</label>
-												</div>
-											</div>
-										</div>
+										<a href="#" class="next"></a>
 									</div>
-									<button class="btn" onclick="checkInputForModal('#tab-change_password')">Сохранить</button>
 								</div>
 							</div>
 						</div>

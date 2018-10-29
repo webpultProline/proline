@@ -582,15 +582,16 @@
 								</div>
 								<div class="mobile-header-link-group autorization-block-no">
 									<div class="nav_right">
-										<a href="#" class="authorization">
+										<a href="users-setting.html" class="authorization">
 											<span>Сидоров С.А.</span>
 										</a>
 									</div>
 								</div>
 								<div class="header-button_group d-flex flex-row flex-nowrap justify-content-around align-items-center">
-										<button class="header-button_group-forwCall openModalBTN" data-targetmodal="send_message">Заказать <br>звонок</button>
-										<button class="header-button_group-feedback openModalBTN" data-targetmodal="request_call">Свяжитесь <br>с нами</button>
-									</div>
+									<button class="header-button_group-forwCall openModalBTN" data-targetmodal="send_message">Заказать <br>звонок</button>
+									<button class="header-button_group-feedback openModalBTN" data-targetmodal="request_call">Свяжитесь <br>с нами</button>
+								</div>
+								
 								<button class="mobile-select-region-btn">Ваш город: <b></b></button>
 								<div class="mobile-select-region">
 									<div class="col-auto header-search">
@@ -1483,418 +1484,315 @@
 		шапка - конец
 		---------------------
 		-->
-        <div class="work_area">
-           <div class="container">
+		<div class="work_area">
+			<div class="container">
 				<div class="breadcrumbs">
-						<a href="#">Главная</a>
-						<a href="#">FAQ</a>
+					<a href="#">Главная</a>
+					<a href="#">Личный кабинет</a>
 				</div>
-				<div class="main-title reviews">
-						<h1>Статьи и обзоры</h1>
+				<div class="main-title title-contacts">
+					<h1>Личный кабинет</h1>
+				</div>
+				<div class="row m22">
+					<div class="col-lg-3">
+						<aside class="nav_left">
+							<nav class="menu_left">
+								<a href="users-setting.html">Настройки</a>
+								<a href="#">Мои заказы</a>
+								<a href="users-favorites.html" class="counter-item" data-count="12">Избранное</a>
+								<a href="#" class="active">Подписка на рассылку</a>
+								<a href="#">Бонусная карта</a>
+								<a href="users-feedback.html">Обратная связь</a>
+							</nav>
+						</aside>
 					</div>
-					<form for="#">
-							<div class="search_faq">
-									<input type="search" name="search_faq" placeholder="Введите фразу для поиска...">
-									<div class="drop__form hidden-mobile">
-											Системы видеонаблюдения <div class="quality_counter">+2</div>
-											<div class="dropped__form ">
-												<div class="label_group filter_item">
-													<div class="dropped__item">
-															<label class="checkbox-label">
-																	<input type="checkbox">
-																	<div class="checkbox_inducator"></div>
-																	Все статьи <span>1</span> 
-																</label>
-																	 
-													</div>
-													<div class="dropped__item">
-															<label class="checkbox-label">
-																	<input type="checkbox">
-																	<div class="checkbox_inducator"></div>
-																	Системы видеонаблюдения<span>2</span> 
-																</label>
-																	 
-													</div>
-													<div class="dropped__item">
-															<label class="checkbox-label">
-																	<input type="checkbox">
-																	<div class="checkbox_inducator"></div>
-																	FAQ <span>999</span> 
-																</label>
-																	 
-													</div>
-													<div class="dropped__item">
-															<label class="checkbox-label">
-																	<input type="checkbox">
-																	<div class="checkbox_inducator"></div>
-																	Обзоры <span>0</span> 
-																</label>
-																	 
-													</div>
-													<div class="dropped__item">
-															<label class="checkbox-label">
-																	<input type="checkbox">
-																	<div class="checkbox_inducator"></div>
-																	Proline <span>22</span> 
-																</label>
-																	 
-													</div>
-													<div class="dropped__item">
-															<label class="checkbox-label">
-																	<input type="checkbox">
-																	<div class="checkbox_inducator"></div>
-																	Proline <span>22</span> 
-																</label>
-																	 
-													</div>
-													
+					<div class="col-lg-9">
+					
+						<!--Табы-->
+						<div class="proline_tabs" id="tabs_user">
+							<div class="proline_tabs-container">
+								<div class="proline_tab open proline_tab-one" id="tab-mailing">
+									<p>Мы обещаем присылать Вам только полезную информацию. И никакого спама! Подпишитесь на рассылку новостей и акционных предложений от компании ПРОЛАЙН.</p>
+									<div class="row">
+										<div class="col-lg-12 tabel_for_mailing">
+											<div class="row tabel_for_mailing-section align-items-center d-lg-flex d-none">
+												<div class="col-lg-3"><p class="proline_tabs-delimitr">Типы уведомлений</p></div>
+												<div class="col-lg-3"><p class="tabel_for_mailing-text tabel_for_mailing-text-top">SMS-сообщения</p></div>
+												<div class="col-lg-3"><p class="tabel_for_mailing-text tabel_for_mailing-text-top">Электронная почта</p></div>
+											</div>
+											<div class="row tabel_for_mailing-section align-items-center">
+												<div class="col-lg-3"><p class="tabel_for_mailing-text">Новости ПРОЛАЙН</p></div>
+												<div class="col-lg-3 col-6">
+													<label class="checkbox-label" data-mobile_text="SMS-сообщения">
+														<input type="checkbox">
+														<div class="checkbox_inducator"></div>
+													</label>
+												</div>
+												<div class="col-lg-3 col-6">
+													<label class="checkbox-label" data-mobile_text="Электронная почта">
+														<input type="checkbox">
+														<div class="checkbox_inducator"></div>
+													</label>
 												</div>
 											</div>
+											<div class="row tabel_for_mailing-section align-items-center">
+												<div class="col-lg-3"><p class="tabel_for_mailing-text">Товар дня (ежедневно)</p></div>
+												<div class="col-lg-3 col-6">
+													<label class="checkbox-label" data-mobile_text="SMS-сообщения">
+														<input type="checkbox">
+														<div class="checkbox_inducator"></div>
+													</label>
+												</div>
+												<div class="col-lg-3 col-6">
+													<label class="checkbox-label" data-mobile_text="Электронная почта">
+														<input type="checkbox">
+														<div class="checkbox_inducator"></div>
+													</label>
+												</div>
+											</div>
+											<div class="row tabel_for_mailing-section align-items-center">
+												<div class="col-lg-3"><p class="tabel_for_mailing-text">Акции</p></div>
+												<div class="col-lg-3 col-6">
+													<label class="checkbox-label" data-mobile_text="SMS-сообщения">
+														<input type="checkbox">
+														<div class="checkbox_inducator"></div>
+													</label>
+												</div>
+												<div class="col-lg-3 col-6">
+													<label class="checkbox-label" data-mobile_text="Электронная почта">
+														<input type="checkbox">
+														<div class="checkbox_inducator"></div>
+													</label>
+												</div>
+											</div>
+											<div class="row tabel_for_mailing-section align-items-center">
+												<div class="col-lg-3"><p class="tabel_for_mailing-text">Статус заказа</p></div>
+												<div class="col-lg-3 col-6">
+													<label class="checkbox-label" data-mobile_text="SMS-сообщения">
+														<input type="checkbox">
+														<div class="checkbox_inducator"></div>
+													</label>
+												</div>
+												<div class="col-lg-3 col-6">
+													<label class="checkbox-label" data-mobile_text="Электронная почта">
+														<input type="checkbox">
+														<div class="checkbox_inducator"></div>
+													</label>
+												</div>
+											</div>
+										</div>
+										<p class="proline_tabs-delimitr col-lg-12">Время отправления уведомлений</p>
+										<div class="col-md-6">
+											<div class="row input-label d-flex flex-row flex-wrap justify-content-between align-items-center min-select_new">
+												<span class="col-lg-12">Ваш часовой пояс</span>
+												<div class="sorting__select col-lg-12">
+													<select>
+														<option>(UTC+3) Москва, Санкт-Петербург, Волгоград</option>
+														<option>(UTC+3) Москва, Санкт-Петербург, Волгоград</option>
+														<option>(UTC+3) Москва, Санкт-Петербург, Волгоград</option>
+														<option>(UTC+3) Москва, Санкт-Петербург, Волгоград</option>
+														<option>(UTC+3) Москва, Санкт-Петербург, Волгоград</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="row input-label d-flex flex-row flex-wrap justify-content-between align-items-center min-select_new">
+												<span class="col-lg-12">Удобное время</span>
+												<div class="sorting__select col-lg-12">
+													<select>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="row input-label d-flex flex-row flex-wrap justify-content-between align-items-center min-select_new">
+												<span class="col-lg-12"><br></span>
+												<div class="sorting__select col-lg-12">
+													<select>
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										
 									</div>
-									
-									<input type="submit" value="Найти">
-								</div>
-								
-					</form>
-					<div class="drop__form hidden-desktop">
-							Системы видеонаблюдения <div class="quality_counter">+2</div>
-							<div class="dropped__form ">
-								<div class="label_group filter_item">
-									<div class="dropped__item">
-											<label class="checkbox-label">
-													<input type="checkbox">
-													<div class="checkbox_inducator"></div>
-													Все статьи <span>1</span> 
-												</label>
-													 
-									</div>
-									<div class="dropped__item">
-											<label class="checkbox-label">
-													<input type="checkbox">
-													<div class="checkbox_inducator"></div>
-													Системы видеонаблюдения<span>2</span> 
-												</label>
-													 
-									</div>
-									<div class="dropped__item">
-											<label class="checkbox-label">
-													<input type="checkbox">
-													<div class="checkbox_inducator"></div>
-													FAQ <span>999</span> 
-												</label>
-													 
-									</div>
-									<div class="dropped__item">
-											<label class="checkbox-label">
-													<input type="checkbox">
-													<div class="checkbox_inducator"></div>
-													Обзоры <span>0</span> 
-												</label>
-													 
-									</div>
-									<div class="dropped__item">
-											<label class="checkbox-label">
-													<input type="checkbox">
-													<div class="checkbox_inducator"></div>
-													Proline <span>22</span> 
-												</label>
-													 
-									</div>
-									<div class="dropped__item">
-											<label class="checkbox-label">
-													<input type="checkbox">
-													<div class="checkbox_inducator"></div>
-													Proline <span>22</span> 
-												</label>
-													 
-									</div>
-									
+									<button class="btn" onclick="checkInputForModal('#tab-mailing')">Сохранить</button>
 								</div>
 							</div>
-					</div>
-					<div class="sorting sorting--reviews">
-							
-							<div class="sort_filter">
-									<button>
-											Все
-									</button>
-									<button class="active">
-											Видео 
-									</button>
-									<button >
-										Игры и опросы
-									</button>
-									<button>
-										Лайфхак
-									</button>
-									<button>
-											Текст
-									</button>
-									
-									
-								</div>
-							<div class="sorting__select">
-									<select>
-										<option>Все категории</option>
-										<option>Все категории</option>
-										<option>Все категории</option>
-									</select>
-								</div>
-				</div>		
-				<div class="row">
-					<div class="col-md-6 col-lg-4">
-						<div class="review__item">
-							<div class="img-box">
-								<img src="img/r01.png">
-							</div>
-							<div class="block_info">
-									<div class="share__user">
-											<div class="user">ZZZadmin</div>
-											<div class="time-date">14 сент. 2018 г.</div>
-									</div>
-									<h5>Суперцены на домофоны и системы 
-											связи</h5>
-									<p>Обновлённый трекер активности от Xiaomi 
-											понравится многим и наверняка потеснит прочие 
-											устройства на рынке. Ведь теперь у Mi Band есть 
-											экран, кнопка, увеличенный </p>		
-									<div class="article-btn">
-											<a href="#" class="btn btn-gb">Обзоры</a>
-											<a href="#" class="btn btn-gb">Детские часы</a>
-											<a href="#" class="btn btn-gb">Детские часы</a>
-									</div>
-							</div>
-							
 						</div>
-						
-					</div>
-					<div class="col-md-6 col-lg-4">
-							<div class="review__item">
-								<div class="img-box">
-									<img src="img/r02.jpg">
-								</div>
-								<div class="block_info">
-										<div class="share__user">
-												<div class="user">ZZZadmin</div>
-												<div class="time-date">14 сент. 2018 г.</div>
-										</div>
-										<h5>Суперцены на домофоны и системы 
-												связи</h5>
-										<p>Обновлённый трекер активности от Xiaomi 
-												понравится многим и наверняка потеснит прочие 
-												устройства на рынке. Ведь теперь у Mi Band есть 
-												экран, кнопка, увеличенный </p>		
-										<div class="article-btn">
-												<a href="#" class="btn btn-gb">Обзоры</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-										</div>
-								</div>
-								
-							</div>
-							
-					</div>
-					<div class="col-md-6 col-lg-4">
-							<div class="review__item">
-								<div class="img-box">
-									<img src="img/r03.jpg">
-								</div>
-								<div class="block_info">
-										<div class="share__user">
-												<div class="user">ZZZadmin</div>
-												<div class="time-date">14 сент. 2018 г.</div>
-										</div>
-										<h5>Суперцены на домофоны и системы 
-												связи</h5>
-										<p>Обновлённый трекер активности от Xiaomi 
-												понравится многим и наверняка потеснит прочие 
-												устройства на рынке. Ведь теперь у Mi Band есть 
-												экран, кнопка, увеличенный </p>		
-										<div class="article-btn">
-												<a href="#" class="btn btn-gb">Обзоры</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-										</div>
-								</div>
-								
-							</div>
-							
-					</div>
-					<div class="col-md-6 col-lg-4">
-							<div class="review__item">
-								<div class="img-box">
-									<img src="img/r01.png">
-								</div>
-								<div class="block_info">
-										<div class="share__user">
-												<div class="user">ZZZadmin</div>
-												<div class="time-date">14 сент. 2018 г.</div>
-										</div>
-										<h5>Суперцены на домофоны и системы 
-												связи</h5>
-										<p>Обновлённый трекер активности </p>		
-										<div class="article-btn">
-												<a href="#" class="btn btn-gb">Обзоры</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-										</div>
-								</div>
-								
-							</div>
-							
-					</div>
-					<div class="col-md-6 col-lg-4">
-								<div class="review__item">
-									<div class="img-box">
-										<img src="img/r02.jpg">
-									</div>
-									<div class="block_info">
-											<div class="share__user">
-													<div class="user">ZZZadmin</div>
-													<div class="time-date">14 сент. 2018 г.</div>
-											</div>
-											<h5>Суперцены на домофоны и системы 
-													связи</h5>
-											<p>Обновлённый трекер активности от Xiaomi 
-													понравится многим и наверняка потеснит прочие 
-													устройства на рынке. Ведь теперь у Mi Band есть 
-													экран, кнопка, увеличенный </p>		
-											<div class="article-btn">
-													<a href="#" class="btn btn-gb">Обзоры</a>
-													<a href="#" class="btn btn-gb">Детские часы</a>
-													<a href="#" class="btn btn-gb">Детские часы</a>
-											</div>
-									</div>
-									
-								</div>
-								
-					</div>
-					<div class="col-md-6 col-lg-4">
-							<div class="review__item">
-								<div class="img-box">
-									<img src="img/r03.jpg">
-								</div>
-								<div class="block_info">
-										<div class="share__user">
-												<div class="user">ZZZadmin</div>
-												<div class="time-date">14 сент. 2018 г.</div>
-										</div>
-										<h5>Суперцены на домофоны и системы 
-												связи</h5>
-										<p>Обновлённый трекер активности от Xiaomi 
-												понравится многим и наверняка потеснит прочие 
-												устройства на рынке. Ведь теперь у Mi Band есть 
-												экран, кнопка, увеличенный </p>		
-										<div class="article-btn">
-												<a href="#" class="btn btn-gb">Обзоры</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-										</div>
-								</div>
-								
-							</div>
-							
-					</div>
-					<div class="col-md-6 col-lg-4">
-							<div class="review__item">
-								<div class="img-box">
-									<img src="img/r01.png">
-								</div>
-								<div class="block_info">
-										<div class="share__user">
-												<div class="user">ZZZadmin</div>
-												<div class="time-date">14 сент. 2018 г.</div>
-										</div>
-										<h5>Суперцены на домофоны и системы 
-												связи</h5>
-										<p>Обновлённый трекер активности от Xiaomi 
-												понравится многим и наверняка потеснит прочие 
-												устройства на рынке. Ведь теперь у Mi Band есть 
-												экран, кнопка, увеличенный </p>		
-										<div class="article-btn">
-												<a href="#" class="btn btn-gb">Обзоры</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-										</div>
-								</div>
-								
-							</div>
-							
-					</div>
-					<div class="col-md-6 col-lg-4">
-							<div class="review__item">
-								<div class="img-box">
-									<img src="img/r02.jpg">
-								</div>
-								<div class="block_info">
-										<div class="share__user">
-												<div class="user">ZZZadmin</div>
-												<div class="time-date">14 сент. 2018 г.</div>
-										</div>
-										<h5>Суперцены на домофоны и системы 
-												связи</h5>
-										<p>Обновлённый трекер активности от Xiaomi 
-												понравится многим и наверняка потеснит прочие 
-												устройства на рынке. Ведь теперь у Mi Band есть 
-												экран, кнопка, увеличенный </p>		
-										<div class="article-btn">
-												<a href="#" class="btn btn-gb">Обзоры</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-										</div>
-								</div>
-								
-							</div>
-							
-					</div>
-					<div class="col-md-6 col-lg-4">
-							<div class="review__item">
-								<div class="img-box">
-									<img src="img/r03.jpg">
-								</div>
-								<div class="block_info">
-										<div class="share__user">
-												<div class="user">ZZZadmin</div>
-												<div class="time-date">14 сент. 2018 г.</div>
-										</div>
-										<h5>Суперцены на домофоны и системы 
-												связи</h5>
-										<p>Обновлённый трекер активности от Xiaomi 
-												понравится многим и наверняка потеснит прочие 
-												устройства на рынке. Ведь теперь у Mi Band есть 
-												экран, кнопка, увеличенный </p>		
-										<div class="article-btn">
-												<a href="#" class="btn btn-gb">Обзоры</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-												<a href="#" class="btn btn-gb">Детские часы</a>
-										</div>
-								</div>
-								
-							</div>
-							
 					</div>
 				</div>
-				<div class="pagination pagination_reviews">
-						<a href="#" class="prev"></a>
-						<div class="pagination__pages">
-							<a href="#">22</a>
-							<a href="#" class="active">23</a>
-							<a href="#">24</a>
-							<a href="#">25</a>
-							<a href="#">26</a>
-							<a href="#">...</a>
-							<a href="#">60</a>
-						</div>
-						<a href="#" class="next"></a>
-				</div>
-
-							
-							
 			</div>
-            
-        </div>
-      
+		</div>
+<!--Modal-->
+    <div class="modal" id="modal_slider">
+            <div class="modal-container to--cart">
+                <div class="modal-head">
+                    <button class="close-modal"><span></span><span></span></button>
+                    <div class="add-to-cart">
+                        <img src="img/to-cart.png" alt="">
+                        <div class="title">
+                            <h2>Товар добавлен в корзину</h2>
+                        </div>
+                        <div class="btn-group">
+                            <a href="#" class="btn">Перейти в корзину</a>
+                            <a href="#" class="btn btn-gb">Продолжить покупки</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-title">
+                        <h2>
+                        С этим товаром покупают
 
+                        </h2>
+                    </div>
+                        <div class="modal-slider" >
+                                <div>
+                                        <div class="product-item p20">
+                                                <div class="img-box">
+                                                    <img src="img/adapter.png" alt="">
+                                                </div>
+                                                <div class="info-box">
+                                                        <div class="product-title">Ai-Ball Cradle+Adaptors</div>
+                                                        <span>Держатель с адаптерами <br> питания</span>
+                                                        <div class="acticle">Актикул: 56409</div>
+                                                        <div class="prices">
+                                                                <div class="price">910</div>
+                                                                <div class="old-price">1 300</div>
+                                                        </div>
+                                                </div>
+                                                <div class="buy">
+                                                        <a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+                                                                <img src="img/cart-white.svg" alt="">
+                                                            </a>
+                                                        <a href="#" class="key">
+                                                    <img src="img/comparison-gray.svg" alt="">
+                                                        </a>
+                                                        <a href="#" class="key js-liked-popup">
+                                                            <img src="img/liked-gray.svg" alt="">
+                                                            <div class="liked-popup">
+                                                            <ul>
+                                                                <li>Добавить в избранное</li>
+                                                                <li>Просмотр списка</li>
+                                                            </ul>
+                                                            </div>
+                                                        </a>
+                                                </div>
+                                                
+                                            </div>
+                                </div>
+                                <div> 
+                                        <div class="product-item p20">
+                                                <div class="img-box">
+                                                    <img src="img/memory.jpg" alt="">
+                                                </div>
+                                                <div class="info-box">
+                                                        <div class="product-title">32Gb microSDHC C10 SanDisk <br>
+                                                                Ultra c адаптером</div>
+                                                        <span>Карта памяти 32Gb c адаптером</span>
+                                                        <div class="acticle">Актикул: 110357</div>
+                                                                <div class="price">1410</div>
+                                                </div>
+                                                <div class="buy">
+                                                        <a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+                                                                <img src="img/cart-white.svg" alt="">
+                                                            </a>
+                                                        <a href="#" class="key">
+                                                    <img src="img/comparison-gray.svg" alt="">
+                                                        </a>
+                                                        <a href="#" class="key js-liked-popup">
+                                                            <img src="img/liked-gray.svg" alt="">
+                                                            <div class="liked-popup">
+                                                            <ul>
+                                                                <li>Добавить в избранное</li>
+                                                                <li>Просмотр списка</li>
+                                                            </ul>
+                                                            </div>
+                                                        </a>
+                                                </div>
+                                                
+                                            </div>
+                                </div>
+                                <div>
+                                        <div class="product-item p20">
+                                                <div class="img-box">
+                                                    <img src="img/p.jpg" alt="">
+                                                </div>
+                                                <div class="info-box">
+                                                        <div class="product-title">Folksafe FS-4200SR (B) KIT</div>
+                                                        <span>Пассивные влагозащищенные  <br>
+                                                                передатчики видео сигнала</span>
+                                                        <div class="acticle">Актикул: 55614</div>
+                                                                <div class="price">455</div>
+                                                </div>
+                                                <div class="buy">
+                                                        <a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+                                                                <img src="img/cart-white.svg" alt="">
+                                                            </a>
+                                                        <a href="#" class="key">
+                                                    <img src="img/comparison-gray.svg" alt="">
+                                                        </a>
+                                                        <a href="#" class="key js-liked-popup">
+                                                            <img src="img/liked-gray.svg" alt="">
+                                                            <div class="liked-popup">
+                                                            <ul>
+                                                                <li>Добавить в избранное</li>
+                                                                <li>Просмотр списка</li>
+                                                            </ul>
+                                                            </div>
+                                                        </a>
+                                                </div>
+                                                
+                                            </div>  
+                                </div>
+                                <div>
+                                        <div class="product-item p20">
+                                                <div class="img-box">
+                                                    <img src="img/p.jpg" alt="">
+                                                </div>
+                                                <div class="info-box">
+                                                        <div class="product-title">Folksafe FS-4200SR (B) KIT</div>
+                                                        <span>Пассивные влагозащищенные  <br>
+                                                                передатчики видео сигнала</span>
+                                                        <div class="acticle">Актикул: 55614</div>
+                                                                <div class="price">455</div>
+                                                </div>
+                                                <div class="buy">
+                                                        <a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
+                                                                <img src="img/cart-white.svg" alt="">
+                                                            </a>
+                                                        <a href="#" class="key">
+                                                    <img src="img/comparison-gray.svg" alt="">
+                                                        </a>
+                                                        <a href="#" class="key js-liked-popup">
+                                                            <img src="img/liked-gray.svg" alt="">
+                                                            <div class="liked-popup">
+                                                            <ul>
+                                                                <li>Добавить в избранное</li>
+                                                                <li>Просмотр списка</li>
+                                                            </ul>
+                                                            </div>
+                                                        </a>
+                                                </div>
+                                                
+                                            </div>       
+                                </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+<!--Modal end-->
 <!--
 	---------------------
 	подвал

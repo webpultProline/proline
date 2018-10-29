@@ -925,4 +925,9 @@ $(function(){
 			
 		});
 	}
+	/*личный кабинет*/
+	$('.user_page-order').click(function(){
+		$(this).toggleClass('open');
+		$(this).parents('.user_page-order-main').toggleClass('open');
+	});
 });

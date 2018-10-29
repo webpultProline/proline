@@ -273,5 +273,14 @@ $(".wrapper-map .tab-map").click(function() {
 	$(".wrapper-map .tab-map").removeClass("active").eq($(this).index()).addClass("active");
 	$(".tab_item-map").hide().eq($(this).index()).show();
 }).eq(0).addClass("active");
+$('.drop__form').on('click', function(){
+  $(this).toggleClass('drop');
+});
+$(document).mouseup(function (e) {
+  var container = $(".drop__form, .dropped__form");
+  if (container.has(e.target).length === 0){
+    $(".drop__form").removeClass('drop');
+  }
+});
 });
 
