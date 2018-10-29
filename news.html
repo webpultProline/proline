@@ -265,7 +265,40 @@
 				</div>
 			</div>
 		</div>
-		
+		<div class="modal" id="add_comment">
+			<div class="modal-container">
+				<div class="modal-head">
+					<p>Оставить комментарий</p>
+					<button class="close-modal"><span></span><span></span></button>
+				</div>
+				<div class="modal-body">
+					<label class="input-label">
+						<span>Ваше имя</span>
+						<input type="text" placeholder="Ваше имя">
+					</label>
+					<label class="input-label">
+						<span>Ваш телефон</span>
+						<input type="text" placeholder="+7 (___)___-__-__" class="phone_input" im-insert="true">
+					</label>
+					<label class="input-label">
+						<span>Ваш Email</span>
+						<input type="email" placeholder="info@info.ru">
+					</label>
+					<label class="input-label">
+						<span>Текст комментария</span>
+						<textarea type="text" placeholder="Комментарий"></textarea>
+					</label>
+					<div class="captcha">
+						<img src="img/capt.png" alt="">
+					</div>
+					<div class="col-auto d-flex flex-row flex-wrap justify-content-center align-items-center">
+						<button class="btn btn-send-request-modal">Отправить отзыв</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 	<!-------------модалка заказать в один клик---------------->
 
 		<div id="proline_product_buy_one_click" class="modal">
@@ -1490,10 +1523,10 @@
 				<div class="breadcrumbs">
 						<a href="#">Главная</a>
 						<a href="#">Новости</a>
-						<a href="#">Свежие новинки апреля</a>
+						<a href="#">Новость</a>
 					</div>
                     <div class="main-title title-contacts">
-                            <h1>Свежие новинки апреля</h1>
+                            <h1>Новость</h1>
                         </div>
                <div class="row m22">
 				<div class="col-md-4 col-lg-3">
@@ -1643,7 +1676,7 @@
 									<a href="#" class="btn btn-gb">Новинки</a>
 							</div>
 							<div class="write_comment">
-								<a href='#' class="btn">Написать комментарий</a>
+								<a href='#' class="btn openModalBTN" data-targetmodal="add_comment">Написать комментарий</a>
 							</div>
 							<div class="d-flex flex-row flex-wrap justify-content-between align-items-center reviews_product-title news--offset">
 									<p>Комментарии</p>
