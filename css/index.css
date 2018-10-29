@@ -5329,6 +5329,19 @@ footer {
 сравнение
 --------------------------------
 */
+.slider.slider-proline.slider-proline_smallCard.scrolled {
+	position: fixed;
+	left: 0;
+	top: 47px;
+	z-index: 40;
+	background: #fff;
+	width: 100%;
+	box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+}
+.slider.slider-proline.slider-proline_smallCard.scrolled .product-item .info-box {
+	display: none;
+}
+	
 .comparison-top {
 	height: 110px;
 }
@@ -6752,6 +6765,16 @@ footer {
 		height: 15px
 	}
 }
+@media(max-width: 767px) and (min-width: 577px){
+	/*
+	--------------------------------
+	сравнение
+	--------------------------------
+	*/
+	.slider.slider-proline.slider-proline_smallCard .product-item {
+		padding-bottom: 20px;
+	}
+}
 @media(max-width: 576px){
 	/*
 	--------------------------------
@@ -7244,23 +7267,6 @@ footer {
 	}
 }
 @media(max-width: 572px){
-	/*
-	--------------------------------
-	сравнение
-	--------------------------------
-	*/
-	.slider.slider-proline.slider-proline_smallCard.scrolled {
-		position: fixed;
-		left: 0;
-		top: 47px;
-		z-index: 40;
-		background: #fff;
-		width: 100%;
-		box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
-	}
-	.slider.slider-proline.slider-proline_smallCard.scrolled .product-item .info-box {
-		display: none;
-	}
 }
 @media(max-width: 430px){
 	/*
