@@ -465,6 +465,18 @@ $(function(){
 	карусели
 	*/
 	if($('.slider-proline').length > 0){
+		$('.slider-proline').slick({
+			infinite: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			arrows: false,
+			slidesToShow: 1,
+			autoplay: false,
+			variableWidth: false,
+			centerMode: false,
+			autoplaySpeed: 5000,
+		});
 		$('.slider-proline').each(function(){
 			if(typeof $(this).attr('data-dotsSet') !== typeof undefined && $(this).attr('data-dotsSet') !== false && $(this).attr('data-dotsSet') != '0'){
 				var setDots = true;
@@ -517,7 +529,8 @@ $(function(){
 			var md_count = parseInt($(this).attr('data-md_count'),10);
 			var sm_count = parseInt($(this).attr('data-sm_count'),10);
 			/**/
-			$(this).slick({
+			
+			$(this).slick('slickSetOption',{
 				infinite: infinite,
 				slidesToShow: 1,
 				slidesToScroll: 1,
@@ -536,7 +549,7 @@ $(function(){
 						}
 					},
 					{
-						breakpoint: 993,
+						breakpoint: 1024,
 						settings: {
 							slidesToShow: lg_count
 						}
@@ -556,8 +569,11 @@ $(function(){
 						}
 					}
 				]
-			});
+			},true);
 		});
+		/*$('.slider-proline').on('init',function(){
+			console.log('sas');
+		});*/
 	}
 	/*
 	попапы
