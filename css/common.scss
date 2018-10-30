@@ -4591,8 +4591,25 @@ div.reviews {
 .mb_30 {
     margin-bottom: 50px;
 }  
+.bold {
+  font-weight: bold;
 
+}
+.mt00 {
+  margin-top: 0;
+  margin-left: -14px;
+  margin-bottom: 15px;
+  a {
+    color: #222425;
+    border: 0;
+    b {
 
+    }
+  }
+}
+.mb-25 {
+  margin-bottom: 25px;
+}
 //media
 @media (min-width: 1200px) {
   .slider-img {

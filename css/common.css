@@ -4958,6 +4958,25 @@ div.reviews {
   margin-bottom: 50px;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.mt00 {
+  margin-top: 0;
+  margin-left: -14px;
+  margin-bottom: 15px;
+}
+
+.mt00 a {
+  color: #222425;
+  border: 0;
+}
+
+.mb-25 {
+  margin-bottom: 25px;
+}
+
 @media (min-width: 1200px) {
   .slider-img {
     min-width: 640px;
