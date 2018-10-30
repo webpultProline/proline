@@ -1278,6 +1278,7 @@ a {
   position: relative;
   padding-left: 4px;
   padding-right: 2px;
+  max-width: 236px;
 }
 
 .from_to span {
