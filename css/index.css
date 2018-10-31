@@ -1459,10 +1459,10 @@ font-family: 'proline-ico' !important;
 	color: #fff;
 	transition: background-color .35s , color .35s;
 }
-.checkbox-label:hover .checkbox_inducator {
+/* .checkbox-label:hover .checkbox_inducator {
 	background-color: #36398b;
 	color: #36398b;
-}
+} */
 .checkbox-label .checkbox_inducator:after {
 	position: absolute;
 	left: 50%;
