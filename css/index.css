@@ -1463,6 +1463,9 @@ font-family: 'proline-ico' !important;
 	background-color: #36398b;
 	color: #36398b;
 } */
+.mb-35 {
+	margin-bottom: 35px;
+}
 .checkbox-label .checkbox_inducator:after {
 	position: absolute;
 	left: 50%;
