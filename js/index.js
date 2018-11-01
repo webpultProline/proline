@@ -948,13 +948,7 @@ $(function(){
 	/*
 	dropdown's
 	*/
-	$('.dropmenu').click(function(){
-		$('.HasPopUp').removeClass('OpenPopUp');
-		if($(this).hasClass('OpenPopUp') == false){
-			custom_selectEvents(true,true,$(this),'dropmenu');
-			$(this).addClass('OpenPopUp');
-		}
-	});
+	
 	/*сравнение*/
 	if($('.comparison-bottom').length > 0){
 		$('.comparison-bottom').find('.proline_product-characteristics_title').click(function(){

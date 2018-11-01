@@ -76,6 +76,7 @@ body .menu_left a:active {
 	-ms-flex-wrap: wrap !important;
 	-webkit-flex-wrap: wrap !important;
 	flex-wrap: wrap !important;
+	margin-top: 7px;
 }
 .breadcrumbs a {
 	margin-bottom: 5px
@@ -5078,6 +5079,7 @@ footer {
 }
 #tabs_user .proline_tab-nav {
 	width: max-content;
+	max-width: 613px;
 }
 #tabs_user .proline_tab-nav > li {
 	padding-left: 30px;
@@ -5451,7 +5453,7 @@ footer {
 .slider.slider-proline.slider-proline_smallCard .product-item .btn-event.stock {
 	margin-top: 5px
 }
-.slider.slider-proline.slider-proline_smallCard .product-item .btn-event.md , .slider.slider-proline .product-item .btn-event.new {
+/* .slider.slider-proline.slider-proline_smallCard .product-item .btn-event.md , .slider.slider-proline .product-item .btn-event.new {
 	display: inline-block;
 	height: 25px;
 	line-height: 25px;
@@ -5459,7 +5461,7 @@ footer {
 	padding-left: 10px;
 	padding-right: 10px;
 	width: auto
-}
+} */
 .slider.slider-proline.slider-proline_smallCard .product-item .btn-event.md {
 	left: 48.72px;
 }
@@ -5889,6 +5891,7 @@ footer {
 	*/
 	#tabs_user .proline_tab-nav {
 		width: 100%;
+		margin-top: 20px;
 	}
 	#tabs_user .proline_tab-nav > li {
 		-ms-flex-positive: 1;
@@ -5902,6 +5905,7 @@ footer {
 
 	#tabs_orders .proline_tab-nav {
 		width: 100%;
+		margin-top: 20px;
 	}
 	#tabs_orders .proline_tab-nav > li {
 		-ms-flex-positive: 1;
@@ -6111,15 +6115,27 @@ footer {
 	
 	div.serach-mobile {
 		position: absolute;
-		left: 0;
-		bottom: 0;
-		height: 40px;
-		width: 100%;
-		background: #36398b;
-		transition: transform .5s;
-		z-index: 10;
-		padding: 5px 4px;
-		transform: translateY(100%) translateX(-500%);
+
+left: 0;
+
+bottom: 0;
+
+height: 40px;
+
+width: calc(100% - 30px);
+
+background: #36398b;
+
+transition: transform .5s;
+
+z-index: 10;
+
+padding: 5px 4px;
+
+transform: translateY(100%) translateX(-500%);
+
+
+margin-left: 15px;
 	}
 	.search-mobile-btn.show ~ .serach-mobile {
 		transform: translateY(100%) translateX(0);
@@ -6203,6 +6219,7 @@ footer {
 		display: block;
 	}
 	.mobile-full_menu-link > span:after {
+		display: none;
 		font-family: 'proline-ico' !important;
 		speak: none;
 		font-style: normal;
@@ -6895,7 +6912,15 @@ footer {
 		justify-content: flex-end !important;
 	}
 	.proline_product_advantages > button {
-		width: 100%
+		width: 100%;
+		justify-content: flex-start;
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+	.proline_tab-nav > li {
+		justify-content: flex-start;
+		padding-left: 35px;
+		padding-right: 35px;
 	}
 	.proline_product-characteristics_list > li > span {
 		width: 100%;

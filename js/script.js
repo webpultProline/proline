@@ -282,5 +282,16 @@ $(document).mouseup(function (e) {
     $(".drop__form").removeClass('drop');
   }
 });
+$('.dropmenu, a').on('click', function(e){
+  e.preventDefault();
+  $(this).toggleClass('OpenPopUp');
+});
+$(document).mouseup(function (e) {
+  var container = $(".dropmenu, a");
+  if (container.has(e.target).length === 0){
+      container.removeClass('OpenPopUp');
+  }
+});
+
 });
 
