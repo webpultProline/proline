@@ -283,7 +283,7 @@ $('.drop__form').on('click', function(){
 //     $(".drop__form").removeClass('drop');
 //   }
 // });
-$('.dropmenu, a').on('click', function(e){
+$('.dropmenu a').on('click', function(e){
   e.preventDefault();
   $(this).toggleClass('OpenPopUp');
 });
