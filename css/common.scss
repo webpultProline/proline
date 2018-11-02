@@ -3529,6 +3529,14 @@ a {
   -ms-flex-align: center;
   align-items: center;
   height: 60px;
+  .img-block {
+    transition: .3s;
+  }
+  &:hover {
+    .img-block {
+      background-color: #e1e1ee;
+    }
+  }
 }
 
 .text-info {
@@ -3933,13 +3941,18 @@ a {
       top: 50%;
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
-      width: 12px;
+      background-image: url(../img/svg_icons/clock-blue.svg);
       height: 12px;
-      background-image: url(../img/time-mini.svg);
+      width: 12px;
+      background-size: contain;
     }
   }
 }
-
+.title--sales {
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 24px;
+}
 .share__social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4321,7 +4334,6 @@ div.reviews {
   }
   .block_info {
     padding: 18px;
-    height: 240px;
     .btn {
       padding-left: 10px;
       padding-right: 10px;
@@ -4364,39 +4376,39 @@ div.reviews {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  .write_next {
-    color: #5a6779;
-    position: relative;
-    padding-right: 30px;
-    -webkit-transition: .3s;
-    transition: .3s;
-    &:hover {
-      color: #36398b;
-      &:after {
-        color: #8e9aa9;
-      }
-    }
+  
+}
+.write_next {
+  color: #5a6779;
+  position: relative;
+  padding-right: 30px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  &:hover {
+    color: #36398b;
     &:after {
-      font-family: 'proline-ico';
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-      content: "\e901";
-      color: #36398b;
-      font-size: 10px;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
-      -webkit-transition: color .35s;
-      transition: color .35s;
+      color: #8e9aa9;
     }
   }
+  &:after {
+    font-family: 'proline-ico';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    content: "\e901";
+    color: #36398b;
+    font-size: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: color .35s;
+    transition: color .35s;
+  }
 }
-
 .share--news .time-date {
   padding-left: 0;
   &:before {
@@ -4603,13 +4615,47 @@ div.reviews {
   a {
     color: #222425;
     border: 0;
-    b {
-
-    }
   }
 }
 .mb-25 {
   margin-bottom: 25px;
+}
+
+.sales--item {
+  .time_items .time_item {
+    width: 30px;
+  }
+  .time_items {
+    width: 116px;
+  }
+  .block_info {
+    padding: 17px;
+    h5 {
+      margin-top: 0;
+      font-size: 14px;
+    }
+     p {
+       min-height: auto;
+       margin-bottom: 15px;
+     }
+  }
+}
+
+.to_sales--row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 65px;
+  .btn {
+    width: 100px;
+    height: 30px;
+    padding-left: 7px;
+    justify-content: flex-start;
+    &:after {
+      right: 5px;
+      margin-top: 1px;
+    }
+  }
 }
 //media
 @media (min-width: 1200px) {
@@ -4682,6 +4728,11 @@ div.reviews {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .sales--item .time_items {
+    width: 116px;
+    margin-left: -7px;
+    margin-right: 14px;
+}
   .pl70 .product_review-liked-group, .pl170 .product_review-liked-group {
     margin-bottom: 20px;
   }
@@ -4925,6 +4976,22 @@ div.reviews {
 }
 
 @media (max-width: 575px) {
+  .to_sales--row .btn {
+    align-self: flex-end;
+  }
+  .to_sales--row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .reviews--select .jq-selectbox {
+    width: 100%;
+  }
+  .reviews--select .jq-selectbox__dropdown {
+    width: 100%;
+  }
+  .sorting__select .jq-selectbox__select {
+    width: 100%;
+  }
   .user_page-order-1 > button {
     top: 37px;
   }
@@ -5142,6 +5209,11 @@ div.reviews {
   .user_page-order-1_7 {
     padding-left: 0;
     
+  }
+  .to_sales--row {
+    .days_time {
+      margin-bottom: 0;
+    }
   }
   .user_page-order-1_7 > img {
     position: static;
@@ -5490,7 +5562,15 @@ div.reviews {
 }
 
 @media (max-width: 991px) {
- 
+  
+  .mobile-full_menu-category ul > li {
+    &:nth-child(1) {
+      display: none;
+    }
+    &:nth-child(2) {
+      display: none;
+    }
+  }
     .news--list-item {
         flex-direction: column;
         .img-box {
