@@ -293,9 +293,11 @@ $(document).mouseup(function (e) {
       container.removeClass('OpenPopUp');
   }
 });
-$('.datepicker_to').datepicker({
-  dateFormat: 'dd M yyyy'
-});
+if($('.datepicker_to').length > 0){
+	$('.datepicker_to').datepicker({
+		dateFormat: 'dd M yyyy'
+	});
+}
 
 });
 
