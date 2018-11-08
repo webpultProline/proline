@@ -464,6 +464,7 @@ a {
 .jq-selectbox__trigger-arrow:after {
   content: '';
   background-image: url("../img/arrow.svg");
+  background-size: 8px 5px;
   position: absolute;
   width: 8px;
   height: 5px;
@@ -4144,7 +4145,7 @@ a {
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 5px;
-  width: 100%;
+  /*width: 100%;*/
   -webkit-transition: .3s;
   transition: .3s;
   border: 1px solid #d6dbe6;
@@ -4152,6 +4153,10 @@ a {
   border-bottom-right-radius: 0;
   border-right: 0;
   color: #5a6779;
+    -ms-flex-positive: 1 !important;
+    -webkit-box-flex: 1 !important;
+    -webkit-flex-grow: 1 !important;
+    flex-grow: 1 !important;
 }
 
 .search_faq input[type='search']::-webkit-input-placeholder {
@@ -4518,6 +4523,17 @@ a {
   margin-bottom: 75px;
 }
 
+@media(min-width: 991px){
+	.socials-links.auth ul {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+
+	.socials-links.auth ul li:first-child {
+		margin-left: 20px;
+	}
+}
+
 .auth h5 {
   letter-spacing: 0;
   font-size: 22px;
@@ -4770,6 +4786,18 @@ div.reviews {
   justify-content: space-between;
 }
 
+.news-column {
+    -ms-flex-positive: 1 !important;
+    -webkit-box-flex: 1 !important;
+    -webkit-flex-grow: 1 !important;
+    flex-grow: 1 !important;
+}
+
+.news-column > p {
+	display: block;
+	width: 100%
+}
+
 #add_comment .modal-container {
   max-width: 430px;
 }
@@ -4980,7 +5008,8 @@ div.reviews {
   height: 42px;
   border-right: 0;
   width: 240px;
-  font-weight: 400
+  font-weight: 400;
+  padding-right: 45px
 }
 
 .date--news .datepicker-here:focus {
@@ -5083,6 +5112,22 @@ div.reviews {
       -ms-flex-align: end;
           align-items: flex-end;
   min-height: 65px;
+}
+
+@media(max-width: 1200px) and (min-width: 768px){
+	.sales--item {
+		height: calc(100% - 30px);
+	}
+}
+@media(max-width: 1200px) and (min-width: 576px){
+	.sales--item .to_sales--row {
+		-ms-flex-wrap: wrap !important;
+		-webkit-flex-wrap: wrap !important;
+		flex-wrap: wrap !important;
+	}
+	.sales--item  .block_info .btn {
+		margin-top: 15px
+	}
 }
 
 .to_sales--row .btn {
@@ -5525,6 +5570,10 @@ p {
   }
   .reviews--select .jq-selectbox__dropdown {
     width: 100%;
+  }
+  .sorting__select , .sorting__select .jq-selectbox.jqselect {
+	  display: block;
+	  width: 100%
   }
   .sorting__select .jq-selectbox__select {
     width: 100%;

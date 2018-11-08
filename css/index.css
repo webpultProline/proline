@@ -30,6 +30,13 @@ body a.autorization-block-yes , body button.autorization-block-yes , body div.au
 ФИКСЫ
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
+::-ms-clear {
+	display: none;
+}
+::-ms-reveal {
+	display: none;
+}
+
 .main---stock .breadcrumbs {
 	padding-bottom: 22px;
 }
@@ -212,7 +219,8 @@ font-family: 'proline-ico' !important;
 }
 .region:before {
 	transform: translateY(-50%);
-	top: 50%
+	top: 50%;
+	background-size: 16px 20px;
 }
 
 .lang-select {
@@ -1897,15 +1905,15 @@ font-family: 'proline-ico' !important;
 }
 .header-fixed .nav_right > button.authorization:before , .header-fixed .nav_right > a.authorization:before , .header-fixed .nav_right > div.authorization:before {
     background: url(../img/svg_icons/user-icon-white.svg) center no-repeat;
-    background-size: contain;
+    background-size: 20px 20px;
 }
 .header-fixed .nav_right > a.comparison:before {
 	background: url(../img/svg_icons/comparison-white.svg) center no-repeat;
-	background-size: contain;
+	background-size: 22px 23px;
 }
 .header-fixed .nav_right > a.liked:before {
 	background: url(../img/svg_icons/liked-white.svg) center no-repeat;
-	background-size: contain;
+	background-size: 20px 18px;
 }
 .header-fixed .header-search {
 	padding-left: 0;
@@ -1919,6 +1927,7 @@ font-family: 'proline-ico' !important;
 	z-index: 6;
 	padding-left: 45px;
 	transition: background-color .35s;
+	height: 50px
 }
 .header-fixed .header-navigation:hover {
 	background-color: #1b1d5c;
@@ -2504,7 +2513,7 @@ a.link-normal > span , button.link-normal > span {
 	width: 22px;
 	height: 23px;
 	background: url(../img/svg_icons/comparison.svg) center no-repeat;
-	background-size: contain;
+	background-size: 22px 23px;
 }
 
 .nav_right > a.cart {
@@ -2557,7 +2566,7 @@ a.link-normal > span , button.link-normal > span {
 	width: 20px;
 	height: 18px;
 	background: url(../img/svg_icons/liked.svg) center no-repeat;
-	background-size: contain;
+	background-size: 20px 18px;
 }
 /*
 средняя часть навигации
@@ -2603,6 +2612,7 @@ a.link-normal > span , button.link-normal > span {
 	top: 50%;
 	transform: translateY(-50%);
 	background-image: url(../img/svg_icons/clock-blue.svg);
+	background-size: 28px 28px;
 	height: 28px;
 	width: 28px
 }
@@ -2691,6 +2701,7 @@ a.link-normal > span , button.link-normal > span {
 	position: relative;
 	left: 0;
 	top: 0;
+	height: 50px
 }
 .header-navigation {
 	border: 0;
@@ -3246,7 +3257,7 @@ a.link-normal > span , button.link-normal > span {
 	height: 20px;
 	content: '';
 	background: url(../img/svg_icons/cart-white.svg) center no-repeat;
-	background-size: contain;
+	background-size: 20px 20px;
 	display: inline-block
 }
 .header-basket:after {
@@ -5125,7 +5136,7 @@ footer {
 }
 #tabs_user .proline_tab-nav {
 	width: max-content;
-	max-width: 613px;
+	max-width: 628px;
 }
 #tabs_user .proline_tab-nav > li {
 	padding-left: 30px;
@@ -5483,7 +5494,7 @@ footer {
 	left: 0;
 	top: 0;
 	border: 0;
-	min-width: 290px;
+	width: 290px;
 	height: 110px;
 }
 .slider.slider-proline.slider-proline_smallCard .product-item:hover {
