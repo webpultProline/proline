@@ -4440,7 +4440,7 @@ a {
 }
 
 .article-btn {
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .article-btn .btn {
@@ -4449,6 +4449,7 @@ a {
   display: inline-flex;
   height: 28px;
   background-color: #e2e2f4;
+  margin-bottom: 15px
 }
 
 .about_product {
@@ -5129,6 +5130,11 @@ div.reviews {
 		margin-top: 15px
 	}
 }
+@media(max-width: 575px){
+	.sales--item  .block_info .btn {
+		margin-top: 15px
+	}
+}
 
 .to_sales--row .btn {
   width: 100px;
@@ -5598,8 +5604,11 @@ p {
     min-width: 100%;
     margin-top: 20px;
   }
+  .search_faq input[type='search'] {
+	  width: calc(100% - 100px);
+  }
   .search_faq input[type="submit"] {
-    min-width: auto;
+    width: 100px
   }
   .auth-btn {
     -webkit-box-orient: vertical;

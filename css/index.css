@@ -37,6 +37,32 @@ body a.autorization-block-yes , body button.autorization-block-yes , body div.au
 	display: none;
 }
 
+[placeholder]{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+input::-webkit-input-placeholder {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+input::-moz-placeholder {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+input:-ms-input-placeholder {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+input:-moz-placeholder {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .main---stock .breadcrumbs {
 	padding-bottom: 22px;
 }
@@ -141,7 +167,7 @@ body .menu_left a:active {
 	content: "\e908";
 	font-size: 14px;
 }
-.key.js-liked-popup:hover:before {
+.key.js-liked-popup:hover:before , .key.js-liked-popup.liked:before {
 	color: #ff8154;
 	content: "\e909"
 }
@@ -613,6 +639,28 @@ font-family: 'proline-ico' !important;
 .review-like:not(.active):hover:before , .review-dislike:not(.active):hover:before {
 	color: #fff;
 }
+
+@media (-moz-touch-enabled: 1), (pointer:coarse) {
+	.review-like:not(.active):hover {
+		content: "\e925";
+		color: #67ba03;
+		background: transparent;
+		border-color: #dae1e3;
+	}
+	.review-dislike:not(.active):hover {
+		content: "\e924";
+		color: #f74f2b;
+		background: transparent;
+		border-color: #dae1e3;
+	}
+	.review-like:not(.active):hover:before {
+		color: #67ba03;
+	}
+	.review-dislike:not(.active):hover:before {
+		color: #f74f2b;
+	}
+}
+
 .review-like.active , .review-dislike.active {
 	color: #fff;
 }
@@ -2930,7 +2978,7 @@ a.link-normal > span , button.link-normal > span {
 	color: #222425;
 	font-size: 14px;
 	line-height: 16px;
-	padding: 0 18px 0 65px;
+	padding: 0 30px 0 65px;
 	text-decoration: none;
 	position: relative;
 	left: 0;
@@ -2939,6 +2987,7 @@ a.link-normal > span , button.link-normal > span {
 	width: 100%;
 	display: block;
 	transition: color .35s;
+	word-break: break-all;
 }
 .header-navigation_list > li > a:not(.hasSubMenu) + ul {
 	opacity: 0;
@@ -5988,11 +6037,6 @@ footer {
 		width: 100%;
 		margin-top: 15px;
 		padding-left: 0
-	}
-	.schedule_work-block-work_time {
-		width: 120px;
-		padding-left: 0;
-		padding-right: 0
 	}
 	.table_for_shipping .row.table_for_shipping-top {
 		display: none;
