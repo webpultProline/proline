@@ -199,6 +199,9 @@ $('.location_region span').on('click', function(e){
   e.preventDefault();
   $('.location_region span').removeClass('active');
   $(this).toggleClass('active');
+  
+  $('#'+$(this).attr('data-action')).val('');
+  $('#'+$(this).attr('data-action')).val($(this).text());
 });
 
 $('.js-btn').on('click', function(e){

@@ -854,11 +854,17 @@ $(function(){
 			$('.proline_product-image').css('background-image',backGround);
 			$('.proline_product-image').attr('data-src',srcBackground);
 		});
-		$('.productGallery').lightGallery({
+		$('.proline_product-image-container').lightGallery({
 			download: false,
 			counter: true,
 			thumbnail: false,
 			selector: '.productGallery-photo',
+		});
+		$('.proline_product-image_button-group').lightGallery({
+			download: false,
+			counter: true,
+			thumbnail: false,
+			selector: '.productGallery-video',
 		});
 	}
 	/*
