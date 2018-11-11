@@ -30,6 +30,44 @@ body a.autorization-block-yes , body button.autorization-block-yes , body div.au
 ФИКСЫ
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
+.product_slider .product-item {
+	margin-bottom: 38px
+}
+body .product_slider .slick-dots {
+	margin-top: 0;
+}
+.liked-popup {
+	opacity: 0;
+}
+.liked-popup.active {
+	opacity: 1;
+}
+.sorting__select .jq-selectbox__select {
+	cursor: pointer;
+}
+.sorting__select .jq-selectbox__dropdown {
+	box-shadow: 0 12px 30px 0 rgba(5,35,77,0.1);
+}
+.info .info__popup {
+	opacity: 0;
+    -webkit-transform: translateY(150%);
+    transform: translateY(150%);
+	top: auto;
+	bottom: -8px;
+}
+.info:hover .info__popup {
+	opacity: 1;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.panel 
+/*0 12px 30px 0 rgba(5,35,77,0.1)*/
+
+
+
+
+
+
 ::-ms-clear {
 	display: none;
 }
@@ -5144,7 +5182,7 @@ footer {
 }
 .product-slide-image {
 	width: 70px;
-	height: 70px;
+	height: 68px;
 	display: block;
 	border: 2px solid #fff;
 	background-position: center;

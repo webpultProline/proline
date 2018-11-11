@@ -135,11 +135,32 @@ $(function() {
       hide_from_to: true,
       postfix: "$",
       force_edges: true,
-      onChange:  function (data) {
-        $('.from_to-start').val(data['from']+" Р");
-        $('.from_to-end').val(data['to']+" Р");
-      }
+		onChange:  function (data) {
+			$('.from_to-start').val(data['from']+" Р");
+			$('.from_to-end').val(data['to']+" Р");
+		},
+		onUpdate:  function (data) {
+			$('.from_to-start').val(data['from']+" Р");
+			$('.from_to-end').val(data['to']+" Р");
+		}
     });
+	
+	if($('.from_to-start').length > 0 && $('.from_to-end').length > 0){
+		function changeValueSliderRange(){
+			var slider_range = $("#rent-range").data("ionRangeSlider");
+			var from_toStart = parseInt($('.from_to-start').val(),10);
+			var from_toEnd = parseInt($('.from_to-end').val(),10);
+			slider_range.update({
+				from: from_toStart,
+				to: from_toEnd,
+			});
+		}
+		
+		$('.from_to-start').focusout(changeValueSliderRange);
+		$('.from_to-start').change(changeValueSliderRange);
+		$('.from_to-end').focusout(changeValueSliderRange);
+		$('.from_to-end').change(changeValueSliderRange);
+	}
   }
 
 
