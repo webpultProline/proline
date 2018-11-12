@@ -1,7 +1,22 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="49px" height="49px" viewBox="0 0 490 490" preserveAspectRatio="xMidYMid meet">
-<g id="layer101" fill="#00ca79" stroke="none">
- <path d="M132 469 c-50 -25 -107 -88 -123 -136 -6 -19 -9 -68 -7 -108 3 -62 8 -80 33 -117 17 -23 50 -56 74 -73 40 -28 48 -30 136 -30 88 0 96 2 136 30 24 17 57 50 74 74 28 40 30 48 30 136 0 88 -2 96 -30 136 -17 24 -50 57 -74 74 -38 26 -52 30 -124 33 -68 2 -89 -1 -125 -19z m210 -76 c108 -63 103 -239 -10 -301 -156 -87 -327 83 -240 240 49 89 157 116 250 61z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="235.714mm" height="235.714mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 23571 23571"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:url(#id0);fill-rule:nonzero}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="23571.4" y1="11785.7" x2="-0" y2="11785.7">
+   <stop offset="0" style="stop-opacity:1; stop-color:#45C39A"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#62D15F"/>
+  </linearGradient>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M21000 11786c0,-2545 -1031,-4849 -2699,-6516 -1667,-1667 -3971,-2699 -6515,-2699 -2545,0 -4848,1032 -6516,2699 -1667,1667 -2699,3971 -2699,6516 0,2544 1032,4848 2699,6515 1668,1668 3971,2699 6516,2699 2544,0 4848,-1031 6515,-2699 1668,-1667 2699,-3971 2699,-6515zm-881 -8334c2133,2133 3452,5079 3452,8334 0,3254 -1319,6201 -3452,8333 -2132,2133 -5079,3452 -8333,3452 -3255,0 -6201,-1319 -8334,-3452 -2133,-2132 -3452,-5079 -3452,-8333 0,-3255 1319,-6201 3452,-8334 2133,-2133 5079,-3452 8334,-3452 3254,0 6201,1319 8333,3452z"/>
  </g>
-
 </svg>

@@ -1,6 +1,18 @@
-<svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- width="24px" height="37px">
-<image  x="0px" y="0px" width="24px" height="37px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAlCAMAAABvTdm5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABL1BMVEU2OYv///82OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYs2OYv////Gd/tBAAAAY3RSTlMAADe/9fGwJBbs4xORiAjw5wRXSrSp+9vL9xBwgXRnziYf/sUryccliW+DAuT8GBv930W3wkCiXWygDPQN8gtewDM2RNi8uxwdd3rV190RIvk4hKyV6SrvCWPGzAMjgE+fPvOmujfZAAAAAWJLR0QB/wIt3gAAAAd0SU1FB+IKFg4VGx/UAjkAAAEZSURBVCjPzdLHQsJAEAbgWUVFLBGxd2LFKMbeS0RU7L1X9v3fwfnDpm3w4sn/sJmZb7M5bIi81NQm6uobSKj482Sj5KSaYtAs3bTo0GpUoC2tQbtUyWjQ4UFnFJJdPOvu4aW3LwL92DwwiHUoAsMYjWRNXkfDMIb5ONEEP8zJEEwBcurE6QCsGe5n80RzNhfzlg8L2LiIagnVsg8raFdRraFa92Bjk7vEFso8ztreUbCLbXuO4+wXCgfuywqKUsthBY5sHexjF0oylhMXTuNwBnBQnV94ubxCfy3Und74Vyxu0d8Jsu5RPASQQf/4RPT8YspXCuAtxd8opVG/f3yGQOS+vsO/TwDaf/W/wJBVY5D8JX+AcvV5+QdX/5QOc0F/qAAAAABJRU5ErkJggg==" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="24px" height="37px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 2400 3700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#36398B}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M50 3192l2300 0c30,0 50,20 50,50l0 408c0,30 -20,50 -50,50l-2300 0c-30,-10 -50,-30 -50,-60l0 -408c0,-20 20,-40 50,-40zm651 -1186l-151 428c-10,20 -40,40 -60,30l-360 -129c-30,-20 -40,-50 -30,-70l730 -1993c44,-140 160,-230 220,-249 100,-31 200,-31 300,0 100,49 170,129 210,229l720 1973c20,10 30,40 30,60 0,20 -10,30 -20,40l-390 149c-10,10 -30,10 -40,0 -10,-10 -20,-20 -20,-30l-170 -438 -969 0 0 0zm152 -429l677 0 -331 -980 -346 980 0 0z"/>
+ </g>
 </svg>

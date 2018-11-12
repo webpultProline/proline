@@ -91,12 +91,93 @@
 		});
 	}
 	
-
-	function renderObject(e,t,a){window.addEventListener("resize",function(){camera.aspect=e.clientWidth/e.clientHeight,camera.updateProjectionMatrix(),
-	r.setSize(e.clientWidth,e.clientHeight),
-	o()},!1);var i=e.clientWidth,n=e.clientHeight;e.setAttribute("width",i),e.setAttribute("height",n);var r=new THREE.WebGLRenderer({canvas:e});r.setClearColor(3355443),r.setPixelRatio(window.devicePixelRatio),r.setSize(i,n),r.shadowMap.enabled=!0,r.shadowMap.type=THREE.PCFSoftShadowMap,scene=new THREE.Scene,scene.background=new THREE.Color('rgb(255,255,255)'),camera=new THREE.PerspectiveCamera(35,e.clientWidth/e.clientHeight,1,5e3),camera.up.set(0,.5,1),camera.position.set(0,0,0),scene.add(camera);var d=new THREE.OrbitControls(camera,r.domElement);d.addEventListener("change",o),d.minDistance=1500,d.maxDistance=4e3,d.enablePan=!0,d.target.set(0,0,0),d.update(),dirLight=new THREE.DirectionalLight(16774337,1),dirLight.color.setHSL(.1,1,.95),dirLight.position.set(50,50,150),dirLight.position.multiplyScalar(1),scene.add(dirLight),scene.add(new THREE.AmbientLight(16777215,.5)),dirLight.castShadow=!0,dirLight.shadow.mapSize.width=2048,dirLight.shadow.mapSize.height=2048;dirLight.shadow.camera.left=-50,dirLight.shadow.camera.right=50,dirLight.shadow.camera.top=50,dirLight.shadow.camera.bottom=-50,dirLight.shadow.camera.far=4500,dirLight.shadow.bias=-1e-4;new THREE.LoadingManager;function o(){r.render(scene,camera)}(new THREE.MTLLoader).setPath(t).load(a+".mtl",function(e){e.preload(),(new THREE.OBJLoader).setMaterials(e).setPath(t).load(a+".obj",function(e){e.position.y=-200,e.castShadow=!1,e.receiveShadow=!1,scene.add(e)})}),function e(){r.render(scene,camera),requestAnimationFrame(function(){e()})}()}
-
+	/*3d анимация*/
+	function renderObject(e, t, a) {
+		window.addEventListener("resize", function() {
+			camera.aspect = e.clientWidth / e.clientHeight, camera.updateProjectionMatrix(), r.setSize(e.clientWidth, e.clientHeight), o()
+		}, !1);
+		var i = e.clientWidth,
+			n = e.clientHeight;
+		e.setAttribute("width", i), e.setAttribute("height", n);
+		var r = new THREE.WebGLRenderer({
+			canvas: e
+		});
+		window.renderer = r;
+		r.setClearColor(3355443), r.setPixelRatio(window.devicePixelRatio), r.setSize(i, n), r.shadowMap.enabled = !0, r.shadowMap.type = THREE.PCFSoftShadowMap, scene = new THREE.Scene, scene.background = new THREE.Color('rgb(255,255,255)'), camera = new THREE.PerspectiveCamera(35, e.clientWidth / e.clientHeight, 1, 5e3), camera.up.set(0, .5, 1), camera.position.set(0, 0, 1500), scene.add(camera);
+		
+		var d = new THREE.OrbitControls(camera, r.domElement);
+		
+		d.addEventListener("change", o), d.minDistance = 500, d.maxDistance = 2000, d.enablePan = !0, d.target.set(0, 0, 0), d.update(), dirLight = new THREE.DirectionalLight(16774337, 1), dirLight.color.setHSL(.1, 1, .95), dirLight.position.set(50, 50, 150), dirLight.position.multiplyScalar(1), scene.add(dirLight), scene.add(new THREE.AmbientLight(16777215, .5)), dirLight.castShadow = !0, dirLight.shadow.mapSize.width = 2048, dirLight.shadow.mapSize.height = 2048;
+		
+		dirLight.shadow.camera.left = -50, dirLight.shadow.camera.right = 50, dirLight.shadow.camera.top = 50, dirLight.shadow.camera.bottom = -50, dirLight.shadow.camera.far = 4500, dirLight.shadow.bias = -1e-4;
+		
+		new THREE.LoadingManager;
+		function o() {
+			r.render(scene, camera)
+		}(new THREE.MTLLoader).setPath(t).load(a + ".mtl", function(e) {
+            e.preload(), (new THREE.OBJLoader).setMaterials(e).setPath(t).load(a + ".obj", function(e) {
+				window.object = e;
+				window.scene = scene;
+				window.camera = camera;
+                e.position.y = -200, e.castShadow = !1, e.receiveShadow = !1, scene.add(e)
+            })
+        }),
+        function e() {
+            r.render(scene, camera), requestAnimationFrame(function() {
+                e()
+            })
+        }()
+	}
+	
+	function animationStart(){
+		var requestAnimationFrame = 	window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+										window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+		window.object.rotation.y += 0.025;
+		
+		window.renderer.render(window.scene, window.camera);
+		window.animation_3d_roate = requestAnimationFrame(function(){
+			animationStart();
+		});
+	}
+	function animationStop(){
+		var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+		cancelAnimationFrame(window.animation_3d_roate);
+	}
+	
+	function plusScene(){
+		var fov = window.camera.fov;
+		if(fov >= 10){
+			window.camera.fov = fov - 10;
+			window.camera.updateProjectionMatrix();
+			window.renderer.render(window.scene, window.camera);
+		}
+	}
+	function minusScene(){
+		var fov = window.camera.fov;
+		if(fov <= 150){
+			window.camera.fov = fov + 10;
+			window.camera.updateProjectionMatrix();
+			window.renderer.render(window.scene, window.camera);
+		}
+	}
 $(function(){
+	/*навигационные кнопки 3d*/
+	$('.btn-view3d').click(function(){
+		if($(this).hasClass('active_rotate') == false){
+			$(this).addClass('active_rotate');
+			animationStart();
+		} else {
+			$(this).removeClass('active_rotate');
+			animationStop();
+		}
+	});
+	$('.btn-view3d--plus').click(function(){
+		plusScene();
+	});
+	$('.btn-view3d--minus').click(function(){
+		minusScene();
+	});
+	/*конец*/
 	/*тест авторизации*/
 	/*$('.auth-user-btn').click(function(event){
 		event.preventDefault();

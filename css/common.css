@@ -1976,6 +1976,9 @@ a {
 
 .img-check {
   background-image: url(../img/circle.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 49px;
   height: 49px;
   position: relative;
@@ -2550,6 +2553,8 @@ a {
 
 .type-d span {
   margin-bottom: 3px;
+  font-size: 15px;
+  color: #222425;
 }
 
 .type-d b {
@@ -2749,6 +2754,7 @@ a {
   left: -37px;
   top: 0;
   color: #584dff;
+  font-size: 20px;
 }
 
 .order_total a {
@@ -2779,7 +2785,7 @@ a {
 .btn-promo {
   height: 42px;
   border-radius: 5px;
-  border: 1px solid #eef0f5;
+  border: 1px solid #d6dbe6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
