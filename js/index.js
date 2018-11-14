@@ -595,6 +595,7 @@ $(function(){
 	*/
 	$('.openModalBTN').click(function(event){
 		event.preventDefault();
+		_setScrollbar();
 		$('body').addClass('openModal');
 		var targetBlock = $(this).attr('data-targetModal');
 		$('.modal').removeClass('openModal');
@@ -612,6 +613,7 @@ $(function(){
 	$('.close-modal').click(function(){
 		if($('.mobile-menu_btn').hasClass('open-menu') == false){
 			$('body').removeClass('openModal');
+			_resetScrollbar();
 		}
 		$(this).parents('.modal').removeClass('openModal');
 	});
@@ -630,6 +632,7 @@ $(function(){
 		if($(event.target).hasClass('modal') == true){
 			if($('.mobile-menu_btn').hasClass('open-menu') == false){
 				$('body').removeClass('openModal');
+				_resetScrollbar();
 			}
 			$(event.target).removeClass('openModal');
 		}
@@ -639,6 +642,32 @@ $(function(){
 	$('.btn-send-request-modal').click(function(){
 		checkInputForModal('.modal.openModal');
 	});
+
+	function _setScrollbar() {
+		var rect = document.body.getBoundingClientRect();
+		var _isBodyOverflowing = rect.left + rect.right < window.innerWidth;
+		var _scrollbarWidth = _getScrollbarWidth();
+        if(_isBodyOverflowing){
+			$('body').css('padding-right',_scrollbarWidth+'px');
+			$('.header-fixed.show').css('padding-right',_scrollbarWidth+'px');
+        }
+	};
+	//_setScrollbar();
+	
+	function _resetScrollbar(){
+		$('body').css('padding-right','0px');
+		$('.header-fixed.show').css('padding-right','0px');
+	}
+	
+	function _getScrollbarWidth() {
+		var scrollDiv = document.createElement('div');
+		scrollDiv.className = 'modal-scrollbar-measure';
+		document.body.appendChild(scrollDiv);
+		var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
+		document.body.removeChild(scrollDiv);
+		return scrollbarWidth;
+	};
+	
 	/*
 	карусели
 	*/

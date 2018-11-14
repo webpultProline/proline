@@ -65,6 +65,20 @@ body .info .info__popup p {
 	font-weight: 400
 }
 
+.more-products.btn.btn-gb:hover {
+    background-color: #54579c;
+	color: #fff
+}
+.more-products.btn.btn-gb:active {
+    background-color: #1b1d5c;
+	color: #fff
+}
+
+
+.select_region .jq-selectbox__dropdown {
+	box-shadow: 0 12px 30px 0 rgba(5,35,77,0.1);
+}
+
 
 .cart-slider .product-item {
 	margin-bottom: 40px
@@ -2002,11 +2016,12 @@ font-family: 'proline-ico' !important;
 /*кастомизация попапов - конец*/
 
 .PopUpBody {
-	border: 1px solid #f7f8f8;
+	border: 1px solid #e9e9e9;
 	padding: 10px;
 	background: #fff;
 	box-shadow: 0 12px 30px 0 rgba(5,35,77,0.1);
 }
+
 /*dropdown's*/
 .dropmenu > a {
 	padding-right: 17px;
@@ -2109,7 +2124,7 @@ font-family: 'proline-ico' !important;
 }
 .header-fixed .nav_right > button.authorization:before , .header-fixed .nav_right > a.authorization:before , .header-fixed .nav_right > div.authorization:before {
     background: url(../img/svg_icons/user-icon-white.svg) center no-repeat;
-    background-size: 20px 20px;
+    background-size: 18px 21px;
 }
 .header-fixed .nav_right > a.comparison:before {
 	background: url(../img/svg_icons/comparison-white.svg) center no-repeat;
@@ -2424,6 +2439,14 @@ body.openModal {
 
 .modal-body {
 	padding: 50px 0 0 0;
+	position: relative;
+}
+.modal-scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
 }
 .modal-error {
 	margin: 0 0 30px;
@@ -2684,7 +2707,7 @@ a.link-normal > span , button.link-normal > span {
 	width: 18px;
 	height: 21px;
 	background: url(../img/svg_icons/user-icon.svg) center no-repeat;
-	background-size: contain;
+	background-size: 18px 21px;
 }
 .nav_right > button.authorization:hover , .nav_right > div.authorization:hover , .nav_right > button.authorization.OpenPopUp , .nav_right > div.authorization.OpenPopUp {
 	background-color: #e8e9fa
@@ -3675,11 +3698,6 @@ a.link-normal > span , button.link-normal > span {
 .items-carouselMain {
 	padding: 35px 0 0 0;
 }
-@media(min-width: 576px){
-	.items-carouselMain .new-products .product-item.product-item-small {
-		margin-bottom: 36px
-	}
-}
 .items-carouselMain .new-products {
 	margin-top: 0;
 	width: 100%
@@ -3698,8 +3716,8 @@ a.link-normal > span , button.link-normal > span {
 }
 .items-carouselMain .items-carouselMain-viewMore {
 	text-align: center;
-	margin-top: 40px;
 	margin-bottom: 36px;
+	margin-top: 40px;
 }
 .items-carouselMain .items-carouselMain-viewMore .btn {
 	display: inline-block;
@@ -3707,6 +3725,17 @@ a.link-normal > span , button.link-normal > span {
 	padding-right: 40px;
 	
 	
+}
+@media(min-width: 576px){
+	.items-carouselMain .new-products .product-item.product-item-small {
+		margin-bottom: 36px
+	}
+	.items-carouselMain .product-item {
+		margin-bottom: 40px
+	}
+	.items-carouselMain .items-carouselMain-viewMore {
+		margin-top: 0;
+	}
 }
 .items-carouselMain .items-carouselMain-viewMore .btn:hover {
 	background-color: #54579c;
