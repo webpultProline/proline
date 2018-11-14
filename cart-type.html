@@ -1492,8 +1492,8 @@
 									Тип плательщика
 							</div>
 							<div class="form-row mw">
-									<label class="input-label input-radio">
-											<input type="radio" name="pay">
+									<label class="input-label input-radio cart--type_user-btn" data-target_tab="cart--user-legal0">
+											<input type="radio" name="pay" checked="">
 											<div class="radio_indicator"></div>
 											<div>
 													<span class="face_type">
@@ -1501,7 +1501,7 @@
 													</span>
 											</div>
 										</label>
-										<label class="input-label input-radio">
+										<label class="input-label input-radio cart--type_user-btn" data-target_tab="cart--user-legal">
 												<input type="radio" name="pay">
 												<div class="radio_indicator"></div>
 												<div>
@@ -1512,6 +1512,56 @@
 											</label>	
 								
 							</div>
+							
+							<div class="cart--type_user" id="cart--type_user">
+								<div class="proline_tab" id="cart--user-legal">
+									<div class="form-row">
+										<label class="input-label ">
+											<span class="required">Наименование организации</span>
+											<input type="text" placeholder="Наименование организации" class="cart--user_full">
+										</label>
+										<label class="input-label ">
+											<span class="required">Код по ОКПО</span>
+											<input type="text" placeholder="Код по ОКПО">
+										</label>
+									</div>
+									<div class="form-row">
+										<label class="input-label ">
+											<span class="required">ИНН</span>
+											<input type="text" placeholder="ИНН">
+										</label>
+										<label class="input-label ">
+											<span class="required">КПП</span>
+											<input type="text" placeholder="КПП">
+										</label>
+										<label class="input-label ">
+											<span class="required">БИК</span>
+											<input type="text" placeholder="БИК">
+										</label>
+									</div>
+									<div class="form-row">
+										<label class="input-label ">
+											<span class="required">Название банка</span>
+											<input type="text" placeholder="Название банка">
+										</label>
+										<label class="input-label ">
+											<span class="required">Юридический адрес</span>
+											<input type="text" placeholder="Юридический адрес" class="cart--user_full">
+										</label>
+									</div>
+									<div class="form-row mw">
+										<label class="input-label">
+											<span class="required">корреспондентский счет</span>
+											<input type="text" placeholder="корреспондентский счет">
+										</label>
+										<label class="input-label">
+											<span class="required">Расчётный счёт</span>
+											<input type="text" placeholder="Расчётный счёт">
+										</label>
+									</div>
+								</div>
+							</div>
+							
 							<div class="form-row mtt">
 									<div class="input-label loc">
 										<span class="required">Местоположение</span>

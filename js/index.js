@@ -230,11 +230,13 @@ $(function(){
 	}
 	fixedHeader();
 	/**/
-	$('.header-navigation').click(function(){
+	$('.header-navigation').click(function(event){
 		if($(this).parent().find('.MainPage').length == 0){
 			$(this).toggleClass('showMenu');
-			if($(this).hasClass('showMenu') == true){
-				custom_selectEvents(true,true,$(this),'header-navigation_list');
+			if($(this).parents().hasClass('header-fixed') == false){
+				if($(this).hasClass('showMenu') == true){
+					custom_selectEvents(true,true,$(this),'header-navigation_list');
+				}
 			}
 		}
 	});
@@ -789,10 +791,24 @@ $(function(){
 	*/
 	$('.HasPopUp').click(function(event){
 		event.preventDefault();
-		$('.HasPopUp').removeClass('OpenPopUp');
+		//$('.HasPopUp').removeClass('OpenPopUp');
 		if($(this).hasClass('OpenPopUp') == false){
 			custom_selectEvents(true,true,$(this),'HasPopUp');
 			$(this).addClass('OpenPopUp');
+		} else {
+			if($(event.target).parents().hasClass('PopUpMain') == false){
+				console.log($(event.target));
+				
+				custom_selectEvents(false,true,$(this),'HasPopUp');
+				$(this).removeClass('OpenPopUp');
+			} else {
+				
+				console.log($(event.target));
+				
+				custom_selectEvents(true,true,$(this),'HasPopUp');
+				$(this).addClass('OpenPopUp');
+			}
+			
 		}
 	});
 	function custom_selectEvents(status_,onactive_,parent_,parent_class_){
@@ -829,6 +845,7 @@ $(function(){
 					if(window.custom_select_parent_class == 'header-navigation_list'){
 						window.custom_select_parent.removeClass('showMenu');
 					}
+					
 				}
 			}
 			if($(event.target).hasClass('PopUpClose') == true){
@@ -1031,7 +1048,23 @@ $(function(){
 								selector_for_mouse = Math.floor(Math.random() * 2) + 1;
 							}
 							$('.header-navigation_row-second').attr('data-action_now',selector_for_mouse);
-							//
+							// Проверка на тач устройства
+							$('.header-navigation_row-second[data-action_now="'+selector_for_mouse+'"] a').click(function(event){
+								event.preventDefault();
+								var check_touch = is_touch_device();
+								if(check_touch == true){
+									if(typeof $(this).attr('data-touchCount') == typeof undefined && $(this).attr('data-touchCount') == false){
+										$(this).attr('data-touchCount',0);
+									}
+									if(parseInt($(this).attr('data-touchCount'),10) == 1){
+										window.location.assign($(this).attr('href'));
+										$(this).attr('data-touchCount',0);
+									} else {
+										$(this).attr('data-touchCount',1);
+									}
+								}
+							});
+							// Проверка на тач устройства
 							$('.header-navigation_row-second[data-action_now="'+selector_for_mouse+'"]').find('a').mouseenter(function(){
 								if($(this).find('span').hasClass('hasSubMenu-fixed_header') == true){
 									if($('.header-navigation_row-third').length > 0){
@@ -1089,6 +1122,49 @@ $(function(){
 			axis: 'y'
 		});
 	}
+	/*кнопки навигации с устройствами с тачем*/
+	function is_touch_device() {
+		var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+		var mq = function(query) {
+			return window.matchMedia(query).matches;
+		}
+		if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+			return true;
+		}
+		var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
+		return mq(query);
+	}
+	$('.header-navigation_list a , .header-navigation_second a').click(function(event){
+		event.preventDefault();
+		var check_touch = is_touch_device();
+		if(check_touch == true){
+			if(typeof $(this).attr('data-touchCount') == typeof undefined && $(this).attr('data-touchCount') == false){
+				$(this).attr('data-touchCount',0);
+			}
+			if(parseInt($(this).attr('data-touchCount'),10) == 1){
+				window.location.assign($(this).attr('href'));
+				$(this).attr('data-touchCount',0);
+			} else {
+				$(this).attr('data-touchCount',1);
+			}
+		}
+	});
+	
+	$('.header-navigation_row a').click(function(event){
+		event.preventDefault();
+		var check_touch = is_touch_device();
+		if(check_touch == true){
+			if(typeof $(this).attr('data-touchCount') == typeof undefined && $(this).attr('data-touchCount') == false){
+				$(this).attr('data-touchCount',0);
+			}
+			if(parseInt($(this).attr('data-touchCount'),10) == 1){
+				window.location.assign($(this).attr('href'));
+				$(this).attr('data-touchCount',0);
+			} else {
+				$(this).attr('data-touchCount',1);
+			}
+		}
+	});
 	//mCSB_container
 	/*
 	выбор языка
@@ -1190,5 +1266,10 @@ $(function(){
 	$('.user_page-order').click(function(){
 		$(this).toggleClass('open');
 		$(this).parents('.user_page-order-main').toggleClass('open');
+	});
+	/*способы доставки*/
+	//changeTabContent();
+	$('.cart--type_user-btn').click(function(){
+		changeTabContent('cart--type_user',$(this).attr('data-target_tab'));
 	});
 });

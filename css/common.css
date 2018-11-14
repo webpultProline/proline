@@ -3823,10 +3823,6 @@ a {
   transition: .3s;
 }
 
-.contacts_info:hover .img-block {
-  background-color: #e1e1ee;
-}
-
 .text-info {
   max-width: 190px;
   margin-top: -4px;
@@ -4569,7 +4565,7 @@ a {
 }
 
 .auth-btn .btn {
-  width: 190px;
+  width: 195px;
   padding: 0;
   height: 42px;
 }
@@ -5589,9 +5585,6 @@ p {
   }
   .sorting__select .jq-selectbox__select {
     width: 100%;
-  }
-  .user_page-order-1 > button {
-    top: 37px;
   }
   .bonus .info__popup {
     width: 240px;

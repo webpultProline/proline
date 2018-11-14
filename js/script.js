@@ -176,14 +176,28 @@ $('.sort_filter a').on('click', function(e){
   e.preventDefault();
 });
 $('.view-more').on('click', function(e){
-  if($(this).parent().find('.view-all').first().hasClass('active') == false){
-    $(this).find('.show').text('Скрыть всё');
-    $(this).parent().find('.view-all').first().addClass('active');
-  } else {
-    $(this).find('.show').text('Показать еще');
-    $(this).parent().find('.view-all').first().removeClass('active');
-  }
+	checkSeoFilterCatalog($(this));
 });
+function checkSeoFilterCatalog(self){
+	if(self.parent().find('.view-all').first().css('display') == 'none'){
+		self.find('.show').text('Скрыть всё');
+		self.parent().find('.view-all').first().addClass('active');
+	} else {
+		self.find('.show').text('Показать еще');
+		self.parent().find('.view-all').first().removeClass('active');
+	}
+}
+function hideSeoOnMobile(){
+	if($(window).width() < 768){
+		if($('.thumb_catalog').find('.view-all').length > 0){
+			if($('.thumb_catalog').find('.view-all').hasClass('active') == true){
+				$('.thumb_catalog').find('.view-all').removeClass('active');
+				$('.thumb_catalog').find('.view-more').find('.show').text('Показать еще');
+			}
+		}
+	}
+}
+hideSeoOnMobile();
 
 $('.more-products').on('click', function(e){
   e.preventDefault();
