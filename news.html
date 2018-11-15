@@ -749,7 +749,6 @@
 		шапка мобильная - конец
 		---------------------
 		-->
-    <div class="page_wrap">
 
         <!--
 		---------------------
@@ -1518,16 +1517,16 @@
 		шапка - конец
 		---------------------
 		-->
-        <div class="work_area">
+        <main>
            <div class="container">
-				<div class="breadcrumbs">
+				<nav class="breadcrumbs">
 						<a href="#">Главная</a>
 						<a href="#">Новости</a>
 						<a href="#">Новость</a>
-					</div>
-                    <div class="main-title title-contacts">
+					</nav>
+                    <section class="main-title title-contacts">
                             <h1>Новость</h1>
-                        </div>
+                        </section>
                <div class="row m22">
 				<div class="col-md-4 col-lg-3">
 					<aside class="nav_left">
@@ -1546,7 +1545,7 @@
 					</aside>
 				</div>
 				<div class="col-md-8 col-lg-9">
-						<div class="share share--news">
+						<section class="share share--news">
 								<div class="share__user">
 									<div class="time-date">14 сент. 2018 г.</div>
 								</div>
@@ -1569,7 +1568,7 @@
 											<span>0</span>
 									</a>
 								</div>
-							</div>
+							</section>
 							<div class="banner-news">
 								<img src='img/banner-news.jpg'>
 								<p>
@@ -1577,14 +1576,14 @@
 										выгодных предложениях.
 								</p>
 							</div>
-							<div class="new__products">
+							<section class="new__products">
 								<div class="title">
 									<h3>Новинки месяца</h3>
 								</div>
-							</div>
+							</section>
 							<div class="row">
 								<div class="col-md-6 col-lg-5">
-										<div class="list_area">
+										<section class="list_area">
 												<p class="title__list">
 														Камеры видеонаблюдения
 												</p>
@@ -1618,8 +1617,9 @@
 											</p>
 											<ul class="product__list">
 												<li><a href="#">Prolaine AHD-WV2415PTZ4</a></li>
+											</ul>
 												
-											</div>
+										</section>
 											<p class="title__list">
 													Видеодомофоны Proline
 											</p>
@@ -1628,10 +1628,11 @@
 												<li><a href="#">Prolaine AHD-WV2415PTZ4</a></li>
 												<li><a href="#">Prolaine AHD-WV2415PTZ4</a></li>
 												<li><a href="#">Prolaine AHD-WV2415PTZ4</a></li>
+											</uL>
 												
 								</div>
 								<div class="col-md-6 col-lg-5 offset-xl-1">
-										<div class="list_area">
+									<section class="list_area">
 												<p class="title__list">
 														Охранно-пожарная GSM сигнализация
 												</p>
@@ -1668,7 +1669,7 @@
 											</ul>
 											
 												
-									</div>
+									</section>
 								</div>
 								
 							</div>
@@ -1846,46 +1847,49 @@
 															</div>
 															<a href="#" class="next"></a>
 														</div>
-														<div class="articles bg--arr">
+														<section class="articles bg--arr">
 																<div class="title">
 																	<h2>Читайте также похожие новости</h2>
 																</div>
-																<a href="#" class="article__item">
-																	<h4>Системы AHD видеонаблюдения</h4>
-																	<p>Мы собрали в одном месте ответы на наиболее часто задаваемые вопросы. Начиная с описания самого прибора, через рекоме...</p>
-																	<p class="date">
-																		31 марта 2017 года
-																	</p>
-																</a>
-																<a href="#" class="article__item">
-																	<h4>Системы AHD видеонаблюдения</h4>
-																	<p>Мы собрали в одном месте ответы на наиболее часто задаваемые вопросы. Начиная с описания самого прибора, через рекоме...</p>
-																	<p class="date">
-																		31 марта 2017 года
-																	</p>
-																</a>
-																<a href="#" class="article__item">
-																	<h4>Системы AHD видеонаблюдения</h4>
-																	<p>Мы собрали в одном месте ответы на наиболее часто задаваемые вопросы. Начиная с описания самого прибора, через рекоме...</p>
-																	<p class="date">
-																		31 марта 2017 года
-																	</p>
-																</a>
-																<a href="#" class="article__item">
-																	<h4>Системы AHD видеонаблюдения</h4>
-																	<p>Мы собрали в одном месте ответы на наиболее часто задаваемые вопросы. Начиная с описания самого прибора, через рекоме...</p>
-																	<p class="date">
-																		31 марта 2017 года
-																	</p>
-																</a>
-																<a href="#" class="article__item">
-																	<h4>Системы AHD видеонаблюдения</h4>
-																	<p>Мы собрали в одном месте ответы на наиболее часто задаваемые вопросы. Начиная с описания самого прибора, через рекоме...</p>
-																	<p class="date">
-																		31 марта 2017 года
-																	</p>
-																</a>
-															</div>				
+<ul class="news-list">
+										<li>
+											<article>
+												<a href="#"></a>
+												<h3>Изменение адреса гарантийного обслуживания для белых талонов</h3>
+												<p>Если при покуке товара вам выдали сервисный талон белого цвета при покупке товара, то эта новость для вас.</p>
+												<footer>
+													<p>
+														<time datetime="2017-04-05 19:00">05 апреля 2017 года</time>
+													</p>
+												</footer>
+											</article>
+										</li>
+										<li>
+											<article>
+												<a href="#"></a>
+												<h3>Свежие новинки марта</h3>
+												<p>Вот и закончился март. Настало время подвести итог обновления нашего ассортимента за этот месяц.</p>
+												<footer>
+													<p>
+														<time datetime="2017-04-05 19:00">05 апреля 2017 года</time>
+													</p>
+												</footer>
+											</article>
+										</li>
+										<li>
+											<article>
+												<a href="#"></a>
+												<h3>Умопомрачительные цены!</h3>
+												<p>Дамы и господа! В нашем магазине появился новый раздел под названием "Распродажа", где вы можете найти одни из самых выгодных предложений на тов...</p>
+												<footer>
+													<p>
+														<time datetime="2017-04-05 19:00">05 апреля 2017 года</time>
+													</p>
+												</footer>
+											</article>
+										</li>
+									</ul>
+														</section>				
 							
 			   </div>
                    
@@ -1895,11 +1899,8 @@
                
                
             </div>
-           </div>
             
-        </div>
-      
-    </div>
+        </main>
 <!--Modal-->
     <div class="modal" id="modal_slider">
             <div class="modal-container to--cart">
@@ -2179,6 +2180,7 @@
 					</div>
 				</div>
 			</div>
+	</footer>
 	<!--
 	---------------------
 	подвал - конец

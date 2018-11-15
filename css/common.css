@@ -1967,7 +1967,10 @@ a {
   margin-top: 7px;
 }
 
-.order__number p {
+.order__number p:not(.order__number--text) {
+	margin: 0
+}
+.order__number p.order__number--text {
   font-weight: normal;
   color: #5c5d5c;
   font-size: 12px;
@@ -2015,6 +2018,7 @@ a {
   font-style: normal;
   line-height: 22px;
   color: #5c5d5c;
+  margin: 0;
 }
 
 .payment {
@@ -2283,9 +2287,12 @@ a {
 }
 
 .title_input {
-  font-size: 13px;
-  line-height: 20px;
-  margin-bottom: 9px;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 9px;
+    font-weight: 400;
+    letter-spacing: 0;
 }
 
 .input-radio {
@@ -2401,7 +2408,7 @@ a {
   margin-top: -20px;
 }
 
-.location_region > span {
+.location_region > span , .location_region > button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2419,9 +2426,12 @@ a {
   font-size: 12px;
   border-radius: 5px;
   margin-right: 8px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: transparent;
 }
 
-.location_region > span.active {
+.location_region > span.active , .location_region > button.active {
   background-color: #36398b;
   color: #fff;
 }
@@ -4592,6 +4602,7 @@ div.reviews {
   padding-left: 20px;
   padding-right: 20px;
   position: relative;
+  cursor: pointer
 }
 
 .drop__form:after {
@@ -4615,6 +4626,7 @@ div.reviews {
 .drop__form.drop .dropped__form {
   visibility: visible;
   bottom: 0;
+  opacity: 1;
 }
 
 .quality_counter {
@@ -4647,6 +4659,7 @@ div.reviews {
   padding-top: 20px;
   padding-bottom: 20px;
   width: 300px;
+  max-height: 300px;
   bottom: 41px;
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
@@ -4661,6 +4674,7 @@ div.reviews {
   visibility: hidden;
   -webkit-transition: .3s;
   transition: .3s;
+  opacity: 0;
 }
 
 .dropped__form .checkbox-label span {
@@ -4721,6 +4735,7 @@ div.reviews {
   margin-bottom: 30px;
   cursor: pointer;
   text-decoration: none;
+  display: block;
 }
 
 .review__item:hover {

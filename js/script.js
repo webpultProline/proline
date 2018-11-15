@@ -209,9 +209,9 @@ $('.sort_filter button').on('click', function(e){
   $('.sort_filter button').removeClass('active');
   $(this).toggleClass('active');
 });
-$('.location_region span').on('click', function(e){
+$('.location_region button').on('click', function(e){
   e.preventDefault();
-  $('.location_region span').removeClass('active');
+  $('.location_region button').removeClass('active');
   $(this).toggleClass('active');
   
   $('#'+$(this).attr('data-action')).val('');
@@ -312,9 +312,7 @@ $(".wrapper-map .tab-map").click(function() {
 	$(".tab_item-map").hide().eq($(this).index()).show();
 }).eq(0).addClass("active");
 
-$('.drop__form').on('click', function(){
-  $(this).toggleClass('drop');
-});
+
 // $(document).mouseup(function (e) {
 //   var container = $(".drop__form");
 //   if (container.hasClass(e.target).length === 0){

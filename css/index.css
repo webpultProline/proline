@@ -174,7 +174,7 @@ body .cart-slider .slick-dots {
 	margin-top: 0;
 }
 
-.location_region > span {
+.location_region > span , .location_region > button {
 	cursor: pointer
 }
 /*0 12px 30px 0 rgba(5,35,77,0.1)*/
@@ -1566,6 +1566,10 @@ font-family: 'proline-ico' !important;
 .input-label {
 	display: block;
 	margin-bottom: 25px;
+}
+p.input-label {
+	margin-top: 0;
+	line-height: 1;
 }
 .input-label > span {
 	display: inline-block;

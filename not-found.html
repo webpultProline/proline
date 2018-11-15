@@ -717,7 +717,6 @@
 		шапка мобильная - конец
 		---------------------
 		-->
-    <div class="page_wrap">
 
         <!--
 		---------------------
@@ -1486,15 +1485,15 @@
 		шапка - конец
 		---------------------
 		-->
-        <div class="work_area">
+        <main>
            <div class="container">
-				<div class="breadcrumbs">
+				<nav class="breadcrumbs">
 						<a href="#">Главная</a>
 						<a href="#">Статьи и обзоры</a>
-					</div>
-                    <div class="main-title title-contacts">
+					</nav>
+                    <section class="main-title title-contacts">
                             <h1>Статьи и обзоры</h1>
-                        </div>
+                        </section>
                <div class="row m22">
 				<div class="col-md-4 col-lg-3">
 					<aside class="nav_left">
@@ -1516,18 +1515,115 @@
 						<form for="#">
 								<div class="search_faq articles_search">
 										<input type="search" name="search_faq" placeholder="Поиск по названию...">
+										<div class="drop__form drop--nl hidden-mobile">
+											Все новости
+											<div class="dropped__form">
+												<div class="label_group filter_item">
+													<div class="dropped__item">
+															<label class="checkbox-label">
+																	<input type="checkbox">
+																	<div class="checkbox_inducator"></div>
+																	Все новости
+																</label>
+																	 
+													</div>
+													<div class="dropped__item">
+															<label class="checkbox-label">
+																	<input type="checkbox">
+																	<div class="checkbox_inducator"></div>
+																	Праздник<span>35</span> 
+																</label>
+																	 
+													</div>
+													<div class="dropped__item">
+															<label class="checkbox-label">
+																	<input type="checkbox">
+																	<div class="checkbox_inducator"></div>
+																	Акция <span>19</span> 
+																</label>
+																	 
+													</div>
+													<div class="dropped__item">
+															<label class="checkbox-label">
+																	<input type="checkbox">
+																	<div class="checkbox_inducator"></div>
+																	Информация <span>15</span> 
+																</label>
+																	 
+													</div>
+													<div class="dropped__item">
+															<label class="checkbox-label">
+																	<input type="checkbox">
+																	<div class="checkbox_inducator"></div>
+																	График работы <span>8</span> 
+																</label>
+																	 
+													</div>
+													<div class="dropped__item">
+															<label class="checkbox-label">
+																	<input type="checkbox">
+																	<div class="checkbox_inducator"></div>
+																	Прочее <span>8</span> 
+																</label>
+																	 
+													</div>
+													<div class="dropped__item">
+															<label class="checkbox-label">
+																	<input type="checkbox">
+																	<div class="checkbox_inducator"></div>
+																	Все новости
+																</label>
+																	 
+													</div>
+													<div class="dropped__item">
+															<label class="checkbox-label">
+																	<input type="checkbox">
+																	<div class="checkbox_inducator"></div>
+																	Праздник<span>35</span> 
+																</label>
+																	 
+													</div>
+													<div class="dropped__item">
+															<label class="checkbox-label">
+																	<input type="checkbox">
+																	<div class="checkbox_inducator"></div>
+																	Акция <span>19</span> 
+																</label>
+																	 
+													</div>
+													<div class="dropped__item">
+															<label class="checkbox-label">
+																	<input type="checkbox">
+																	<div class="checkbox_inducator"></div>
+																	Информация <span>15</span> 
+																</label>
+																	 
+													</div>
+													<div class="dropped__item">
+															<label class="checkbox-label">
+																	<input type="checkbox">
+																	<div class="checkbox_inducator"></div>
+																	График работы <span>8</span> 
+																</label>
+																	 
+													</div>
+													<div class="dropped__item">
+															<label class="checkbox-label">
+																	<input type="checkbox">
+																	<div class="checkbox_inducator"></div>
+																	Прочее <span>8</span> 
+																</label>
+																	 
+													</div>
+												</div>
+											</div>
+										</div>
 										<label class="input-label date_time date--news mobile-none">
-												<input type="text" class="datepicker-here">
+												<input type="text" class="datepicker-here datepicker_to" placeholder="06 Ноя 2018 - 15 Ноя 2018" data-multiple-dates="2" data-multiple-dates-separator=" - " >
 												<i class="cal_icon"></i>
 											 
 										</label>
-										<div class="sorting__select news--search mobile-none">
-											<select>
-												<option>Все новости</option>
-												<option>Все новости</option>
-												<option>Все новости</option>
-											</select>
-										</div>
+										
 
 										
 										<input type="submit" value="Найти">
@@ -1546,10 +1642,10 @@
 							</div>
 									
 						</form>
-						<div class="not-found">
+						<section class="not-found">
 По вашему запросу ничего не найдено
 
-						</div>
+						</section>
                    
                     
 			   </div>
@@ -1559,9 +1655,7 @@
             </div>
            </div>
             
-        </div>
-      
-    </div>
+        </main>
 <!--Modal-->
     <div class="modal" id="modal_slider">
             <div class="modal-container to--cart">

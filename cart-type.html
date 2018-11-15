@@ -677,7 +677,6 @@
 		шапка мобильная - конец
 		---------------------
 		-->
-    <div class="page_wrap">
 
         <!--
 		---------------------
@@ -1446,1018 +1445,610 @@
 		шапка - конец
 		---------------------
 		-->
-        <div class="work_area">
-           <div class="container">
-				<div class="breadcrumbs">
-						<a href="#">Главная</a>
-						<a href="#">Корзина</a>
-						<a>Оформление заказа</a>
-					</div>
-                    <div class="main-title">
-                            <h1>Оформление заказа</h1>
+<main>
+    <div class="container">
+        <nav class="breadcrumbs">
+			<a href="#">Главная</a>
+			<a href="#">Корзина</a>
+			<a>Оформление заказа</a>
+		</nav>
+        <section class="main-title">
+            <h1>Оформление заказа</h1>
+		</section>
+        <div class="row mt">
+            <div class="col-md-12 col-lg-8 col-xl-9 thumb_catalog ">
+                <section class="form_area">
+                    <section class="form_title">
+                        <h3>Контактные данные</h3>
+					</section>
+                    <section class="form-row">
+                        <label class="input-label">
+							<span class="required">Фамилия</span>
+                            <input type="text" placeholder="Ваша фамилия">
+						</label>
+                        <label class="input-label ">
+							<span class="required">Имя</span>
+                            <input type="text" placeholder="Ваше имя">
+						</label>
+                        <label class="input-label ">
+							<span class="required">Отчество</span>
+                            <input type="text" placeholder="Ваше отчество">
+						</label>
+                    </section>
+                    <section class="form-row mw">
+                        <label class="input-label">
+							<span class="required">Телефон</span>
+                            <input type="text" placeholder="+7 (___)__-__-__" class="phone_input" im-insert="true">
+							<span class="specify">Мы позвоним Вам, чтобы еще раз все уточнить</span>
+						</label>
+                        <label class="input-label">
+							<span class="required">E-mail</span>
+                            <input type="text" placeholder="Ваш E-mail">
+						</label>
+                    </section>
+                    <h4 class="title_input">Тип плательщика</h4>
+                    <section class="form-row mw">
+                        <label class="input-label input-radio cart--type_user-btn" data-target_tab="cart--user-legal0">
+                            <input type="radio" name="pay" checked="">
+                            <i class="radio_indicator"></i>
+                            <div>
+								<span class="face_type">Физическое</span>
+							</div>
+                        </label>
+                        <label class="input-label input-radio cart--type_user-btn" data-target_tab="cart--user-legal">
+                            <input type="radio" name="pay">
+                            <i class="radio_indicator"></i>
+                            <div>
+								<span class="face_type ur">Юридическое</span>
+							</div>
+                        </label>
+                    </section>
+                    <section class="cart--type_user" id="cart--type_user">
+                        <div class="proline_tab" id="cart--user-legal">
+                            <div class="form-row">
+                                <label class="input-label">
+									<span class="required">Наименование организации</span>
+                                    <input type="text" placeholder="Наименование организации" class="cart--user_full">
+								</label>
+                                <label class="input-label">
+									<span class="required">Код по ОКПО</span>
+                                    <input type="text" placeholder="Код по ОКПО">
+								</label>
+                            </div>
+                            <div class="form-row">
+                                <label class="input-label">
+									<span class="required">ИНН</span>
+                                    <input type="text" placeholder="ИНН">
+								</label>
+                                <label class="input-label">
+									<span class="required">КПП</span>
+                                    <input type="text" placeholder="КПП">
+								</label>
+                                <label class="input-label">
+									<span class="required">БИК</span>
+                                    <input type="text" placeholder="БИК">
+								</label>
+                            </div>
+                            <div class="form-row">
+                                <label class="input-label">
+									<span class="required">Название банка</span>
+									<input type="text" placeholder="Название банка">
+								</label>
+                                <label class="input-label">
+									<span class="required">Юридический адрес</span>
+                                    <input type="text" placeholder="Юридический адрес" class="cart--user_full">
+								</label>
+                            </div>
+                            <div class="form-row mw">
+                                <label class="input-label">
+									<span class="required">корреспондентский счет</span>
+                                    <input type="text" placeholder="корреспондентский счет">
+								</label>
+                                <label class="input-label">
+									<span class="required">Расчётный счёт</span>
+                                    <input type="text" placeholder="Расчётный счёт">
+								</label>
+                            </div>
                         </div>
-               <div class="row mt">
-                   
-                   <div class="col-md-12 col-lg-8 col-xl-9 thumb_catalog ">
-                        <div class="form_area">
-							<div class="form_title">
-								<h3>Контактные данные</h3>
+                    </section>
+                    <section class="form-row mtt">
+                        <p class="input-label loc"> <span class="required">Местоположение</span> </p>
+                        <div class="location_region">
+							<button class="active" data-action="select-city-for-cart">Москва</button>
+							<button data-action="select-city-for-cart">Санкт-Петербург</button>
+							<button data-action="select-city-for-cart">Екатеринбург</button>
+							<button data-action="select-city-for-cart">Челябинск</button>
+						</div>
+                        <div class="header-search loc-search">
+                            <form>
+                                <input type="text" placeholder="Введите название" id="select-city-for-cart">
+                                <button></button>
+                            </form>
+                        </div>
+                    </section>
+                </section>
+                <section class="form_area pb0 tabs-delivery">
+                    <section class="form_title">
+                        <h3>Доставка</h3>
+					</section>
+					<section class="form-row type-delivery tabs">
+						<div class="input-label input-radio tab active">
+							<div class="radio_indicator"></div>
+							<span class="face_type">
+								<img src="img/d01.svg" alt="">
+								<div class="type-d">
+									<span>Самовывоз</span>
+									<p>Из г.Москва по будням с 9:00 до 19:00, в субботу с 10:00 до 19:00 </p>
+								</div>
+							</span>
+						</div>
+						<div class="input-label input-radio tab">
+							<div class="radio_indicator"></div>
+							<span class="face_type"> <img src="img/d02.svg" alt="">
+								<div class="type-d">
+									<span>Доставка курьером</span>
+									<p>ПН-ПТ с 9:00 до 19:00</p>
+								</div>
+							</span>
+						</div>
+						<div class="input-label input-radio tab">
+							<div class="radio_indicator"></div>
+							<span class="face_type">
+								<img src="img/d03.svg" alt="">
+								<div class="type-d">
+									<span> Транспортной <br> компанией </span>
+									<p>Из г.Москва по будням с 9:00 до 19:00, в субботу с 10:00 до 19:00 </p>
+								</div>
+							</span>
+						</div>
+						<div class="input-label input-radio tab">
+							<div class="radio_indicator"></div>
+							<span class="face_type">
+								<img src="img/d04.svg" alt="">
+								<div class="type-d">
+									<span>Express EMS почта</span>
+									<p>Из г.Москва по будням с 9:00 до 19:00, в субботу с 10:00 до 19:00 </p>
+								</div>
+							</span>
+						</div>
+						<div class="input-label input-radio tab">
+							<div class="radio_indicator"></div>
+							<span class="face_type">
+								<img src="img/d05.svg" alt=""> 
+								<div class="type-d"> 
+									<span>Почта России</span>
+									<p>ПН-ПТ с 9:00 до 19:00</p>
+								</div>
+							</span>
+						</div>
+					</section>
+				</section>
+		<section class="tab_content">
+			<section class="tab_item">
+				<div class="form_area d_items">
+					<div class="form_title">
+						<h3>Пункты самовывоза</h3>
+					</div>
+					<div class="sorting__select sorting__region">
+						<select>
+							<option>Семеновский переулок, д6</option>
+							<option>Семеновский переулок, д6</option>
+							<option>Семеновский переулок, д6</option>
+						</select>
+					</div>
+					<div class="selected_address">
+						<div class="address"> Семеновская </div>
+						<div class="time"> ПН-ПТ : с 9:00 до 19:00,
+						<br> СБ-ВС: выходной </div>
+					</div>
+					<div class="map">
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A672dfac72a7d672e9423c84ce7a46fd2805a72a7e360c9797082508c77840430&amp;width=100%25&amp;height=320&amp;lang=ru_RU&amp;scroll=false"></script>
+					</div>
+				</div>
+				<div class="form_area pb0">
+					<div class="form_title mb36">
+						<h3>Способы оплаты</h3>
+					</div>
+					<div class="form-row type-payment type-delivery">
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div>
+								<span class="face_type">
+									<img src="img/p01.svg" alt="">
+									<div class="type-d"> <span>Наличными</span> <b> 1970 руб. <span></span> </b> </div>
+								</span>
 							</div>
-							<div class="form-row">
-								<label class="input-label ">
-									<span class="required">Фамилия</span>
-									<input type="text" placeholder="Ваша фамилия">
-								</label>
-								<label class="input-label ">
-									<span class="required">Имя</span>
-									<input type="text" placeholder="Ваше имя">
-								</label>
-								<label class="input-label ">
-									<span class="required">Отчество</span>
-									<input type="text" placeholder="Ваше отчество">
-								</label>
+						</label>
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div>
+								<span class="face_type">
+									<img src="img/p01.svg" alt="">
+									<div class="type-d"> <span>Банковской картой</span> <b> 1970 руб. <span>коммисия 1%</span> </b> </div>
+								</span>
 							</div>
-							<div class="form-row mw">
-								<label class="input-label ">
-									<span class="required">Телефон</span>
-									<input type="text" placeholder="+7 (___)__-__-__" class="phone_input" im-insert="true">
-									<span class="specify">Мы позвоним Вам, чтобы еще раз все уточнить</span>
-								</label>
-								<label class="input-label">
-									<span class="required">E-mail</span>
-									<input type="text" placeholder="Ваш E-mail">
-								</label>
+						</label>
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div>
+								<span class="face_type">
+									<img src="img/p03.svg" alt="">
+									<div class="type-d"> <span>Банковский перевод</span> <b> 1970 руб. <span>коммисия 2%</span> </b> </div>
+								</span>
 							</div>
-							<div class="title_input">
-									Тип плательщика
-							</div>
-							<div class="form-row mw">
-									<label class="input-label input-radio cart--type_user-btn" data-target_tab="cart--user-legal0">
-											<input type="radio" name="pay" checked="">
-											<div class="radio_indicator"></div>
-											<div>
-													<span class="face_type">
-															Физическое
-													</span>
-											</div>
-										</label>
-										<label class="input-label input-radio cart--type_user-btn" data-target_tab="cart--user-legal">
-												<input type="radio" name="pay">
-												<div class="radio_indicator"></div>
-												<div>
-													<span class="face_type ur">
-															Юридическое
-													</span>
-												</div>
-											</label>	
-								
-							</div>
-							
-							<div class="cart--type_user" id="cart--type_user">
-								<div class="proline_tab" id="cart--user-legal">
-									<div class="form-row">
-										<label class="input-label ">
-											<span class="required">Наименование организации</span>
-											<input type="text" placeholder="Наименование организации" class="cart--user_full">
-										</label>
-										<label class="input-label ">
-											<span class="required">Код по ОКПО</span>
-											<input type="text" placeholder="Код по ОКПО">
-										</label>
-									</div>
-									<div class="form-row">
-										<label class="input-label ">
-											<span class="required">ИНН</span>
-											<input type="text" placeholder="ИНН">
-										</label>
-										<label class="input-label ">
-											<span class="required">КПП</span>
-											<input type="text" placeholder="КПП">
-										</label>
-										<label class="input-label ">
-											<span class="required">БИК</span>
-											<input type="text" placeholder="БИК">
-										</label>
-									</div>
-									<div class="form-row">
-										<label class="input-label ">
-											<span class="required">Название банка</span>
-											<input type="text" placeholder="Название банка">
-										</label>
-										<label class="input-label ">
-											<span class="required">Юридический адрес</span>
-											<input type="text" placeholder="Юридический адрес" class="cart--user_full">
-										</label>
-									</div>
-									<div class="form-row mw">
-										<label class="input-label">
-											<span class="required">корреспондентский счет</span>
-											<input type="text" placeholder="корреспондентский счет">
-										</label>
-										<label class="input-label">
-											<span class="required">Расчётный счёт</span>
-											<input type="text" placeholder="Расчётный счёт">
-										</label>
-									</div>
+						</label>
+						<label class="input-label input-radio">
+						<input type="radio" name="type_payment">
+						<div class="radio_indicator"></div>
+						<div> <span class="face_type"> <img src="img/p04.svg" alt=""> <div class="type-d"> <span>WebMoney</span> <b> 1970 руб. <span></span> </b> </div>
+						</span>
+						</div>
+						</label>
+						<label class="input-label input-radio">
+						<input type="radio" name="type_payment">
+						<div class="radio_indicator"></div>
+						<div> <span class="face_type"> <img src="img/p05.svg" alt=""> <div class="type-d"> <span>Qiwi</span> <b> 1970 руб. <span></span> </b> </div>
+						</span>
+						</div>
+						</label>
+						<label class="input-label input-radio">
+						<input type="radio" name="type_payment">
+						<div class="radio_indicator"></div>
+						<div> <span class="face_type"> <img src="img/p06.svg" alt=""> <div class="type-d"> <span>ЯндексДеньги</span> <b> 1970 руб. <span></span> </b> </div>
+						</span>
+						</div>
+						</label>
+						<label class="input-label input-radio">
+						<input type="radio" name="type_payment">
+						<div class="radio_indicator"></div>
+						<div> <span class="face_type"> <img src="img/p07.svg" alt=""> <div class="type-d"> <span>АльфаБанк</span> <b> 1970 руб. <span></span> </b> </div>
+						</span>
+						</div>
+						</label>
+						<label class="input-label input-radio">
+						<input type="radio" name="type_payment">
+						<div class="radio_indicator"></div>
+						<div> <span class="face_type"> <img src="img/p08.svg" alt=""> <div class="type-d"> <span>ПромСвязьБанк</span> <b> 1970 руб. <span></span> </b> </div>
+						</span>
+						</div>
+						</label>
+						<label class="input-label input-radio">
+						<input type="radio" name="type_payment">
+						<div class="radio_indicator"></div>
+						<div> <span class="face_type"> <img src="img/p09.svg" alt=""> <div class="type-d"> <span>СберБанк</span> <b> 1970 руб. <span></span> </b> </div>
+						</span>
+						</div>
+						</label>
+					</div>
+				</div>
+			</section>
+			<section class="tab_item">
+				<div class="form_area d_items">
+					<div class="form_title">
+						<h3>Курьерская доставка</h3> </div>
+					<div class="form-row type-delivery tabs">
+						<label class="input-label input-radio tab">
+							<input type="radio" name="delivery">
+							<div class="radio_indicator"></div>
+							<div>
+								<div class="courier_delivery"> <img src="img/cd01.png" alt="">
+									<h6>Boxberry</h6>
+									<div class="price_delivery"> 600 руб. </div>
 								</div>
 							</div>
-							
-							<div class="form-row mtt">
-									<div class="input-label loc">
-										<span class="required">Местоположение</span>
-									</div>
-									<div class="location_region">
-										<span class="active" data-action="select-city-for-cart">Москва</span>
-										<span data-action="select-city-for-cart">Санкт-Петербург</span>
-										<span data-action="select-city-for-cart">Екатеринбург</span>
-										<span data-action="select-city-for-cart">Челябинск</span>
-									</div>
-									<div class="header-search loc-search">
-											<form>
-												<input type="text" placeholder="Введите название" id="select-city-for-cart">
-												<button></button>
-											</form>
-										</div>
-								
-							</div>
-
-						</div>
-						
-						<div class="form_area pb0 tabs-delivery">
-							<div class="form_title">
-								<h3>Доставка</h3>
-							</div>
-									
-									<div class="form-row type-delivery tabs">
-											<div class="input-label input-radio tab active">
-													<div class="radio_indicator"></div>
-													<span class="face_type">
-															<img src="img/d01.svg" alt="">
-															<div class="type-d">
-																	<span>Самовывоз</span>
-																	<p>Из г.Москва по будням с 9:00 до
-																			19:00, в субботу с 10:00 до 19:00 </p>
-															</div>
-														</span>
-											</div>
-											<div class="input-label input-radio tab">
-												<div class="radio_indicator"></div>
-												<span class="face_type">
-														<img src="img/d02.svg" alt="">
-												<div class="type-d">
-														<span>Доставка курьером</span>
-												<p>ПН-ПТ с 9:00 до 19:00</p>
-												</div>	
-												</span>
-											</div>
-											<div class="input-label input-radio tab">
-												<div class="radio_indicator"></div>
-												<span class="face_type">
-														<img src="img/d03.svg" alt="">
-													<div class="type-d">
-															<span>
-																	Транспортной <br>
-																	компанией
-																</span>
-																<p>Из г.Москва по будням с 9:00 до
-																		19:00, в субботу с 10:00 до 19:00 </p>
-													</div>
-												</span>
-											</div>
-											<div class="input-label input-radio tab">
-												<div class="radio_indicator"></div>
-												<span class="face_type">
-														<img src="img/d04.svg" alt="">
-														<div class="type-d">
-																<span>Express EMS почта</span>
-																<p>Из г.Москва по будням с 9:00 до
-																		19:00, в субботу с 10:00 до 19:00 </p>
-														</div>
-													</span>
-											</div>
-											<div class="input-label input-radio tab">
-												<div class="radio_indicator"></div>
-												<span class="face_type">
-														<img src="img/d05.svg" alt="">
-												<div class="type-d">
-														<span>Почта России</span>
-												<p>ПН-ПТ с 9:00 до 19:00</p>
-												</div>	
-												</span>
-											</div>
-												
-													
-										
-									</div>
-									
-							
-							
-
-						</div>
-						<div class="tab_content">
-									<div class="tab_item">
-											<div class="form_area d_items">
-													<div class="form_title">
-															<h3>Пункты самовывоза</h3>
-														</div>
-														<div class="sorting__select sorting__region">
-																<select>
-																	<option>Семеновский переулок, д6</option>
-																	<option>Семеновский переулок, д6</option>
-																	<option>Семеновский переулок, д6</option>
-																</select>
-															</div>
-														<div class="selected_address">
-															<div class="address">
-																	Семеновская
-															</div>
-															<div class="time">
-																	ПН-ПТ : с 9:00 до 19:00, <br>
-					СБ-ВС: выходной
-															</div>
-															
-														</div>
-														<div class="map">
-																<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A672dfac72a7d672e9423c84ce7a46fd2805a72a7e360c9797082508c77840430&amp;width=100%25&amp;height=320&amp;lang=ru_RU&amp;scroll=false"></script>
-														</div>	
-											</div>
-											<div class="form_area pb0">
-													<div class="form_title mb36">
-															<h3>Способы оплаты</h3>
-														</div>
-														<div class="form-row type-payment type-delivery">
-																<label class="input-label input-radio">
-																		<input type="radio" name="type_payment">
-																		<div class="radio_indicator"></div>
-																		<div>
-																				<span class="face_type">
-																					<img src="img/p01.svg" alt="">
-																					<div class="type-d">
-																							<span>Наличными</span> 
-																					<b>
-																						1970 руб.
-																						<span></span>
-																					</b>
-																					</div>
-																				</span>
-																				
-																				
-																		</div>
-																	</label>
-																	
-																	<label class="input-label input-radio">
-																			<input type="radio" name="type_payment">
-																			<div class="radio_indicator"></div>
-																			<div>
-																					<span class="face_type">
-																						<img src="img/p01.svg" alt="">
-																						<div class="type-d">
-																						<span>Банковской картой</span> 
-																						<b>
-																							1970 руб.
-																							<span>коммисия 1%</span>
-																						</b>
-																					</div>
-																					</span>
-																					
-																					
-																			</div>
-																		</label>
-																	<label class="input-label input-radio">
-																			<input type="radio" name="type_payment">
-																			<div class="radio_indicator"></div>
-																			<div>
-																					<span class="face_type">
-																							<img src="img/p03.svg" alt="">
-																					<div class="type-d">
-																							<span>Банковский перевод</span>
-																							<b>
-																									1970 руб.
-																									<span>коммисия 2%</span>
-																								</b>
-																					</div>	
-																					</span>
-																			</div>
-																		</label>
-																		<label class="input-label input-radio">
-																			<input type="radio" name="type_payment">
-																			<div class="radio_indicator"></div>
-																			<div>
-																					<span class="face_type">
-																						<img src="img/p04.svg" alt="">
-																						<div class="type-d">
-																								<span>WebMoney</span> 
-																						<b>
-																							1970 руб.
-																							<span></span>
-																						</b>
-																						</div>
-																					</span>
-																					
-																					
-																			</div>
-																		</label>
-																		
-																		<label class="input-label input-radio">
-																			<input type="radio" name="type_payment">
-																			<div class="radio_indicator"></div>
-																			<div>
-																					<span class="face_type">
-																							<img src="img/p05.svg" alt="">
-																						<div class="type-d">
-																								<span>Qiwi</span>
-																								<b>
-																										1970 руб.
-																										<span></span>
-																									</b>
-																									
-																						</div>
-																					</span>
-																					
-																			</div>
-																		</label>
-																		<label class="input-label input-radio">
-																				<input type="radio" name="type_payment">
-																				<div class="radio_indicator"></div>
-																				<div>
-																						<span class="face_type">
-																								<img src="img/p06.svg" alt="">
-																						<div class="type-d">
-																								<span>ЯндексДеньги</span>
-																								<b>
-																										1970 руб.
-																										<span></span>
-																									</b>
-																						</div>	
-																						</span>
-																				</div>
-																			</label>
-																			<label class="input-label input-radio">
-																				<input type="radio" name="type_payment">
-																				<div class="radio_indicator"></div>
-																				<div>
-																						<span class="face_type">
-																							<img src="img/p07.svg" alt="">
-																							<div class="type-d">
-																									<span>АльфаБанк</span> 
-																							<b>
-																								1970 руб.
-																								<span></span>
-																							</b>
-																							</div>
-																						</span>
-																						
-																						
-																				</div>
-																			</label>
-																			
-																			<label class="input-label input-radio">
-																				<input type="radio" name="type_payment">
-																				<div class="radio_indicator"></div>
-																				<div>
-																						<span class="face_type">
-																								<img src="img/p08.svg" alt="">
-																							<div class="type-d">
-																									<span>ПромСвязьБанк</span>
-																									<b>
-																											1970 руб.
-																											<span></span>
-																										</b>
-																										
-																							</div>
-																						</span>
-																						
-																				</div>
-																			</label>
-																			<label class="input-label input-radio">
-																					<input type="radio" name="type_payment">
-																					<div class="radio_indicator"></div>
-																					<div>
-																							<span class="face_type">
-																									<img src="img/p09.svg" alt="">
-																							<div class="type-d">
-																									<span>СберБанк</span>
-																									<b>
-																											1970 руб.
-																											<span></span>
-																										</b>
-																							</div>	
-																							</span>
-																					</div>
-																				</label>
-																		
-															
-														</div>
-											</div>
-									</div>
-
-								
-								<div class="tab_item">
-										<div class="form_area d_items">
-												<div class="form_title">
-														<h3>Курьерская доставка</h3>
-													</div>
-													<div class="form-row type-delivery tabs">
-															<label class="input-label input-radio tab">
-																	<input type="radio" name="delivery">
-																	<div class="radio_indicator"></div>
-																	<div>
-																		<div class="courier_delivery">
-																				<img src="img/cd01.png" alt="">
-																				<h6>Boxberry</h6>
-																				<div class="price_delivery">
-																					600 руб.
-																				</div>
-																				
-																		</div>
-																	</div>
-															</label>
-															<label class="input-label input-radio tab">
-																	<input type="radio" name="delivery">
-																	<div class="radio_indicator"></div>
-																	<div>
-																			<div class="courier_delivery">
-																					<img src="img/cd02.png" alt="">
-																					<h6>Стриж</h6>
-																					<div class="price_delivery">
-																					1 200 руб.
-																					</div>
-																					
-																			</div>
-																	</div>
-															</label>
-															<label class="input-label input-radio tab">
-																	<input type="radio" name="delivery">
-																	<div class="radio_indicator"></div>
-																	<div>
-																			<div class="courier_delivery">
-																					<img src="img/cd03.png" alt="">
-																					<h6>СДЭК</h6>
-																					<div class="price_delivery">
-																					1 200 руб.
-																					</div>
-																					
-																			</div>
-																	</div>
-															</label>
-															<label class="input-label input-radio tab">
-																	<input type="radio" name="delivery">
-																	<div class="radio_indicator"></div>
-																	<div>
-																		<div class="courier_delivery">
-																				<img src="img/cd04.png" alt="">
-																				<h6>ПЭК</h6>
-																				<div class="price_delivery">
-																					600 руб.
-																				</div>
-																				
-																		</div>
-																	</div>
-															</label>
-															<label class="input-label input-radio tab">
-																	<input type="radio" name="delivery">
-																	<div class="radio_indicator"></div>
-																	<div>
-																			<div class="courier_delivery">
-																					<img src="img/cd05.png" alt="">
-																					<h6>MaxiPost</h6>
-																					<div class="price_delivery">
-																					1 200 руб.
-																					</div>
-																					
-																			</div>
-																	</div>
-															</label>
-															<label class="input-label input-radio tab">
-																	<input type="radio" name="delivery">
-																	<div class="radio_indicator"></div>
-																	<div>
-																			<div class="courier_delivery">
-																					<img src="img/cd06.png" alt="">
-																					<h6>DPD</h6>
-																					<div class="price_delivery">
-																					1 200 руб.
-																					</div>
-																					
-																			</div>
-																	</div>
-															</label>
-															
-															
-																
-																	
-														
-													</div>
-										</div>
-										<div class="form_area">
-												<div class="form_title">
-													<h3>Контактные данные</h3>
-												</div>
-												<div class="form-row">
-													<label class="input-label ">
-														<span class="required">Город</span>
-														<input type="text" placeholder="Ваш город">
-													</label>
-													<label class="input-label ">
-														<span class="required">Улица</span>
-														<input type="text" placeholder="Ваша улица">
-													</label>
-													<div class="form-group">
-															<label class="input-label ">
-																	<span class="required">Дом</span>
-																	<input type="text" placeholder="Ваш дом">
-																</label>
-																<label class="input-label ">
-																		<span class="required">Корпус</span>
-																		<input type="text" placeholder="Ваш корпус">
-																	</label>
-													</div>
-													
-												</div>
-												<div class="form-row date_time">
-													<label class="input-label ">
-														<span class="required">Дата доставки</span>
-															<input type='text' class="datepicker-here">
-															<i class="cal_icon"></i>
-														 
-													</label>
-													<label class="input-label">
-														<span class="required">Время</span>
-														<div class="sorting__select select_time">
-															<select>
-																<option>12:00—13:00</option>
-																<option>12:00—13:00</option>
-																<option>12:00—13:00</option>
-															</select>
-														</div>
-													</label>
-													
-												</div>
-												<div class="form-row comment">
-													<label class="input-textarea">
-														<span>Комментарий</span>
-														<textarea type="text" placeholder="Введите комментарий"></textarea>
-													</label>
-												</div>
-											
-											</div>
-										<div class="form_area pb0">
-												<div class="form_title mb36">
-														<h3>Способы оплаты</h3>
-													</div>
-													<div class="form-row type-payment type-delivery">
-															<label class="input-label input-radio">
-																	<input type="radio" name="type_payment">
-																	<div class="radio_indicator"></div>
-																	<div>
-																			<span class="face_type">
-																				<img src="img/p01.svg" alt="">
-																				<div class="type-d">
-																						<span>Наличными</span> 
-																				<b>
-																					1970 руб.
-																					<span></span>
-																				</b>
-																				</div>
-																			</span>
-																			
-																			
-																	</div>
-																</label>
-																
-																<label class="input-label input-radio">
-																		<input type="radio" name="type_payment">
-																		<div class="radio_indicator"></div>
-																		<div>
-																				<span class="face_type">
-																					<img src="img/p02.svg" alt="">
-																					<div class="type-d">
-																							<span>Банковской картой</span> 
-																					<b>
-																						1970 руб.
-																						<span>коммисия 1%</span>
-																					</b>
-																					</div>
-																				</span>
-																				
-																				
-																		</div>
-																	</label>
-													</div>
-										</div>
-									</div>
-									<div class="tab_item">
-										<div class="form_area d_items ">
-												<div class="form_title">
-														<h3>Транспортная  компания</h3>
-													</div>
-													<div class="form-row type-delivery tabs">
-															<label class="input-label input-radio tab">
-																	<input type="radio" name="delivery">
-																	<div class="radio_indicator"></div>
-																	<div>
-																		<div class="courier_delivery">
-																				<img src="img/td01.png" alt="">
-																				<h6>Деловые линии</h6>
-																				<div class="price_delivery">
-																					600 руб.
-																				</div>
-																				
-																		</div>
-																	</div>
-															</label>
-															<label class="input-label input-radio tab">
-																	<input type="radio" name="delivery">
-																	<div class="radio_indicator"></div>
-																	<div>
-																			<div class="courier_delivery">
-																					<img src="img/td02.png" alt="">
-																					<h6>Энергия</h6>
-																					<div class="price_delivery">
-																					1 200 руб.
-																					</div>
-																					
-																			</div>
-																	</div>
-															</label>
-															<label class="input-label input-radio tab">
-																	<input type="radio" name="delivery">
-																	<div class="radio_indicator"></div>
-																	<div>
-																			<div class="courier_delivery">
-																					<img src="img/td03.png" alt="">
-																					<h6>Кит</h6>
-																					<div class="price_delivery">
-																					1 200 руб.
-																					</div>
-																					
-																			</div>
-																	</div>
-															</label>
-															<div class="selected_address date_delivery">
-																<div class="date_text">
-																	<h5>Дата доставки</h5>
-																	<span>с 18 августа по 31 августа 2018</span>
-																</div>
-																
-															</div>
-														
-													</div>
-													<div class="form_row">
-														
-													</div>
-													
-										</div>
-										<div class="form_area">
-												<div class="form_title">
-													<h3>Контактные данные</h3>
-												</div>
-												<div class="form-row">
-													<label class="input-label ">
-														<span class="required">Город</span>
-														<input type="text" placeholder="Ваш город">
-													</label>
-													<label class="input-label ">
-														<span class="required">Улица</span>
-														<input type="text" placeholder="Ваша улица">
-													</label>
-													<div class="form-group">
-															<label class="input-label ">
-																	<span class="required">Дом</span>
-																	<input type="text" placeholder="Ваш дом">
-																</label>
-																<label class="input-label ">
-																		<span class="required">Корпус</span>
-																		<input type="text" placeholder="Ваш корпус">
-																	</label>
-													</div>
-													
-												</div>
-												<div class="form-row comment">
-													<label class="input-textarea">
-														<span>Комментарий</span>
-														<textarea type="text" placeholder="Введите комментарий"></textarea>
-													</label>
-												</div>
-											
-											</div>
-											<div class="form_area pb0">
-												<div class="form_title mb36">
-														<h3>Способы оплаты</h3>
-													</div>
-													<div class="form-row type-payment type-delivery">
-															<label class="input-label input-radio">
-																	<input type="radio" name="type_payment">
-																	<div class="radio_indicator"></div>
-																	<div>
-																			<span class="face_type">
-																				<img src="img/p01.svg" alt="">
-																				<div class="type-d">
-																						<span>Наличными</span> 
-																				<b>
-																					1970 руб.
-																					<span></span>
-																				</b>
-																				</div>
-																			</span>
-																			
-																			
-																	</div>
-																</label>
-																
-																<label class="input-label input-radio">
-																		<input type="radio" name="type_payment">
-																		<div class="radio_indicator"></div>
-																		<div>
-																				<span class="face_type">
-																					<img src="img/p01.svg" alt="">
-																					<div class="type-d">
-																					<span>Банковской картой</span> 
-																					<b>
-																						1970 руб.
-																						<span>коммисия 1%</span>
-																					</b>
-																				</div>
-																				</span>
-																				
-																				
-																		</div>
-																	</label>
-																<label class="input-label input-radio">
-																		<input type="radio" name="type_payment">
-																		<div class="radio_indicator"></div>
-																		<div>
-																				<span class="face_type">
-																						<img src="img/p03.svg" alt="">
-																				<div class="type-d">
-																						<span>Банковский перевод</span>
-																						<b>
-																								1970 руб.
-																								<span>коммисия 2%</span>
-																							</b>
-																				</div>	
-																				</span>
-																		</div>
-																	</label>
-																	<label class="input-label input-radio">
-																		<input type="radio" name="type_payment">
-																		<div class="radio_indicator"></div>
-																		<div>
-																				<span class="face_type">
-																					<img src="img/p04.svg" alt="">
-																					<div class="type-d">
-																							<span>WebMoney</span> 
-																					<b>
-																						1970 руб.
-																						<span></span>
-																					</b>
-																					</div>
-																				</span>
-																				
-																				
-																		</div>
-																	</label>
-																	
-																	<label class="input-label input-radio">
-																		<input type="radio" name="type_payment">
-																		<div class="radio_indicator"></div>
-																		<div>
-																				<span class="face_type">
-																						<img src="img/p05.svg" alt="">
-																					<div class="type-d">
-																							<span>Qiwi</span>
-																							<b>
-																									1970 руб.
-																									<span></span>
-																								</b>
-																								
-																					</div>
-																				</span>
-																				
-																		</div>
-																	</label>
-																	<label class="input-label input-radio">
-																			<input type="radio" name="type_payment">
-																			<div class="radio_indicator"></div>
-																			<div>
-																					<span class="face_type">
-																							<img src="img/p06.svg" alt="">
-																					<div class="type-d">
-																							<span>ЯндексДеньги</span>
-																							<b>
-																									1970 руб.
-																									<span></span>
-																								</b>
-																					</div>	
-																					</span>
-																			</div>
-																		</label>
-																		<label class="input-label input-radio">
-																			<input type="radio" name="type_payment">
-																			<div class="radio_indicator"></div>
-																			<div>
-																					<span class="face_type">
-																						<img src="img/p07.svg" alt="">
-																						<div class="type-d">
-																								<span>АльфаБанк</span> 
-																						<b>
-																							1970 руб.
-																							<span></span>
-																						</b>
-																						</div>
-																					</span>
-																					
-																					
-																			</div>
-																		</label>
-																		
-																		<label class="input-label input-radio">
-																			<input type="radio" name="type_payment">
-																			<div class="radio_indicator"></div>
-																			<div>
-																					<span class="face_type">
-																							<img src="img/p08.svg" alt="">
-																						<div class="type-d">
-																								<span>ПромСвязьБанк</span>
-																								<b>
-																										1970 руб.
-																										<span></span>
-																									</b>
-																									
-																						</div>
-																					</span>
-																					
-																			</div>
-																		</label>
-																		<label class="input-label input-radio">
-																				<input type="radio" name="type_payment">
-																				<div class="radio_indicator"></div>
-																				<div>
-																						<span class="face_type">
-																								<img src="img/p09.svg" alt="">
-																						<div class="type-d">
-																								<span>СберБанк</span>
-																								<b>
-																										1970 руб.
-																										<span></span>
-																									</b>
-																						</div>	
-																						</span>
-																				</div>
-																			</label>
-																	
-														
-													</div>
-										</div>
-
-									</div>
-								
+						</label>
+						<label class="input-label input-radio tab">
+							<input type="radio" name="delivery">
+							<div class="radio_indicator"></div>
+							<div>
+								<div class="courier_delivery"> <img src="img/cd02.png" alt="">
+									<h6>Стриж</h6>
+									<div class="price_delivery"> 1 200 руб. </div>
 								</div>
-								
-						<div class="checkout">
-								<label class="checkbox-label">
-										<input type="checkbox">
-										<div class="checkbox_inducator"></div>
-										Я хочу зарегистрироваться на сайте и пользоваться личным кабинетом
-									</label>
-								<label class="checkbox-label">
-										<input type="checkbox">
-										<div class="checkbox_inducator"></div>
-										Я согласен с <a href="#"><span>политикой конфиденциальности</span></a> и разрешаю обработку персональных данных 
-									</label>
-									<a href='#' class="pay checkout_btn btn-send-request-form">Оформить заказ</a>
+							</div>
+						</label>
+						<label class="input-label input-radio tab">
+							<input type="radio" name="delivery">
+							<div class="radio_indicator"></div>
+							<div>
+								<div class="courier_delivery"> <img src="img/cd03.png" alt="">
+									<h6>СДЭК</h6>
+									<div class="price_delivery"> 1 200 руб. </div>
+								</div>
+							</div>
+						</label>
+						<label class="input-label input-radio tab">
+							<input type="radio" name="delivery">
+							<div class="radio_indicator"></div>
+							<div>
+								<div class="courier_delivery"> <img src="img/cd04.png" alt="">
+									<h6>ПЭК</h6>
+									<div class="price_delivery"> 600 руб. </div>
+								</div>
+							</div>
+						</label>
+						<label class="input-label input-radio tab">
+							<input type="radio" name="delivery">
+							<div class="radio_indicator"></div>
+							<div>
+								<div class="courier_delivery"> <img src="img/cd05.png" alt="">
+									<h6>MaxiPost</h6>
+									<div class="price_delivery"> 1 200 руб. </div>
+								</div>
+							</div>
+						</label>
+						<label class="input-label input-radio tab">
+							<input type="radio" name="delivery">
+							<div class="radio_indicator"></div>
+							<div>
+								<div class="courier_delivery"> <img src="img/cd06.png" alt="">
+									<h6>DPD</h6>
+									<div class="price_delivery"> 1 200 руб. </div>
+								</div>
+							</div>
+						</label>
+					</div>
+				</div>
+				<div class="form_area">
+					<div class="form_title">
+						<h3>Контактные данные</h3> </div>
+					<div class="form-row">
+						<label class="input-label "> <span class="required">Город</span>
+							<input type="text" placeholder="Ваш город"> </label>
+						<label class="input-label "> <span class="required">Улица</span>
+							<input type="text" placeholder="Ваша улица"> </label>
+						<div class="form-group">
+							<label class="input-label "> <span class="required">Дом</span>
+								<input type="text" placeholder="Ваш дом"> </label>
+							<label class="input-label "> <span class="required">Корпус</span>
+								<input type="text" placeholder="Ваш корпус"> </label>
 						</div>
 					</div>
-						<div class="col-md-12 col-lg-4 col-xl-3">
-								<aside class="aside-right">
-									<div class="total total_self">
-										<div class="order_total">
-											<span>Ваш заказ</span>
-											<a href="#">Изменить</a>
-										</div>
-										<div class="quantity">
-											<div class="quantity_box">
-												<div class="img-box">
-													<img src="img/mini01.jpg" alt="">
-												</div>
-												<div class="product_name">
-												 Уличная <br>  AHD/CVI/TVI/CVBS  видеокамера  Proline HY-W1024FMS
-												</div>
-												<div class="pieces">
-													1 шт
-												</div>
-											</div>
-											<div class="quantity_box">
-											 <div class="img-box">
-												 <img src="img/mini02.jpg" alt="">
-											 </div>
-											 <div class="product_name">
-												 7" LCD цветной видеодомофон Proline DF-J706S
-											 </div>
-											 <div class="pieces">
-												 60 шт
-											 </div>
-											 </div>
-											 <div class="quantity_box">
-												 <div class="img-box">
-													 <img src="img/mini03.jpg" alt="">
-												 </div>
-												 <div class="product_name">
-													 Уличная <br> AHD/CVI/TVI/CVBS видеокамера  Proline HY-W1024FMS
-												 </div>
-												 <div class="pieces">
-													 60 шт
-												 </div>
-											 </div>
-										</div>
-										
-										<div class="total_price">
-											<div class="left">
-												 <div class="total_price__item">
-														 <span>Всего:</span>
-													 </div>
-													 <div class="total_price__item">
-													  <span>На сумму:</span>
-													  
-													  </div>
-													  <div class="total_price__item">
-														  <span>Доставка:</span>
-													  </div>
-											</div>
-											<div class="right">
-												 <div class="total_price__item">
-														 <span>3 товара</span>
-													 </div>
-													 <div class="total_price__item">
-													  <span class="ruble">21 970</span>
-													  
-													  </div>
-													  <div class="total_price__item">
-															 <span class="ruble">950</span>
-													  </div>
-											</div>
-											
-										</div>
-										
-										<div class="total_full">
-											 <div class="left">
-												 <div class="total_price__item">
-														 <strong>Итого:</strong>
-													 </div>
-											 </div>
-											 <div class="right">
-													 <strong class="ruble">90 950</strong>
-											 </div>
-										</div>
-										<div class="promo">
-												<span>Активировать промокод</span>
-												<div class="btn-promo">
-														<input type="text">
-														<button></button>
-												</div>
-													
-											</div>
-											<div class="bonus">
-													<div class="bonus_line">
-															<span class="circle">
-			
-																</span>
-																<p>
-																		53 000 бонусов за заказ
-																</p>
-												
-																	<i class="info">?
-																			<div class="info__popup">
-																					<p>
-																							Начисление Бонусных рублей произойдёт 
-																							после доставки или получения заказа в 
-																							магазине. Сумма Бонусных рублей 
-																							определяется в соответствии с правилами 
-																							программы «Пролайн-Бонус».
-																					</p>
-																							
-																				</div>
-																	</i>
-													</div>
-											
-												</div>	
-									</div>
-								</aside>
-							 </div>    
-                        
-                        
-                   </div>
-                   
-                    
-               </div>
-               
-               
-            </div>
-           </div>
-            
-        </div>
-      
+					<div class="form-row date_time">
+						<label class="input-label "> <span class="required">Дата доставки</span>
+							<input type='text' class="datepicker-here"> <i class="cal_icon"></i> </label>
+						<label class="input-label"> <span class="required">Время</span>
+							<div class="sorting__select select_time">
+								<select>
+									<option>12:00—13:00</option>
+									<option>12:00—13:00</option>
+									<option>12:00—13:00</option>
+								</select>
+							</div>
+						</label>
+					</div>
+					<div class="form-row comment">
+						<label class="input-textarea"> <span>Комментарий</span>
+							<textarea type="text" placeholder="Введите комментарий"></textarea>
+						</label>
+					</div>
+				</div>
+				<div class="form_area pb0">
+					<div class="form_title mb36">
+						<h3>Способы оплаты</h3> </div>
+					<div class="form-row type-payment type-delivery">
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div> <span class="face_type"> <img src="img/p01.svg" alt=""> <div class="type-d"> <span>Наличными</span> <b> 1970 руб. <span></span> </b> </div>
+							</span>
+					</div>
+					</label>
+					<label class="input-label input-radio">
+						<input type="radio" name="type_payment">
+						<div class="radio_indicator"></div>
+						<div> <span class="face_type"> <img src="img/p02.svg" alt=""> <div class="type-d"> <span>Банковской картой</span> <b> 1970 руб. <span>коммисия 1%</span> </b> </div>
+						</span>
+						</div>
+					</label>
+					</div>
+				</div>
+			</section>
+			<section class="tab_item">
+				<div class="form_area d_items ">
+					<div class="form_title">
+						<h3>Транспортная  компания</h3> </div>
+					<div class="form-row type-delivery tabs">
+						<label class="input-label input-radio tab">
+							<input type="radio" name="delivery">
+							<div class="radio_indicator"></div>
+							<div>
+								<div class="courier_delivery"> <img src="img/td01.png" alt="">
+									<h6>Деловые линии</h6>
+									<div class="price_delivery"> 600 руб. </div>
+								</div>
+							</div>
+						</label>
+						<label class="input-label input-radio tab">
+							<input type="radio" name="delivery">
+							<div class="radio_indicator"></div>
+							<div>
+								<div class="courier_delivery"> <img src="img/td02.png" alt="">
+									<h6>Энергия</h6>
+									<div class="price_delivery"> 1 200 руб. </div>
+								</div>
+							</div>
+						</label>
+						<label class="input-label input-radio tab">
+							<input type="radio" name="delivery">
+							<div class="radio_indicator"></div>
+							<div>
+								<div class="courier_delivery"> <img src="img/td03.png" alt="">
+									<h6>Кит</h6>
+									<div class="price_delivery"> 1 200 руб. </div>
+								</div>
+							</div>
+						</label>
+						<div class="selected_address date_delivery">
+							<div class="date_text">
+								<h5>Дата доставки</h5> <span>с 18 августа по 31 августа 2018</span> </div>
+						</div>
+					</div>
+					<div class="form_row"> </div>
+				</div>
+				<div class="form_area">
+					<div class="form_title">
+						<h3>Контактные данные</h3> </div>
+					<div class="form-row">
+						<label class="input-label "> <span class="required">Город</span>
+							<input type="text" placeholder="Ваш город"> </label>
+						<label class="input-label "> <span class="required">Улица</span>
+							<input type="text" placeholder="Ваша улица"> </label>
+						<div class="form-group">
+							<label class="input-label "> <span class="required">Дом</span>
+								<input type="text" placeholder="Ваш дом"> </label>
+							<label class="input-label "> <span class="required">Корпус</span>
+								<input type="text" placeholder="Ваш корпус"> </label>
+						</div>
+					</div>
+					<div class="form-row comment">
+						<label class="input-textarea"> <span>Комментарий</span>
+							<textarea type="text" placeholder="Введите комментарий"></textarea>
+						</label>
+					</div>
+				</div>
+				<div class="form_area pb0">
+					<div class="form_title mb36">
+						<h3>Способы оплаты</h3>
+					</div>
+					<div class="form-row type-payment type-delivery">
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div> <span class="face_type"> <img src="img/p01.svg" alt=""> <div class="type-d"> <span>Наличными</span> <b> 1970 руб. <span></span> </b> </div></span></div>
+						</label>
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div> <span class="face_type"> <img src="img/p01.svg" alt=""> <div class="type-d"> <span>Банковской картой</span> <b> 1970 руб. <span>коммисия 1%</span> </b> </div></span></div>
+						</label>
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div> <span class="face_type"> <img src="img/p03.svg" alt=""> <div class="type-d"> <span>Банковский перевод</span> <b> 1970 руб. <span>коммисия 2%</span> </b> </div></span></div>
+						</label>
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div> <span class="face_type"> <img src="img/p04.svg" alt=""> <div class="type-d"> <span>WebMoney</span> <b> 1970 руб. <span></span> </b> </div>
+							</span>
+							</div>
+						</label>
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div> <span class="face_type"> <img src="img/p05.svg" alt=""> <div class="type-d"> <span>Qiwi</span> <b> 1970 руб. <span></span> </b> </div>
+							</span>
+							</div>
+						</label>
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div> <span class="face_type"> <img src="img/p06.svg" alt=""> <div class="type-d"> <span>ЯндексДеньги</span> <b> 1970 руб. <span></span> </b> </div>
+							</span>
+							</div>
+						</label>
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div> <span class="face_type"> <img src="img/p07.svg" alt=""> <div class="type-d"> <span>АльфаБанк</span> <b> 1970 руб. <span></span> </b> </div>
+							</span>
+							</div>
+						</label>
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div> <span class="face_type"> <img src="img/p08.svg" alt=""> <div class="type-d"> <span>ПромСвязьБанк</span> <b> 1970 руб. <span></span> </b> </div>
+							</span>
+							</div>
+						</label>
+						<label class="input-label input-radio">
+							<input type="radio" name="type_payment">
+							<div class="radio_indicator"></div>
+							<div> <span class="face_type"> <img src="img/p09.svg" alt=""> <div class="type-d"> <span>СберБанк</span> <b> 1970 руб. <span></span> </b> </div>
+							</span>
+							</div>
+						</label>
+					</div>
+				</div>
+			</section>
+		</section>
+		<section class="checkout">
+			<label class="checkbox-label">
+				<input type="checkbox">
+				<div class="checkbox_inducator"></div>
+				Я хочу зарегистрироваться на сайте и пользоваться личным кабинетом 
+			</label>
+			<label class="checkbox-label">
+				<input type="checkbox">
+				<div class="checkbox_inducator"></div>
+				Я согласен с <a href="#"><span>политикой конфиденциальности</span></a> и разрешаю обработку персональных данных
+			</label>
+			<a href='#' class="pay checkout_btn btn-send-request-form">Оформить заказ</a>
+		</section>
     </div>
+	
+	
+			<div class="col-md-12 col-lg-4 col-xl-3">
+				<aside class="aside-right">
+					<div class="total total_self">
+						<div class="order_total"> <span>Ваш заказ</span> <a href="#">Изменить</a> </div>
+						<div class="quantity">
+							<div class="quantity_box">
+								<div class="img-box"> <img src="img/mini01.jpg" alt=""> </div>
+								<div class="product_name"><span>Уличная
+									<br/> AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS </span></div>
+								<div class="pieces"> 1 шт </div>
+							</div>
+							<div class="quantity_box">
+								<div class="img-box"> <img src="img/mini02.jpg" alt=""> </div>
+								<div class="product_name"> 7" LCD цветной видеодомофон Proline DF-J706S </div>
+								<div class="pieces"> 60 шт </div>
+							</div>
+							<div class="quantity_box">
+								<div class="img-box"> <img src="img/mini03.jpg" alt=""> </div>
+								<div class="product_name"> Уличная
+									<br> AHD/CVI/TVI/CVBS видеокамера Proline HY-W1024FMS </div>
+								<div class="pieces"> 60 шт </div>
+							</div>
+						</div>
+						<div class="total_price">
+							<div class="left">
+								<div class="total_price__item"> <span>Всего:</span> </div>
+								<div class="total_price__item"> <span>На сумму:</span> </div>
+								<div class="total_price__item"> <span>Доставка:</span> </div>
+							</div>
+							<div class="right">
+								<div class="total_price__item"> <span>3 товара</span> </div>
+								<div class="total_price__item"> <span class="ruble">21 970</span> </div>
+								<div class="total_price__item"> <span class="ruble">950</span> </div>
+							</div>
+						</div>
+						<div class="total_full">
+							<div class="left">
+								<div class="total_price__item"> <strong>Итого:</strong> </div>
+							</div>
+							<div class="right"> <strong class="ruble">90 950</strong> </div>
+						</div>
+						<div class="promo"> <span>Активировать промокод</span>
+							<div class="btn-promo">
+								<input type="text">
+								<button></button>
+							</div>
+						</div>
+						<div class="bonus">
+							<div class="bonus_line"> <span class="circle"> </span>
+								<p> 53 000 бонусов за заказ </p> <i class="info">? <div class="info__popup"> <p> Начисление Бонусных рублей произойдёт после доставки или получения заказа в магазине. Сумма Бонусных рублей определяется в соответствии с правилами программы «Пролайн-Бонус». </p> </div> </i> </div>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</div>
+    </div>
+</main>
 <!--Modal-->
     <div class="modal" id="modal_slider">
             <div class="modal-container to--cart">
