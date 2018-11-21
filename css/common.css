@@ -5978,9 +5978,6 @@ p {
   .bottom_info .title {
     margin-bottom: 22px;
   }
-  .bottom_info > p {
-    font-size: 18px;
-  }
   .new-products + .bottom_info > p {
 	  font-size: 14px;
   }

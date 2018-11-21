@@ -1977,13 +1977,6 @@ p.input-label {
 .PopUpMain.bottom .PopUpBody {
 	border-radius: 0 0 5px 5px;
 }
-.PopUpMoreLinkHeader:hover .PopUpMain {
-	visibility: visible;
-	opacity: 1;
-}
-.PopUpMoreLinkHeader:hover > a:after {
-	content: "\e904";
-}
 .PopUpMoreLinkHeader:hover > a {
 	color: #36398b;
 }
@@ -5058,6 +5051,7 @@ footer {
 	font-size: 16px;
 	font-weight: 500;
 	display: block;
+	letter-spacing: 0
 }
 
 .proline_product-input_group {
@@ -7647,7 +7641,12 @@ margin-left: 15px;
 		position: relative;
 		left: 0;
 		top: 0;
+		margin-bottom: 10px;
 	}
+.slider.slider-proline .product-item:hover {
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(5, 35, 77, 0.1);
+    box-shadow: 0px 5px 10px 0px rgba(5, 35, 77, 0.1);
+}
 	.slider.slider-proline .product-item .btn-comparison {
 		right: 5px;
 		top: 5px
