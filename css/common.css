@@ -799,6 +799,7 @@ font-weight: 500;
   color: #9da7b4;
   font-weight: 500;
   margin-top: 22px;
+  margin-bottom: 0
 }
 
 .buy {
@@ -844,6 +845,7 @@ font-weight: 500;
   font-weight: 500;
   margin-top: 16px;
   position: relative;
+  margin-bottom: 0;
 }
 
 .price:after {
@@ -858,6 +860,8 @@ font-weight: 500;
   color: #b4b9c6;
   text-decoration: line-through;
   margin-left: 5px;
+  margin-top: 0;
+  margin-bottom: 0
 }
 
 .old-price:after {
