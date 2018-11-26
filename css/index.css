@@ -19,6 +19,81 @@
 .header-top > .container > .row {
 	height: 43px
 }
+
+/*контный класс*/
+.typography p {
+	line-height: 20px;
+	margin-bottom: 30px
+}
+.typography p > a {
+    color: #36398b;
+    border-bottom: 1px dotted #36398b;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.typography ul {
+	margin-bottom: 35px;
+}
+.typography ul li {
+	line-height: 20px;
+	margin-bottom: 15px;
+	padding-left: 14px;
+	position: relative;
+}
+.typography ul li:before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #5a6779;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.typography h2 {
+	letter-spacing: 0;
+	font-size: 22px;
+	margin-bottom: 30px
+}
+.typography h3 {
+	letter-spacing: 0;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+.typography h4 {
+	line-height: 20px;
+    margin-bottom: 30px;
+	font-weight: 500;
+	font-size: 0.875rem;
+	letter-spacing: 0;
+}
+.section {
+	display: block;
+}
+main > .container > .section > h1 {
+    font-size: 34px;
+    letter-spacing: 0;
+}
+@media (max-width: 991px){
+	main > .container > .section > h1 {
+		font-size: 23px;
+	}
+}
+@media (max-width: 767px){
+	main > .container > .section > h1 {
+		font-size: 26px;
+	}
+}
+@media (max-width: 575px){
+	main > .container > .section h1 {
+		font-size: 21px;
+	}
+}
+/**/
+
 /*
 временные переменные
 */
@@ -30,6 +105,9 @@ body a.autorization-block-yes , body button.autorization-block-yes , body div.au
 ФИКСЫ
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
+.authorization_user {
+	margin-top: 34px
+}
 .cart--type_user#cart--type_user .proline_tab#cart--user-legal {
 	text-align: left;
 }
@@ -1571,7 +1649,7 @@ p.input-label {
 	margin-top: 0;
 	line-height: 1;
 }
-.input-label > span {
+.input-label > span , .input-label > p {
 	display: inline-block;
 	text-align: left;
 	font-size: 13px;
@@ -1582,14 +1660,14 @@ p.input-label {
 	left: 0;
 	top: 0;
 }
-.input-label > span:last-child , body .form-row .input-label .specify {
+.input-label > span:last-child , body .form-row .input-label .specify , .input-label > p:last-child {
 	color: #5a6779;
 	font-size: 13px;
 }
-.input-label > span.required {
+.input-label > span.required , .input-label > p.required {
 	padding-right: 8px;
 }
-.input-label > span.required:after {
+.input-label > span.required:after , .input-label > p.required:after {
 	position: absolute;
 	right: 0;
 	top: 0.25em;

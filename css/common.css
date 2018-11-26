@@ -587,7 +587,7 @@ a {
   min-width: 270px;
   padding-bottom: 18px;
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   cursor: pointer;
   text-decoration: none;
 }
@@ -782,17 +782,17 @@ font-weight: 500;
     font-size: 16px;
     min-height: 40px;
     display: block;
-    margin-top: 26px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     padding: 0 30px;
+	margin: 26px 0 0;
 }
 
-.info-box span {
+.info-box span , .info-box .product-info {
   display: block;
-  margin-top: 24px;
   min-height: 35px;
+  margin: 24px 0 0;
 }
 
 .info-box .acticle {
@@ -1940,6 +1940,7 @@ font-weight: 500;
 .main-title.ty {
   margin-top: 30px;
   margin-bottom: 32px;
+  letter-spacing: 0
 }
 
 .main-title.ty h1 {
@@ -2085,7 +2086,7 @@ font-weight: 500;
   margin-bottom: 22px;
 }
 
-.title_liked h2 {
+.title_liked {
   font-size: 26px;
   letter-spacing: 0;
 }
@@ -2519,7 +2520,7 @@ font-weight: 500;
   margin-bottom: 20px;
 }
 
-.type-delivery .input-radio p {
+.type-delivery .input-radio p:not(.type-delivery-info) {
   font-size: 12px;
   color: #5c5d5c;
   max-width: 185px;
@@ -2562,6 +2563,11 @@ font-weight: 500;
 }
 
 .type-d span {
+  margin-bottom: 3px;
+  font-size: 15px;
+  color: #222425;
+}
+.type-d p.type-delivery-info {
   margin-bottom: 3px;
   font-size: 15px;
   color: #222425;
@@ -2786,7 +2792,7 @@ font-weight: 500;
   padding-bottom: 15px;
 }
 
-.promo span {
+.promo > p {
   font-size: 13px;
   line-height: 20px;
   font-weight: 500;
@@ -2947,9 +2953,6 @@ font-weight: 500;
   margin-bottom: 10px;
 }
 
-.cart_content {
-  margin-top: 3px;
-}
 
 .cart_item {
   border-radius: 10px;
@@ -3239,6 +3242,16 @@ font-weight: 500;
 
 .cart-title {
   margin-bottom: 15px;
+  margin-top: 0;
+  letter-spacing: 0;
+}
+.cart-subtitle {
+	font-size: 20px;
+	font-weight: bold;
+	display: block;
+	margin-top: 20px;
+	letter-spacing: 0;
+	margin-bottom: 15px;
 }
 
 .cart-title span {
@@ -3257,13 +3270,17 @@ font-weight: 500;
   padding-right: 12px;
   padding-top: 20px;
 }
+.input-radio.tab span {
+  display: block;
+}
 
-.courier_delivery h6 {
-  font-size: 15px;
-  line-height: 16px;
+.courier_delivery span:not(.price_delivery) {
+  font-size: 26px;
+  line-height: 1;
   margin-top: 5px;
-  letter-spacing: 0;
-  font-weight: 400;
+  letter-spacing: 1pt;
+  font-weight: 700;
+  color: #000;
 }
 
 .courier_delivery .price_delivery {
@@ -4282,6 +4299,8 @@ font-weight: 500;
   color: #5a6779;
   margin-right: 7px;
   font-size: 12px;
+  margin-bottom: 0;
+  margin-top: 0
 }
 
 .share__user .user:before {
@@ -4515,8 +4534,10 @@ font-weight: 500;
 }
 
 .authorization_user .title {
-  margin-top: 34px;
-  margin-bottom: 30px;
+	margin-top: 34px;
+	margin-bottom: 30px;
+	letter-spacing: 0;
+	font-size: 22px;
 }
 
 .authorization_user .title h3 {
@@ -4604,6 +4625,9 @@ div.reviews {
   position: relative;
   cursor: pointer
 }
+.drop__form > p {
+	margin: 0;
+}
 
 .drop__form:after {
   content: '';
@@ -4650,6 +4674,7 @@ div.reviews {
   border-radius: 10px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  margin: 0;
 }
 
 .dropped__form {
@@ -5770,7 +5795,7 @@ p {
     margin-top: 24px;
     margin-bottom: 22px;
   }
-  .title_liked h2 {
+  .title_liked {
     font-size: 21px;
   }
   .total {

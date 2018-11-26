@@ -1487,242 +1487,77 @@
         <main>
            <div class="container">
 				<nav class="breadcrumbs">
-						<a href="#">Главная</a>
-						<a href="#">Корзина</a>
-						<a href="#">Вход</a>
-					</nav>
-                    <div class="main-title title-contacts">
-                            <h1>Вход</h1>
-                        </div>
-               <div class="row">
-				<div class="col-md-12 col-lg-6 col-xl-4">
-						<section class="authorization_user">
-							<div class="title">
-								<h3>Авторизация на сайте</h3>
-							</div>
-								<p class="modal-error">
-									Пожалуйста, введите действительный адрес электронной почты
-								</p>
-								<label class="input-label">
-									<span>Email</span>
-									<input type="email" placeholder="Email">
-								</label>
-								<label class="input-label password">
-									<span>Пароль</span>
-									<input type="password" placeholder="Пароль">
-									<button></button>
-								</label>
-								<div class="d-flex flex-row flex-wrap justify-content-between align-items-center user-auth-ling-group">
-									<label class="checkbox-label checkbox-label-auth">
-										<input type="checkbox">
-										<div class="checkbox_inducator"></div>
-										<b class="checkbox-label-auth-yes">Запомнить меня</b>
-										<b class="checkbox-label-auth-no">Чужой компьютер</b>
+					<a href="#">Главная</a>
+					<a href="#">Корзина</a>
+					<a href="#">Вход</a>
+				</nav>
+				<div class="section">
+					<h1>Вход</h1>
+					<div class="row">
+						<div class="col-md-12 col-lg-6 col-xl-4">
+							<div class="authorization_user">
+								<section>
+									<h3 class="title">Авторизация на сайте</h3>
+									<p class="modal-error">
+										Пожалуйста, введите действительный адрес электронной почты
+									</p>
+									<label class="input-label">
+										<span>Email</span>
+										<input type="email" placeholder="Email">
 									</label>
-									<button class="link-normal openModalBTN" data-targetmodal="user-password-change"><span>Забыли пароль?</span></button>
-								</div>
-								<div>
-									<button class="btn btn-enter-user btn-send-request-modal">Войти</button>
-								</div>
-								<div class="socials-links auth">
+									<label class="input-label password">
+										<span>Пароль</span>
+										<input type="password" placeholder="Пароль">
+										<button></button>
+									</label>
+									<div class="d-flex flex-row flex-wrap justify-content-between align-items-center user-auth-ling-group">
+										<label class="checkbox-label checkbox-label-auth">
+											<input type="checkbox">
+											<i class="checkbox_inducator"></i>
+											<b class="checkbox-label-auth-yes">Запомнить меня</b>
+											<b class="checkbox-label-auth-no">Чужой компьютер</b>
+										</label>
+										<button class="link-normal openModalBTN" data-targetmodal="user-password-change"><span>Забыли пароль?</span></button>
+									</div>
+									<div>
+										<button class="btn btn-enter-user btn-send-request-modal">Войти</button>
+									</div>
+								</section>
+								<section class="socials-links auth">
 									<h5>Войти через социальные сети</h5>
 									<ul class="justify-content-end">
 										<li><a href="#" class="vk"></a></li>
 										<li><a href="#" class="facebook"></a></li>
-
 										<li><a href="#" class="twitter"></a></li>
 										<li><a href="#" class="ok"></a></li>
 										<li><a href="#" class="instag"></a></li>
 										<li><a href="#" class="youtube"></a></li>
 									</ul>
-								</div>
-						</section>
-				</div>
-                 <div class="col-md-12 offset-xl-2 col-xl-5 col-lg-6">
-						<section class="authorization_user">
-								<div class="title">
-									<h3>Регистрация нового пользователя</h3>
-								</div>
-								<ul class="article-list auth-on">
-										<h3>Почему стоит зарегистроваться на сайте:</h3>
-										<li>Адрес доставки и другие данные сохраняются для следующих 
-												покупок.</li>
-										<li>Отслеживайте статус заказа.</li>
-										<li>Получайте персонализированные предложения.</li>
-										<li>Накапливайте и тратьте бонусные рубли.</li>
-										<li>Сохраняйте историю заказов</li>
-
-									</ul>
-									<div class="auth-btn">
-										<a href='#' class='btn openModalBTN' data-targetmodal="user-register">Зарегистрироваться</a>
-										<a href='#' class='btn btn-gb'>Купить без регистрации</a>	
-									</div>
 								</section>
-				 </div>   
-               </div>
-               
-               
+							</div>
+						</div>
+						<div class="col-md-12 offset-xl-2 col-xl-5 col-lg-6">
+							<section class="authorization_user typography">
+								<h2>Регистрация нового пользователя</h2>
+								<h3>Почему стоит зарегистроваться на сайте:</h3>
+								<ul>
+									<li>Адрес доставки и другие данные сохраняются для следующих 
+									покупок.</li>
+									<li>Отслеживайте статус заказа.</li>
+									<li>Получайте персонализированные предложения.</li>
+									<li>Накапливайте и тратьте бонусные рубли.</li>
+									<li>Сохраняйте историю заказов</li>
+								</ul>
+								<div class="auth-btn">
+									<a href='#' class='btn openModalBTN' data-targetmodal="user-register">Зарегистрироваться</a>
+									<a href='#' class='btn btn-gb'>Купить без регистрации</a>	
+								</div>
+							</section>
+						</div>   
+					</div>
+				</div>
             </div>
-           </main>
-<!--Modal-->
-    <div class="modal" id="modal_slider">
-            <div class="modal-container to--cart">
-                <div class="modal-head">
-                    <button class="close-modal"><span></span><span></span></button>
-                    <div class="add-to-cart">
-                        <img src="img/to-cart.png" alt="">
-                        <div class="title">
-                            <h2>Товар добавлен в корзину</h2>
-                        </div>
-                        <div class="btn-group">
-                            <a href="#" class="btn">Перейти в корзину</a>
-                            <a href="#" class="btn btn-gb">Продолжить покупки</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-title">
-                        <h2>
-                        С этим товаром покупают
-
-                        </h2>
-                    </div>
-                        <div class="modal-slider" >
-                                <div>
-                                        <div class="product-item p20">
-                                                <div class="img-box">
-                                                    <img src="img/adapter.png" alt="">
-                                                </div>
-                                                <div class="info-box">
-                                                        <div class="product-title">Ai-Ball Cradle+Adaptors</div>
-                                                        <span>Держатель с адаптерами <br> питания</span>
-                                                        <div class="acticle">Актикул: 56409</div>
-                                                        <div class="prices">
-                                                                <div class="price">910</div>
-                                                                <div class="old-price">1 300</div>
-                                                        </div>
-                                                </div>
-                                                <div class="buy">
-                                                        <a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
-                                                                <img src="img/cart-white.svg" alt="">
-                                                            </a>
-                                                        <a href="#" class="key">
-                                                    <img src="img/comparison-gray.svg" alt="">
-                                                        </a>
-                                                        <a href="#" class="key js-liked-popup">
-                                                            <img src="img/liked-gray.svg" alt="">
-                                                            <div class="liked-popup">
-                                                            <ul>
-                                                                <li>Добавить в избранное</li>
-                                                                <li>Просмотр списка</li>
-                                                            </ul>
-                                                            </div>
-                                                        </a>
-                                                </div>
-                                                
-                                            </div>
-                                </div>
-                                <div> 
-                                        <div class="product-item p20">
-                                                <div class="img-box">
-                                                    <img src="img/memory.jpg" alt="">
-                                                </div>
-                                                <div class="info-box">
-                                                        <div class="product-title">32Gb microSDHC C10 SanDisk <br>
-                                                                Ultra c адаптером</div>
-                                                        <span>Карта памяти 32Gb c адаптером</span>
-                                                        <div class="acticle">Актикул: 110357</div>
-                                                                <div class="price">1410</div>
-                                                </div>
-                                                <div class="buy">
-                                                        <a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
-                                                                <img src="img/cart-white.svg" alt="">
-                                                            </a>
-                                                        <a href="#" class="key">
-                                                    <img src="img/comparison-gray.svg" alt="">
-                                                        </a>
-                                                        <a href="#" class="key js-liked-popup">
-                                                            <img src="img/liked-gray.svg" alt="">
-                                                            <div class="liked-popup">
-                                                            <ul>
-                                                                <li>Добавить в избранное</li>
-                                                                <li>Просмотр списка</li>
-                                                            </ul>
-                                                            </div>
-                                                        </a>
-                                                </div>
-                                                
-                                            </div>
-                                </div>
-                                <div>
-                                        <div class="product-item p20">
-                                                <div class="img-box">
-                                                    <img src="img/p.jpg" alt="">
-                                                </div>
-                                                <div class="info-box">
-                                                        <div class="product-title">Folksafe FS-4200SR (B) KIT</div>
-                                                        <span>Пассивные влагозащищенные  <br>
-                                                                передатчики видео сигнала</span>
-                                                        <div class="acticle">Актикул: 55614</div>
-                                                                <div class="price">455</div>
-                                                </div>
-                                                <div class="buy">
-                                                        <a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
-                                                                <img src="img/cart-white.svg" alt="">
-                                                            </a>
-                                                        <a href="#" class="key">
-                                                    <img src="img/comparison-gray.svg" alt="">
-                                                        </a>
-                                                        <a href="#" class="key js-liked-popup">
-                                                            <img src="img/liked-gray.svg" alt="">
-                                                            <div class="liked-popup">
-                                                            <ul>
-                                                                <li>Добавить в избранное</li>
-                                                                <li>Просмотр списка</li>
-                                                            </ul>
-                                                            </div>
-                                                        </a>
-                                                </div>
-                                                
-                                            </div>  
-                                </div>
-                                <div>
-                                        <div class="product-item p20">
-                                                <div class="img-box">
-                                                    <img src="img/p.jpg" alt="">
-                                                </div>
-                                                <div class="info-box">
-                                                        <div class="product-title">Folksafe FS-4200SR (B) KIT</div>
-                                                        <span>Пассивные влагозащищенные  <br>
-                                                                передатчики видео сигнала</span>
-                                                        <div class="acticle">Актикул: 55614</div>
-                                                                <div class="price">455</div>
-                                                </div>
-                                                <div class="buy">
-                                                        <a href="#" class="to-cart openModalBTN" data-targetmodal="modal_slider" tabindex="0">
-                                                                <img src="img/cart-white.svg" alt="">
-                                                            </a>
-                                                        <a href="#" class="key">
-                                                    <img src="img/comparison-gray.svg" alt="">
-                                                        </a>
-                                                        <a href="#" class="key js-liked-popup">
-                                                            <img src="img/liked-gray.svg" alt="">
-                                                            <div class="liked-popup">
-                                                            <ul>
-                                                                <li>Добавить в избранное</li>
-                                                                <li>Просмотр списка</li>
-                                                            </ul>
-                                                            </div>
-                                                        </a>
-                                                </div>
-                                                
-                                            </div>       
-                                </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-<!--Modal end-->
+		</main>
 <!--
 	---------------------
 	подвал
@@ -1843,6 +1678,7 @@
 					</div>
 				</div>
 			</div>
+		</footer>
 	<!--
 	---------------------
 	подвал - конец
