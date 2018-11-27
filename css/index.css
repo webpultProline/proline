@@ -4370,7 +4370,14 @@ footer {
 .copyright-text {
 	font-size: 13px;
 	color: #525759;
-	margin: 0;
+	margin: 5px 0 5px;
+	display: inline-block;
+}
+.copyright-image {
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px
 }
 /*
 --------------------------------
@@ -6839,6 +6846,7 @@ margin-left: 15px;
 	}
 	.serach-mobile.header-search > form {
 		height: 30px;
+		border-radius: 0
 	}
 	.serach-mobile.header-search > form > input[type='text'] {
 		height: 30px;
@@ -7374,6 +7382,11 @@ margin-left: 15px;
 	.footer_bottom .socials-links > ul > li > a {
 		width: 36px;
 		height: 36px
+	}
+	
+	
+	.nav_right > a.liked:hover , .nav_right > a.liked:active , .nav_right > a.liked:focus {
+		background-color: transparent!important
 	}
 }
 @media(max-width: 767px){
@@ -8093,4 +8106,8 @@ margin-left: 15px;
 	.modal.users-modals .socials-links > ul > li:last-child {
 		margin-right: 20px
 	}
+}
+
+@media(-moz-touch-enabled: 1), (pointer:coarse){
+
 }
